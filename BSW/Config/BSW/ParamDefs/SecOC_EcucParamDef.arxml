@@ -1,0 +1,1739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <USED-LANGUAGES><L-10 L="EN" xml:space="preserve">EN</L-10></USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_SecOC</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>SecOC</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the SecOC (Secure Onboard Communication) module.</L-2>
+              </DESC>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2014-10-31</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2017-01-31</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/SecOC</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <!-- CONTAINER DEFINITION: SecOCGeneral -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>SecOCGeneral</SHORT-NAME>
+                  <LONG-NAME><L-4 L="EN">SecOC General</L-4></LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container for common configuration options.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: SecOCDevErrorDetect -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Default error tracer (Det)</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Swithces the default error tracer (Det) detection and notification ON or OFF.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCMaxAlignScalarType -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>SecOCMaxAlignScalarType</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC maximum alignment type</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The scalar type which has the maximum alignment restrictions on the given platform. This type can be e.g. uint8, uint16 or uint32.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>uint32</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>uint8</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>uint16</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>uint32</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCVersionInfoApi -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC version Info</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the availability of the SecOC_GetVersionInfo ON or OFF.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCIgnoreVerificationResult -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCIgnoreVerificationResult</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Ignore verification result</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the handling of verification result ON or OFF. If the switch is set to true the verification is performed but the verification result is ignored. So if the verification fails the PDU is forwarded to the PduR nevertheless and an error event is set in the Logging Module. The switch is implemented for the test phase and will be ignored in series software.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCMainFunctionPeriodRx -->
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>SecOCMainFunctionPeriodRx</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Period of SecOC_MainFunctionRx</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Specifies the period of the main function SecOC_MainFunctionRx in seconds</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+                      <MAX>1</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCMainFunctionPeriodTx -->
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>SecOCMainFunctionPeriodTx</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Period of SecOC_MainFunctionTx</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Specifies the period of the main function SecOC_MainFunctionTx in seconds</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0.01</DEFAULT-VALUE>
+                      <MAX>1</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCRbUpdateScheduler -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCRbUpdateScheduler</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Update BSW-Scheduler</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the automatic update of the BSW-Scheduler via the Rte on or off. If the switch is set to true the SecOC_MainFunctions are defined in Rte-Header and automatically inserted in BSW-Scheduler in the configured period. If the switch is set to false the SecOC_MainFunctions are defined in the SecOC.h and the scheduler shall be updated by the integrator.  </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCRbCryptMode -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>SecOCRbCryptMode</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC cryptographic mode</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">SecOC can call the cryptographic services synchronous (e.g. in the PduR interface functions) or asynchronous (in a cyclic main function). AR defines the asynchronous mode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>asynchronous</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>asynchronous</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>synchronous</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCQueryFreshnessValue -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>SecOCQueryFreshnessValue</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC query freshness value</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies if the freshness value shall be determined through a C-function or a software component.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>CFUNC</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>CFUNC</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RTE</SHORT-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- CONTAINER DEFINITION: SecOCSameBufferPduCollection -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>SecOCSameBufferPduCollection</SHORT-NAME>
+                  <LONG-NAME><L-4 L="EN">SecOC Buffer configuration that may be used by a collection of Pdus.</L-4></LONG-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: SecOCBufferLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCBufferLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Buffer length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length of the buffer for Pdu collection in bytes.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- CONTAINER DEFINITION: SecOCRxPduProcessing -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>SecOCRxPduProcessing</SHORT-NAME>
+                  <LONG-NAME><L-4 L="EN">SecOC configuration of received PDUs to be verified</L-4></LONG-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: SecOCAuthInfoTxLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCAuthInfoTxLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC authenticator length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the authentication code to be included in the payload of the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>4</DEFAULT-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCAuthenticationBuildAttempts -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCAuthenticationBuildAttempts</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC number of authentication build attempts</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the number of authentication build attempts.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCAuthenticationVerifyAttempts -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCAuthenticationVerifyAttempts</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC number of verification attempts</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the number of authentication verify attempts that are to be carried out when the verification of the authentication information failed for a given Secured I_PDU. If zero is set then only one authentication verification attempt is done.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCDataId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCDataId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC data identifier</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines a unique numerical identifier for the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the Freshness Value. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>64</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueTxLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueTxLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value payload length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the Freshness Value to be included in the payload of the Secured I-PDU. This length is specific to the least significant bits of the complete Freshness Counter. If the parameter is 0 no Fresh-ness Value is included in the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>64</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value id</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the local freshness identifier used to generate the freshness value used to generate or verify a MAC.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCKeyId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCKeyId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC key identifier</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the local Key identifier of the stored Key used to generate or verify a MAC. The association between a key and an identifier shall be done with the function SecOC_AssociateKey.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCUseFreshnessTimestamp -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCUseFreshnessTimestamp</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC use freshness timestamp</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies whether the Freshness Value is generated through individual Freshness Counters or by a Timestamps. The value is set to TRUE when Timestamps are used. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCRbRxPduCryptIF -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>SecOCRbRxPduCryptIF</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC cryptographic interface</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The cryptographic interface of the Pdu. If it is not set here the default cryptographic interface set in container SecOCRbCryptInterface is used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Csm_rba_CryptoBCL</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Csm_rba_CryptoHSM</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>None</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <!-- REFERENCE DEFINITION: SecOCSameBufferPduRef -->
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>SecOCSameBufferPduRef</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Reference to Buffer collection</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This reference is used to collect Pdus that are using the same SecOC buffer.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_SecOC/EcucModuleDefs/SecOC/SecOCSameBufferPduCollection</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                    <!-- REFERENCE DEFINITION: SecOCRxAuthServiceConfigRef -->
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>SecOCRxAuthServiceConfigRef</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Reference to Csm Job</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This reference is used to define which crypto service function is called for authentication.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Csm/EcucModuleDefs/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                  <SUB-CONTAINERS>
+                    <!-- CONTAINER DEFINITION: SecOCRxAuthenticPduLayer -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCRxAuthenticPduLayer</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC configuration of authentic PDU</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <REFERENCES>
+                        <!-- REFERENCE DEFINITION: SecOCRxAuthenticLayerPduRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>SecOCRxAuthenticLayerPduRef</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Reference to authentic PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the global Pdu.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- CONTAINER DEFINITION: SecOCRxSecuredPduLayer -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCRxSecuredPduLayer</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC configuration of secured PDU</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCRxSecuredLayerPduId -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>SecOCRxSecuredLayerPduId</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC identifier of secured PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">PDU identifier assigned by SecOC module. Used by PduR for SecOC_PduRRxIndication. </L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <!-- REFERENCE DEFINITION: SecOCRxSecuredLayerPduRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>SecOCRxSecuredLayerPduRef</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Reference to the secured PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the global Pdu.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- CONTAINER DEFINITION: SecOCTxPduProcessing -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>SecOCTxPduProcessing</SHORT-NAME>
+                  <LONG-NAME><L-4 L="EN">SecOC configuration of transmitted PDUs to be secured</L-4></LONG-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: SecOCAuthInfoTxLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCAuthInfoTxLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC authentication length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the authentication code to be included in the payload of the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>4</DEFAULT-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCAuthenticationBuildAttempts -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCAuthenticationBuildAttempts</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC number of authentication build attempts</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the number of authentication build attempts.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCDataId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCDataId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC data identifier</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines a unique numerical identifier for the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the Freshness Value. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>64</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueTxLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueTxLength</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value payload length</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the length in bits of the Freshness Value to be included in the payload of the Secured I-PDU. This length is specific to the least significant bits of the complete Freshness Counter. If the parameter is 0 no Fresh-ness Value is included in the Secured I-PDU. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>64</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCFreshnessValueId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCFreshnessValueId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC freshness value id</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the local freshness identifier used to generate the freshness value used to generate or verify a MAC.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCKeyId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>SecOCKeyId</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC key identifier</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies the local Key identifier of the stored Key used to generate or verify a MAC. The association between a key and an identifier shall be done with the function SecOC_AssociateKey.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCUseFreshnessTimestamp -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCUseFreshnessTimestamp</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC use freshness timestamp</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies whether the Freshness Value is generated through individual Freshness Counters or by a Timestamps. The value is set to TRUE when Timestamps are used. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCProvideTxTruncatedFreshnessValue -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCProvideTxTruncatedFreshnessValue</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC provide sender truncated freshness value</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter specifies if the sender query freshness function provides the truncated freshness info instead of generating this by SecOC. In this case, SecOC shall add this data to the Authentic PDU instead of truncating the freshness value.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCRbTxPduCryptIFRef -->
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>SecOCRbTxPduCryptIFRef</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC cryptographic interface</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The cryptographic interface of the Pdu. If it is not set here the default cryptographic interface set in container SecOCRbCryptInterface is used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Csm_rba_CryptoBCL</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Csm_rba_CryptoHSM</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>None</SHORT-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: SecOCRbClearBufferAfterTransmit -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>SecOCRbClearBufferAfterTransmit</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOCRB Clear buffers after transmit</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If this parameter is set to true, SecOC doesn't wait for TxConfirmation to clear the buffers and instead clears the buffers and resets the PDU state to idle directly after passing the secured PDU to the PduR. </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <!-- REFERENCE DEFINITION: SecOCSameBufferPduRef -->
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>SecOCSameBufferPduRef</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Reference to Buffer collection</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This reference is used to collect Pdus that are using the same SecOC buffer.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_SecOC/EcucModuleDefs/SecOC/SecOCSameBufferPduCollection</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                    <!-- REFERENCE DEFINITION: SecOCTxAuthServiceConfigRef -->
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>SecOCTxAuthServiceConfigRef</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Reference to Csm Job</L-4></LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This reference is used to define which crypto service function is called for authentication.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Csm/EcucModuleDefs/Csm/CsmJobs/CsmJob</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                  <SUB-CONTAINERS>
+                    <!-- CONTAINER DEFINITION: SecOCTxAuthenticPduLayer -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCTxAuthenticPduLayer</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC configuration of authentic PDU</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCTxAuthenticLayerPduId -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>SecOCTxAuthenticLayerPduId</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC identifier of authentic PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">PDU identifier assigned by SecOC module. Used by PduR for SecOC_PduRTransmit. </L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <!-- REFERENCE DEFINITION: SecOCTxAuthenticLayerPduRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>SecOCTxAuthenticLayerPduRef</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Reference to authentic PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the global Pdu.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- CONTAINER DEFINITION: SecOCTxSecuredPduLayer -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCTxSecuredPduLayer</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC configuration of secured PDU</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCTxSecuredLayerPduId -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>SecOCTxSecuredLayerPduId</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC identifier of secured PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">PDU identifier assigned by SecOC module. Used by PduR for confirmation (SecOC_PduRTxConfirmation) and for TriggerTransmit. </L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <!-- REFERENCE DEFINITION: SecOCTxSecuredLayerPduRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>SecOCTxSecuredLayerPduRef</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Reference to secured PDU</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the global Pdu.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- CONTAINER DEFINITION: SecOCRbSubUnits -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>SecOCRbSubUnits</SHORT-NAME>
+                  <LONG-NAME><L-4 L="EN">Configuration of SecOC sub units</L-4></LONG-NAME>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <SUB-CONTAINERS>
+                    <!-- CONTAINER DEFINITION: SecOCRbPduRInterface -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCRbPduRInterface</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Configuration of SecOC PduR interface</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCRbAuthDirect -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbAuthDirect</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Direct authentication</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the authentication during direct transmission ON or OFF.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: SecOCRbAuthTrigger -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbAuthTrigger</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Triggered authentication</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the authentication during triggered transmission ON or OFF (currently not supported)</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: SecOCRbAuthProtocol -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbAuthProtocol</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Authentication protocol</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the authentication during transport protocol ON or OFF (currently not supported)</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: SecOCRbVerifyDirect -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbVerifyDirect</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Direct verification</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the verification during direct reception ON or OFF.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: SecOCRbVerifyProtocol -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbVerifyProtocol</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Verification protocol</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switches the verification during transport protocol ON or OFF (currently not supported)</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- CONTAINER DEFINITION: SecOCRbFreshInterface -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCRbFreshInterface</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">Configuration of SecOC freshness interface</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCRbTimeMgm -->
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbTimeMgm</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC timer management</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Selects the timer management</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>None</DEFAULT-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>None</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>External</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: SecOCRbCountMgm -->
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>SecOCRbCountMgm</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC counter management</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Selects the counter management (currently not supported)</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>None</DEFAULT-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>None</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <!-- CONTAINER DEFINITION: SecOCRbFreshErrorHandling -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>SecOCRbFreshErrorHandling</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">Container for Freshness Value Error Handling</L-4></LONG-NAME>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <!-- PARAMETER DEFINITION: SecOCRbFreshErrorHandlingEnabled -->
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>SecOCRbFreshErrorHandlingEnabled</SHORT-NAME>
+                              <LONG-NAME><L-4 L="EN">Error Handling for Freshness Value in RB Layer</L-4></LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enable Error Handling for Freshness Value in RB layer</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>RB</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: SecOCRbFreshErrorLengthByteWise -->
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>SecOCRbFreshErrorLengthByteWise</SHORT-NAME>
+                              <LONG-NAME><L-4 L="EN">Error Handling for Freshness Value Length</L-4></LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enable Error Handling to check if Freshness Value length is a multiple of 8 bits</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>RB</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: SecOCRbFreshErrorTruncLength -->
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>SecOCRbFreshErrorTruncLength</SHORT-NAME>
+                              <LONG-NAME><L-4 L="EN">Error Handling for Truncated Freshness Value Length</L-4></LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enable Error Handling to check if Truncated Freshness Value Length is exactly 8 bits</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>RB</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- CONTAINER DEFINITION: SecOCRbCryptInterface -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>SecOCRbCryptInterface</SHORT-NAME>
+                      <LONG-NAME><L-4 L="EN">SecOC cryptographic interface container</L-4></LONG-NAME>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: SecOCCryptDefaultInterface -->
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>SecOCCryptDefaultInterface</SHORT-NAME>
+                          <LONG-NAME><L-4 L="EN">SecOC default cryptographic interface</L-4></LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Selects the default cryptographic interface. This cryptographic interface is set for all Rx and Tx pdus. It can be overwriten for each pdu in the pdu specific configuration with exception of "Csm" and "None". These interfaces are always set for all pdu even if pdu specific configuration is already set or not.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DEFAULT-VALUE>Csm_rba_CryptoBCL</DEFAULT-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>Csm_rba_CryptoBCL</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>Csm_rba_CryptoHSM</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>None</SHORT-NAME>
+                              <ORIGIN>RB</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

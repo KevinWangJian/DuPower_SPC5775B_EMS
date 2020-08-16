@@ -1,0 +1,626 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS ChargePole
+
+
+BO_ 2632668916 RTS_DT: 8 BMS
+ SG_ RTS_DT8 : 56|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT7 : 48|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT6 : 40|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT5 : 32|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT4 : 24|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT3 : 16|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT2 : 8|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS_DT1 : 0|8@1+ (1,0) [0|255] ""  ChargePole
+
+BO_ 2632774742 RTS_CTS: 8 ChargePole
+ SG_ RTS_CTS8 : 56|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS7 : 48|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS6 : 40|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS5 : 32|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS4 : 24|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS3 : 16|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS2 : 8|8@1+ (1,0) [0|255] ""  BMS
+ SG_ RTS_CTS1 : 0|8@1+ (1,0) [0|255] ""  BMS
+
+BO_ 2632734452 RTS: 8 BMS
+ SG_ RTS8 : 56|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS7 : 48|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS6 : 40|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS5 : 32|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS4 : 24|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS3 : 16|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS2 : 8|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ RTS1 : 0|8@1+ (1,0) [0|255] ""  ChargePole
+
+BO_ 2552714996 BHM_BCU: 2 BMS
+ SG_ BHM_SPN2601_Ubat_Max_Permit : 0|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+
+BO_ 2552689750 CHM_CHG: 3 ChargePole
+ SG_ CHM_SPN2600_Comm_Ver : 0|24@1+ (1,0) [0|16777215] ""  BMS
+
+BO_ 2617661172 BCP_BCU: 13 BMS
+ SG_ BCP_SPN2816_Ucell_Max_Permit : 0|16@1+ (0.01,0) [0|24] "V"  ChargePole
+ SG_ BCP_SPN2817_I_Max_Permit : 16|16@1+ (0.1,-400) [-400|0] "A"  ChargePole
+ SG_ BCP_SPN2818_kWh_Nom : 32|16@1+ (0.1,0) [0|1000] "kWh"  ChargePole
+ SG_ BCP_SPN2819_U_Max_Permit : 48|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+ SG_ BCP_SPN2820_T_Max_Permit : 64|8@1+ (1,-50) [-50|200] "C"  ChargePole
+ SG_ BCP_SPN2821_SOC : 72|16@1+ (0.1,0) [0|100] "%"  ChargePole
+ SG_ BCP_SPN2822_U : 88|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+
+BO_ 2618382068 BCS_BCU: 9 BMS
+ SG_ BCS_SPN3075_U_Mea : 0|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+ SG_ BCS_SPN3076_I_Mea : 16|16@1+ (0.1,-400) [-400|400] "A"  ChargePole
+ SG_ BCS_SPN3077_Ucell_Max : 32|12@1+ (0.01,0) [0|24] "V"  ChargePole
+ SG_ BCS_SPN3077_Ucell_Max_Grp : 44|4@1+ (1,0) [0|15] ""  ChargePole
+ SG_ BCS_SPN3078_SOC : 48|8@1+ (1,0) [0|100] "%"  ChargePole
+ SG_ BCS_SPN3079_Time_Remain : 56|16@1+ (1,0) [0|600] "min"  ChargePole
+
+BO_ 2416637014 CRO_CHG: 1 ChargePole
+ SG_ CRO_SPN2830_CHG_Ready : 0|8@1+ (1,0) [0|255] ""  BMS
+
+BO_ 2416531188 BRO_BCU: 1 BMS
+ SG_ BRO_SPN2829_BCU_Ready : 0|8@1+ (1,0) [0|255] ""  ChargePole
+
+BO_ 2550723670 CML_CHG: 8 ChargePole
+ SG_ CML_SPN2827_I_Min_Out : 48|16@1+ (0.1,-400) [-400|0] "A" Vector__XXX
+ SG_ CML_SPN2826_I_Max_Out : 32|16@1+ (0.1,-400) [-400|0] "A"  BMS
+ SG_ CML_SPN2825_U_Min_Out : 16|16@1+ (0.1,0) [0|1000] "V"  BMS
+ SG_ CML_SPN2824_U_Max_Out : 0|16@1+ (0.1,0) [0|1000] "V"  BMS
+
+BO_ 2550658134 CTS_CHG: 7 ChargePole
+ SG_ CTS_SPN2823_SYNC_YearThousand : 52|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_YearTen : 44|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_YearHundred : 48|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Year : 40|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_SecondTen : 4|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Second : 0|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_MonthTen : 36|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Month : 32|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_MinuteTen : 12|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Minute : 8|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_HourTen : 20|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Hour : 16|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_DayTen : 28|4@1+ (1,0) [0|9] ""  BMS
+ SG_ CTS_SPN2823_SYNC_Day : 24|4@1+ (1,0) [0|9] ""  BMS
+
+BO_ 2617399028 BRM_BCU: 49 BMS
+ SG_ BRM_SPN2576_BMSVer_Year : 352|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ BRM_SPN2576_BMSVer_Version : 328|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2576_BMSVer_Reserver : 368|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ BRM_SPN2576_BMSVer_Month : 344|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2576_BMSVer_Day : 336|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN1 : 192|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN2 : 200|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN3 : 208|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN4 : 216|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN5 : 224|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN6 : 232|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN7 : 240|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN8 : 248|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN9 : 256|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN10 : 264|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN11 : 272|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN12 : 280|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN13 : 288|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN14 : 296|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN15 : 304|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN16 : 312|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2575_VIN17 : 320|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2574_BMSSW_Reserved : 184|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2572_PackChgCnt : 152|24@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ BRM_SPN2573_PackRight : 176|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2571_PackDay : 144|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2571_PackMonth : 136|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BRM_SPN2571_PackYear : 128|8@1+ (1,1985) [1985|2235] "" Vector__XXX
+ SG_ BRM_SPN2570_PackSN : 96|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ BRM_SPN2569_BatFactory : 64|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ BRM_SPN2565_Ver : 0|24@1+ (1,0) [0|16777215] ""  ChargePole
+ SG_ BRM_SPN2566_Bat_Type : 24|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ BRM_SPN2567_Cap_Nom : 32|16@1+ (0.1,0) [0|1000] "Ah"  ChargePole
+ SG_ BRM_SPN2568_U_Nom : 48|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+
+BO_ 2550264918 CRM_CHG: 8 ChargePole
+ SG_ CRM_SPN2562_CHG_Loc : 40|24@1+ (1,0) [0|16777215] ""  BMS
+ SG_ CRM_SPN2561_CHG_Index : 8|32@1+ (1,0) [0|4294967295] ""  BMS
+ SG_ CRM_SPN2560_Ack : 0|8@1+ (1,0) [0|255] ""  BMS
+
+BO_ 2283795542 CEM_CHG: 4 ChargePole
+ SG_ CEM_other : 26|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ CEM_SPN3927_Timeout_BSD : 24|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3926_Timeout_BST : 20|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3925_Timeout_BCL : 18|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3924_Timeout_BCS : 16|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3923_Timeout_BRO : 10|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3922_Timeout_BCP : 8|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CEM_SPN3921_Timeout_BRM : 0|2@1+ (1,0) [0|3] ""  BMS
+
+BO_ 2283689716 BEM_BCU: 4 BMS
+ SG_ BEM_other : 26|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ BEM_SPN3907_Timeout_CSD : 24|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3906_Timeout_CST : 18|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3905_Timeout_CCS : 16|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3904_Timeout_CRO : 10|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3903_Timeout_CTS_CML : 8|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3902_Timeout_SPN2560_0xAA : 2|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BEM_SPN3901_Timeout_SPN2560_0x00 : 0|2@1+ (1,0) [0|3] ""  ChargePole
+
+BO_ 2552099926 CSD_CHG: 8 ChargePole
+ SG_ CSD_SPN3613_CHG_Index : 32|32@1+ (1,1) [1|4294967295] ""  BMS
+ SG_ CSD_SPN3612_E_Out : 16|16@1+ (0.1,0) [0|1000] "kWh"  BMS
+ SG_ CSD_SPN3611_Time_Charged : 0|16@1+ (1,0) [0|600] "min"  BMS
+
+BO_ 2551994100 BSD_BCU: 7 BMS
+ SG_ BSD_SPN3605_T_Max : 48|8@1+ (1,-50) [-50|200] "C"  ChargePole
+ SG_ BSD_SPN3604_T_Min : 40|8@1+ (1,-50) [-50|200] "C"  ChargePole
+ SG_ BSD_SPN3603_Ucell_Max : 24|16@1+ (0.01,0) [0|24] "V"  ChargePole
+ SG_ BSD_SPN3602_Ucell_Min : 8|16@1+ (0.01,0) [0|24] "V"  ChargePole
+ SG_ BSD_SPN3601_SOC_Final : 0|8@1+ (1,0) [0|100] "%"  ChargePole
+
+BO_ 2417685590 CST_CHG: 4 ChargePole
+ SG_ CST_SPN3521_Stop_Reason_BMSStop : 6|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3523_Stop_Fault_U : 26|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3523_Stop_Fault_Mismatch : 24|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_T_Inter : 12|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_T_CHG : 8|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_Other : 18|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_EmerStop : 16|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_Deliver : 14|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3522_Stop_Fault_CHGCnnt : 10|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3521_Stop_Reason_Manual : 2|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3521_Stop_Reason_Fault : 4|2@1+ (1,0) [0|3] ""  BMS
+ SG_ CST_SPN3521_Stop_Reason_Auto : 0|2@1+ (1,0) [0|3] ""  BMS
+
+BO_ 2417579764 BST_BCU: 4 BMS
+ SG_ BST_SPN3512_Stop_Fault_HVRelay : 18|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_CC2 : 20|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3511_Stop_Reason_CHGStop : 6|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3513_Stop_Fault_U : 26|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3513_Stop_Fault_I : 24|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_T : 16|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_Other : 22|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_Iso : 8|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_OutCnnt : 10|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_BCUcompo : 12|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3512_Stop_Fault_ChgCnnt : 14|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3511_Stop_Reason_Ucell : 4|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3511_Stop_Reason_U : 2|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BST_SPN3511_Stop_Reason_SOC : 0|2@1+ (1,0) [0|3] ""  ChargePole
+
+BO_ 2551404276 BSM_BCU: 7 BMS
+ SG_ BSM_SPN3096_Chg_Enable : 52|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3095_OutConnector_State : 50|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3094_Iso_State : 48|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3093_T_Warn : 46|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3092_I_Warn : 44|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3091_SOC_Warn : 42|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3090_Ucell_Warn : 40|2@1+ (1,0) [0|3] ""  ChargePole
+ SG_ BSM_SPN3089_T_Min_Index : 32|8@1+ (1,1) [1|128] ""  ChargePole
+ SG_ BSM_SPN3088_T_Min : 24|8@1+ (1,-50) [-50|200] "C"  ChargePole
+ SG_ BSM_SPN3087_T_Max_Index : 16|8@1+ (1,1) [1|128] ""  ChargePole
+ SG_ BSM_SPN3086_T_Max : 8|8@1+ (1,-50) [-50|200] "C"  ChargePole
+ SG_ BSM_SPN3085_Ucell_Max_Index : 0|8@1+ (1,1) [1|256] ""  ChargePole
+
+BO_ 2551379030 CCS_CHG: 8 ChargePole
+ SG_ CCS_SPN3081_U_Out : 0|16@1+ (0.1,0) [0|1000] "V"  BMS
+ SG_ CCS_SPN3082_I_Out : 16|16@1+ (0.1,-400) [-400|400] "A"  BMS
+ SG_ CCS_SPN3083_Time_Charged : 32|16@1+ (1,0) [0|600] "min"  BMS
+ SG_ CCS_SPN3929_Chg_enable : 48|2@1+ (1,0) [0|3] ""  BMS
+
+BO_ 2551207668 BCL_BCU: 5 BMS
+ SG_ BCL_SPN3074_ChgMode : 32|8@1+ (1,0) [0|255] ""  ChargePole
+ SG_ BCL_SPN3073_I_Req : 16|16@1+ (0.1,-400) [-400|0] "A"  ChargePole
+ SG_ BCL_SPN3072_U_Req : 0|16@1+ (0.1,0) [0|1000] "V"  ChargePole
+
+
+
+CM_ "20170627
+1、重新给所有的信号命名，便于理解
+2、修改电流的初始值为0（以前为-400）
+3、修正BRM多帧报文中的问题，新增BMS版本信息（可选），修改BRM长度为49
+4、修正RTS、RTS_CTS、RTS_DT的数据的初始值为0xFF
+5、修正BST报文，新增充电机主动中止、高压继电器故障、CC2检测点电压故障、其他故障位变更";
+CM_ SG_ 2552714996 BHM_SPN2601_Ubat_Max_Permit "最高允许充电总电压";
+CM_ SG_ 2552689750 CHM_SPN2600_Comm_Ver "充电通讯协议版本";
+CM_ SG_ 2617661172 BCP_SPN2816_Ucell_Max_Permit "单体动力蓄电池最高允许充电电压";
+CM_ SG_ 2617661172 BCP_SPN2817_I_Max_Permit "最高允许充电电流";
+CM_ SG_ 2617661172 BCP_SPN2818_kWh_Nom "动力蓄电池标称总能量";
+CM_ SG_ 2617661172 BCP_SPN2819_U_Max_Permit "最高允许充电总电压";
+CM_ SG_ 2617661172 BCP_SPN2820_T_Max_Permit "最高允许动力蓄电池温度";
+CM_ SG_ 2617661172 BCP_SPN2821_SOC "整车动力蓄电池荷电状态";
+CM_ SG_ 2617661172 BCP_SPN2822_U "整车动力蓄电池总电压";
+CM_ SG_ 2618382068 BCS_SPN3075_U_Mea "充电电压测量值";
+CM_ SG_ 2618382068 BCS_SPN3076_I_Mea "充电电流测量值";
+CM_ SG_ 2618382068 BCS_SPN3077_Ucell_Max "最高单体动力蓄电池电压";
+CM_ SG_ 2618382068 BCS_SPN3077_Ucell_Max_Grp "最高单体动力蓄电池电压所在组号";
+CM_ SG_ 2618382068 BCS_SPN3078_SOC "当前荷电状态";
+CM_ SG_ 2618382068 BCS_SPN3079_Time_Remain "估算剩余充电时间";
+CM_ SG_ 2416637014 CRO_SPN2830_CHG_Ready "充电机输出准备就绪报文";
+CM_ SG_ 2416531188 BRO_SPN2829_BCU_Ready "BCU充电准备就绪报文";
+CM_ SG_ 2550723670 CML_SPN2827_I_Min_Out "充电机最小输出电流";
+CM_ SG_ 2550723670 CML_SPN2826_I_Max_Out "充电机最大输出电流";
+CM_ SG_ 2550723670 CML_SPN2825_U_Min_Out "充电机最低输出电压";
+CM_ SG_ 2550723670 CML_SPN2824_U_Max_Out "充电机最高输出电压";
+CM_ SG_ 2617399028 BRM_SPN2565_Ver "BCU通信协议版本号";
+CM_ SG_ 2617399028 BRM_SPN2566_Bat_Type "电池类型";
+CM_ SG_ 2617399028 BRM_SPN2567_Cap_Nom "整车动力蓄电池系统额定容量";
+CM_ SG_ 2617399028 BRM_SPN2568_U_Nom "整车动力蓄电池系统额定总电压";
+CM_ SG_ 2550264918 CRM_SPN2562_CHG_Loc "充电机/充电站所在区域编码";
+CM_ SG_ 2550264918 CRM_SPN2561_CHG_Index "充电机编号";
+CM_ SG_ 2550264918 CRM_SPN2560_Ack "辨识结果";
+CM_ SG_ 2283795542 CEM_other "其他";
+CM_ SG_ 2283795542 CEM_SPN3927_Timeout_BSD "接收BCU充电统计报文超时";
+CM_ SG_ 2283795542 CEM_SPN3926_Timeout_BST "接收BCU中止充电报文超时";
+CM_ SG_ 2283795542 CEM_SPN3925_Timeout_BCL "接收电池充电要求报文超时";
+CM_ SG_ 2283795542 CEM_SPN3924_Timeout_BCS "接收电池充电总状态报文超时";
+CM_ SG_ 2283795542 CEM_SPN3923_Timeout_BRO "接收BCU完成充电准备报文超时";
+CM_ SG_ 2283795542 CEM_SPN3922_Timeout_BCP "接收电池充电参数报文超时";
+CM_ SG_ 2283795542 CEM_SPN3921_Timeout_BRM "接收BCU和车辆的辨识报文超时";
+CM_ SG_ 2283689716 BEM_other "其他";
+CM_ SG_ 2283689716 BEM_SPN3907_Timeout_CSD "接收充电机充电统计报文超时";
+CM_ SG_ 2283689716 BEM_SPN3906_Timeout_CST "接收充电机中止充电报文超时";
+CM_ SG_ 2283689716 BEM_SPN3905_Timeout_CCS "接收充电机充电状态报文超时";
+CM_ SG_ 2283689716 BEM_SPN3904_Timeout_CRO "接收充电机完成充电准备报文超时";
+CM_ SG_ 2283689716 BEM_SPN3903_Timeout_CTS_CML "接收充电机的时间同步和充电机最大输出能力报文超时";
+CM_ SG_ 2283689716 BEM_SPN3902_Timeout_SPN2560_0xAA "接收SPN2560=0xAA的充电机辨识报文超时";
+CM_ SG_ 2283689716 BEM_SPN3901_Timeout_SPN2560_0x00 "接收SPN2560=0x00的充电机辨识报文超时";
+CM_ SG_ 2552099926 CSD_SPN3613_CHG_Index "充电机编号";
+CM_ SG_ 2552099926 CSD_SPN3612_E_Out "输出能量";
+CM_ SG_ 2552099926 CSD_SPN3611_Time_Charged "累计充电时间";
+CM_ SG_ 2551994100 BSD_SPN3605_T_Max "动力蓄电池最高温度";
+CM_ SG_ 2551994100 BSD_SPN3604_T_Min "动力蓄电池最低温度";
+CM_ SG_ 2551994100 BSD_SPN3603_Ucell_Max "动力蓄电池单体最高电压";
+CM_ SG_ 2551994100 BSD_SPN3602_Ucell_Min "动力蓄电池单体最低电压";
+CM_ SG_ 2551994100 BSD_SPN3601_SOC_Final "中止荷电状态SOC";
+CM_ SG_ 2417685590 CST_SPN3521_Stop_Reason_BMSStop "充电机中止充电原因
+BMS主动中止";
+CM_ SG_ 2417685590 CST_SPN3523_Stop_Fault_U "充电机中止充电错误原因
+电压异常";
+CM_ SG_ 2417685590 CST_SPN3523_Stop_Fault_Mismatch "充电机中止充电错误原因
+电流不匹配";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_T_Inter "充电机中止充电故障原因
+充电机内部过温";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_T_CHG "充电机中止充电故障原因
+充电机过温";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_Other "充电机中止充电故障原因
+其他故障";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_EmerStop "充电机中止充电故障原因
+充电机急停";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_Deliver "充电机中止充电故障原因
+电量不能传送";
+CM_ SG_ 2417685590 CST_SPN3522_Stop_Fault_CHGCnnt "充电机中止充电故障原因
+充电连接器故障";
+CM_ SG_ 2417685590 CST_SPN3521_Stop_Reason_Manual "充电机中止充电原因
+人工中止";
+CM_ SG_ 2417685590 CST_SPN3521_Stop_Reason_Fault "充电机中止充电原因
+故障中止";
+CM_ SG_ 2417685590 CST_SPN3521_Stop_Reason_Auto "充电机中止充电原因
+达到充电机设定条件中止";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_HVRelay "BCU中止充电故障原因
+高压继电器故障";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_CC2 "BCU中止充电故障原因
+检测点2电压检测故障";
+CM_ SG_ 2417579764 BST_SPN3511_Stop_Reason_CHGStop "BCU中止充电原因
+充电机主动中止";
+CM_ SG_ 2417579764 BST_SPN3513_Stop_Fault_U "BCU中止充电错误原因
+电压异常";
+CM_ SG_ 2417579764 BST_SPN3513_Stop_Fault_I "BCU中止充电错误原因
+电流过大";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_T "BCU中止充电故障原因
+电池组温度过高";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_Other "BCU中止充电故障原因
+其他故障";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_Iso "BCU中止充电故障原因
+绝缘故障";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_OutCnnt "BCU中止充电故障原因
+输出连接器过温故障";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_BCUcompo "BCU中止充电故障原因
+BCU元件过温";
+CM_ SG_ 2417579764 BST_SPN3512_Stop_Fault_ChgCnnt "BCU中止充电故障原因
+充电连接器故障";
+CM_ SG_ 2417579764 BST_SPN3511_Stop_Reason_Ucell "BCU中止充电原因
+达到单体电压的设定值";
+CM_ SG_ 2417579764 BST_SPN3511_Stop_Reason_U "BCU中止充电原因
+达到总电压的设定值";
+CM_ SG_ 2417579764 BST_SPN3511_Stop_Reason_SOC "BCU中止充电原因
+达到所需SOC目标值";
+CM_ SG_ 2551404276 BSM_SPN3096_Chg_Enable "充电允许";
+CM_ SG_ 2551404276 BSM_SPN3095_OutConnector_State "动力蓄电池组输出连接器连接状态";
+CM_ SG_ 2551404276 BSM_SPN3094_Iso_State "动力蓄电池绝缘状态";
+CM_ SG_ 2551404276 BSM_SPN3093_T_Warn "动力蓄电池温度过高";
+CM_ SG_ 2551404276 BSM_SPN3092_I_Warn "动力蓄电池充电过电流";
+CM_ SG_ 2551404276 BSM_SPN3091_SOC_Warn "整车动力蓄电池荷电状态SOC";
+CM_ SG_ 2551404276 BSM_SPN3090_Ucell_Warn "单体动力蓄电池电压";
+CM_ SG_ 2551404276 BSM_SPN3089_T_Min_Index "最低动力蓄电池温度检测点编号";
+CM_ SG_ 2551404276 BSM_SPN3088_T_Min "最低动力蓄电池温度";
+CM_ SG_ 2551404276 BSM_SPN3087_T_Max_Index "最高温度检测点编号";
+CM_ SG_ 2551404276 BSM_SPN3086_T_Max "最高动力蓄电池温度";
+CM_ SG_ 2551404276 BSM_SPN3085_Ucell_Max_Index "最高单体动力蓄电池电压所在编号";
+CM_ SG_ 2551379030 CCS_SPN3081_U_Out "电压输出值";
+CM_ SG_ 2551379030 CCS_SPN3082_I_Out "电流输出值";
+CM_ SG_ 2551379030 CCS_SPN3083_Time_Charged "累计充电时间";
+CM_ SG_ 2551379030 CCS_SPN3929_Chg_enable "充电允许";
+CM_ SG_ 2551207668 BCL_SPN3074_ChgMode "充电模式";
+CM_ SG_ 2551207668 BCL_SPN3073_I_Req "电流需求";
+CM_ SG_ 2551207668 BCL_SPN3072_U_Req "电压需求";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","Dynamic","OnChange","Opening","NoMsgSendType","not_used";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "SAE_Document" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" INT -2147483648 2147483647;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_DEF_DEF_  "SAE_Document" "";
+BA_DEF_DEF_  "GenSigStartValue" -2147483648;
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_ "GenMsgCycleTime" BO_ 2632668916 10;
+BA_ "GenMsgSendType" BO_ 2632668916 4;
+BA_ "VFrameFormat" BO_ 2632668916 3;
+BA_ "GenMsgCycleTime" BO_ 2632774742 10;
+BA_ "GenMsgSendType" BO_ 2632774742 4;
+BA_ "VFrameFormat" BO_ 2632774742 3;
+BA_ "GenMsgCycleTime" BO_ 2632734452 10;
+BA_ "GenMsgSendType" BO_ 2632734452 4;
+BA_ "VFrameFormat" BO_ 2632734452 3;
+BA_ "GenMsgCycleTime" BO_ 2552714996 250;
+BA_ "GenMsgSendType" BO_ 2552714996 4;
+BA_ "VFrameFormat" BO_ 2552714996 3;
+BA_ "GenMsgCycleTime" BO_ 2552689750 250;
+BA_ "GenMsgSendType" BO_ 2552689750 4;
+BA_ "VFrameFormat" BO_ 2552689750 3;
+BA_ "SAE_Document" BO_ 2617661172 "J1939-71";
+BA_ "GenMsgCycleTime" BO_ 2617661172 500;
+BA_ "GenMsgSendType" BO_ 2617661172 4;
+BA_ "VFrameFormat" BO_ 2617661172 3;
+BA_ "SAE_Document" BO_ 2618382068 "J1939-71";
+BA_ "GenMsgCycleTime" BO_ 2618382068 250;
+BA_ "GenMsgSendType" BO_ 2618382068 4;
+BA_ "VFrameFormat" BO_ 2618382068 3;
+BA_ "GenMsgCycleTime" BO_ 2416637014 250;
+BA_ "GenMsgSendType" BO_ 2416637014 4;
+BA_ "VFrameFormat" BO_ 2416637014 3;
+BA_ "GenMsgCycleTime" BO_ 2416531188 250;
+BA_ "GenMsgSendType" BO_ 2416531188 4;
+BA_ "VFrameFormat" BO_ 2416531188 3;
+BA_ "GenMsgCycleTime" BO_ 2550723670 250;
+BA_ "GenMsgSendType" BO_ 2550723670 4;
+BA_ "VFrameFormat" BO_ 2550723670 3;
+BA_ "GenMsgCycleTime" BO_ 2550658134 500;
+BA_ "GenMsgSendType" BO_ 2550658134 4;
+BA_ "VFrameFormat" BO_ 2550658134 3;
+BA_ "SAE_Document" BO_ 2617399028 "J1939-71";
+BA_ "GenMsgCycleTime" BO_ 2617399028 250;
+BA_ "GenMsgSendType" BO_ 2617399028 4;
+BA_ "VFrameFormat" BO_ 2617399028 3;
+BA_ "GenMsgCycleTime" BO_ 2550264918 250;
+BA_ "GenMsgSendType" BO_ 2550264918 4;
+BA_ "VFrameFormat" BO_ 2550264918 3;
+BA_ "GenMsgCycleTime" BO_ 2283795542 250;
+BA_ "GenMsgSendType" BO_ 2283795542 4;
+BA_ "VFrameFormat" BO_ 2283795542 3;
+BA_ "GenMsgCycleTime" BO_ 2283689716 250;
+BA_ "GenMsgSendType" BO_ 2283689716 4;
+BA_ "VFrameFormat" BO_ 2283689716 3;
+BA_ "GenMsgCycleTime" BO_ 2552099926 250;
+BA_ "GenMsgSendType" BO_ 2552099926 4;
+BA_ "VFrameFormat" BO_ 2552099926 3;
+BA_ "GenMsgCycleTime" BO_ 2551994100 250;
+BA_ "GenMsgSendType" BO_ 2551994100 4;
+BA_ "VFrameFormat" BO_ 2551994100 3;
+BA_ "GenMsgCycleTime" BO_ 2417685590 10;
+BA_ "GenMsgSendType" BO_ 2417685590 4;
+BA_ "VFrameFormat" BO_ 2417685590 3;
+BA_ "GenMsgCycleTime" BO_ 2417579764 10;
+BA_ "GenMsgSendType" BO_ 2417579764 4;
+BA_ "VFrameFormat" BO_ 2417579764 3;
+BA_ "GenMsgCycleTime" BO_ 2551404276 250;
+BA_ "GenMsgSendType" BO_ 2551404276 4;
+BA_ "VFrameFormat" BO_ 2551404276 3;
+BA_ "GenMsgCycleTime" BO_ 2551379030 50;
+BA_ "GenMsgSendType" BO_ 2551379030 4;
+BA_ "VFrameFormat" BO_ 2551379030 3;
+BA_ "GenMsgCycleTime" BO_ 2551207668 50;
+BA_ "GenMsgSendType" BO_ 2551207668 4;
+BA_ "SAE_Document" BO_ 2551207668 "";
+BA_ "VFrameFormat" BO_ 2551207668 3;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT8 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT7 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT6 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT5 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT4 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT3 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT2 255;
+BA_ "GenSigStartValue" SG_ 2632668916 RTS_DT1 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS8 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS7 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS6 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS5 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS4 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS3 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS2 255;
+BA_ "GenSigStartValue" SG_ 2632774742 RTS_CTS1 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS8 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS7 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS6 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS5 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS4 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS3 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS2 255;
+BA_ "GenSigStartValue" SG_ 2632734452 RTS1 255;
+BA_ "GenSigStartValue" SG_ 2552714996 BHM_SPN2601_Ubat_Max_Permit 0;
+BA_ "GenSigStartValue" SG_ 2552689750 CHM_SPN2600_Comm_Ver 0;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2816_Ucell_Max_Permit 0;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2817_I_Max_Permit 4000;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2818_kWh_Nom 0;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2819_U_Max_Permit 0;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2820_T_Max_Permit 50;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2821_SOC 0;
+BA_ "GenSigStartValue" SG_ 2617661172 BCP_SPN2822_U 0;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3075_U_Mea 0;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3076_I_Mea 4000;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3077_Ucell_Max 0;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3077_Ucell_Max_Grp 0;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3078_SOC 0;
+BA_ "GenSigStartValue" SG_ 2618382068 BCS_SPN3079_Time_Remain 0;
+BA_ "GenSigStartValue" SG_ 2416637014 CRO_SPN2830_CHG_Ready 0;
+BA_ "GenSigStartValue" SG_ 2416531188 BRO_SPN2829_BCU_Ready 0;
+BA_ "GenSigStartValue" SG_ 2550723670 CML_SPN2827_I_Min_Out 4000;
+BA_ "GenSigStartValue" SG_ 2550723670 CML_SPN2826_I_Max_Out 4000;
+BA_ "GenSigStartValue" SG_ 2550723670 CML_SPN2825_U_Min_Out 0;
+BA_ "GenSigStartValue" SG_ 2550723670 CML_SPN2824_U_Max_Out 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_YearThousand 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_YearTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_YearHundred 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Year 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_SecondTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Second 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_MonthTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Month 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_MinuteTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Minute 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_HourTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Hour 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_DayTen 0;
+BA_ "GenSigStartValue" SG_ 2550658134 CTS_SPN2823_SYNC_Day 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2576_BMSVer_Year 65535;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2576_BMSVer_Version 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2576_BMSVer_Reserver 16777215;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2576_BMSVer_Month 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2576_BMSVer_Day 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN1 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN2 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN3 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN4 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN5 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN6 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN7 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN8 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN9 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN10 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN11 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN12 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN13 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN14 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN15 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN16 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2575_VIN17 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2574_BMSSW_Reserved 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2572_PackChgCnt 16777215;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2573_PackRight 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2571_PackDay 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2571_PackMonth 255;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2571_PackYear 250;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2570_PackSN 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2569_BatFactory 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2565_Ver 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2566_Bat_Type 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2567_Cap_Nom 0;
+BA_ "GenSigStartValue" SG_ 2617399028 BRM_SPN2568_U_Nom 0;
+BA_ "GenSigStartValue" SG_ 2550264918 CRM_SPN2562_CHG_Loc 0;
+BA_ "GenSigStartValue" SG_ 2550264918 CRM_SPN2561_CHG_Index 1;
+BA_ "GenSigStartValue" SG_ 2550264918 CRM_SPN2560_Ack 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_other 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3927_Timeout_BSD 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3926_Timeout_BST 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3925_Timeout_BCL 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3924_Timeout_BCS 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3923_Timeout_BRO 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3922_Timeout_BCP 0;
+BA_ "GenSigStartValue" SG_ 2283795542 CEM_SPN3921_Timeout_BRM 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_other 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3907_Timeout_CSD 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3906_Timeout_CST 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3905_Timeout_CCS 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3904_Timeout_CRO 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3903_Timeout_CTS_CML 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3902_Timeout_SPN2560_0xAA 0;
+BA_ "GenSigStartValue" SG_ 2283689716 BEM_SPN3901_Timeout_SPN2560_0x00 0;
+BA_ "GenSigStartValue" SG_ 2552099926 CSD_SPN3613_CHG_Index 0;
+BA_ "GenSigStartValue" SG_ 2552099926 CSD_SPN3612_E_Out 0;
+BA_ "GenSigStartValue" SG_ 2552099926 CSD_SPN3611_Time_Charged 0;
+BA_ "GenSigStartValue" SG_ 2551994100 BSD_SPN3605_T_Max 50;
+BA_ "GenSigStartValue" SG_ 2551994100 BSD_SPN3604_T_Min 50;
+BA_ "GenSigStartValue" SG_ 2551994100 BSD_SPN3603_Ucell_Max 0;
+BA_ "GenSigStartValue" SG_ 2551994100 BSD_SPN3602_Ucell_Min 0;
+BA_ "GenSigStartValue" SG_ 2551994100 BSD_SPN3601_SOC_Final 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3521_Stop_Reason_BMSStop 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3523_Stop_Fault_U 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3523_Stop_Fault_Mismatch 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_T_Inter 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_T_CHG 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_Other 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_EmerStop 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_Deliver 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3522_Stop_Fault_CHGCnnt 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3521_Stop_Reason_Manual 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3521_Stop_Reason_Fault 0;
+BA_ "GenSigStartValue" SG_ 2417685590 CST_SPN3521_Stop_Reason_Auto 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_HVRelay 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_CC2 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3511_Stop_Reason_CHGStop 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3513_Stop_Fault_U 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3513_Stop_Fault_I 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_T 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_Other 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_Iso 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_OutCnnt 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_BCUcompo 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3512_Stop_Fault_ChgCnnt 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3511_Stop_Reason_Ucell 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3511_Stop_Reason_U 0;
+BA_ "GenSigStartValue" SG_ 2417579764 BST_SPN3511_Stop_Reason_SOC 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3096_Chg_Enable 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3095_OutConnector_State 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3094_Iso_State 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3093_T_Warn 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3092_I_Warn 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3091_SOC_Warn 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3090_Ucell_Warn 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3089_T_Min_Index 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3088_T_Min 50;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3087_T_Max_Index 0;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3086_T_Max 50;
+BA_ "GenSigStartValue" SG_ 2551404276 BSM_SPN3085_Ucell_Max_Index 0;
+BA_ "GenSigStartValue" SG_ 2551379030 CCS_SPN3081_U_Out 0;
+BA_ "GenSigStartValue" SG_ 2551379030 CCS_SPN3082_I_Out 4000;
+BA_ "GenSigStartValue" SG_ 2551379030 CCS_SPN3083_Time_Charged 0;
+BA_ "GenSigStartValue" SG_ 2551379030 CCS_SPN3929_Chg_enable 0;
+BA_ "GenSigStartValue" SG_ 2551207668 BCL_SPN3074_ChgMode 0;
+BA_ "GenSigStartValue" SG_ 2551207668 BCL_SPN3073_I_Req 4000;
+BA_ "GenSigStartValue" SG_ 2551207668 BCL_SPN3072_U_Req 0;
+

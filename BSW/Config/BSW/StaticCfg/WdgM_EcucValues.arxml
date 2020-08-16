@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_Project</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>WdgM</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>WdgMConfigSet</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet</DEFINITION-REF>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMInitialMode</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMConfigSet/WdgMMode_Fast</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMMode_Fast</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMExpiredSupervisionCycleTol</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMModeId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMSupervisionCycle</DEFINITION-REF>
+                          <VALUE>0.01</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMTrigger_Fast</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMTrigger</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMTrigger/WdgMWatchDogMode</DEFINITION-REF>
+                              <VALUE>WDGIF_FAST_MODE</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMTrigger/WdgMTriggerConditionValue</DEFINITION-REF>
+                              <VALUE>50</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMTrigger/WdgMTriggerWatchDogRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMWatchdog_Internal</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Asw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Asw_5ms/WdgMCheckpoint_Asw_5ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Asw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Asw_5ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_5ms/WdgMCheckpoint_Bsw_5ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_10ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_10ms/WdgMCheckpoint_Bsw_10ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_20ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>20</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_20ms/WdgMCheckpoint_Bsw_20ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_50ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>50</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_50ms/WdgMCheckpoint_Bsw_50ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_100ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>100</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_100ms/WdgMCheckpoint_Bsw_100ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMAliveSupervision_Bsw_1000ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMSupervisionReferenceCycle</DEFINITION-REF>
+                              <VALUE>1000</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMExpectedAliveIndications</DEFINITION-REF>
+                              <VALUE>10</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMaxMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMMinMargin</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMAliveSupervision/WdgMAliveSupervisionCheckpointRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_1000ms/WdgMCheckpoint_Bsw_1000ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_5ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_10ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_10ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_20ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_20ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_50ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_50ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_100ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_100ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMLocalStatusParams_Bsw_1000ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMFailedAliveSupervisionRefCycleTol</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <REFERENCE-VALUES>
+                            <ECUC-REFERENCE-VALUE>
+                              <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMConfigSet/WdgMMode/WdgMLocalStatusParams/WdgMLocalStatusSupervisedEntityRef</DEFINITION-REF>
+                              <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_1000ms</VALUE-REF>
+                            </ECUC-REFERENCE-VALUE>
+                          </REFERENCE-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>WdgMGeneral</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMVersionInfoApi</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMDevErrorDetect</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMRbDebugOptionEnable</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMRbDeadlineTimeOutDetect</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMRbDeadlineTimerSelection</DEFINITION-REF>
+                      <VALUE>AUTOSAR_OS_TIMER</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMDefensiveBehavior</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMDemStoppedSupervisionReport</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMImmediateReset</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMOffModeEnabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMRbInterruptLockDisable</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMRbRteDisabled</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMWatchdog_Internal</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMWatchdog</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMWatchdog/WdgMWatchdogName</DEFINITION-REF>
+                          <VALUE>WdgMWatchdog_Internal</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMWatchdog/WdgMWatchdogDeviceRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgIf/WdgIfDevice</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMCallerIds</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMCallerIds</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMCallerIds/WdgMCallerId</DEFINITION-REF>
+                          <VALUE>42</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Asw_5ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Asw_5ms/WdgMCheckpoint_Asw_5ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Asw_5ms/WdgMCheckpoint_Asw_5ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Asw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint/WdgMCheckpointId</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_5ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_5ms/WdgMCheckpoint_Bsw_5ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_5ms/WdgMCheckpoint_Bsw_5ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_5ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint/WdgMCheckpointId</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_10ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_10ms/WdgMCheckpoint_Bsw_10ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_10ms/WdgMCheckpoint_Bsw_10ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_10ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint/WdgMCheckpointId</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_20ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_20ms/WdgMCheckpoint_Bsw_20ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_20ms/WdgMCheckpoint_Bsw_20ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_20ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint/WdgMCheckpointId</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_50ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_50ms/WdgMCheckpoint_Bsw_50ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_50ms/WdgMCheckpoint_Bsw_50ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_50ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_100ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_100ms/WdgMCheckpoint_Bsw_100ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_100ms/WdgMCheckpoint_Bsw_100ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_100ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>WdgMAliveSupervisedEntity_Bsw_1000ms</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMSupervisedEntityId</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointInitialRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_1000ms/WdgMCheckpoint_Bsw_1000ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-SYMBOLIC-NAME-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMInternalCheckpointFinalRef</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/WdgM/WdgMGeneral/WdgMAliveSupervisedEntity_Bsw_1000ms/WdgMCheckpoint_Bsw_1000ms</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMOSCounter</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/ETAS_Project/EcucModuleConfigurationValuess/Os/Rte_TickCounter</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>WdgMCheckpoint_Bsw_1000ms</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_WdgM/EcucModuleDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DEFINITION-REF>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

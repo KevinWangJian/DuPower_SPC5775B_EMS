@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Dio</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Dio</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">MCAL Digital I/O</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the MCAL module for digital inputs and outputs.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>0.1.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2011-04-19</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Dio</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DioConfig</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Configuration data set</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Defines one data set of post-build configuration. Which of these data sets is actually active is controlled by EcuM. Data sets can only be switched at initialization time.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DioPort</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Port</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of a single digital input/output port, consisting of channels and possible channel groups.
+
+This shortname is only needed for Dio_WritePort and Dio_ReadPort  API 
+
+Signal name is configured as the short name here.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>DioPortId</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Port ID</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Numeric identifier of the Dio port. Not all MCU ports may be used for Dio, thus there may be &quot;gaps&quot; in the list of all IDs. This value will be assigned to the Dio port symbolic name (i.e. the short name of the DioPort container indirectly).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>4294967295</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-STRING-PARAM-DEF>
+                          <SHORT-NAME>DioPortRbConnectedTo</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ConnectedTo</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Customer specific name of Hardware port.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>RB:0.1.0:2013-10-30</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                        </ECUC-STRING-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>DioChannel</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Channel</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of an individual Dio channel. Besides a HW specific channel name which is typically fixed for a specific micro controller, additional symbolic names can be defined per channel.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DioChannelId</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Channel ID</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Numeric identifier of the Dio channel.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-STRING-PARAM-DEF>
+                              <SHORT-NAME>DioChannelRbConnectedTo</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Connected to</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Physical ID of Logical channel . Create the Mapping with below format</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:0.1.0:2013-10-30</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                            </ECUC-STRING-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>DioChannelGroup</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Channel Group</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of a group of Dio channels. A channel group represents several adjoining Dio channels represented by a logical group.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-STRING-PARAM-DEF>
+                              <SHORT-NAME>DioChannelGroupIdentification</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Identification</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">The Dio channel group is identified in Dio API by a pointer to a data structure (of type Dio_ChannelGroupType). That data structure contains the channel group information. This parameter contains the code fragment that has to be inserted in the API call of the calling module to get the address of the variable in memory which holds the channel group information.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                            </ECUC-STRING-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DioPortMask</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Port mask</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This shall be the mask which defines the positions of the channel group. The channels shall consist of adjoining bits in the same port. The data type depends on the port width.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DioPortOffset</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Port offset</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">The position of the channel group on the port, counted from the LSB. This value can be derived from DioPortMask: calculationFormula = position of the first bit of DioPortMask which is set to &apos;1&apos;; counted from LSB.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>31</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DioGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">General settings</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of general aspects of the Dio module.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>Dio0RbMachineType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dio device Type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select the families for which Dio shall be compiled. If Mcu module is available in the project, this is parameter can be left without configuring. When Mcu is integrated , the device type will be extracted from Mcu modfule itself. If Mcu module is not available . this parameter is mandatory. 
+
+If device type is configured in both Mcu and Dio, the one configured in Mcu module will be assumed as device type</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Type1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RH850 F1L devices</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Type2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RH850 R1L devices</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>Type3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RH850 P1X-C devices</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio1RbReadChannelApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read channel API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the ReadChannel() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio2RbWriteChannelApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write channel API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the WriteChannel() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio3RbReadPortApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read Port API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the ReadPort() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio4RbWritePortApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write Port API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the WritePort() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio5RbReadChannelGroupApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read Channel Group API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the ReadChannelGroup() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>Dio6RbWriteChannelGroupApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write Channel Group API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the WriteChannelGroup() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:0.1.0:2014-09-22</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DioDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Development error detection</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the detection and notification of development errors. If this parameter is enabled, then extended error checking is performed during runtime; any errors detected by these checks are reported to the Dem module. This feature should be switched off in series software.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DioFlipChannelApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Flip channel API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the FlipChannel() API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DioVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Version information API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables/disables the GetVersionInfo() API. This functionality can be used e.g. for providing version information to test equipment.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

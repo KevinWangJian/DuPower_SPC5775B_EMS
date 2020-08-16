@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+
+	<ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+       <USED-LANGUAGES>
+          <L-10 xml:space="default" L="EN">EN</L-10>
+       </USED-LANGUAGES>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2017-01-13</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+	<AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_LinSM</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                    <ELEMENTS>
+                        <!-- Module Definition: LinSM -->
+                        <ECUC-MODULE-DEF>
+                           <SHORT-NAME>LinSM</SHORT-NAME>
+                            <LONG-NAME>
+                            <L-4 L="EN">Lin State manager Module</L-4>
+                              </LONG-NAME>
+                           <DESC>
+                                <L-2 L="EN">Configuration of the Lin State Manager module(with vendor specific enhancements of RB).</L-2>
+                           </DESC>
+                             <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                           <ADMIN-DATA>
+                              <DOC-REVISIONS>
+                                 <DOC-REVISION>
+                                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                                    <DATE>2014-10-31</DATE>
+                                 </DOC-REVISION>
+                                    <DOC-REVISION>
+						                <REVISION-LABEL>2.0.0</REVISION-LABEL>
+						                <ISSUED-BY>RB</ISSUED-BY>
+						                <DATE>2017-01-13</DATE>
+						            </DOC-REVISION>
+                              </DOC-REVISIONS>
+                           </ADMIN-DATA>
+                           <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+							<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/LinSM</REFINED-MODULE-DEF-REF>
+                           <SUPPORTED-CONFIG-VARIANTS>
+                              <SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+                              <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                              <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                           </SUPPORTED-CONFIG-VARIANTS>
+                            <CONTAINERS>
+                              <!-- Container Definition: LinSMConfigSet -->
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                     <SHORT-NAME>LinSMConfigSet</SHORT-NAME>
+                                     <DESC>
+                                        <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR LinSm module.</L-2>
+                                     </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00207</RELATED-TRACE-ITEM-REF>
+                                     <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                    <PARAMETERS>
+                                        <!-- PARAMETER DEFINITION: LinSMModeRequestRepetitionMax -->
+                                         <ECUC-INTEGER-PARAM-DEF>
+                                            <SHORT-NAME>LinSMModeRequestRepetitionMax</SHORT-NAME>
+                                            <DESC>
+                                               <L-2 L="EN">Specifies the maximal amount of mode request repetitions without a respective mode indication from the LinIf module until the LinSM module reports a Default Error to the Det and tries to go back to no communication.This parameter is not supported</L-2>
+                                            </DESC>
+                                            <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00208</RELATED-TRACE-ITEM-REF>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                            <SCOPE>LOCAL</SCOPE>
+                                            <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                            <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            </VALUE-CONFIG-CLASSES>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>255</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+                                    </PARAMETERS>
+                                    <SUB-CONTAINERS>
+                                        <!-- Container Definition: LinSMChannel -->
+                                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                           <SHORT-NAME>LinSMChannel</SHORT-NAME>
+                                           <DESC>
+                                              <L-2 L="EN">Describes each LIN channel the LinSM is connected to.</L-2>
+                                           </DESC>
+                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                           <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                            <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                            <PARAMETERS>
+                                              <!-- PARAMETER DEFINITION: LinSMConfirmationTimeout -->
+                                                <ECUC-FLOAT-PARAM-DEF>
+                                                     <SHORT-NAME>LinSMConfirmationTimeout</SHORT-NAME>
+                                                     <DESC>
+                                                    <L-2 L="EN">Timeout in seconds for the goto sleep and wakeup calls to LinIf. The timeout must be longer than a goto-sleep command on the bus (i.e. it is bit rate dependent).</L-2>
+                                                     </DESC>
+                                                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00144</RELATED-TRACE-ITEM-REF>
+                                                     <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                     <SCOPE>LOCAL</SCOPE>
+                                                     <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                     <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     </VALUE-CONFIG-CLASSES>
+                                                     <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                     <MAX>Inf</MAX>
+                                                     <MIN>0</MIN>
+                                                </ECUC-FLOAT-PARAM-DEF>
+					    						<!-- PARAMETER DEFINITION: LinSMSleepSupport -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                    <SHORT-NAME>LinSMSleepSupport</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Some LIN clusters does not need sleep, they will just shut off. This parameter will affect the behavior to achieve the no communication state.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    							<ORIGIN>RB:2017-01-13</ORIGIN>
+                                                    <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    </VALUE-CONFIG-CLASSES>
+                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                </ECUC-BOOLEAN-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: LinSMTransceiverPassiveMode -->
+                                                <ECUC-BOOLEAN-PARAM-DEF>
+                                                     <SHORT-NAME>LinSMTransceiverPassiveMode</SHORT-NAME>
+                                                     <DESC>
+                                                        <L-2 L="EN">Selects STANDBY (true) or SLEEP (false) transceiver mode when entering LINSM_NO_COM.</L-2>
+                                                     </DESC>
+                                                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00202</RELATED-TRACE-ITEM-REF>
+                                                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                     <SCOPE>LOCAL</SCOPE>
+                                                     <MULTIPLICITY-CONFIG-CLASSES>
+                                                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                     </MULTIPLICITY-CONFIG-CLASSES>
+                                                     <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                     <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                     <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                           <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     </VALUE-CONFIG-CLASSES>
+                                                     <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: LinSmNetworkIndex -->
+					    					    <ECUC-INTEGER-PARAM-DEF >
+                                                    <SHORT-NAME>LinSmNetworkIndex</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">This parameter holds the unique channel index value. The value shall be the same as the ComMChannelId of the ComMChannel referenced by LinSMComMNetworkHandleRef.
+					    						    	Implementation Type: NetworkHandleType</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    							<ORIGIN>RB:2016-09-21</ORIGIN>
+                                                    <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    </VALUE-CONFIG-CLASSES>
+                                                    <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                                    <WITH-AUTO>true</WITH-AUTO>
+                                                    <MAX>255</MAX>
+                                                    <MIN>0</MIN>
+                                                </ECUC-INTEGER-PARAM-DEF>
+					    						<!-- PARAMETER DEFINITION: LinSMEnableScheduleTableQueue -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                    <SHORT-NAME>LinSMEnableScheduleTableQueue</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">This parameter enables or disables of queue Handling for Run Once Schedule table per channel.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    							<ORIGIN>RB:2016-03-15</ORIGIN>
+                                                    <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    </VALUE-CONFIG-CLASSES>
+                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                    <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                                </ECUC-BOOLEAN-PARAM-DEF>
+					    						<!-- PARAMETER DEFINITION: LinSMMaxQUEUESize -->
+                                                <ECUC-INTEGER-PARAM-DEF>
+                                                    <SHORT-NAME>LinSMMaxQUEUESize</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">This parameter holds the Maximum queue size</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    							 <ORIGIN>RB:2016-03-16</ORIGIN>
+                                                    <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    </VALUE-CONFIG-CLASSES>
+                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                    <MAX>255</MAX>
+                                                    <MIN>1</MIN>
+                                                </ECUC-INTEGER-PARAM-DEF>
+                                            </PARAMETERS>
+                                            <REFERENCES>
+                                                <!-- Symbolic Name Reference Definition: LinSMComMNetworkHandleRef -->
+                                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                                   <SHORT-NAME>LinSMComMNetworkHandleRef</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">Unique handle to identify one certain LIN network. Reference to one of the network handles configured in the ComM.</L-2>
+                                                   </DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00145</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+					    					     <!-- Symbolic Name Reference Definition: LinSMChannelIndex -->
+                                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                                    <SHORT-NAME>LinSMChannelIndex</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Index of the controller. To be able to interface to the correct hw.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    					     	<ORIGIN>RB:2016-09-23</ORIGIN>
+                                                    <VALUE-CONFIG-CLASSES>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    </VALUE-CONFIG-CLASSES>
+                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfGlobalConfig/LinIfChannel</DESTINATION-REF>
+                                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                            </REFERENCES>
+                                            <SUB-CONTAINERS>
+                                                  <!-- Container Definition: LinSMSchedule -->
+                                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                                     <SHORT-NAME>LinSMSchedule</SHORT-NAME>
+                                                     <DESC>
+                                                        <L-2 L="EN">The schedule references to a schedule that is located in the LinIf configuration. Moreover, the PDU groups are located in the COM configuration. Note that there are two references to PDU groups. The simple reason is that a PDU group is only allowed to contain one direction (TX or RX).</L-2>
+                                                     </DESC>
+                                                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00146</RELATED-TRACE-ITEM-REF>
+                                                     <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                     <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                                     <MULTIPLICITY-CONFIG-CLASSES>
+                                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      </MULTIPLICITY-CONFIG-CLASSES>
+                                                      <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                     <PARAMETERS>
+                                                        <!-- PARAMETER DEFINITION: LinSMScheduleIndex -->
+                                                        <ECUC-INTEGER-PARAM-DEF>
+                                                           <SHORT-NAME>LinSMScheduleIndex</SHORT-NAME>
+                                                           <DESC>
+                                                              <L-2 L="EN">This index parameter can be used by the BswM as a  SymbolicNameReference target. The LinSM just forwards the request from the BswM to LinIf. Note that the value of the LinSMScheduleIndex shall be the same as the value from the LinIf.</L-2>
+                                                           </DESC>
+                                                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00001</RELATED-TRACE-ITEM-REF>
+                                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                           <SCOPE>LOCAL</SCOPE>
+                                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                           <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                           <VALUE-CONFIG-CLASSES>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           </VALUE-CONFIG-CLASSES>
+                                                           <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                                           <MAX>255</MAX>
+                                                           <MIN>0</MIN>
+                                                        </ECUC-INTEGER-PARAM-DEF>
+					    				       		<!-- PARAMETER DEFINITION: LinSMScheduleTablePriority -->
+					    				                <ECUC-INTEGER-PARAM-DEF>
+                                                            <SHORT-NAME>LinSMScheduleTablePriority</SHORT-NAME>
+                                                            <DESC>
+                                                            <L-2 L="EN">This parameter holds the priority of each schedule table</L-2>
+                                                            </DESC>
+                                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    				       			  <ORIGIN>RB:2016-03-15</ORIGIN>
+                                                                <VALUE-CONFIG-CLASSES>
+                                                                   <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                                   </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                   <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                   </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                   <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                   </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                </VALUE-CONFIG-CLASSES>
+                                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                            <MAX>255</MAX>
+                                                            <MIN>1</MIN>
+                                                        </ECUC-INTEGER-PARAM-DEF>
+                                                     </PARAMETERS>
+                                                     <REFERENCES>
+                                                        <!-- Symbolic Name Reference Definition: LinSMScheduleIndexRef -->
+                                                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                                           <SHORT-NAME>LinSMScheduleIndexRef</SHORT-NAME>
+                                                           <DESC>
+                                                              <L-2 L="EN">Reference to a schedule table in the LinIf configuration</L-2>
+                                                           </DESC>
+                                                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00149</RELATED-TRACE-ITEM-REF>
+                                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                           <SCOPE>LOCAL</SCOPE>
+                                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                           <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                                           <VALUE-CONFIG-CLASSES>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                           </VALUE-CONFIG-CLASSES>
+                                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/LinIf/LinIfGlobalConfig/LinIfChannel/LinIfScheduleTable</DESTINATION-REF>
+                                                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                                     </REFERENCES>
+                                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+					    				       <!-- Container Definition: LinSmDemEventParameterRefs -->
+                                                <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                                    <SHORT-NAME>LinSmDemEventParameterRefs</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                    <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+					    				       	    <!--	FC_VariationPoint_START -->
+					    				       	    <PARAMETERS>
+					    				       		    <!-- LinSMRbDynCreate_LINSM_E_CONFIRMATION_TIMEOUT-->
+					    				       		    <ECUC-ENUMERATION-PARAM-DEF>
+					    				       		    	<SHORT-NAME>LinSMRbDynCreate_LINSM_E_CONFIRMATION_TIMEOUT</SHORT-NAME>
+					    				       		    	<LONG-NAME>
+					    				       		    		<L-4 L="EN">LinSMRbDynCreate_LINSM_E_CONFIRMATION_TIMEOUT</L-4>
+					    				       		    	</LONG-NAME>
+					    				       		    	<DESC>
+					    				       		    		<L-2 L="EN">Selects the way how the LinSM DemEvents are created and referenced. If not set or set to &quot;Disabled&quot;, no such DemEvent is automatically/dynamically created. If the dynamic creation of this DemEvent is standard, the reference to this DemEvent (in parameter LINSM_E_CONFIRMATION_TIMEOUT) is also automatically created and shall therefore not be set manually.</L-2>
+					    				       		    	</DESC>
+					    				       		    	<ADMIN-DATA>
+					    				       		    		<SDGS>
+					    				       		    			<SDG GID="DemEventInfo">
+					    				       		    			<SD GID="DemEventShortNamePattern">LINSM_LinSMChannel_E_CONFIRMATION_TIMEOUT</SD>
+					    				       		    			<SD GID="DemEventLongNamePatternEn">LINSM_LinSMChannel_E_CONFIRMATION_TIMEOUT</SD>
+					    				       		    			</SDG>
+					    				       		    		</SDGS>
+					    				       		    	</ADMIN-DATA>
+					    				       		    	<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					    				       		    	<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					    				       		    	<ORIGIN>RB:2015-02-18</ORIGIN>
+					    				       		    	<VALUE-CONFIG-CLASSES>
+					    				       		    		<ECUC-VALUE-CONFIGURATION-CLASS>
+					    				       		    			<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+					    				       		    			<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+					    				       		    		</ECUC-VALUE-CONFIGURATION-CLASS>
+					    				       		    	</VALUE-CONFIG-CLASSES>
+					    				       		    	<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+					    				       		    	<DEFAULT-VALUE>Disabled</DEFAULT-VALUE>
+					    				       		    	<LITERALS>
+					    				       		    		<ECUC-ENUMERATION-LITERAL-DEF>
+					    				       		    			<SHORT-NAME>Disabled</SHORT-NAME>
+					    				       		    			<LONG-NAME>
+					    				       		    				<L-4 L="EN">Disabled</L-4>
+					    				       		    			</LONG-NAME>
+					    				       		    			<ORIGIN>BOSCH</ORIGIN>
+					    				       		    		</ECUC-ENUMERATION-LITERAL-DEF>
+					    				       		    		<ECUC-ENUMERATION-LITERAL-DEF>
+					    				       		    			<SHORT-NAME>Standard</SHORT-NAME>
+					    				       		    			<LONG-NAME>
+					    				       		    				<L-4 L="EN">Standard</L-4>
+					    				       		    			</LONG-NAME>
+					    				       		    			<ORIGIN>BOSCH</ORIGIN>
+					    				       		    		</ECUC-ENUMERATION-LITERAL-DEF>
+					    				       		    	</LITERALS>
+					    				       		    </ECUC-ENUMERATION-PARAM-DEF>
+					    				       	    </PARAMETERS>
+					    				       	    <!--	FC_VariationPoint_END -->
+                                                    <REFERENCES>
+                                                        <!-- Symbolic Name Reference Definition: LINSM_E_CONFIRMATION_TIMEOUT -->
+                                                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+                                                            <SHORT-NAME>LINSM_E_CONFIRMATION_TIMEOUT</SHORT-NAME>
+                                                            <DESC>
+                                                                <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Timeout of the callbacks from LinIf&quot; has occured.</L-2>
+                                                            </DESC>
+                                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                            <ORIGIN>RB:2016-01-01</ORIGIN>
+                                                            <VALUE-CONFIG-CLASSES>
+                                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                            </VALUE-CONFIG-CLASSES>
+                                                            <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                                    </REFERENCES>
+                                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                            </SUB-CONTAINERS>
+                                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+								    </SUB-CONTAINERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <!-- Container Definition: LinSMGeneral -->
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                     <SHORT-NAME>LinSMGeneral</SHORT-NAME>
+                                     <DESC>
+                                        <L-2 L="EN">This container contains general parameters of LIN State Manager module.</L-2>
+                                     </DESC>
+                                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00139</RELATED-TRACE-ITEM-REF>
+                                     <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                     <PARAMETERS>
+                                        <!-- PARAMETER DEFINITION: LinSMDevErrorDetect -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                           <SHORT-NAME>LinSMDevErrorDetect</SHORT-NAME>
+                                           <DESC>
+                                                    <L-2 L="EN">Switches the Development Error Detection and Notification ON or OFF.</L-2>
+                                           </DESC>
+                                           <INTRODUCTION>
+                                              <P>
+                                                 <L-1 L="EN">* true: enabled (ON).
+                                                  * false: disabled (OFF).</L-1>
+                                              </P>
+                                           </INTRODUCTION>
+                                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00206</RELATED-TRACE-ITEM-REF>
+                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                           <SCOPE>LOCAL</SCOPE>
+                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                           <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                           <VALUE-CONFIG-CLASSES>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                           </VALUE-CONFIG-CLASSES>
+                                           <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: LinSMMainProcessingPeriod -->
+                                        <ECUC-FLOAT-PARAM-DEF>
+                                           <SHORT-NAME>LinSMMainProcessingPeriod</SHORT-NAME>
+                                           <DESC>
+                                              <L-2 L="EN">Fixed period that the MainFunction shall be called.</L-2>
+                                           </DESC>
+                                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00141</RELATED-TRACE-ITEM-REF>
+                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                           <SCOPE>LOCAL</SCOPE>
+                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                           <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                           <VALUE-CONFIG-CLASSES>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                           </VALUE-CONFIG-CLASSES>
+                                           <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                           <MAX>Inf</MAX>
+                                           <MIN>0</MIN>
+                                        </ECUC-FLOAT-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: LinSMVersionInfoApi -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                           <SHORT-NAME>LinSMVersionInfoApi</SHORT-NAME>
+                                           <DESC>
+                                              <L-2 L="EN">Switches the LinSM_GetVersionInfo function ON or OFF.</L-2>
+                                           </DESC>
+                                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinSM_00140</RELATED-TRACE-ITEM-REF>
+                                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                           <SCOPE>LOCAL</SCOPE>
+                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                           <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                           <VALUE-CONFIG-CLASSES>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                           </VALUE-CONFIG-CLASSES>
+                                           <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: LinSMDSMReInitEnabled -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                           <SHORT-NAME>LinSMDSMReInitEnabled</SHORT-NAME>
+                                           <DESC>
+                                              <L-2 L="EN">Enables or disables the reporting of DEM events to DSM after the Re-initialisation of DSM has occured.</L-2>
+                                           </DESC>
+                                           <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                           <SCOPE>LOCAL</SCOPE>
+                                           <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                           <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                           <VALUE-CONFIG-CLASSES>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                              <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                              </ECUC-VALUE-CONFIGURATION-CLASS>
+                                           </VALUE-CONFIG-CLASSES>
+                                           <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+					   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>                                  
+                                     </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            </CONTAINERS>
+                        </ECUC-MODULE-DEF>
+				    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>rba_Uart</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-DEF>
+                      <SHORT-NAME>rba_Uart</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">MCAL rba_Uart Driver</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of the rba_Uart module.</L-2>
+                      </DESC>
+                      <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                      <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                          <DOC-REVISION>
+                            <REVISION-LABEL>42.1.0.0</REVISION-LABEL>
+                            <ISSUED-BY>RB</ISSUED-BY>
+                            <DATE>2016-10-05</DATE>
+                          </DOC-REVISION>
+                        </DOC-REVISIONS>
+                      </ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                      <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                      </SUPPORTED-CONFIG-VARIANTS>
+                      <CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_UartConfigSet</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Configuration Data Sets</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration parameters and sub containers of  rba_Uart module.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_UartCBCchannel</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">rba_Uart CBC</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the container of Uart CBC channel</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC0_ChannelNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC Channel number</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The used UART Hardware channel number for circular buffer implementation</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>3</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC1_PaddingByte</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_PaddingByte</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Padding byte for the data packet configured</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-STRING-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC2_CTS_PINID</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_CTS_PINID</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">CTS PINID from port</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-STRING-PARAM-DEF>
+                                <ECUC-STRING-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC3_RTS_PINID</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_RTS_PINID</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RTS PINID from port</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-STRING-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC4_Rxtimeout</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_RXTimeout</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC5_TxBlockSizeLimit</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_TxBlockSizeLimit</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC6_RxBlockSizeLimit</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_RxBlockSizeLimit</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC7_TxBufferLen</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_TxBufferLen</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC8_RxBufferLen</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_RxBufferLen</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_CBC9_RxRTSThreshold</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_CBC_RxRTSThreshold</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">RxTimeout per UartCBC_MainFunctionRx</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>rba_Uart_UCBC1_TXNotificationFunction</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart TX_CBC_notification function</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Address of transmission notification function with parameters</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-FUNCTION-NAME-DEF>
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>rba_Uart_UCBC2_RXNotificationFunction</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart RX_CBC notification function</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Address of transmission notification function with parameters</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-FUNCTION-NAME-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_Uartchannel</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">rba_Uart channel</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the container of Uart channel</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_0_ChannelNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel number</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The used UART Hardware channel number</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">In RH850P1X UART has 4 hardware channels so values from 0-3 selected</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>3</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_0_ChannelPmode</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_Channel mode</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The used UART Hardware channel Mode</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-06</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_MODE_DMA</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">DMA mode</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_1_ChannelParity</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel parity</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of required parity bits for the data</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">In RH850P1X UART Frame can have even ,odd and no parity set.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_PARITY_NONE</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">NO parity</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_PARITY_ODD</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">ODD parity</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_PARITY_EVEN</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">EVEN parity</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_2_DataBitsNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel number of data bits</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of character length for one frame in UART</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">In RH850P1X UART Character length can be 7 bits or 8 bits.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_DATA_BITS_7</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">7 bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_DATA_BITS_8</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">8 bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_3_TXPolarity</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart output Polarity</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Sets the output polarity for UART communication.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">In RH850 Output polarity can be inverted</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_TX_DATA_NOT_INVERTED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">NO Inversion</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_TX_DATA_INVERTED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Data Inverted</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_4_RXPolarity</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart input Polarity</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Sets the input polarity for UART communication.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">In RH850 input polarity can be inverted</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_RX_DATA_NOT_INVERTED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">NO Inversion</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_RX_DATA_INVERTED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Data Inverted</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_5_StopBitsNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel  number of stop bits</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Sets the stop bit length of data for UART communication.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_STOP_BITS_1</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">1 stop bit</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_STOP_BITS_2</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">2 stop bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_6_TransferDirection</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel transfer direction</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Sets the bit order of data for UART communication.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_MSB_FIRST</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">MSB First</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_LSB_FIRST</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">LSB First</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_7_Baudrate</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel baudrate</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of baudrate for UART channel</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_9600BIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">9600bps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_19_2KBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">19_2kbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_112_5KBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">112_5kbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_115_2KBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">115_2kbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_500KBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">500kbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_1MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">1Mbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_1_5MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">1_5Mbps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_2MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">2Mps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_3MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">3Mps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_3_5MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">3_5Mps baudrate</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_40MHZ_BAUDRATE_3_636MBIT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">3_636 Mbps</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_8_TXBlockSize</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel maximum TX block size</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Maximum  block size on transmission side</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_9_RXBlockSize</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel maximum RX block size</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Maximum block size on reception side</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_U1_RXDefaultState</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart RX default state</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of default state for Receive channel on UART</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_CHANNEL_RX_STARTED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Uart rx enabled</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>UART_CHANNEL_RX_STOPPED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Uart rx disabled</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_U2_ChannelTXISRON</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel TXISR</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of transmission complete ISR is ON or OFF</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_U3_RXISRON</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart channel RXISR</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of Reception complete ISR is ON or OFF</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Uart_U3_StatusISR</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart_Channel StatusISR</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of Status complete ISR is ON or OFF</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-06</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>rba_Uart_U4_TXNotificationFunction</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart TX notification function</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Address of transmission notification function with parameters</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-FUNCTION-NAME-DEF>
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>rba_Uart_U5_RXNotificationFunction</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart RX notification function</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Address of reception notification function with parameters</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-FUNCTION-NAME-DEF>
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>rba_Uart_U6_ErrorNotificationFunction</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart error notification function</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Address of error notification function with parameters</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-FUNCTION-NAME-DEF>
+                              </PARAMETERS>
+                              <SUB-CONTAINERS>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Uart_U7_TXDmaconfiqset</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart TX- DMA channel</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Configuration of DMA channels used for UART channel</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_UartDmaChannelMode</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">TX DMA mode</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of DMA channel mode</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>UART_DMA_TXMODE_ONESHOT</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">oneshot mode for DMA channel</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_UartDmaChannelNumber</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">TX DMA channel</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of DMA channel number for UART Transmission</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>15</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Uart_U8_RXDmaconfiqset</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uart RX- DMA channel</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Configuration of DMA channels used for UART channel</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_UartDmaChannelMode</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">RX DMA mode</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of DMA channel mode</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>UART_DMA_RXMODE_ONESHOT</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">oneshot mode for DMA channel</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>UART_DMA_RXMODE_FREERUNNING</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">continous mode for DMA channel</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_UartDmaChannelNumber</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">RX DMA channel</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of DMA channel number for UART Reception</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>15</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_UartGeneral</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">General Settings</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of general rba_Uart parameters.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_U1_AtleastoneDMAchannelselected</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart atleast one channel dma</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Select whether atleast one DMA channel is used or not</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_U2_GlobalTXbuffersize</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart Global TX buffer</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Global transmission buffer size</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_U3_GlobalRXbuffersize</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart Global RX buffer</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Global reception buffer size</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_U4_DeverrorON</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart Dev error detect</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Switches the Default Error Tracer (Det) detection ON or OFF.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_U5_ModuleID</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart Module ID</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selction of module ID for this component</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_U6_CBC_Support</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart CBC_Support</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Uart Circular buffer support</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_U7_CBC_FlowControl</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart CBC_FlowControl</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Uart Flowcontrol support</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_U8_CBC_BufferPadding</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Uart CBC_BufferPadding</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Uart Buffer Padding support</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-29</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CONTAINERS>
+                    </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,706 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: GW EMS BMSL
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ BMSH_Address_Copy_1 : 0|8@0+ (1,0) [0|0] "bit" Vector__XXX
+ SG_ BMSL_cell_deep_dschrg_b : 0|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_vhlChgMode : 0|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_311 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2015 Func_DiagReq: 8 GW
+ SG_ Func_DiagReq_Byte7 : 63|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte6 : 55|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte5 : 47|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte4 : 39|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte3 : 31|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte2 : 23|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte1 : 15|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ Func_DiagReq_Byte0 : 7|8@0+ (1,0) [0|0] ""  BMSL
+
+BO_ 1848 BMSL_DiagResp: 8 BMSL
+ SG_ BMSL_DiagResp_Byte7 : 63|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte6 : 55|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte5 : 47|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte4 : 39|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte3 : 31|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte2 : 23|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte1 : 15|8@0+ (1,0) [0|0] ""  GW
+ SG_ BMSL_DiagResp_Byte0 : 7|8@0+ (1,0) [0|0] ""  GW
+
+BO_ 1840 BMSL_DiagReq: 8 GW
+ SG_ BMSL_DiagReq_Byte7 : 63|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte6 : 55|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte5 : 47|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte4 : 39|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte3 : 31|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte2 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMSL_DiagReq_Byte1 : 15|8@0+ (1,0) [0|0] ""  BMSL
+ SG_ BMSL_DiagReq_Byte0 : 7|8@0+ (1,0) [0|0] ""  BMSL
+
+BO_ 502 BMSL_PAK_DATA_2: 8 BMSL
+ SG_ BMSL_pwrmon_b : 20|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_pack_2_T : 18|11@0+ (0.1,-40) [-40|140] "°„C"  EMS
+ SG_ BMSL_ign_b : 3|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_hw_ovp_actv_b : 4|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_lv_pwr_U : 39|16@0+ (0.001,0) [0|65.534] "V"  EMS
+ SG_ BMSL_pack_soc_abs_Pct : 55|8@0+ (1,0) [0|100] "%"  EMS
+ SG_ BMSL_pack_1_T : 2|11@0+ (0.1,-40) [-40|140] "°„C"  EMS
+
+BO_ 1587 BMS_DevelopMessage_TX2: 8 BMSL
+ SG_ Debug_BMSNMTimeOutTimer : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_AutoCodeSts : 53|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_ocvCheckComplete : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_BMSNWMFrameTx : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_BMSNWMFrameRxSts : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_BMSNWMRmrSts : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_BMSNMStMode : 47|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Debug_SWVisionNum : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_chgRlyCtlMode : 23|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_drvRlyCtlMode : 19|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_vhlChgMode : 15|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_vhlDrvMode : 11|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_WMDstMode : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1585 BMS_DevelopMessage_TX1: 8 BMSL
+ SG_ DebugSignal_Fault_34 m0 : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_32 m0 : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_76 m1 : 36|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_25 m0 : 41|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_159 m2 : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_103 m1 : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_47 m0 : 63|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_158 m2 : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_102 m1 : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_46 m0 : 62|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_157 m2 : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_101 m1 : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_45 m0 : 61|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_156 m2 : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_100 m1 : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_44 m0 : 60|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_99 m1 : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_155 m2 : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_43 m0 : 59|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_98 m1 : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_154 m2 : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_42 m0 : 58|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_97 m1 : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_153 m2 : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_41 m0 : 57|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_96 m1 : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_152 m2 : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_40 m0 : 56|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_95 m1 : 55|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_151 m2 : 55|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_39 m0 : 55|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_94 m1 : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_150 m2 : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_38 m0 : 54|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_93 m1 : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_149 m2 : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_37 m0 : 53|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_92 m1 : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_148 m2 : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_36 m0 : 52|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_91 m1 : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_147 m2 : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_35 m0 : 51|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_90 m1 : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_146 m2 : 50|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_89 m1 : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_145 m2 : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_33 m0 : 49|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_88 m1 : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_144 m2 : 48|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_87 m1 : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_143 m2 : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_31 m0 : 47|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_86 m1 : 46|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_142 m2 : 46|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_30 m0 : 46|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_85 m1 : 45|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_141 m2 : 45|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_29 m0 : 45|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_84 m1 : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_140 m2 : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_28 m0 : 44|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_83 m1 : 43|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_139 m2 : 43|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_27 m0 : 43|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_82 m1 : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_138 m2 : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_26 m0 : 42|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_81 m1 : 41|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_137 m2 : 41|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_80 m1 : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_136 m2 : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_24 m0 : 40|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_79 m1 : 39|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_135 m2 : 39|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_23 m0 : 39|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_78 m1 : 38|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_134 m2 : 38|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_22 m0 : 38|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_77 m1 : 37|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_133 m2 : 37|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_21 m0 : 37|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_132 m2 : 36|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_20 m0 : 36|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_131 m2 : 35|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_75 m1 : 35|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_19 m0 : 35|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_130 m2 : 34|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_74 m1 : 34|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_18 m0 : 34|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_129 m2 : 33|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_73 m1 : 33|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_17 m0 : 33|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_128 m2 : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_72 m1 : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_16 m0 : 32|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_127 m2 : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_71 m1 : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_15 m0 : 31|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_126 m2 : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_70 m1 : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_14 m0 : 30|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_125 m2 : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_69 m1 : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_13 m0 : 29|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_124 m2 : 28|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_68 m1 : 28|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_12 m0 : 28|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_123 m2 : 27|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_67 m1 : 27|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_11 m0 : 27|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_122 m2 : 26|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_66 m1 : 26|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_10 m0 : 26|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_121 m2 : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_9 m0 : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_65 m1 : 25|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_120 m2 : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_8 m0 : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_64 m1 : 24|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_119 m2 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_7 m0 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_63 m1 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_118 m2 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_62 m1 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_6 m0 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_117 m2 : 21|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_61 m1 : 21|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_5 m0 : 21|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_116 m2 : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_60 m1 : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_4 m0 : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_115 m2 : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_59 m1 : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_3 m0 : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_114 m2 : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_58 m1 : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_2 m0 : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_113 m2 : 17|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_57 m1 : 17|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_1 m0 : 17|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_112 m2 : 16|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_56 m1 : 16|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_0 m0 : 16|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_111 m2 : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_55 m1 : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_110 m2 : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_54 m1 : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_109 m2 : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_53 m1 : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_108 m2 : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_52 m1 : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_107 m2 : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_51 m1 : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_106 m2 : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_50 m1 : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_105 m2 : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_49 m1 : 9|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_104 m2 : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Fault_48 m1 : 8|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_Multiplexor m0 : 15|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ DebugSignal_FaultNumber M : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1586 BMS_DevelopMessage_RX2: 8 GW
+
+BO_ 1584 BMS_DevelopMessage_RX1: 8 GW
+ SG_ Debug_NegRelay_ManualCtrl : 10|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_CSCAutoCodingEn : 26|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_VltFactorSwitch : 25|2@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_CycTime : 23|7@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_ocvManualEn : 16|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_CANSendCtrl : 15|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_CloseIsoCheck : 14|1@1+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_RelayManualCtrl : 13|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_MCPreChgRelay_ManualCtrl : 12|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_MCChgRelay_ManualCtrl : 11|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_PreChgRelay_ManualCtrl : 9|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_PosRelay_ManualCtrl : 8|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_Cal_SOC_Command : 7|1@0+ (1,0) [0|0] ""  BMSL
+ SG_ Debug_Cal_SOC_Value : 6|7@0+ (1,0) [0|0] ""  BMSL
+
+BO_ 481 BMSL_CELL_DATA_1: 8 BMSL
+ SG_ BMSL_cell_02_bal_actv_b : 21|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_02_U : 20|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_03_bal_actv_b : 37|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_03_U : 36|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_01_bal_actv_b : 5|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_04_bal_actv_b : 53|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_04_U : 52|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_01_U : 4|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+
+BO_ 499 BMSL_CELL_DATA_2: 8 BMSL
+ SG_ BMSL_cell_06_bal_actv_b : 21|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_06_U : 20|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_07_bal_actv_b : 37|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_07_U : 36|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_05_bal_actv_b : 5|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_08_bal_actv_b : 53|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_08_U : 52|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_05_U : 4|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+
+BO_ 500 BMSL_CELL_DATA_3: 8 BMSL
+ SG_ BMSL_cell_10_bal_actv_b : 21|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_10_U : 20|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_11_bal_actv_b : 37|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_11_U : 36|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_09_bal_actv_b : 5|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_12_bal_actv_b : 53|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_cell_12_U : 52|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+ SG_ BMSL_cell_09_U : 4|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+
+BO_ 501 BMSL_CELL_DATA_4: 8 BMSL
+ SG_ BMSL_max_cell_U : 36|13@0+ (0.001,0) [0|8.19] "V"  EMS
+ SG_ BMSL_cell_13_bal_actv_b : 5|1@0+ (1,0) [0|1] "bit" Vector__XXX
+ SG_ BMSL_min_cell_U : 52|13@0+ (0.001,0) [0|8.19] "V"  EMS
+ SG_ BMSL_cell_13_U : 4|13@0+ (0.001,0) [0|8.19] "V" Vector__XXX
+
+BO_ 484 BMSL_PAK_DATA_1: 8 BMSL
+ SG_ BMSL_term_U : 23|16@0+ (0.001,0) [0|65.534] "V"  EMS
+ SG_ BMSL_inst_I : 39|32@0- (0.001,0) [-450|450] "A"  EMS
+ SG_ BMSL_stack_U : 7|16@0+ (0.001,0) [0|65.534] "V"  EMS
+
+BO_ 737 BMSL_PAK_LIMITS_1: 8 BMSL
+ SG_ BMSL_avail_chrg_1s_IA : 7|10@0+ (1,0) [0|1022] "A" Vector__XXX
+ SG_ BMSL_avail_chrg_1s_PKW : 11|12@0+ (0.01,0) [0|40.94] "kW"  EMS
+ SG_ BMSL_avail_dschrg_1s_IA : 31|10@0+ (1,-1022) [-1022|0] "A" Vector__XXX
+ SG_ BMSL_avail_dschrg_1s_PKW : 35|12@0+ (0.01,-40.94) [-40.94|0] "kW"  EMS
+
+BO_ 1011 BMSL_PAK_LIMITS_2: 8 BMSL
+ SG_ BMSL_avail_chrg_10s_IA : 7|10@0+ (1,0) [0|1022] "A" Vector__XXX
+ SG_ BMSL_avail_chrg_10s_PKW : 11|12@0+ (0.01,0) [0|40.94] "kW"  EMS
+ SG_ BMSL_avail_dschrg_10s_IA : 31|10@0+ (1,-1022) [-1022|0] "A" Vector__XXX
+ SG_ BMSL_avail_dschrg_10s_PKW : 35|12@0+ (0.01,-40.94) [-40.94|0] "kW"  EMS
+
+BO_ 1012 BMSL_PAK_LIMITS_3: 8 BMSL
+ SG_ BMSL_avail_chrg_60s_IA : 7|10@0+ (1,0) [0|1022] "A" Vector__XXX
+ SG_ BMSL_avail_chrg_60s_PKW : 11|12@0+ (0.01,0) [0|40.94] "kW"  EMS
+ SG_ BMSL_avail_dschrg_60s_IA : 31|10@0+ (1,-1022) [-1022|0] "A" Vector__XXX
+ SG_ BMSL_avail_dschrg_60s_PKW : 35|12@0+ (0.01,-40.94) [-40.94|0] "kW"  EMS
+
+BO_ 503 BMSL_PAK_STATUS_1: 8 BMSL
+ SG_ BMSL_Fault_status_bit4 : 12|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_Fault_status_bit3 : 11|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_Fault_status_bit2 : 10|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_Fault_status_bit1 : 9|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_Fault_status_bit0 : 8|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_PACK_STATUS_1_AliveCounter : 3|4@0+ (1,0) [0|15] "bit"  EMS
+ SG_ BMSL_cbal_en_b : 24|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_ecu_comm_fault_actv_b : 29|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_bcc_fault_actv_b : 30|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_bcc_comm_fault_actv_b : 31|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_ocp_actv_b : 32|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_temp_fault_actv_b : 33|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_pack_uvp_actv_b : 34|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_pack_ovp_actv_b : 35|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cell_uvp_actv_b : 36|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cell_ovp_actv_b : 37|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_pwr_uvp_actv_b : 38|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_pwr_ovp_actv_b : 39|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cb_state_e : 6|3@0+ (1,0) [0|7] "bit"  EMS
+ SG_ BMSL_inst_I_samplingfault_actv_b : 41|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cell_U_samplingfault_actv_b : 42|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cb_weld_actv_b : 48|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_equalize_fail_actv_b : 49|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_cb_stuck_open_actv_b : 50|1@0+ (1,0) [0|1] "bit"  EMS
+ SG_ BMSL_pack_mode : 54|4@0+ (1,0) [0|15] "bit"  EMS
+ SG_ BMSL_PACK_STATUS_1_Checksum : 63|8@0+ (1,0) [0|255] "bit"  EMS
+
+BO_ 1013 BMSL_PAK_STATUS_2: 8 BMSL
+ SG_ BMSL_cb_lifetime_remain_Pct : 31|8@0+ (1,0) [0|100] "%"  EMS
+ SG_ BMSL_sw_version_build : 39|8@0+ (1,0) [0|255] "bit"  EMS
+ SG_ BMSL_sw_version_minor : 47|8@0+ (1,0) [0|255] "bit"  EMS
+ SG_ BMSL_sw_version_major : 55|8@0+ (1,0) [0|255] "bit"  EMS
+
+BO_ 504 BMSL_PAK_STATUS_3: 5 BMSL
+ SG_ BMSL_FAN_Control_PWM : 31|8@0+ (1,0) [0|100] "%"  EMS
+ SG_ BMSL_FANCotrolHWDrvFault_Status : 37|2@0+ (1,0) [0|3] "bit"  EMS
+ SG_ BMSL_FAN_Fault_Status : 39|2@0+ (1,0) [0|3] "bit"  EMS
+
+BO_ 490 EMS_HCU_BMSL_CTRL: 8 EMS
+ SG_ EMS_HCU_InsideTemperature : 7|8@0+ (0.5,-40) [-40|60] "°„C"  BMSL
+ SG_ EMS_HCU_veh_cb_cmd_e : 15|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_EngineSpeedRPMInvalid : 16|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_EngStatus : 23|3@0+ (1,0) [0|7] "bit"  BMSL
+ SG_ EMS_HCU_CrashOutputSts_bit1 : 33|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_HCU_CrashOutputSts_bit2 : 34|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_HCU_CrashOutputSts_bit3 : 35|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_HCU_CrashOutputSts_bit4 : 36|1@0+ (1,0) [0|1] "bit"  BMSL
+ SG_ EMS_EngineSpeedRPM : 47|16@0+ (0.25,0) [0|16383.25] "RPM"  BMSL
+ SG_ EMS_HCU_InsideTemperatureInvalid : 8|1@0+ (1,0) [0|1] "bit"  BMSL
+
+BO_ 1018 EMS_TotalOdometer_Info: 8 EMS
+ SG_ EMS_IPK_TotalOdometer : 7|24@0+ (0.1,0) [0|999999] "KM"  BMSL
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 BMSL_cell_deep_dschrg_b "Cell deep UV fault";
+CM_ BO_ 2015 "Transmitted by GW";
+CM_ BO_ 1848 "Transmitted by BMSL";
+CM_ BO_ 1840 "Transmitted by GW";
+CM_ BO_ 502 "Transmitted by BMSL, including Battery Pack status";
+CM_ SG_ 502 BMSL_pwrmon_b "Indicates if the 12V supply is normal to drive the Circuit Breaker";
+CM_ SG_ 502 BMSL_pack_2_T "Temperature of sensor 2#";
+CM_ SG_ 502 BMSL_ign_b "Ignition state";
+CM_ SG_ 502 BMSL_hw_ovp_actv_b "Cell hardware OVP fault";
+CM_ SG_ 502 BMSL_lv_pwr_U "Voltage of LV power supply";
+CM_ SG_ 502 BMSL_pack_soc_abs_Pct "Absolute pack State of Charge.";
+CM_ SG_ 502 BMSL_pack_1_T "Temperature of sensor 1#";
+CM_ BO_ 481 "Transmitted by BMSL, including Cell status";
+CM_ SG_ 481 BMSL_cell_02_bal_actv_b "Cell_02 balancing state flag";
+CM_ SG_ 481 BMSL_cell_02_U "Cell_02 voltage";
+CM_ SG_ 481 BMSL_cell_03_bal_actv_b "Cell_03 balancing state flag";
+CM_ SG_ 481 BMSL_cell_03_U "Cell_03 voltage";
+CM_ SG_ 481 BMSL_cell_01_bal_actv_b "Cell_01 balancing state flag";
+CM_ SG_ 481 BMSL_cell_04_bal_actv_b "Cell_04 balancing state flag";
+CM_ SG_ 481 BMSL_cell_04_U "Cell_04 voltage";
+CM_ SG_ 481 BMSL_cell_01_U "Cell_01 voltage";
+CM_ BO_ 499 "Transmitted by BMSL, including Cell status";
+CM_ SG_ 499 BMSL_cell_06_bal_actv_b "Cell_06 balancing state flag";
+CM_ SG_ 499 BMSL_cell_06_U "Cell_06 voltage";
+CM_ SG_ 499 BMSL_cell_07_bal_actv_b "Cell_07 balancing state flag";
+CM_ SG_ 499 BMSL_cell_07_U "Cell_07 voltage";
+CM_ SG_ 499 BMSL_cell_05_bal_actv_b "Cell_05 balancing state flag";
+CM_ SG_ 499 BMSL_cell_08_bal_actv_b "Cell_08 balancing state flag";
+CM_ SG_ 499 BMSL_cell_08_U "Cell_08 voltage";
+CM_ SG_ 499 BMSL_cell_05_U "Cell_05 voltage";
+CM_ BO_ 500 "Transmitted by BMSL, including Cell status";
+CM_ SG_ 500 BMSL_cell_10_bal_actv_b "Cell_10 balancing state flag";
+CM_ SG_ 500 BMSL_cell_10_U "Cell_10 voltage";
+CM_ SG_ 500 BMSL_cell_11_bal_actv_b "Cell_11 balancing state flag";
+CM_ SG_ 500 BMSL_cell_11_U "Cell_11 voltage";
+CM_ SG_ 500 BMSL_cell_09_bal_actv_b "Cell_09 balancing state flag";
+CM_ SG_ 500 BMSL_cell_12_bal_actv_b "Cell_12 balancing state flag";
+CM_ SG_ 500 BMSL_cell_12_U "Cell_12 voltage";
+CM_ SG_ 500 BMSL_cell_09_U "Cell_09 voltage";
+CM_ BO_ 501 "Transmitted by BMSL, including Cell status";
+CM_ SG_ 501 BMSL_max_cell_U "Maximum cell voltage";
+CM_ SG_ 501 BMSL_cell_13_bal_actv_b "Cell_13 balancing state flag";
+CM_ SG_ 501 BMSL_min_cell_U "Minimum cell voltage";
+CM_ SG_ 501 BMSL_cell_13_U "Cell_13 voltage";
+CM_ BO_ 484 "Transmitted by BMSL, including Battery Pack status";
+CM_ SG_ 484 BMSL_term_U "Voltage between the positive and negtive terminals";
+CM_ SG_ 484 BMSL_inst_I "Battery current";
+CM_ SG_ 484 BMSL_stack_U "Battery pack voltage";
+CM_ BO_ 737 "Transmitted by BMSL, including Maximum current and power Info";
+CM_ SG_ 737 BMSL_avail_chrg_1s_IA "Maximum charge current available for the next 1 second";
+CM_ SG_ 737 BMSL_avail_chrg_1s_PKW "Maximum charge power available for the next 1 second.";
+CM_ SG_ 737 BMSL_avail_dschrg_1s_IA "Maximum discharge current available for the next 1 second.";
+CM_ SG_ 737 BMSL_avail_dschrg_1s_PKW "Maximum discharge power available for the next 1 second.";
+CM_ BO_ 1011 "Transmitted by BMSL, including Maximum current and power Info";
+CM_ SG_ 1011 BMSL_avail_chrg_10s_IA "Maximum charge current for the next 10s";
+CM_ SG_ 1011 BMSL_avail_chrg_10s_PKW "Maximum charge power available for the next 10 seconds";
+CM_ SG_ 1011 BMSL_avail_dschrg_10s_IA "Maximum discharge current for the next 10s";
+CM_ SG_ 1011 BMSL_avail_dschrg_10s_PKW "Maximum discharge power available for the next 10 seconds.";
+CM_ BO_ 1012 "Transmitted by BMSL, including Maximum current and power Info";
+CM_ SG_ 1012 BMSL_avail_chrg_60s_IA "Maximum charge current for the next 60s";
+CM_ SG_ 1012 BMSL_avail_chrg_60s_PKW "Maximum charge power available for the next 60 seconds";
+CM_ SG_ 1012 BMSL_avail_dschrg_60s_IA "Maximum discharge current for the next 60s";
+CM_ SG_ 1012 BMSL_avail_dschrg_60s_PKW "Maximum discharge power available for the next 60 seconds.";
+CM_ BO_ 503 "Transmitted by BMSL, including Battery Pack status";
+CM_ SG_ 503 BMSL_Fault_status_bit4 "Unrestorability";
+CM_ SG_ 503 BMSL_Fault_status_bit3 "Restorability";
+CM_ SG_ 503 BMSL_Fault_status_bit2 "Derating";
+CM_ SG_ 503 BMSL_Fault_status_bit1 "SVS";
+CM_ SG_ 503 BMSL_Fault_status_bit0 "Hybrid system fault Lamp";
+CM_ SG_ 503 BMSL_PACK_STATUS_1_AliveCounter "Message counter";
+CM_ SG_ 503 BMSL_cbal_en_b "Indicates if the conditions for cell balancing are active.";
+CM_ SG_ 503 BMSL_ecu_comm_fault_actv_b "BMS Comm fault with ECU";
+CM_ SG_ 503 BMSL_bcc_fault_actv_b "BCC £®cell voltage measurement MCU£©fault";
+CM_ SG_ 503 BMSL_bcc_comm_fault_actv_b "BCC(cell voltage sampling MCU) Comm Fault";
+CM_ SG_ 503 BMSL_ocp_actv_b "Pack OC fault";
+CM_ SG_ 503 BMSL_temp_fault_actv_b "Pack temperature fault";
+CM_ SG_ 503 BMSL_pack_uvp_actv_b "Pack UVP error flag";
+CM_ SG_ 503 BMSL_pack_ovp_actv_b "Pack OVP error flag";
+CM_ SG_ 503 BMSL_cell_uvp_actv_b "Cell UVP error flag";
+CM_ SG_ 503 BMSL_cell_ovp_actv_b "Cell OVP error flag";
+CM_ SG_ 503 BMSL_pwr_uvp_actv_b "12V power supply UV";
+CM_ SG_ 503 BMSL_pwr_ovp_actv_b "12V power supply OV";
+CM_ SG_ 503 BMSL_cb_state_e "Indicates the current state of the Circuit Breaker";
+CM_ SG_ 503 BMSL_inst_I_samplingfault_actv_b "Current sampling fault";
+CM_ SG_ 503 BMSL_cell_U_samplingfault_actv_b "Cell voltage sampling line fault";
+CM_ SG_ 503 BMSL_cb_weld_actv_b "CB stuck close fault";
+CM_ SG_ 503 BMSL_equalize_fail_actv_b "Percharge fail";
+CM_ SG_ 503 BMSL_cb_stuck_open_actv_b "CB stuck open fault";
+CM_ SG_ 503 BMSL_pack_mode "Mode of 48V battery";
+CM_ SG_ 503 BMSL_PACK_STATUS_1_Checksum "Message checksum";
+CM_ BO_ 1013 "Transmitted by BMSL, including Battery Pack status, SW version etc";
+CM_ SG_ 1013 BMSL_cb_lifetime_remain_Pct "Remaining lifetime of the Circuit Breaker";
+CM_ SG_ 1013 BMSL_sw_version_build "SW build version";
+CM_ SG_ 1013 BMSL_sw_version_minor "Minor SW version";
+CM_ SG_ 1013 BMSL_sw_version_major "Major SW version";
+CM_ BO_ 504 "Transmitted by BMSL, including Battery Pack status";
+CM_ SG_ 504 BMSL_FAN_Control_PWM "The duty cycle of the PWM signalt BMS outputs to control the cooling fan";
+CM_ SG_ 504 BMSL_FANCotrolHWDrvFault_Status "Fault status of BMS PWM control HW driver";
+CM_ SG_ 504 BMSL_FAN_Fault_Status "Cooling Fan Fault Status";
+CM_ BO_ 490 "Transmitted by EMS, including Fan Control Command etc";
+CM_ SG_ 490 EMS_HCU_InsideTemperature "Indicate the in-car temperature data
+0xC9~0xFF: Invalid";
+CM_ SG_ 490 EMS_HCU_veh_cb_cmd_e "vehicle close CB command";
+CM_ SG_ 490 EMS_EngineSpeedRPMInvalid "Invalid flag for EMS_EngineSpeedRPM";
+CM_ SG_ 490 EMS_EngStatus "Engine running status";
+CM_ SG_ 490 EMS_HCU_CrashOutputSts_bit1 "Front First Level";
+CM_ SG_ 490 EMS_HCU_CrashOutputSts_bit2 "Left Hand Side";
+CM_ SG_ 490 EMS_HCU_CrashOutputSts_bit3 "Right Hand Side";
+CM_ SG_ 490 EMS_HCU_CrashOutputSts_bit4 "Rear Side";
+CM_ SG_ 490 EMS_EngineSpeedRPM "Signal from EMS/PowerTrian to indicate Engine RPM ";
+CM_ SG_ 490 EMS_HCU_InsideTemperatureInvalid "Indicate the in-car temperature invalid flag";
+CM_ BO_ 1018 "Transmitted by EMS, including total odometer etc.";
+CM_ SG_ 1018 EMS_IPK_TotalOdometer "The total odometer displayed in IPK";
+BA_DEF_  "SyncJumpWidthMin" INT 1 4;
+BA_DEF_  "SyncJumpWidthMax" INT 1 4;
+BA_DEF_  "SamplePointMin" INT 1 100;
+BA_DEF_  "SamplePointMax" INT 1 100;
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigTimeoutValue" INT 0 1000000000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnChange","OnWrite","IfActive","OnChangeWithRepetition","OnWriteWithRepetition","IfActiveWithRepetition";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgCycleTimeActive" INT 0 0;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cycllic","NoSendType","IfActive";
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagState" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmCAN" INT 0 2;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 65535;
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "DiagStationAddress" HEX 0 255;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_DEF_  "SyncJumpWidthMin" 1;
+BA_DEF_DEF_  "SyncJumpWidthMax" 1;
+BA_DEF_DEF_  "SamplePointMin" 1;
+BA_DEF_DEF_  "SamplePointMax" 1;
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigTimeoutValue" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgCycleTimeActive" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "Cycllic";
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "DiagState" "No";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "NmCAN" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "DiagStationAddress" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLVector.dll";
+BA_ "BusType" "CAN";
+BA_ "DBName" "KC2_BMSL_DBC";
+BA_ "NmStationAddress" BU_ BMSL 36;
+BA_ "DiagState" BO_ 2015 1;
+BA_ "GenMsgSendType" BO_ 2015 1;
+BA_ "DiagResponse" BO_ 1848 1;
+BA_ "GenMsgSendType" BO_ 1848 1;
+BA_ "GenMsgSendType" BO_ 1840 1;
+BA_ "DiagRequest" BO_ 1840 1;
+BA_ "GenMsgCycleTime" BO_ 502 50;
+BA_ "GenMsgSendType" BO_ 1587 2;
+BA_ "GenMsgCycleTime" BO_ 1587 500;
+BA_ "GenMsgSendType" BO_ 1585 2;
+BA_ "GenMsgCycleTime" BO_ 1585 500;
+BA_ "GenMsgCycleTime" BO_ 1584 500;
+BA_ "GenMsgCycleTime" BO_ 481 50;
+BA_ "GenMsgCycleTime" BO_ 499 50;
+BA_ "GenMsgCycleTime" BO_ 500 50;
+BA_ "GenMsgCycleTime" BO_ 501 50;
+BA_ "GenMsgCycleTime" BO_ 484 20;
+BA_ "GenMsgCycleTime" BO_ 737 100;
+BA_ "GenMsgCycleTime" BO_ 1011 1000;
+BA_ "GenMsgCycleTime" BO_ 1012 1000;
+BA_ "GenMsgCycleTime" BO_ 503 50;
+BA_ "GenMsgCycleTime" BO_ 1013 1000;
+BA_ "GenMsgCycleTime" BO_ 504 50;
+BA_ "GenMsgCycleTime" BO_ 490 50;
+BA_ "GenMsgCycleTime" BO_ 1018 1000;
+BA_ "GenSigStartValue" SG_ 737 BMSL_avail_dschrg_1s_IA 1022;
+BA_ "GenSigStartValue" SG_ 737 BMSL_avail_dschrg_1s_PKW 4094;
+BA_ "GenSigStartValue" SG_ 1011 BMSL_avail_dschrg_10s_IA 1022;
+BA_ "GenSigStartValue" SG_ 1011 BMSL_avail_dschrg_10s_PKW 4094;
+BA_ "GenSigStartValue" SG_ 1012 BMSL_avail_dschrg_60s_IA 1022;
+BA_ "GenSigStartValue" SG_ 1012 BMSL_avail_dschrg_60s_PKW 4094;
+BA_ "GenSigStartValue" SG_ 1013 BMSL_cb_lifetime_remain_Pct 100;
+BA_ "GenSigStartValue" SG_ 490 EMS_HCU_InsideTemperature 120;
+VAL_ 3221225472 BMSL_cell_deep_dschrg_b 1 "error" 0 "Not error" ;
+VAL_ 502 BMSL_pwrmon_b 1 "Active" 0 "Not active" ;
+VAL_ 502 BMSL_pack_2_T 2047 "Invalid" ;
+VAL_ 502 BMSL_ign_b 1 "Active" 0 "Not active" ;
+VAL_ 502 BMSL_hw_ovp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 502 BMSL_lv_pwr_U 65535 "Invalid" ;
+VAL_ 502 BMSL_pack_soc_abs_Pct 255 "Invalid" ;
+VAL_ 502 BMSL_pack_1_T 2047 "Invalid" ;
+VAL_ 1587 Debug_AutoCodeSts 2 "Fail" 1 "Success" 0 "Default" ;
+VAL_ 1584 Debug_NegRelay_ManualCtrl 1 "Close" 0 "Open" ;
+VAL_ 1584 Debug_CANSendCtrl 1 "Stop CAN Send" 0 "Normal CAN Send" ;
+VAL_ 1584 Debug_CloseIsoCheck 1 "CloseIsoCheck" 0 "Not CloseIsoCheck" ;
+VAL_ 1584 Debug_RelayManualCtrl 1 "ManualControl" 0 "Not ManualControl" ;
+VAL_ 1584 Debug_MCPreChgRelay_ManualCtrl 1 "Close" 0 "Open" ;
+VAL_ 1584 Debug_MCChgRelay_ManualCtrl 1 "Close" 0 "Open" ;
+VAL_ 1584 Debug_PreChgRelay_ManualCtrl 1 "Close" 0 "Open" ;
+VAL_ 1584 Debug_PosRelay_ManualCtrl 1 "Close" 0 "Open" ;
+VAL_ 1584 Debug_Cal_SOC_Command 1 "Calibrate SOC" 0 "Not Calibrate SOC" ;
+VAL_ 481 BMSL_cell_02_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 481 BMSL_cell_02_U 8191 "Invalid" ;
+VAL_ 481 BMSL_cell_03_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 481 BMSL_cell_03_U 8191 "Invalid" ;
+VAL_ 481 BMSL_cell_01_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 481 BMSL_cell_04_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 481 BMSL_cell_04_U 8191 "Invalid" ;
+VAL_ 481 BMSL_cell_01_U 8191 "Invalid" ;
+VAL_ 499 BMSL_cell_06_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 499 BMSL_cell_06_U 8191 "Invalid" ;
+VAL_ 499 BMSL_cell_07_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 499 BMSL_cell_07_U 8191 "Invalid" ;
+VAL_ 499 BMSL_cell_05_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 499 BMSL_cell_08_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 499 BMSL_cell_08_U 8191 "Invalid" ;
+VAL_ 499 BMSL_cell_05_U 8191 "Invalid" ;
+VAL_ 500 BMSL_cell_10_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 500 BMSL_cell_10_U 8191 "Invalid" ;
+VAL_ 500 BMSL_cell_11_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 500 BMSL_cell_11_U 8191 "Invalid" ;
+VAL_ 500 BMSL_cell_09_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 500 BMSL_cell_12_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 500 BMSL_cell_12_U 8191 "Invalid" ;
+VAL_ 500 BMSL_cell_09_U 8191 "Invalid" ;
+VAL_ 501 BMSL_max_cell_U 8191 "Invalid" ;
+VAL_ 501 BMSL_cell_13_bal_actv_b 1 "Active" 0 "Not active" ;
+VAL_ 501 BMSL_min_cell_U 8191 "Invalid" ;
+VAL_ 501 BMSL_cell_13_U 8191 "Invalid" ;
+VAL_ 484 BMSL_term_U 65535 "Invalid" ;
+VAL_ 484 BMSL_stack_U 65535 "Invalid" ;
+VAL_ 737 BMSL_avail_chrg_1s_IA 1023 "Invalid" ;
+VAL_ 737 BMSL_avail_chrg_1s_PKW 4095 "Invalid" ;
+VAL_ 737 BMSL_avail_dschrg_1s_IA 1023 "Invalid" ;
+VAL_ 737 BMSL_avail_dschrg_1s_PKW 4095 "Invalid" ;
+VAL_ 1011 BMSL_avail_chrg_10s_IA 1023 "Invalid" ;
+VAL_ 1011 BMSL_avail_chrg_10s_PKW 4095 "Invalid" ;
+VAL_ 1011 BMSL_avail_dschrg_10s_IA 1023 "Invalid" ;
+VAL_ 1011 BMSL_avail_dschrg_10s_PKW 4095 "Invalid" ;
+VAL_ 1012 BMSL_avail_chrg_60s_IA 1023 "Invalid" ;
+VAL_ 1012 BMSL_avail_chrg_60s_PKW 4095 "Invalid" ;
+VAL_ 1012 BMSL_avail_dschrg_60s_IA 1023 "Invalid" ;
+VAL_ 1012 BMSL_avail_dschrg_60s_PKW 4095 "Invalid" ;
+VAL_ 503 BMSL_Fault_status_bit4 1 "Active" 0 "Inactive" ;
+VAL_ 503 BMSL_Fault_status_bit3 1 "Active" 0 "Inactive" ;
+VAL_ 503 BMSL_Fault_status_bit2 1 "Active" 0 "Inactive" ;
+VAL_ 503 BMSL_Fault_status_bit1 1 "Active" 0 "Inactive" ;
+VAL_ 503 BMSL_Fault_status_bit0 1 "Active" 0 "Inactive" ;
+VAL_ 503 BMSL_cbal_en_b 1 "Active" 0 "Not active" ;
+VAL_ 503 BMSL_ecu_comm_fault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_bcc_fault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_bcc_comm_fault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_ocp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_temp_fault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_pack_uvp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_pack_ovp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cell_uvp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cell_ovp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_pwr_uvp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_pwr_ovp_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cb_state_e 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Fault" 1 "Closed" 0 "Open" ;
+VAL_ 503 BMSL_inst_I_samplingfault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cell_U_samplingfault_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cb_weld_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_equalize_fail_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_cb_stuck_open_actv_b 1 "Error" 0 "Not error" ;
+VAL_ 503 BMSL_pack_mode 15 "Failure" 14 "reserved" 13 "reserved" 12 "reserved" 11 "reserved" 10 "reserved" 9 "Safe State" 8 "reserved" 7 "shut down" 6 "Emergency disconnect" 5 "Open" 4 "Run" 3 "Close" 2 "Standby" 1 "Initialization" 0 "Sleep" ;
+VAL_ 1013 BMSL_cb_lifetime_remain_Pct 255 "Invalid" ;
+VAL_ 1013 BMSL_sw_version_build 255 "Invalid" ;
+VAL_ 1013 BMSL_sw_version_minor 255 "Invalid" ;
+VAL_ 1013 BMSL_sw_version_major 255 "Invalid" ;
+VAL_ 504 BMSL_FAN_Control_PWM 255 "Invalid" ;
+VAL_ 504 BMSL_FANCotrolHWDrvFault_Status 3 "Reserved" 2 "Reserved" 1 "FANctrl_ Fault_State" 0 "FANctrl_Normal_State" ;
+VAL_ 504 BMSL_FAN_Fault_Status 3 "FAN_Fault_State" 2 "Reserved" 1 "Reserved" 0 "FAN_Normal_State" ;
+VAL_ 490 EMS_HCU_InsideTemperature 255 "Invalid" ;
+VAL_ 490 EMS_HCU_veh_cb_cmd_e 1 "Close" 0 "Not close" ;
+VAL_ 490 EMS_EngineSpeedRPMInvalid 1 "Invalid" 0 "Valid" ;
+VAL_ 490 EMS_EngStatus 7 "Invalid" 6 "Abnormal" 5 "Reserved" 4 "Reserved" 3 "Running" 2 "Stopping ( only for PHEV )" 1 "Cranking" 0 "Engine Stop" ;
+VAL_ 490 EMS_HCU_CrashOutputSts_bit1 1 "Active" 0 "Inactive" ;
+VAL_ 490 EMS_HCU_CrashOutputSts_bit2 1 "Active" 0 "Inactive" ;
+VAL_ 490 EMS_HCU_CrashOutputSts_bit3 1 "Active" 0 "Inactive" ;
+VAL_ 490 EMS_HCU_CrashOutputSts_bit4 1 "Active" 0 "Inactive" ;
+VAL_ 490 EMS_EngineSpeedRPM 65535 "Invalid" 65534 "Abnormal" ;
+VAL_ 490 EMS_HCU_InsideTemperatureInvalid 1 "Invalid" 0 "Valid" ;
+VAL_ 1018 EMS_IPK_TotalOdometer 16777214 "Abnormal" 16777215 "Invalid" ;
+

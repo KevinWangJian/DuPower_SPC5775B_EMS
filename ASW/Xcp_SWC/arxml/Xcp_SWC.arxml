@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Xcp_SWC</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>Xcp_SWC</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="14f84952-8593-49f1-9336-f89669a55a6a">
+              <SHORT-NAME>IB_Xcp_SWC</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="a70e3e81-56c0-4721-859b-20752999c75b">
+                  <SHORT-NAME>TE_Xcp_SWC_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Xcp_SWC/Xcp_SWC/IB_Xcp_SWC/RE_Xcp_SWC_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="d9eb69a9-40f8-4752-be79-eb68280c233d">
+                  <SHORT-NAME>RE_Xcp_SWC_10ms</SHORT-NAME>
+                  <SYMBOL>RE_Xcp_SWC_10ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

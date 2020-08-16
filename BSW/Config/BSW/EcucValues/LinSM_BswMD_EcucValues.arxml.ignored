@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+ <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+  </ADMIN-DATA>
+ <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>UBK</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Project</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-CONFIGURATION-VALUES>
+                      <SHORT-NAME>rba_ArxmlGen</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-MODULE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen</DEFINITION-REF>
+                      <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>LinSM</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompCategory</DEFINITION-REF>
+                              <VALUE>BswModule</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompId</DEFINITION-REF>
+                              <VALUE>141</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsConfigurable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandalone</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandardized</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompLongName</DEFINITION-REF>
+                              <VALUE>LINStateManager</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionAr</DEFINITION-REF>
+                              <VALUE>4.2.2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionSw</DEFINITION-REF>
+                              <VALUE>8.0.0</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_uint8_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint8</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_ModeType_Enum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enum used for LinSM communication modes</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_CompuMethod_OperationalMode</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_RamVar_AStruc_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of structure</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_RamVar_AStruc_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSM_RamVar_struct_shrtnm</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_RamVar_struct_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_boolean_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>boolean</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_uint32_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint32</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_DataConstraint_u32</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint32_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_RamVar_struct_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Struct</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE />
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Structure of uint8,boolean,uint32and enum</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_RamVar_struct_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>ChnlState</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_ModeType_Enum_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>TimeOutCounter</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint32_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>TimeoutFlag</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>StoredSchdTab</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_SchdReq_E_NOT_OK</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_Conf_Status</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_Request_Status</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_CompuMethod_OperationalMode</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>computation method displaying the Operational modes of LinSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSM_CompuMethod_FullCom</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>LINSM_FULL_COM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSM_CompuMethod_NoCom</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>2</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>LINSM_NO_COM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_DataConstraint_u8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>255</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_LinSM/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_DataConstraint_u32</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>4294967295</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_LinSM/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_uint8_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>implementation data type for application data type uint8</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_LinSM_ModeType_Enum_Impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enum used for LinSM communication modes</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_RamVar_AStruc_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of structure</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSM_RamVar_struct_shrtnm</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_RamVar_struct_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_boolean_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>implementation data type for application data type boolean</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_uint32_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>implementation data type for application data type uint32</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint32</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_RamVar_struct_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Struct</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Struct of uint8,boolean,uint32and enum implementation data types</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>ChnlState</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_LinSM_ModeType_Enum_Impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>TimeOutCounter</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint32_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>TimeoutFlag</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>StoredSchdTab</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_SchdReq_E_NOT_OK</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_Conf_Status</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>LinSm_Request_Status</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_boolean_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_State</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>State variable of LINSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_uint8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>LinSM_RamVar</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>LinSM type variable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/LinSM/LinSM_RamVar_AStruc_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </CONTAINERS>
+                    </ECUC-MODULE-CONFIGURATION-VALUES>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,2205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="preserve">EN</L-10>
+    </USED-LANGUAGES>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Fee</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Fee</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Memory: Flash EEPROM Emulation</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the Fee (Flash eeprom emulation) module.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>0.1.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2011-04-19</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Fee</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FeeBlockConfiguration</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">FeeBlockConfiguration.</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of block specific parameters for the Flash EEPROM Emulation module.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeBlockNumber</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block identifier.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag has currently no effect, the FeeRbBlockPersistentId has to be configured instead.
+						            The FeeBlockNumber will be calculated by the Fee automatically. This can be used as a parameter in the user
+									interfaces in order to identify the relevant block.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">0x0000 and 0xFFFF shall not be used for block numbers (see FEE006).
+									  Range: min = 2^NVM_DATASET_SELECTION_BITS max =
+									  0xFFFF - 2^NVM_DATASET_SELECTION_BITS Note:
+									  Depending on the number of bits set aside for dataset selection several other block numbers
+									  shall also be left out to ease implementation.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <MAX>65534</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeBlockSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Data size of the block.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Size of a logical block in bytes.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeImmediateData</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Marker for high priority data.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If the Fee&apos;s queue contains more than one order, high priority data will be favored.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Block contains immediate data. false: Block does not contain immediate data.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeNumberOfWriteCycles</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of block write cycles over ECU lifetime.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of write cycles (app.) required for this block (during the complete ECU lifetime).
+						            This tag is used for calculating the reachable driving cycles in some product lines
+									(e.g. CC-AS).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbBlockPersistentId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Permanent block ID.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Permanent block ID which is stored in the medium (&quot;UUID&quot;).</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Permanent block id which is used for storage in medium (&quot;UUID&quot;).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65534</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>FeeRbCallbackEnd</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Callback function for successful jobs.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Name of callback function which is called after successful finished orders.
+						            This should be used for any adapter blocks/jobs because the module&apos;s job result is only
+									changed for NvM job types.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Possible values are: Name of the Callback function or NULL_PTR if no Callback function is available.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>FeeRbCallbackError</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Callback function for failed jobs.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Name of callback function which is called if order couldn&apos;t be finished successfully.
+						            This should be used for any adapter blocks/jobs because the module&apos;s job result is only
+									changed for NvM job types.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Possible values are: Name of the Callback function or NULL_PTR if no Callback function is available.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDataFilterType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Data Filter Type (data classification).</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Defines the data classification for certain actions (e.g. during migration, start up, erase services).
+						            This tag has currently no effect.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>DYNAMIC</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Dynamic (standard, anybody can erase this block (e.g. during migration)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>STATIC</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Static (only certain users can erase this block, e.g. repair shops)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>PERMANENT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Permanent (only very certain users can erase this block, e.g. OEM)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SUPER_PERMANENT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Super Permanent (block can never be erased)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDeviceIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Rb special device index in integer. This information is needed by the NVRAM manager respectively the Memory Abstraction Interface
+						            to address a certain logical block.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Rb special device index</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Range: 0 .. 254 (0xFF reserved for broadcast call to GetStatus function).
+						              This tag has currently no effect.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbFirstReadDataMigration</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">First Read Data Migration</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag activates or deactivates the First Read Data Migration feature.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">false: First Read Data Migration is disabled (default).
+true: First Read Data Migration is enabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbNoFallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">NoFallback attribute</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag activates or deactivates a fall back mechanism to older copies of the same block
+                                    in case the latest block is corrupted.
+                                    By default a fall back to old copies is possible.
+                                    The NoFallback feature is available only for Renesas R1x / P1x as well as TI controllers.
+                                    It is activated only when at least one block is configured as NoFallback.
+									The API Fee_Rb_BlockMaintenance() needs to be activated and called during shutdown when this feature is used.
+									This is necessary to repair double storage NoFallback blocks which are corrupted due to write interruptions.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">false: If the latest copy is corrupted an older valid copy of the same block is read (default).
+                                      true: If the latest copy is corrupted all available older copies of the same block are ignored.
+
+                                      Behavior during layout change:
+
+                                      Parameter gets activated in the new layout (true):
+                                      Old copies are still readable since the evaluation is done on the block properties from the data flash.
+                                      New copies are written with an activated NoFallback setting.
+
+                                      Parameter gets deactivated in the new layout (false) but the feature itself is still activated:
+                                      Only the last valid copy which was also readable with an activated NoFallback setting is readable.
+                                      New copies are written with a deactivated NoFallback setting.
+
+                                      Parameter gets deactivated in the new layout (false) and the feature itself is deactivated:
+                                      All old copies are readable.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FeeRbOrigin</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Responsible module for this configuration.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">NVM / Adapter / Fee internal block type</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">NvM block type</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>ADAPTER</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Adapter block type (Eep_Adapter / PDM_Adapter)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FEE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Fee Internal</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbRobustness</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block robustness attribute.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag improves the robustness against a data modification during write executions by
+						            adding an additional checksum to the block data which is calculated over an internal
+									buffer that is used for writing the block data step by step.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Feature enabled (block will be increased by 4 bytes).
+						              false: Feature disabled.Note: Behavior for rba_FeeFs1 during layout change:
+
+1.
+                                      Parameter gets activated in the new layout (true):
+                                      Old copies are still readable since the evaluation is done on the block properties from the data flash.
+                                      New copies are written with an activated Robustness  setting.
+
+                                      
+2. Parameter gets deactivated in the new layout (false):
+                                      Only the last valid copy which was also readable with an activated Robustness setting is readable.
+                                      New copies are written with a deactivated Robustness setting.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbSecLevel</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Redundant data storage.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Security Level of the block</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Range: 1 = Block has one copy in flash, 2 = Block has two identical copies in flash</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>2</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbSurvival</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block survival attribute.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag changes the reorganization behaviour for this block in case it is not within the layout.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Sector reorganization will not delete this block, even if it is not part of the layout.
+						              false: Sector reorganization will delete this block if it is not part of the layout.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbVarBlockLength</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Variable Block Length</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag marks that the block length is variable and calculated on runtime.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">false: Block length is numeric literal and calculated at compile time (default).
+true: Block length is variable and calculated on runtime.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>FeeDeviceIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block Device index.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This information is defined but not used.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">This tag has currently no effect.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fls/FlsGeneral</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FeeGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">FeeGeneral.</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container for general parameters. These parameters are not specific to a block.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Development Error Detection setting.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable development error detection.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Development error detection enabled.
+						              false: Development error detection disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Instance ID.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>FeeNvmJobEndNotification</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job End notification function.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Mapped to the job end notification routine provided by the upper layer module (NvM_JobEndNotification).
+									This tag has currently no effect. Job end and job error notifications must be configured block wise
+									if necessary.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>FeeNvmJobErrorNotification</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job Error notification function.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Mapped to the job error notification routine provided by the upper layer module (NvM_JobErrorNotification).
+									This tag has currently no effect. Job end and job error notifications must be configured block wise
+									if necessary.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeePollingMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Polling mode setting.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable the polling mode for this module (usage of the job result functionality).</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Polling mode enabled, callback functions (provided to FLS module) disabled.
+						              false: Polling mode disabled, callback functions (provided to FLS module) enabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbActEraseSuspension</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Erase suspension active (only for Ti devices).</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This tag improves the possibility to activate a suspension during erasing of flash. If it&apos;s active, the erase order can be suspended by other Fee orders
+                        and if all Fee orders are finished, erase order should be resumed. This feature is only for Ti device active.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Feature enabled.
+						              false: Feature disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbActSafetyChecks</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Internal Safety Check setting.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable or disable additional internal checks of the module concerning layout and block sizes.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:  Feature enabled.
+						              false: Feature disabled.
+									  default: true.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbActSurvivalEval</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the &quot;partial afterburner&quot;.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable or disable an additional block specific reorganization for unknown blocks with an active survival setting (&quot;FeeRbSurvival&quot;) in the medium.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:  Feature enabled  (&quot;block specific afterburner&quot; on for blocks with active survival setting).
+						              false: Feature disabled (&quot;block specific afterburner&quot; off for blocks with active survival setting).
+									  default: false
+									  Hint:  If activated, this block will be overtaken independent from the &quot;FeeRbActUnknownBlockReorg&quot; setting (&quot;general afterburner&quot;).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbActUnknownBlockReorg</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the &quot;global afterburner&quot;.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable or disable an additional reorganization for any unknown block in the medium.
+						            Only the CB (Customer Block) is allowed to enable this feature, because this is affecting the thresholds of the sector
+                                    reorganization to a special safety level. It must be deactivated (default) for the ASW!</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:  Feature enabled  (&quot;general afterburner&quot; on for all unknown blocks).
+						              false: Feature disabled (&quot;general afterburner&quot; off for all unknown blocks).
+									  default: false.
+									  Hints:  If activated, all unknown blocks will be overtaken independent from the &quot;FeeRbActSurvivalEval&quot; setting (&quot;block specific afterburner&quot;).
+									          If deactivated and with active survival evaluation (&quot;FeeRbActSurvivalEval&quot; == TRUE), only blocks with an active survival setting (&quot;FeeRbSurvival&quot; == TRUE) will be overtaken.#
+											  Only the CB (Customer Block) is allowed to enable this feature, because this is affecting the thresholds of the sector
+                                              reorganization to a special safety level. It must be deactivated (default) for the ASW!</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbActUnknownBlockReorgCacheSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Available cache size for faster sector reorganisation for &quot;global afterburner&quot; feature.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable or disable an additional optimisation in reorganization for any unknown block in the medium.
+						            Only the CB (Customer Block) and with global afterburner feature (FeeRbActUnknownBlockReorg = TRUE) is allowed to enable this feature.
+                                    It must be deactivated (default) for the ASW!</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Numeric value.
+									  Default: 1800.
+									  Hints:  This feature fastens the sector reorganisation for unknown blocks by scanning the sector and building up a cache for unknown block.
+											  Each unknown block requires 6 bytes information in the cache, 4 bytes for address and 2 bytes for FEE index.
+									          For best performance project must allocate enough cache size to store information of all unknown blocks (one more then actual number of unknown blocks).
+											  For example, if a project has 250 unknown blocks in CB then at least 251*6 = 1506bytes to be allocated.
+											  Default value is for 299 unknown blocks, which is 300*6=1800bytes.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:6.0.0:2015-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>393210</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbAddonsCCAS</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the CC-AS specific add-ons.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable or disable add-ons for CC-AS (&quot;Forced Read&quot;, &quot;Stop Mode&quot;, &quot;Write address based&quot;).
+						            Hint: for the usage of the rba_FeeAddOnAS_ForcedRead functionality, the Fee configuration tag
+                                          &quot;FeeRbReadForce&quot; needs to be activated as well.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Add-ons for CC-AS enabled.
+						              false: Add-ons for CC-AS disabled.
+									  default: false.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FeeRbFsSelect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Selected Filesystem.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Specifies the actual layout of the data on the flash.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:7.0.0:2015-11-13</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FS1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Fee 1.0 layout - round robin, management and user data one next to the other</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FS2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Fee 2.0 layout - seperate sectors for management and user data.</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FeeRbMachineType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Machine Type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Controller type to be configured in case no MCU module is present.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV2_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev2 Production Device B silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3_C</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 Production Device C silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3_D</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 Production Device D silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 Production Device B silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4_40NM_A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 40nm Production Device A silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm Production Device A silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm Production Device B silicon</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_TC264_AUTOSAR</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Ifx TC264 AUTOSAR Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev1 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV2_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev2 Cut 2.0 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV3_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev3 Cut 2.0 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV4_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev4 Cut 2.0 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_UC1_DEV3PLUS_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Dev3 Plus</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_UC1_DEV3_40NM_C3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Dev3 40NM Cut3</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_LPD</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale Leopard Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_KOMODO</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale Komodo Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_BOLERO</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale Bolero Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_SPC56XL_70XX</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroelectronics SPC56XL70XX Device (96kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_SPC56XL_70XX_64K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroelectronics SPC56XL70XX Device (64kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_1M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Chorus 1M Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_2M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Chorus 2M Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_4M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Chorus 4M Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_2M_AUTOSAR</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Chorus 2M AUTOSAR Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_4M_AUTOSAR</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Chorus 4M AUTOSAR Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_EIGER_SPC58NE_AUTOSAR</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroElectronics Eiger SPC58NExx AUTOSAR Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_512K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 Fx4 Device (512kB PFlash / 32kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_768K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 Fx4 Device (786kB PFlash / 32kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_1M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 Fx4 Device (1MB PFlash / 32kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_1_5M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 Fx4 Device (1,5MB PFlash / 64kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_256K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (256kB PFlash / 16kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_256K_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (256kB PFlash / 16kB DFlash) reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_512K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (512kB PFlash / 32kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_512K_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (512kB PFlash / 32kB DFlash) reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_1M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (1MB PFlash / 32kB DFlash)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_1M_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850 R1x Device (1MB PFlash / 32kB DFlash) reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ZYNQ_V3H_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">External Quad SPI Flash for Ultra Scale Zynq controller (256kB DFlash) - ONLY PROTOTYPE, NOT FOR SERIES RELEASE</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCARH3_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">External Quad SPI Flash for RCAR H3 controller (256kB DFlash) - ONLY PROTOTYPE, NOT FOR SERIES RELEASE</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCAR_V3M_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">External Quad SPI Flash for RCAR V3M controller (1MB DFlash) - ONLY PROTOTYPE, NOT FOR SERIES RELEASE</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCAR_V3H_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">External Quad SPI Flash for RCAR V3H controller (1MB DFlash) - ONLY PROTOTYPE, NOT FOR SERIES RELEASE</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_STV0991</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STV0991 QSPI Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev3 Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_6S</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev3 Flash with 6 sectors</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev3 Flash reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_REDUCED_6S</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev3 Flash reduced by Crash data size and with 6 sectors</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev3 HSM Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev4 Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev4 Flash reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev4 HSM Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev5 Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev5 Flash reduced by Crash data size</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CC CUBE Dev5 HSM Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_4SEC_64KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 4 sectors each 64kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_8SEC_16KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 8 sectors each 16kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_6SEC_128KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 6 sectors each 128kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_8SEC_64KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 8 sectors each 64kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_EVE_AUTOSAR</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">EVE AUTOSAR simulation environment</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MANUAL_CFG</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">This option is used to support other targets which are not supported in the list. The information of target must be configured manually in FeeGeneral/FeeRbSectorTable</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbMaintainRedundantBlocks</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">API activation for Fee_Rb_BlockMaintenance().</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the API to maintain the redundant blocks.
+									Hint: If NvM is used this switch must be set to &quot;TRUE&quot;!</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Maintain API enabled.
+                                      false: Maintain API disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbPageBufferSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Size of internal page buffer.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Size of buffer for communication between flash driver and Fee.
+                         If there is no configuration value for this parameter, the default (1024) will be automatically used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:7.1.0:2016-04-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>256</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbReadForce</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Forced read setting.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable force read function.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Forced read enabled.
+						              false: Forced read disabled.
+									  default: false.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeSetModeSupported</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">API activation for Fee_SetMode().</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compiler switch to enable/disable the &quot;SetMode&quot; functionality of the FEE module.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: SetMode functionality supported / code present,
+						              false: SetMode functionality not supported / code not present. Note: This configuration setting has to be consistent with that of all underlying flash device drivers (configuration parameter FlsSetModeApi).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">API activation for Fee_GetVersionInfo().</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the API to read out the modules version information.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Version info API enabled.
+						              false: Version info API disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeVirtualPageSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Virtual page size setting.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The size in bytes to which logical blocks shall be aligned.
+									The correct value is automatically taken internally from Fee.
+						            Hint: If 0 is configured, the Fee will search for the largest
+									      configured (HW) page size within the complete sector
+										  configuration and define it as the virtual page size
+										  automatically.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>FeeRbSectorTable</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FeeRbSectorTable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the information of target which is not supported by the target list. This container must be configured when user chooses the option MCU_RB_MANUAL_CFG of FeeRbMachineType </L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>FlsRbPageSize</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">FlsRbPageSize</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Size of one page of this sector in bytes (HW/target dependant configuration) </L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>4294967295</MAX>
+                          <MIN>1</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>FeeRbFastCacheInitActive</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Fast cache initialization setting</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Switch to enable and disable Fast cache initialization.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>FeeRbHeaderRecheckActive</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Header Recheck setting</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">switch to enable and disable Header Recheck, necessary to be set to true only for flash types with undefined erase pattern</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>FlsRbErasedValue</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">FlsRbErasedValue</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter defines the erase value of the Data Flash (HW/target dependant configuration)</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <MAX>255</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>FeeRbSector</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">FeeRbSector</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains the information of sector of the specific target</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>FlsRbSectorSize</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">FlsRbSectorSize</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Size of this sector in bytes</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FeePublishedInformation</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">FeePublishedInformation.</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Additional published parameters not covered by CommonPublishedInformation container.</L-2>
+                  </DESC>
+                  <INTRODUCTION>
+                    <P>
+                      <L-1 L="EN">Note that these parameters do not have any configuration class setting, since they are published information.</L-1>
+                    </P>
+                  </INTRODUCTION>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeBlockOverhead</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block overhead.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Management overhead per logical block in bytes (block header size).</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided
+											that allows the configurator to calculate the management overhead correctly.
+											This tag is currently ignored.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>FeeMaximumBlockingTime</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Maximum block time.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The maximum time the FEE module&apos;s API routines shall be blocked (delayed) by internal operations.
+						            This tag is currently ignored.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Note: Internal operations in that case means operations that are not explicitly invoked from the upper layer
+											module but need to be handled for proper operation of this module or the underlying memory driver.
+											This tag is currently ignored.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>Inf</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeePageOverhead</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Page overhead.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Management overhead per page in bytes.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Note: If the management overhead depends on the block size or block location a formula has to be provided
+											that allows the configurator to calculate the management overhead correctly.
+											This tag is currently ignored.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FeeRbDebug</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Fee Debugging</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container for debugging switches.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugBlock</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Own debugging block to keep debugging information over resets.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables a Fee block owned by the Fee itself. This block holds the information about timing measurements and erase counters over resets.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:   Fee debug block enabled.
+                            false:  Fee debug block disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugCheckLayout</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Check the layout on startup.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">During Fee startup a list of specified block is checked to be present with data or invalidated in the flash.
+                          If one of those blocks is missing the Fee goes into an endless loop in the init to avoid further changes of the DFLASH.
+                          This is useful for reset tests to preserve a certain dump in order to ease finding errors.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:   Checking the layout on startup enabled.
+                            false:  Checking the layout on startup disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugDump</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dump the DFLASH on unexpected errors.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Whenever internally an unexpected error happens the DFLASH is dumped to a text file.
+                          This feature makes only sense when the Fee is running in a simulation on the PC.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:   Dump on unexpected error enabled.
+                            false:  Dump on unexpected error disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugEraseCounters</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Enable sector erase counter measurements.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable erase counter measurements.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:   Erase counters enabled.
+                            false:  Erase counters disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugEraseCountersHistogramSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Size of the erase counters histogram.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of slots in the histogram for erase counter measurement.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">When erase counter measurement is enabled a histogram for delta erase counter measurement will be maintained one for each sector.
+                            It is log(2) scaled with an offset of 0.
+                            The bigger this histogram is, the bigger are the maximum values it can hold.
+                            On the other hand more RAM is consumed and the debug block (in case it is enabled) will also grow bigger to store the histogram.
+                            Every slot consumes 4 bytes (uint32).
+                            When erase counter measurement is turned off then this value has no effect.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <MAX>50</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugTime</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Enable timing measurements.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable timing measurements.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:   Timing measurements enabled.
+                            false:  Timing measurements disabled.
+                            In case timing measurement is enabled the following operations are measured:
+                            Main Function duration
+                            Init
+                            Read
+                            Write
+                            Invalidate
+                            Data sector change
+                            FAT sector change</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FeeRbDebugTimeHistogramSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Size of the timing measurement histogram.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of slots in the histogram for timing measurement.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">When time measurement is enabled a histogram for timing measurement will be maintained for all measured operations.
+                            The unit in this histogram is microseconds and it is log(2) scaled where the first basket has an offset of 0.
+                            The bigger this histogram is, the bigger are the maximum values it can hold.
+                            On the other hand more RAM is consumed and the debug block (in case it is enabled) will also grow bigger to store the histogram.
+                            Every slot consumes 4 bytes (uint32).
+                            When timing measurement is turned off then this value has no effect.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <MAX>50</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>FeeRbDebugCheckLayoutBlock</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block which presence shall be checked</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Every block that is named here is checked in the init for its presence when FeeRbDebugCheckLayout is enabled.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fee/FeeBlockConfiguration</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

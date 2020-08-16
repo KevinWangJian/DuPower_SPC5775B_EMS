@@ -1,0 +1,3211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <REVISION-LABEL>10.0.0</REVISION-LABEL>
+        <ISSUED-BY>RB</ISSUED-BY>
+        <DATE>2015-06-18</DATE>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Bfx</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Bfx</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Bit Handling Library</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Bit Handling Library</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.1.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2013-10-31</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>40.9.1.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2015-04-30</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Bfx</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>BfxGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">General settings for Bfx</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">General settings for Bfx with selections for used controller and activation of GetVersionInfo interface</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>BfxRbOptimizationMcuExtract</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Select whether to fetch machine type from MCU and configure for controller optimized implementation</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If BfxRbOptimizationMcuExtract is chosen as &quot;True&quot;, then the controller information will be extracted from MCU.Based on this, optimized implementations will be selected.Hence the user should not configure &quot;BfxRbOptimization&quot;.If BfxRbOptimizationMcuExtract is chosen as &quot;False&quot;, the controller information will not be extracted from MCU and so the user needs to configure &quot;BfxRbOptimization&quot; manually.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:10.0.0:2015-06-18</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>BfxRbOptimization</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Select for which controller optimized implementations shall be used</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select for which controller optimized implementations shall be used</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>TC17xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Tricore TC17xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>TC27xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Tricore TC27xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MPC57xx</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP MPC57xx controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MPCCut2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP MPC Cut2 controller</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:5.0.0:2012-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NO_OPTIMIZATION</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">No optimization, standard C implementations shall be used</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>Bfx_VersionInfoAPI</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Configuration parameter for activation of Bfx_GetVersionInfo function.</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If BfxVersionInfoAPI is set to &quot;ON&quot;, the function BfxGetVersionInfo shall return the version information of the Bfx library. If BfxVersionInfoAPI is set to &quot;OFF&quot;, the Bfx library shall not provide the function Bfx_GetVersionInfo</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>ON</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Activate BfxGetVersionInfo function.</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>OFF</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Deactivate BfxGetVersionInfo function.</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-15</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>BfxRbMemoryLocations</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Memory locations</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Choose memory location settings for each single service</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBit_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBit_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBit_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitMasku16u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBitMask_u16u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitMasku32u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBitMask_u32u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocClrBitMasku8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ClrBitMask_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocCopyBitu16u8u16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_CopyBit_u16u8u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocCopyBitu32u8u32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_CopyBit_u32u8u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocCopyBitu8u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_CopyBit_u8u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitu16u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBit_u16u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitu32u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBit_u32u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitu8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBit_u8u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitsu16u8u8u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBits_u16u8u8_u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitsu32u8u8u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBits_u32u8u8_u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocGetBitsu8u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_GetBits_u8u8u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitu16u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBit_u16u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitu32u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBit_u32u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitu8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBit_u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsu16u8u8u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBits_u16u8u8u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsu32u8u8u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBits_u32u8u8u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsu8u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBits_u8u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsMasku16u16u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBitsMask_u16u16u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsMasku32u32u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBitsMask_u32u32u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocPutBitsMasku8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_PutBitsMask_u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitLtu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitLt_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitLtu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitLt_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitLtu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitLt_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitRtu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitRt_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitRtu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitRt_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocRotBitRtu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_RotBitRt_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:4.0.0:</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:4.0.0:</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBit_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBit_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBit_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitMasku16u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBitMask_u16u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitMasku32u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBitMask_u32u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitMasku8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBitMask_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitsu16u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBits_u16u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitsu32u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBits_u32u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocSetBitsu8u8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_SetBits_u8u8u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitLtu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitLt_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitLtu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitLt_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitLtu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitLt_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitRtu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitRt_u16u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitRtu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitRt_u32u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocShiftBitRtu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ShiftBitRt_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitMasku16u16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBitMask_u16u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitMasku32u32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBitMask_u32u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitMasku8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBitMask_u8u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitsu16</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBits_u16</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitsu32</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBits_u32</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocToggleBitsu8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_ToggleBits_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitLnMasku16u16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitLnMask_u16u16_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitLnMasku32u32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitLnMask_u32u32_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitLnMasku8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitLnMask_u8u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitMasku16u16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitMask_u16u16_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitMasku32u32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitMask_u32u32_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstBitMasku8u8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstBitMask_u8u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstParityEvenu16u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstParityEven_u16_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstParityEvenu32u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstParityEven_u32_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2010-12-17</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>bfxRbMemLocTstParityEvenu8u8</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Bfx_TstParityEven_u8_u8</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Select one of following values: NORMAL for location in normal flash, FAST for location in fast flash, SLOW for location in slow flash, INLINE for inlining of the service</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NORMAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in normal flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in fast flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Location in slow flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>INLINE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Service is inlined</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.0.0:2011-06-30</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

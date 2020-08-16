@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+   <ADMIN-DATA>
+      <DOC-REVISIONS>
+         <DOC-REVISION>
+            <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+            <DATE>2016-03-25</DATE>
+         </DOC-REVISION>
+      </DOC-REVISIONS>
+   </ADMIN-DATA>
+   <AR-PACKAGES>
+      <!-- AR-Package: AUTOSAR -->
+      <AR-PACKAGE >
+         <SHORT-NAME>AUTOSAR_UdpNm</SHORT-NAME>
+         <AR-PACKAGES>
+            <!-- AR-Package: AUTOSAR -->
+            <AR-PACKAGE >
+               <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+               <ELEMENTS>
+                  <!-- Module Definition: UdpNm -->
+                  <ECUC-MODULE-DEF >
+                     <SHORT-NAME>UdpNm</SHORT-NAME>
+                     <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                     <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                           <DOC-REVISION>
+                              <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                              <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                              <DATE>2014-10-31</DATE>
+                           </DOC-REVISION>
+                        </DOC-REVISIONS>
+                     </ADMIN-DATA>
+                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                     <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                     <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/UdpNm</REFINED-MODULE-DEF-REF>                     
+                     <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                     </SUPPORTED-CONFIG-VARIANTS>
+                     <CONTAINERS>
+                        <!-- Container Definition: UdpNmGlobalConfig -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                           <SHORT-NAME>UdpNmGlobalConfig</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container contains all global configuration parameters of UDP NM configured from the CanTrcv Module perspective.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00001</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: UdpNmBusSynchronizationEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmBusSynchronizationEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling bus synchronization support.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This feature is required for gateway nodes only.
+                                        It must not be defined if UDPNM_PASSIVE_MODE_ENABLED is defined.
+                                        This parameter shall be derived from NM_BUS_SYNCHRONIZATION_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00006</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCarWakeUpFilterEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCarWakeUpFilterEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If CWU filtering is supported, only the CWU bit within the NM PDU with source node identifier UdpNmCarWakeUpFilterNodeId is considered as CWU request.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">FALSE - CWU filtering is not supported 
+                                        TRUE - CWU filtering is supported.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00077</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCarWakeUpFilterNodeId -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCarWakeUpFilterNodeId</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Source node identifier for CWU filtering. If CWU filtering is supported, only the CWU bit within the NM PDU with source node identifier UdpNmCarWakeUpFilterNodeId is considered as CWU request.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00078</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCarWakeUpRxEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCarWakeUpRxEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables or disables support of CarWakeUp bit evaluation in received NM PDUs.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">FALSE - CarWakeUp not supported.
+                                        TRUE - CarWakeUp supported.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00076</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmComControlEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmComControlEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the Communication Control support.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_COM_CONTROL_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00013</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmComUserDataSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmComUserDataSupport</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enable/disable the user data support.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00055</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCoordinatorEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCoordinatorEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enable/disable the NM Coordination algorithm to being able to initiate the synchronization algorithm.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">TRUE: Option is enabled
+
+                                        FALSE: The parameter shall be FALSE by default and shall only be allowed to be TRUE if the parameter UDPNM_REMOTE_SLEEP_IND_ENABLED is TRUE.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00040</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCoordinatorId -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCoordinatorId</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Set the NM coordination ID for this gateway.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">0x00: passive coordinator only
+                                        0x01 - 0x03: coordinator priority
+
+                                        Only valid, if UDPNM_COORDINATOR_ENABLED is TRUE.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00041</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>3</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmCoordinatorSyncSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmCoordinatorSyncSupport</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables/disables the coordinator synchronization support.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00059</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmDevErrorDetect -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmDevErrorDetect</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00002</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmImmediateRestartEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmImmediateRestartEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the asynchronous transmission of a NM PACKET upon bus-communication request in Prepare-Bus-Sleep mode.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">Must not be defined if UDPNM_PASSIVE_MODE_ENABLED is defined.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00009</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmNodeDetectionEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmNodeDetectionEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the node detection support.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_NODE_DETECTION_ENABLED.
+                                        This parameter shall only be enabled if UDPNM_NODE_ID_ENABLED is defined.
+
+                                        If(UdpNmPduCbvPosition != UDPNM_PDU_OFF) then Equal(NmNodeDetectionEnabled) else Equal(False).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00007</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmNodeIdEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmNodeIdEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the source node identifier.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_NODE_ID_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00008</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmNumberOfChannels -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmNumberOfChannels</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Number of NM channels allowed within one ECU.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00014</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>1</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmPassiveModeEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmPassiveModeEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling support of the Passive Mode.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_PASSIVE_MODE_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00010</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmPduRxIndicationEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmPduRxIndicationEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the PDU Rx Indication.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_PDU_RX_INDICATION_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00011</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmPnEiraCalcEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmPnEiraCalcEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if UdpNm calculates the PN request information for internal and external requests. (EIRA) true: PN request are calculated</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">false: PN request are not calculated</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00066</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmPnResetTime -->
+                              <ECUC-FLOAT-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmPnResetTime</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies the runtime of the reset timer in seconds. This reset time is valid for the reset of PN requests in the EIRA and in the ERA. The value shall be the same for every channel. Thus it is a global config parameter.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00065</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65.535</MAX>
+                                 <MIN>0.001</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmRemoteSleepIndEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmRemoteSleepIndEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling remote sleep indication support.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This feature is required for gateway nodes only.
+                                        It must not be defined if UDPNM_PASSIVE_MODE_ENABLED is defined.
+                                        This parameter shall be derived from NM_REMOTE_SLEEP_IND_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00005</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmRepeatMsgIndEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmRepeatMsgIndEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enable/disable the notification that a RepeatMessageRequest bit has been received.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_REPEAT_MSG_IND_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00015</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmStateChangeIndEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmStateChangeIndEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling the UDP NM state change notification.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_STATE_CHANGE_IND_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00012</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmUserDataEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmUserDataEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling user data support.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be derived from NM_USER_DATA_ENABLED.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00004</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: UdpNmVersionInfoApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>UdpNmVersionInfoApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Pre-processor switch for enabling version info API support.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00003</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                           <REFERENCES>
+                              <!-- Reference Definition: UdpNmPnEiraRxNSduRef -->
+                              <ECUC-REFERENCE-DEF >
+                                 <SHORT-NAME>UdpNmPnEiraRxNSduRef</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Reference to a Pdu in the COM-Stack. Only one SduRef is required for UdpNm because the EIRA is the aggregation over all Ethernet Channels.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00062</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                              </ECUC-REFERENCE-DEF>
+                           </REFERENCES>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: UdpNmChannelConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>UdpNmChannelConfig</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the channel-specific configuration parameters of the UdpNm.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00017</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: UdpNmActiveWakeupBitEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmActiveWakeupBitEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables/Disables the handling of the Active Wakeup Bit in the UdpNm module.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00074</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- Vendor06: PARAMETER DEFINITION: UdpNmAllNmMessagesKeepAwake - RB specific parameter -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmAllNmMessagesKeepAwake</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">RB (Vendor06) specific parameter: Specifies if UdpNm drops irrelevant NM PDUs.
+false: Only NM PDUs with a PNI bit = true and containing a PN request for this ECU triggers the standard RX indication handling true: Every NM PDU triggers the standard RX indication handling</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00089</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:AR42.3.0.0:2017-06-30</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>                                    
+                                    <!-- PARAMETER DEFINITION: UdpNmImmediateNmTransmissions -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmImmediateNmTransmissions</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines the number of immediate NM PDUs which shall be transmitted. If the value is zero no immediate NM PDUs are transmitted.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00075</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmImmediateNmCycleTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmImmediateNmCycleTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines the immediate NM PDU cycle time in seconds which is used for UdpNmImmediateNmTransmissions NM PDU transmissions.</L-2>
+                                       </DESC>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:42.0.3.0:2016-03-25</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmMainFunctionPeriod -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmMainFunctionPeriod</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Call cycle of UdpNm_MainFunction_x for the respective instance in [s].</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00032</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>0.255</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmMsgCycleOffset -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmMsgCycleOffset</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Time offset in the periodic transmission node. It determines the start delay of the transmission.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">&lt; UDPNM_MSG_CYCLE_TIME
+
+                                                This parameter is only valid if UDPNM_PASSIVE_MODE_ENABLED is disabled.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00029</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmMsgCycleTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmMsgCycleTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Period of a NM-message. It determines the periodic rate and is the basis for transmit scheduling.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">NM_TIMEOUT_TIME = n * UDPNM_MSG_CYCLE_TIME 
+                                                This parameter is only valid if UDPNM_PASSIVE_MODE_ENABLED is disabled.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00028</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmMsgTimeoutTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmMsgTimeoutTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Transmission Timout of NM-message. If there is no transmission confirmation by the UDP Interface within this timeout, the UDPNM module shall gibe an error notification.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">This parameter is only valid if UDPNM_PASSIVE_MODE_ENABLED is disabled.
+
+                                                UDPNM_MSG_TIMEOUT_TIME should be a multiple of UDPNM_MSG_CYCLE_TIME.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00030</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmNodeId -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmNodeId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Node identifier of local node.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">This parameter is only valid if UDPNM_PASSIVE_MODE_ENABLED is set to OFF and UDPNM_NODE_DETECTION_ENABLED is set to ON.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00031</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPduCbvPosition -->
+                                    <ECUC-ENUMERATION-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPduCbvPosition</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines the position of the control bit vector within the NM PACKET.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">The value of the parameter represents the location of the control bit vector in the NM PACKET (UDPNM_PDU_BYTE_0 means byte 0, UDPNM_PDU_BYTE_1 means byte 1, UDPNM_PDU_OFF means the control bit vector is not part of the NM PACKET)
+
+                                                See also UDPNM_PDU_NID_POSITION
+
+                                                if (UDPNM_PDU_CBV_POSITION != UDPNM_PDU_OFF &amp;&amp; UDPNM_PDU_NID_POSITION != UDPNM_PDU_OFF) then UDPNM_PDU_CBV_POSITION != UDPNM_PDU_NID_POSITION
+
+                                                if (UDPNM_PDU_CBV_POSITION != UDPNM_PDU_OFF &amp;&amp; UDPNM_PDU_NID_POSITION == UDPNM_PDU_OFF) then UDPNM_PDU_CBV_POSITION = UDPNM_PDU_BYTE0</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00026</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <LITERALS>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_BYTE_0</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_BYTE_1</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_OFF</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                       </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPduLength -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPduLength</SHORT-NAME>
+                                           <LONG-NAME>
+                                                <L-4 L="EN">UdpNmPduLength (Currently Unused)</L-4>
+                                           </LONG-NAME>                                       
+                                       <DESC>
+                                          <L-2 L="EN">Defines the length of the NM PACKET in bytes.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Valid values are within the range 0 &lt;= UDPNM_PDU_LENGTH &lt;= 8.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00024</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>8</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPduNidPosition -->
+                                    <ECUC-ENUMERATION-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPduNidPosition</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines the position of the source node identifier within the NM PACKET.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">ImplementationType: UdpNm_PduPositionType
+
+                                                The value of the parameter represents the location of the source node identifier in the NM PACKET (UDPNM_PDU_BYTE_0 means byte 0, UDPNM_PDU_BYTE_1 means byte 1, UDPNM_PDU_OFF means source node identifier is not part of the NM PACKET)
+
+                                                See also UDPNM_PDU_CBV_POSITION
+
+                                                if (UDPNM_PDU_NID_POSITION != UDPNM_PDU_OFF &amp;&amp; UDPNM_PDU_CBV_POSITION != UDPNM_PDU_OFF) then UDPNM_PDU_NID_POSITION != UDPNM_PDU_CBV_POSITION
+
+                                                if (UDPNM_PDU_NID_POSITION != UDPNM_PDU_OFF &amp;&amp; UDPNM_PDU_CBV_POSITION == UDPNM_PDU_OFF) then UDPNM_PDU_IND_POSITION = UDPNM_PDU_BYTE0</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00025</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <LITERALS>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_BYTE_0</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_BYTE_1</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF >
+                                             <SHORT-NAME>UDPNM_PDU_OFF</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                       </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPnEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPnEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables or disables support of partial networking.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">false: Partial networking Range not supported 
+                                                true: Partial networking supported</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00061</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPnEraCalcEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPnEraCalcEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies if UdpNm calculates the PN request information for external requests. (ERA)</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">false: PN request are not calculated 
+                                                true: PN request are calculated.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00060</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPnHandleMultipleNetworkRequests -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPnHandleMultipleNetworkRequests</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">false: UdpNm_NetworkRequest is ignored in NO.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">true: UdpNm_NetworkRequest triggers a change from NO to RM.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00063</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmRemoteSleepIndTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmRemoteSleepIndTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Timeout for Remote Sleep Indication.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">It defines the time in [s] how long it shall take to recognize that all other nodes are ready to sleep.
+
+                                                Typically it should be equal to: n * UDPNM_MSG_CYCLE_TIME, where n denotes the number of NM packets that are normally sent before Remote Sleep Indication is detected.
+                                                The value of n decremented by one determines the amount of lost NM packets that can be tolerated by the Remote Sleep Indication procedure.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00023</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmRepeatMessageTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmRepeatMessageTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Timeout for Repeat Message State.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">It defines the time in [s] how long the NM shall stay in the Repeat Message State.
+
+                                                Typically it should be equal to: n * UDPNM_MSG_CYCLE_TIME, where n denotes the number of NM packets that are normally sent in the Repeat Message State.
+                                                The value of n decremented by one determines the amount of lost NM packets that can be tolerated by the node detection procedure.
+                                                The value 0 denotes that no Repeat Message State is configured.
+                                                It means that Repeat Message State is transient what implicates that it is left immediately after entrance and in result no start-up stability is guaranteed and no node detection procedure is possible.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00022</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmTimeoutTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmTimeoutTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Network Timeout for NM packets.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">It denotes the time in [s] how long the NM shall stay in the Network Mode before transition into Prepare Bus-Sleep Mode shall take place.
+
+                                                It shall be equal for all nodes in the cluster.
+                                                It shall be greater than UDPNM_MSG_CYCLE_TIME.
+                                                Typically, it should be equal to: x * UDPNM_MSG_CYCLE_TIME, where n denotes the number of NM PACKET cycle times in the Ready Sleep State before transition into the Bus-Sleep Mode is initiated.
+                                                The value of n decremented by one determines the amount of lost NM packets that can be tolerated by the coordination algorithm.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00020</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.002</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmUserDataLength -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmUserDataLength</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines the length of the user data contained in the NM PACKET.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">The difference between Pdulength and applied standardized bytes (source node identifier and control bit vector) within the NM PACKET.
+                                                Valid values are 0x00..MTU Size</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>RB:42.2.0.1:2017-04-30</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>4294967295</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmWaitBusSleepTime -->
+                                    <ECUC-FLOAT-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmWaitBusSleepTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Timeout for bus calm down phase.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">It denotes the time in [s] how long the NM shall stay in the Prepare Bus-Sleep Mode before transition into Bus-Sleep Mode shall take place.
+
+                                                It shall be equal for all nodes in the cluster.
+                                                It shall be long enough to empty all Tx-buffer empty.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00021</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: UdpNmPnEraRxNSduRef -->
+                                    <ECUC-REFERENCE-DEF >
+                                       <SHORT-NAME>UdpNmPnEraRxNSduRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to a Pdu in the COM-Stack. The SduRef is required for every UdpNm Channel, because ERA is reported per channel.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00073</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: UdpNmComMNetworkHandleRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+                                       <SHORT-NAME>UdpNmComMNetworkHandleRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This reference points to the unique channel defined by the ComMChannel and provides access to the unique channel index value in ComMChannelId.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00018</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: UdpNmRxPdu -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>UdpNmRxPdu</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This container describes the UdpNm RX PDU's.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00038</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: UdpNmRxPduId -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>UdpNmRxPduId</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">ID of the RxPdu that will be used by a RxIndication of the lower layer.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00043</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                             <WITH-AUTO>true</WITH-AUTO>					     
+                                             <MAX>4294967296</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                       <REFERENCES>
+                                          <!-- Reference Definition: UdpNmRxPduRef -->
+                                          <ECUC-REFERENCE-DEF >
+                                             <SHORT-NAME>UdpNmRxPduRef</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">The reference to a PDU in the global PDU structure described in the AUTOSAR ECU Configuration Specification. This reference will be used by the UdpNm module to derive the PDU Id.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00039</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                          </ECUC-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <!-- Container Definition: UdpNmTxPdu -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>UdpNmTxPdu</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This container describes the UdpNm TX PDU's.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00036</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: UdpNmTxConfirmationPduId -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>UdpNmTxConfirmationPduId</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Id of the TxPdu that will be used by a TxConfirmation from the lower layer.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00042</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                             <WITH-AUTO>true</WITH-AUTO>
+                                             <MAX>4294967296</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                       <REFERENCES>
+                                          <!-- Reference Definition: UdpNmTxPduRef -->
+                                          <ECUC-REFERENCE-DEF >
+                                             <SHORT-NAME>UdpNmTxPduRef</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">The reference to a PDU in the global PDU structure described in the AUTOSAR ECU Configuration Specification. This reference will be used by the UdpNm module to derive the PDU Id.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00037</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                          </ECUC-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <!-- Container Definition: UdpNmUserDataTxPdu -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>UdpNmUserDataTxPdu</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This optional container is used to configure the UserNm PDU. This container is only available if UdpNmComUserDataSupport is enabled.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00056</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: UdpNmTxUserDataPduId -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>UdpNmTxUserDataPduId</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">This parameter defines the Handle ID of the NM User Data I-PDU.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00058</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                             <WITH-AUTO>true</WITH-AUTO>
+                                             <MAX>65535</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                       <REFERENCES>
+                                          <!-- Reference Definition: UdpNmTxUserDataPduRef -->
+                                          <ECUC-REFERENCE-DEF >
+                                             <SHORT-NAME>UdpNmTxUserDataPduRef</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Reference to the NM User Data I-PDU in the global PDU collection.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00057</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                          </ECUC-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: UdpNmDemEventParameterRefs -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>UdpNmDemEventParameterRefs</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00050</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                              <PARAMETERS>
+                                                <ECUC-ENUMERATION-PARAM-DEF>
+                                                  <SHORT-NAME>UdpNm_DynCreate_UdpNmEvent</SHORT-NAME>
+                                                  <LONG-NAME>
+                                                    <L-4 L="EN">UdpNm_DynCreate_UdpNmEvent</L-4>
+                                                  </LONG-NAME>
+                                                  <DESC>
+                                                    <L-2 L="EN"> RB (Vendor06) Selects the way how the UdpNm DemEvents are created. If set to "Disabled" no DemEvent is automatically created. If configured to "Standard", the reference to a DemEvent is also automatically created and shall therefore not to be set manually.</L-2>
+                                                  </DESC>
+                                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                  <SCOPE>LOCAL</SCOPE>
+                                                  <ORIGIN>RB:AR42.3.4.0:2017-13-10</ORIGIN>
+                                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                  <VALUE-CONFIG-CLASSES>
+                                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                  </VALUE-CONFIG-CLASSES>
+                                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                  <DEFAULT-VALUE>Disabled</DEFAULT-VALUE>
+                                                  <LITERALS>
+                                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                                      <SHORT-NAME>Standard</SHORT-NAME>
+                                                      <LONG-NAME>
+                                                        <L-4 L="EN">Standard</L-4>
+                                                      </LONG-NAME>
+                                                      <ORIGIN>RB:AR42.3.4.0:2017-13-10</ORIGIN>
+                                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                                      <SHORT-NAME>Disabled</SHORT-NAME>
+                                                      <LONG-NAME>
+                                                        <L-4 L="EN">Disabled</L-4>
+                                                      </LONG-NAME>
+                                                      <ORIGIN>RB:AR42.3.4.0:2017-13-10</ORIGIN>
+                                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                                  </LITERALS>
+                                                </ECUC-ENUMERATION-PARAM-DEF>
+                                              </PARAMETERS>                                  
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: UDPNM_E_NETWORK_TIMEOUT -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+                                       <SHORT-NAME>UDPNM_E_NETWORK_TIMEOUT</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "NM-Timeout Timer has abnormally expired outside of the Ready Sleep State" has occured.</L-2>
+                                          <L-2 L="EN">Tags: atp.Status=obsolete, atp.StatusRevisionBegin=4.2.2</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00053</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: UDPNM_E_TCPIP_TRANSMIT_ERROR -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+                                       <SHORT-NAME>UDPNM_E_TCPIP_TRANSMIT_ERROR</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error "A call to the TCP/IP stack has failedA call to the TCP/IP stack has failed" has occured.</L-2>
+                                          <L-2 L="EN">Tags: atp.Status=obsolete, atp.StatusRevisionBegin=4.2.2</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00052</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: UdpNmPnInfo -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>UdpNmPnInfo</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">PN information configuration</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00067</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: UdpNmPnInfoLength -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPnInfoLength</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies the length of the PN request information in the NM message.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00069</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                                       <MAX>7</MAX>
+                                       <MIN>1</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: UdpNmPnInfoOffset -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>UdpNmPnInfoOffset</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies the offset of the PN request information in the NM message.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00068</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                                       <MAX>7</MAX>
+                                       <MIN>1</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: UdpNmPnFilterMaskByte -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>UdpNmPnFilterMaskByte</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">PN information configuration</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00070</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>7</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: UdpNmPnFilterMaskByteIndex -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>UdpNmPnFilterMaskByteIndex</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Index of the filter mask byte. Specifies the position within the filter mask byte array.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00071</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>6</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: UdpNmPnFilterMaskByteValue -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>UdpNmPnFilterMaskByteValue</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Parameter to configure the filter mask byte.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_UdpNm_00072</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                                             <MAX>255</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                     </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+               </ELEMENTS>
+            </AR-PACKAGE>
+         </AR-PACKAGES>
+      </AR-PACKAGE>
+   </AR-PACKAGES>
+</AUTOSAR>

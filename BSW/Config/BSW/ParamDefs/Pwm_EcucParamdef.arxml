@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Pwm</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Pwm</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Pwm</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of Pwm (Pulse Width Modulation) module.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2016-11-01</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>42.1.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2016-11-01</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>PwmChannelConfigSet</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">PwmChannelConfigSet</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR Pwm module.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>PwmRbMaxChannel</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmMaxChannel</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter contains the number of Channels configured. It will be gathered by tools during the configuration stage.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">calculationFormula = Number of configured Icu Channels
+
+                                        Implementation Type: Pwm_ChannelType</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <WITH-AUTO>true</WITH-AUTO>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>PwmChannel</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmChannel</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of an individual PWM channel.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <PARAMETERS>
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>PwmChannelClass</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmChannelClass</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Class of PWM Channel.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">ImplementationType: Pwm_ChannelClassType</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_FIXED_PERIOD</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_FIXED_PERIOD</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_FIXED_PERIOD_SHIFTED</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_FIXED_PERIOD_SHIFTED</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_VARIABLE_PERIOD</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_VARIABLE_PERIOD</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>PwmChannelId</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmChannelId</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Channel Id of the PWM channel. This value will be assigned to the symbolic name derived of the PwmChannel container short name.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <WITH-AUTO>true</WITH-AUTO>
+                          <MAX>4294967295</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>PwmDutycycleDefault</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmDutycycleDefault</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value of duty cycle used for Initialization</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">0, represents 0%  
+0x8000 represents 100%</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>32768</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>PwmIdleState</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmIdleState</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">The parameter PWM_IDLE_STATE represents the output state of the PWM after the signal is stopped (e.g. call of Pwm_SetOutputToIdle).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_HIGH</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_HIGH</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_LOW</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_LOW</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>PwmNotification</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmNotification</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Definition of the Callback function.When the notification support is ON then configure Notification function else it is left empty and default Null_Ptr is assigned</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FLOAT-PARAM-DEF>
+                          <SHORT-NAME>PwmPeriodDefault</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmPeriodDefault</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Value of period used for Initialization.(in seconds).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>Inf</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>PwmPolarity</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmPolarity</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Defines the starting polarity of each PWM channel.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_HIGH</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_HIGH</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>PWM_LOW</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">PWM_LOW</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>PwmRbChannelActive</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmChannelActive</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Check for the channel to be active or dead</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>PwmRbHWPeripheral</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmHWPeripheral</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Hardware peripheral of the channel</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>Pwm_Prv_HwGtm_e</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">GTM TIMER</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>42.1.0.0:2016-11-01</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>PwmMcuClockReferencePoint</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PwmMcuClockReferencePoint</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter contains reference to the McuClockReferencePoint</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>PwmRbGtmAtomChannel</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Gtm Channel Parameters</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Container for configuration of GTM - ATOM specific parameters</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>PwmRb_b_GtmHWInstance</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">GTM Hardware Instance</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of Hardware Instance of GTM</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>2</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>PwmRb_c_GtmHWChannel</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">GTM Hardware Channel</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of Hardware Channel of GTM</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>7</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>PwmRb_d_GtmClksource</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CMU clock source</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of Clock sources for GTM Channel</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_0</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 0</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_1</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 1</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_2</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 2</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_3</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 3</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_4</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 4</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_5</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 5</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_6</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 6</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CMU_CLK_7</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider 7</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-01-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>PwmRb_e_GtmIndex</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Gtm-Atom Hardware index</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of GTM harware index</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <WITH-AUTO>true</WITH-AUTO>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>PwmConfigurationOfOptApiServices</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">PwmConfigurationOfOptApiServices</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">PwmConfigurationOfOptApiServices</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmDeInitApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmDeInitApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Adds / removes the service Pwm_DeInit() from the code.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmGetOutputState</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmGetOutputState</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">PwmGetOutputState</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmSetDutyCycleApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmSetDutyCycleApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">PwmSetDutyCycle</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmSetOutputToIdle</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmSetOutputToIdle</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">PwmSetOutputToIdle</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmSetPeriodAndDuty</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmSetPeriodAndDuty</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">PwmSetPeriodAndDuty</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmVersionInfoApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switch to indicate that the Pwm_ GetVersionInfo is supported</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>PwmGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">PwmGeneral</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">PwmGeneral</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmDevErrorDetect</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">* true: enabled (ON).
+* false: disabled (OFF).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmDutycycleUpdatedEndperiod</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmDutycycleUpdatedEndperiod</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switch for enabling the update of the duty cycle parameter at the end of the current period.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">TRUE: update of duty cycle is done at the end of period of currently generated waveform (current waveform is finished). FALSE: update of duty cycle is done immediately (just after service call, current waveform is cut).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>PwmIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmIndex</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmPeriodUpdatedEndperiod</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmPeriodUpdatedEndperiod</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switch for enabling the update of the period parameter at the end of the current period.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">TRUE: Duty cycle is updated at the end of the current period. 
+FALSE: Duty cycle may be updated prior to the end of the current period</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmRbGTMused</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">GTM usage by PWM</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switch to indicate GTM is Used by Pwm</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">TRUE:Gtm module is used
+FALSE: Gtm Module is not used</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmRbNotificationSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmNotificationSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switch to indicate that the notifications are supported</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">TRUE:Pwm signal edge notifications are switched on
+FALSE:Pwm signal edge notifications are switched off</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2014-10-14</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmRbPreCompileVariant</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Set PreCompile support ON</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Selection of  Pre compile time environment.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">True:Pre compile variant enabled 
+False:Pre compile variant not enabled</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2016-11-01</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>PwmRbVersionCheckAutosar</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">PwmEnable AUTOSAR version checking</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables / disables AUTOSAR file version checking.
+- If enabled the respective AUTOSAR file versions are checked. In case of a missmatch an error is reported during compilaton.
+- If disabled, versions are not checked. Use this option, for example, if you want to mix AUTOSAR versions.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">True:Pre compile variant enabled 
+False:Pre compile variant not enabled</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2014-10-14</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>PwmRbDriverConfiguration</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Pwm driver configuration</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container contains the configuration (parameters) of the Pwm Driver</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>PwmRbKeywordCompiler</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Compiler specific keyword</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compiler specific keyword for interrupt handler functions, if required, e.g :
+- GHS uses &quot;__interrupt&quot; keyword
+- Diab uses &quot;__interrupt__&quot; keyword.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:42.1.0.0:2014-10-14</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

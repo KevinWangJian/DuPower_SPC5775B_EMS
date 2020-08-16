@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_NvM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>PortInterfaces</SHORT-NAME>
+          <ELEMENTS>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMAdmin</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>SetBlockProtection</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>ProtectionEnabled</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMAdmin/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMMirror</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>ReadRamBlockFromNvM</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>SrcPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_Rb_VoidPtr</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMMirror/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>WriteRamBlockToNvM</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>DstPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_Rb_VoidPtr</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMMirror/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMNotifyInitBlock</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>InitBlock</SHORT-NAME>
+                  <ARGUMENTS>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMNotifyInitBlock/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMNotifyJobFinished</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>JobFinished</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>ServiceId</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>JobResult</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_RequestResultType</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMNotifyJobFinished/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMRbNotifyJobStarted</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>JobStarted</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>ServiceId</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+            </CLIENT-SERVER-INTERFACE>
+            <CLIENT-SERVER-INTERFACE>
+              <SHORT-NAME>NvMService</SHORT-NAME>
+              <IS-SERVICE>true</IS-SERVICE>
+              <OPERATIONS>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>EraseBlock</SHORT-NAME>
+                  <ARGUMENTS>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>GetDataIndex</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>DataIndexPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>GetErrorStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>RequestResultPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_RequestResultType</TYPE-TREF>
+                      <DIRECTION>OUT</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>InvalidateNvBlock</SHORT-NAME>
+                  <ARGUMENTS>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>ReadBlock</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>DstPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_Rb_VoidPtr</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>RestoreBlockDefaults</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>DstPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_Rb_VoidPtr</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>SetDataIndex</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>DataIndex</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>SetRamBlockStatus</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>BlockChanged</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+                <CLIENT-SERVER-OPERATION>
+                  <SHORT-NAME>WriteBlock</SHORT-NAME>
+                  <ARGUMENTS>
+                    <ARGUMENT-DATA-PROTOTYPE>
+                      <SHORT-NAME>SrcPtr</SHORT-NAME>
+                      <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_Rb_ConstVoidPtr</TYPE-TREF>
+                      <DIRECTION>IN</DIRECTION>
+                    </ARGUMENT-DATA-PROTOTYPE>
+                  </ARGUMENTS>
+                  <POSSIBLE-ERROR-REFS>
+                    <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/AUTOSAR_NvM/PortInterfaces/NvMService/E_NOT_OK</POSSIBLE-ERROR-REF>
+                  </POSSIBLE-ERROR-REFS>
+                </CLIENT-SERVER-OPERATION>
+              </OPERATIONS>
+              <POSSIBLE-ERRORS>
+                <APPLICATION-ERROR>
+                  <SHORT-NAME>E_NOT_OK</SHORT-NAME>
+                  <ERROR-CODE>1</ERROR-CODE>
+                </APPLICATION-ERROR>
+              </POSSIBLE-ERRORS>
+            </CLIENT-SERVER-INTERFACE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwcImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>NvM</SHORT-NAME>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SWC-BSW-MAPPING-REF DEST="SWC-BSW-MAPPING">/AUTOSAR_NvM/SwcBswMappings/NvM</SWC-BSW-MAPPING-REF>
+              <VENDOR-ID>6</VENDOR-ID>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SERVICE-SW-COMPONENT-TYPE>
+              <SHORT-NAME>NvM</SHORT-NAME>
+              <PORTS>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>NvM_MultiBlock</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>NvM_ConfigId</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <P-PORT-PROTOTYPE>
+                  <SHORT-NAME>NVDataBlock1</SHORT-NAME>
+                  <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</PROVIDED-INTERFACE-TREF>
+                </P-PORT-PROTOTYPE>
+                <R-PORT-PROTOTYPE>
+                  <SHORT-NAME>NVDataBlock1_Finished</SHORT-NAME>
+                  <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMNotifyJobFinished</REQUIRED-INTERFACE-TREF>
+                </R-PORT-PROTOTYPE>
+              </PORTS>
+              <INTERNAL-BEHAVIORS>
+                <SWC-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>NVRAMManager</SHORT-NAME>
+                  <EVENTS>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EENB_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/EraseNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGDI_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGES_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetErrorStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EINB_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/InvalidateNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBL_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/ReadBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBD_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/RestoreBlockDefaults</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/RestoreBlockDefaults</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESDI_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESRS_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetRamBlockStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EWBL_NvM_MultiBlock</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/WriteBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EENB_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/EraseNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGDI_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGES_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetErrorStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EINB_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/InvalidateNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBL_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/ReadBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBD_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/RestoreBlockDefaults</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/RestoreBlockDefaults</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESDI_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESRS_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetRamBlockStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EWBL_NvM_ConfigId</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/WriteBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EENB_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/EraseNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/EraseBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGDI_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EGES_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/GetErrorStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetErrorStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EINB_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/InvalidateNvBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/InvalidateNvBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBL_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/ReadBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/ReadBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ERBD_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/RestoreBlockDefaults</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/RestoreBlockDefaults</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESDI_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetDataIndex</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetDataIndex</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>ESRS_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/SetRamBlockStatus</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                    <OPERATION-INVOKED-EVENT>
+                      <SHORT-NAME>EWBL_NVDataBlock1</SHORT-NAME>
+                      <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_NvM/SwComponentTypes/NvM/NVRAMManager/WriteBlock</START-ON-EVENT-REF>
+                      <OPERATION-IREF>
+                        <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</CONTEXT-P-PORT-REF>
+                        <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-PROVIDED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </OPERATION-INVOKED-EVENT>
+                  </EVENTS>
+                  <PORT-API-OPTIONS>
+                    <PORT-API-OPTION>
+                      <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>0</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_MultiBlock</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>1</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NvM_ConfigId</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-ARG-VALUES>
+                        <PORT-DEFINED-ARGUMENT-VALUE>
+                          <VALUE>
+                            <NUMERICAL-VALUE-SPECIFICATION>
+                              <VALUE>3</VALUE>
+                            </NUMERICAL-VALUE-SPECIFICATION>
+                          </VALUE>
+                          <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_NvM/ImplementationDataTypes/NvM_BlockIdType</VALUE-TYPE-TREF>
+                        </PORT-DEFINED-ARGUMENT-VALUE>
+                      </PORT-ARG-VALUES>
+                      <PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</PORT-REF>
+                    </PORT-API-OPTION>
+                    <PORT-API-OPTION>
+                      <ENABLE-TAKE-ADDRESS>true</ENABLE-TAKE-ADDRESS>
+                      <INDIRECT-API>false</INDIRECT-API>
+                      <PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1_Finished</PORT-REF>
+                    </PORT-API-OPTION>
+                  </PORT-API-OPTIONS>
+                  <RUNNABLES>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>EraseNvBlock</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_EraseNvBlock</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>GetDataIndex</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_GetDataIndex</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>GetErrorStatus</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_GetErrorStatus</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>InvalidateNvBlock</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_InvalidateNvBlock</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>ReadBlock</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_ReadBlock</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>RestoreBlockDefaults</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_RestoreBlockDefaults</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>SetBlockProtection</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_SetBlockProtection</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>SetDataIndex</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_SetDataIndex</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>SetRamBlockStatus</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_SetRamBlockStatus</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>WriteBlock</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SYMBOL>NvM_WriteBlock</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                    <RUNNABLE-ENTITY>
+                      <SHORT-NAME>MainFunction</SHORT-NAME>
+                      <CAN-BE-INVOKED-CONCURRENTLY>false</CAN-BE-INVOKED-CONCURRENTLY>
+                      <SERVER-CALL-POINTS>
+                        <SYNCHRONOUS-SERVER-CALL-POINT>
+                          <SHORT-NAME>SSCP_NVDataBlock1_Finished</SHORT-NAME>
+                          <OPERATION-IREF>
+                            <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1_Finished</CONTEXT-R-PORT-REF>
+                            <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMNotifyJobFinished/JobFinished</TARGET-REQUIRED-OPERATION-REF>
+                          </OPERATION-IREF>
+                        </SYNCHRONOUS-SERVER-CALL-POINT>
+                      </SERVER-CALL-POINTS>
+                      <SYMBOL>NvM_MainFunction</SYMBOL>
+                    </RUNNABLE-ENTITY>
+                  </RUNNABLES>
+                  <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                </SWC-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

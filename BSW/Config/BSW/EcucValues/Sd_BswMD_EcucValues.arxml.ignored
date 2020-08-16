@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+ <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>UBK</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Project</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-CONFIGURATION-VALUES>
+                      <SHORT-NAME>rba_ArxmlGen</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-MODULE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen</DEFINITION-REF>
+                      <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Sd</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompCategory</DEFINITION-REF>
+                              <VALUE>BswModule</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompId</DEFINITION-REF>
+                              <VALUE>171</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsConfigurable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandalone</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandardized</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompLongName</DEFINITION-REF>
+                              <VALUE>ServiceDiscovery</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_StateType_Enum</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enum for Sd State type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_Enum_StateType</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_StateType_Enum_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_StateType_u8_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Simple Value Sd State Type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_Enum_StateType</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_StateType_u8_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_Enum_StateType</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>Enumeration for Sd State Type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_0</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>SD_STATE_UNINIT</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_1</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>SD_STATE_INIT</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_DataConstraint_u8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>255</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_Sd/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>SE_MainFunction</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityCategory</DEFINITION-REF>
+                                  <VALUE>Schedulable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityImplEntryRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Sd/BswModuleEntrys/Sd_MainFunction</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_StateType_Enum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enumeration for Sd State Type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_StateType_u8_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Simple Typedef of Sd StateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>Sd_InitStatus_en</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.1f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Gives information about current status for Service Discovery. [SD_STATE_UNINIT - Service Discovery is not yet configured , SD_STATE_INIT - Service Discovery is configured ]</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/Sd/Sd_StateType_u8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </CONTAINERS>
+                    </ECUC-MODULE-CONFIGURATION-VALUES>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

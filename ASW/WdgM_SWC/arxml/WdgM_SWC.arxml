@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>WdgM_SWC</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>WdgM_SWC</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <R-PORT-PROTOTYPE UUID="10558de5-fce7-4842-bdda-9a8fd2d31513">
+              <SHORT-NAME>RPort_AliveSupervision_Asw_5ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="fa5b740d-c2c4-441b-bd48-0e16357a1057">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_5ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="8770d88a-caf0-445c-ac94-8e25cfa23a0b">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_10ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="14c475a9-a609-4830-9119-f2d837d3a96f">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_20ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="4d231998-86e9-41a5-a954-e158d647516c">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_50ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6fbefcef-6d21-4434-9f07-98ca8ec9a3a6">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_100ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="f328633d-97e2-4933-a551-513de2127889">
+              <SHORT-NAME>RPort_AliveSupervision_Bsw_1000ms</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_WdgM/WdgM_AliveSupervision</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="062112cd-8f80-483d-8c20-a52e26acb2e2">
+              <SHORT-NAME>IB_WdgM_SWC</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_WdgM/WdgM_Type_Map</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="aec4721b-496f-4fa3-8c95-3c8d98b7817d">
+                  <SHORT-NAME>TimingEvent_0</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Asw_5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="2f89f3f7-5c78-4355-b7c5-48c82a34dea3">
+                  <SHORT-NAME>TimingEvent_1</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="93276d52-6795-425a-906c-6c0ff6458337">
+                  <SHORT-NAME>TimingEvent_2</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="cc7b2ca4-7656-46b8-be49-5a0410b3affa">
+                  <SHORT-NAME>TimingEvent_3</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_20ms</START-ON-EVENT-REF>
+                  <PERIOD>0.02</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="5ed38bff-bf3b-49b2-b2d2-d868f78b5025">
+                  <SHORT-NAME>TimingEvent_4</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_50ms</START-ON-EVENT-REF>
+                  <PERIOD>0.05</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="29216c8a-6434-433b-a3a6-c61bcd6dbbbe">
+                  <SHORT-NAME>TimingEvent_5</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_100ms</START-ON-EVENT-REF>
+                  <PERIOD>0.1</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="6119219d-1bca-4c8e-a98c-c244eed99b9b">
+                  <SHORT-NAME>TimingEvent_6</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/WdgM_SWC/WdgM_SWC/IB_WdgM_SWC/WdgMSwc_CheckpointReached_Bsw_1000ms</START-ON-EVENT-REF>
+                  <PERIOD>1.0</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5c9a8441-4a15-4ba9-8aa9-880a60793484">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Asw_5ms</SHORT-NAME>
+                  <MODE-ACCESS-POINTS>
+                    <MODE-ACCESS-POINT>
+                      <MODE-GROUP-IREF>
+                        <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_WdgM/WdgM_IndividualMode/currentMode</TARGET-MODE-GROUP-REF>
+                        </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                    <MODE-ACCESS-POINT>
+                      <MODE-GROUP-IREF>
+                        <R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                          <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_WdgM/WdgM_GlobalMode/currentMode</TARGET-MODE-GROUP-REF>
+                        </R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF>
+                      </MODE-GROUP-IREF>
+                    </MODE-ACCESS-POINT>
+                  </MODE-ACCESS-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="9d4a1a0d-ff51-4cdc-8a9a-3bf0bd2f53a5">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Asw_5ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Asw_5ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="3e71e0da-1e29-484a-9316-a5c079729ef1">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_5ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6b8779d9-6db7-416d-a8e6-41b7a7c958cc">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_5ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_5ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="504ab894-8b49-4fb6-8cb4-8bcb9db1e8d6">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_10ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="f84ccb70-c06e-4cba-8121-35b5c53c57a3">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_10ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_10ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="b13d1766-b5b4-45b2-b551-6d4531569c48">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_20ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="4e029473-292f-4710-8d37-32565c580e6d">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_20ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_20ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="a1a9cbd0-0029-457f-9221-b9f0c2ab451d">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_50ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="11971728-f625-4601-bdf4-2b7d1495cdaf">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_50ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_50ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="4b5fcd8b-d61c-4ab9-9906-3b8aab622dbf">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_100ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="5995d646-20e4-4381-b49b-6e03b3a5f3f5">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_100ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_100ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="f882deae-cd64-4c28-be9f-a24800fc5d6a">
+                  <SHORT-NAME>WdgMSwc_CheckpointReached_Bsw_1000ms</SHORT-NAME>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="ff86c6cf-a5e0-4423-bf5e-f0095cc6f506">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_1000ms</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_WdgM/WdgM_AliveSupervision/CheckpointReached</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>WdgMSwc_CheckpointReached_Bsw_1000ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

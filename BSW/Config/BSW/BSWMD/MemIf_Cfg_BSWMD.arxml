@@ -1,0 +1,1474 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_MemIf</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>MemIf</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_MemIf/BswModuleDescriptions/MemIf/BswInternalBehavior</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>MemIf</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>22</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Read</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Write</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_InvalidateBlock</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_GetStatus</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_GetJobResult</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Cancel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_EraseImmediateBlock</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_MainFunction</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_GetStatus</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_BlockMaintenance</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_VarLenRead</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_VarLenWrite</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_GetMigrationResult</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_CheckDeviceIndex</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <OUTGOING-CALLBACKS>
+                <!--Not yet implemented.-->
+              </OUTGOING-CALLBACKS>
+              <BSW-MODULE-DEPENDENCYS>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Ea</SHORT-NAME>
+                  <TARGET-MODULE-ID>40</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Eep</SHORT-NAME>
+                  <TARGET-MODULE-ID>90</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Fee</SHORT-NAME>
+                  <TARGET-MODULE-ID>21</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Fls</SHORT-NAME>
+                  <TARGET-MODULE-ID>92</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+              </BSW-MODULE-DEPENDENCYS>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <ENTITYS>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>MemIf_Rb_MainFunction</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_MemIf/BswModuleEntrys/MemIf_Rb_MainFunction</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+	            <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_MemIf_Rb_MainFunction</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_MemIf/BswModuleDescriptions/MemIf/BswInternalBehavior/MemIf_Rb_MainFunction</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.005</PERIOD>
+                    </BSW-TIMING-EVENT>
+                  </EVENTS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+            <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+            <ELEMENTS>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Read</SHORT-NAME>
+	            <LONG-NAME>
+	              <L-4 L="EN">Read Data Service (AutoSAR)</L-4>
+	            </LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "Read" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              This function places a read job to the FEE or EA by calling the Fee_Read() or the Ea_Read() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x02</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >NVM index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockOffset", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockOffset</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Offset of block</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Pointer to data buffer</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="Length", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Length of block</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Write</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Write Data Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "Write" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              This function places a write job to the FEE or EA by calling the Fee_Write() or the Ea_Write() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x03</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Nvm index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Pointer to data buffer</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_InvalidateBlock</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Invalidate Block Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "InvalidateBlock" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              Calls the Fee_InvalidateBlock() or the Ea_InvalidateBlock() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x07</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Nvm index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_GetStatus</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Get Status Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "GetStatus" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              Calls the Fee_GetStatus() or the Ea_GetStatus() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x05</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Current status of the underlying abstraction module and device drive.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_MemIf/ImplementationDataTypes/MemIf_StatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_GetJobResult</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Get Job Result Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "GetJobResult" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              Calls the Fee_GetJobResult() or the Ea_GetJobResult() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x06</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Result of the last job.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_MemIf/ImplementationDataTypes/MemIf_JobResultType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+			  <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Cancel</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Cancel Job Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "Cancel" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              Calls the Fee_Cancel() or the Ea_Cancel() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x04</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">None</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_EraseImmediateBlock</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Erase Block Immediate Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Invokes the "EraseImmediateBlock" function of the underlying memory abstraction module selected by the parameter DeviceIndex.
+				              Calls the Fee_EraseImmediateBlock() or the Ea_EraseImmediateBlock() function.
+				  </L-2>
+                </DESC>
+                <SERVICE-ID>0x09</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Nvm index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_GetVersionInfo</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Get Version Info Service (AutoSAR)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">Returns the MemIf version information within the argument, separately for:</L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">MemIf vendor ID</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">MemIf module ID</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">MemIf SW major version</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">MemIf SW minor version</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">MemIf SW patch version</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <SERVICE-ID>0x08</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">None</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="VersionInfoPtr", Kind="in", Type="Std_VersionInfoType*", IsConst="False"-->
+                    <SHORT-NAME>VersionInfoPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to return the version information of this module (Std_VersionInfoType):</L-2>
+  				    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_MainFunction</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Main function (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+  				  <L-2 L="EN">Main function which encapsulates the main function of the underlaying modules:</L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_MainFunction()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">Fls_MainFunction()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">Ea_MainFunction()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">Eep_MainFunction()</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">None</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                </RETURN-TYPE>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_GetStatus</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Get Status Service (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+				  <L-2 L="EN">Checks the status of the underlaying modules:</L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_GetStatus()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">Ea_GetStatus()</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Current status of the underlying Fee and Ea module, depending if Fee and Ea are configured</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_MemIf/ImplementationDataTypes/MemIf_StatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_BlockMaintenance</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Block Maintenance Service (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+				  <L-2 L="EN">Repair redundant copy of blocks to ensure that the double storage of a specified block number is intact.
+				              Calls the underlaying module API's depending on configured device:
+				  </L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_Rb_BlockMaintenance()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">Ea_Rb_BlockMaintenance()</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Block number</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_VarLenRead</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Variable Block Length Read Service (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+				  <L-2 L="EN">Starts a read job to the Fee when the block length is variable and calculated on runtime (runtime RAM block configuration feature enabled).
+				              Calls the underlaying module API's depending on configured device:
+				  </L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_Rb_VarLenRead()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">In case of bock configuration for Ea: Feature not implemented (E_NOT_OK returned by default)</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >NvM index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockOffset", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockOffset</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Offset of block  where the read shall start from</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Pointer to buffer to read data to</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="Length", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Length of block to be read</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_VarLenWrite</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Variable Block Length Write Service (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+				  <L-2 L="EN">Starts a write job to the Fee when the block length is variable and calculated on runtime (runtime RAM block configuration feature enabled).
+				              Calls the underlaying module API's depending on configured device:
+				  </L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_Rb_VarLenWrite()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">In case of bock configuration for Ea: Feature not implemented (E_NOT_OK returned by default)</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Function success:</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <INTRODUCTION>
+                    <LIST TYPE="UNNUMBER">
+                      <ITEM>
+                        <P>
+					      <L-1 L="EN">E_OK: Order was successfully placed</L-1>
+                        </P>
+                      </ITEM>
+                      <ITEM>
+                        <P>
+                          <L-1 L="EN">E_NOT_OK: Order was not placed because the respective order queue entry is not empty or the module has not been initialized yet</L-1>
+                        </P>
+                      </ITEM>
+                    </LIST>
+                  </INTRODUCTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >NvM index (based on this index the corresponding Fee index will be searched and placed into the order queue)</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Pointer to  buffer to write data from</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="Length", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >NV block length</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_Rb_GetMigrationResult</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Get Migration Result Service (RB extension)</L-4>
+				</LONG-NAME>
+                <DESC>
+				  <L-2 L="EN">Service returns the migration result of the last data reading during initialisation (calling the API after subsequent read jobs in the same driving cycle does not change the initially returned value anymore).
+				              Calls the underlaying module API's depending on configured device:
+				  </L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+						<L-1 L="EN">Fee_Rb_GetMigrationResult()</L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+					    <L-1 L="EN">In case of bock configuration for Ea: Feature not implemented (MEMIF_RB_MIGRATION_RESULT_INIT_E returned by default)</L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                </INTRODUCTION>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Migration result of the last data reading during.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_MemIf/ImplementationDataTypes/MemIf_Rb_MigrationResult_ten</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Corresponding Fee block number</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>MemIf_CheckDeviceIndex</SHORT-NAME>
+				<LONG-NAME>
+				  <L-4 L="EN">Device Index Check Service (MemIf internal)</L-4>
+				</LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">This function checks the device index and reports a DET error in case the device index is greater then the configured maximum of devices.</L-2>
+                </DESC>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>ReturnValue</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">None</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DeviceIndex", Kind="in", Type="uint8", IsConst="False"-->
+                    <SHORT-NAME>DeviceIndex</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Index of requested device</L-2>
+                    </DESC>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+            </ELEMENTS>
+          </AR-PACKAGE>
+		  <AR-PACKAGE>
+            <SHORT-NAME>CompuMethods</SHORT-NAME>
+            <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>MemIf_StatusType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">All underlying devices have returned this state</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_IDLE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">At least one device returned this state, all other returned states shall be ignored</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_UNINIT</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">At least one configured device returned this state and no other device returned MEMIF_UNINIT</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_BUSY</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">At least one configured device returned this state and no other device returned MEMIF_BUSY or MEMIF_UNINIT</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_BUSY_INTERNAL</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>MemIf_JobResultType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">The job has been finished successfully</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_JOB_OK</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">The job has not been finished successfully</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_JOB_FAILED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">The job has not yet been finished.MEMIF_JOB_CANCELED: The job has been canceled</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_JOB_PENDING</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">The requested block is inconsistent (it may contain corrupted data) or block is NOT found</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_BLOCK_INCONSISTENT</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">The requested block has been marked as invalid, the requested operation can not be performed</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_BLOCK_INVALID</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>MemIf_Rb_MigrationResult_ten</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Initialization value, result not yet available</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_INIT_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">RAM size equals size on medium (no migration necessary)</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_NOT_NECESSARY_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">RAM size lesser than size on medium (remaining data discarded)</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_TO_SMALLER_SIZE_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">RAM size greater than size on medium (remaining data filled with zero)</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_TO_BIGGER_SIZE_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Migration not done, because data was not read</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_NOT_DONE_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Migration is deactivated by configuration</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>MEMIF_RB_MIGRATION_RESULT_DEACTIVATED_E</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            </ELEMENTS>
+          </AR-PACKAGE>
+		  <AR-PACKAGE>
+            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+            <ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>MemIf_StatusType</SHORT-NAME>
+                <LONG-NAME>
+                  <L-4 L="EN">Enumeration type for current status of the underlying abstraction module and device drive</L-4>
+                </LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">The MemIf_GetStatus() and MemIf_Rb_GetStatus() services provide information based on this type.</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_MemIf/CompuMethods/MemIf_StatusType</COMPU-METHOD-REF>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+              </IMPLEMENTATION-DATA-TYPE>
+              <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>MemIf_JobResultType</SHORT-NAME>
+                <LONG-NAME>
+                  <L-4 L="EN">Enumeration type for result of the last job</L-4>
+                </LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">The MemIf_GetJobResult() service provides information based on this type.</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_MemIf/CompuMethods/MemIf_JobResultType</COMPU-METHOD-REF>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+              </IMPLEMENTATION-DATA-TYPE>
+              <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>MemIf_Rb_MigrationResult_ten</SHORT-NAME>
+                <LONG-NAME>
+                  <L-4 L="EN">Enumeration type for the migration result of the last data reading during initialisation</L-4>
+                </LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">The MemIf_Rb_GetMigrationResult() service provides information based on this type.</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_MemIf/CompuMethods/MemIf_Rb_MigrationResult_ten</COMPU-METHOD-REF>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+                <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+              </IMPLEMENTATION-DATA-TYPE>
+            </ELEMENTS>
+          </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

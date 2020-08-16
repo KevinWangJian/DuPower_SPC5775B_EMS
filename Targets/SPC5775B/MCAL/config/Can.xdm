@@ -1,0 +1,3200 @@
+<?xml version='1.0'?>
+<datamodel version="5.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/12/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/12/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Can" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Can" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/TS_T2D30M20I1R0/Can"/>
+              <a:a name="IMPORTER_INFO" value="can-import"/>
+              <a:a name="UUID" value="1788c053-c77a-4e4c-a3e8-7d94a87e7571"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPostBuild"/>
+              <d:ctr name="CanGeneral" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="can-import"/>
+                <a:a name="UUID" value="b42a49ef-1bdc-4094-8b87-4e1f66c5db97"/>
+                <d:var name="CanChangeBaudrateApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanEnableUserModeSupport" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanMainFunctionBusoffPeriod" type="FLOAT" 
+                       value="0.001">
+                  <a:a name="ENABLE" value="true"/>
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanMainFunctionModePeriod" type="FLOAT" 
+                       value="0.001">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanMultiplexedTransmission" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanVersionInfoApi" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanIndex" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanDevErrorDetection" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                </d:var>
+                <d:var name="CanMainFunctionWakeupPeriod" type="FLOAT" 
+                       value="0.001">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanHardwareCancellation" type="BOOLEAN" 
+                       value="false"/>
+                <d:var name="CanIdenticalIdCancellation" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanTimeoutDuration" type="INTEGER" value="2000">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanLPduReceiveCalloutFunction" 
+                       type="FUNCTION-NAME" value="NULL_PTR">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:ref name="CanCounterRef" type="REFERENCE" >
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="CanSupportTTCANRef" type="REFERENCE" >
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:var name="CanCodeSizeOptimization" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanExtendedIDSupport" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanMBCountExtensionSupport" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanApiEnableMbAbort" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanSetBaudrateApi" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanAbortOnlyOneMB" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanEnableDualClockMode" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="CanSpecifiedRAMBlockSize" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="MBDSR" type="ENUMERATION" 
+                       value="CAN_8_BYTES_PAYLOAD">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:lst name="CanMainFunctionRWPeriods" type="MAP"/>
+              </d:ctr>
+              <d:lst name="CanConfigSet" type="MAP">
+                <a:a name="IMPORTER_INFO" value="can-import"/>
+                <d:ctr name="CanConfigSet" type="IDENTIFIABLE">
+                  <a:a name="IMPORTER_INFO" value="can-import"/>
+                  <a:a name="UUID" value="3f729f4b-1cdd-4ec1-b94a-641321617130"/>
+                  <d:lst name="CanController" type="MAP">
+                    <a:a name="IMPORTER_INFO" value="can-import"/>
+                    <d:ctr name="Can_Network_CANNODE_0" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="2dca6252-d24d-4c1a-a18c-a86bbb11714e"/>
+                      <d:var name="CanHwChannel" type="ENUMERATION" 
+                             value="FlexCAN_A">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanControllerBaseAddress" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanWakeupProcessing" type="ENUMERATION" 
+                             value="POLLING">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanBccSupport" type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanWakeupSupport" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanBusoffProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanControllerActivation" type="BOOLEAN" 
+                             value="true">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanTxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanControllerId" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanRxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanListenOnlyMode" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanLoopBackMode" type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanSoftwareBusOffRecovery" type="BOOLEAN" 
+                             value="true"/>
+                      <d:var name="CanAutoBusOffRecovery" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanTrippleSamplingEnable" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanLowestBuffTransmitFirst" type="BOOLEAN" 
+                             value="false"/>
+                      <d:var name="CanLocalPriorityEn" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanClockFromBus" type="BOOLEAN" value="false"/>
+                      <d:ref name="CanControllerDefaultBaudrate" 
+                             type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanCpuClockRef" type="REFERENCE" 
+                             value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockREF_CAN_CLK"/>
+                      <d:ref name="CanCpuClockRef_Alternate" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:var name="CanControllerRxFifoEnable" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanRxFifoWarningNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanRxFifoOverflowNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanErrorControllerNotifEn" type="BOOLEAN" 
+                             value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanErrorControllerNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:lst name="CanControllerBaudrateConfig" type="MAP">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                        <d:ctr name="Can_Network_CANNODE_0" type="IDENTIFIABLE">
+                          <a:a name="IMPORTER_INFO" value="can-import"/>
+                          <a:a name="UUID" 
+                               value="6b2a758a-1981-4d77-a4ab-83c8c91340a9"/>
+                          <d:var name="CanControllerCheckCanStandard" 
+                                 type="BOOLEAN" value="true">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanAdvancedSetting" type="BOOLEAN" 
+                                 value="false">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanBusLength" type="INTEGER" value="40">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanPropDelayTranceiver" type="FLOAT" 
+                                 value="150.0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanTxArbitrationStartDelay" 
+                                 type="INTEGER" value="12">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanControllerPrescaller" type="INTEGER" 
+                                 value="1"/>
+                          <d:var name="CanControllerPrescaller_Alt" 
+                                 type="INTEGER" value="100">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanControllerBaudRate" type="INTEGER" 
+                                 value="500">
+                            <a:a name="IMPORTER_INFO" value="can-import"/>
+                          </d:var>
+                          <d:var name="CanControllerBaudRateConfigID" 
+                                 type="INTEGER" value="1">
+                            <a:a name="IMPORTER_INFO" value="can-import"/>
+                          </d:var>
+                          <d:var name="CanControllerPropSeg" type="INTEGER" 
+                                 value="3"/>
+                          <d:var name="CanControllerSeg1" type="INTEGER" 
+                                 value="6"/>
+                          <d:var name="CanControllerSeg2" type="INTEGER" 
+                                 value="6"/>
+                          <d:var name="CanControllerSyncJumpWidth" 
+                                 type="INTEGER" value="2"/>
+                          <d:var name="CanControllerSyncSeg" type="INTEGER" 
+                                 value="1">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:ctr name="CanControllerFdBaudrateConfig" 
+                                 type="IDENTIFIABLE">
+                            <a:a name="ENABLE" value="false"/>
+                            <d:var name="CanControllerFDPrescaller" 
+                                   type="INTEGER" value="100">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdBaudRate" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdSyncSeg" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerPropSeg" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSeg1" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSeg2" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSyncJumpWidth" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var 
+                                   name="CanControllerTrcvDelayCompensationOffset" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerTxBitRateSwitch" 
+                                   type="BOOLEAN" value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdIsoCANFD" 
+                                   type="BOOLEAN" value="true">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdPrExcEn" type="BOOLEAN" 
+                                   value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdEdgeFilterDis" 
+                                   type="BOOLEAN" value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="CanControllerCBT" type="IDENTIFIABLE">
+                            <d:var name="CanControllerCbtEnable" type="BOOLEAN" 
+                                   value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtPrescaller" 
+                                   type="INTEGER" value="100">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtBaudRate" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSyncSeg" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtPropSeg" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSeg1" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSeg2" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSyncJumpWidthCbt" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:ctr>
+                      </d:lst>
+                      <d:ref name="CanWakeupSourceRef" type="REFERENCE" >
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanRAMBlock" type="MAP"/>
+                      <d:lst name="CanFilterMask" type="MAP">
+                        <d:ctr name="CanFilterMask_0" type="IDENTIFIABLE">
+                          <d:var name="CanFilterMaskValue" type="INTEGER" 
+                                 value="2047">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                        </d:ctr>
+                      </d:lst>
+                      <d:ctr name="CanRxFifo" type="IDENTIFIABLE">
+                        <d:var name="CanControllerIDAcceptanceMode" 
+                               type="ENUMERATION" value="A">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanRxFifoFiltersNumber" type="ENUMERATION" 
+                               value="FILTERS_NUMBER_8">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanRxFifoGlobalMaskValue" type="INTEGER" 
+                               value="2047">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="CanRxFifoTable" type="MAP"/>
+                      </d:ctr>
+                      <d:ctr name="CanTTController" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="CanTTControllerApplWatchdogLimit" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerCycleCountMax" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerExpectedTxTrigger" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var 
+                               name="CanTTControllerExternalClockSynchronisation" 
+                               type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerGlobalTimeFiltering" 
+                               type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerInitialRefOffset" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerInterruptEnable" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerLevel2" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerNTUConfig" type="FLOAT" 
+                               value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerOperationMode" 
+                               type="ENUMERATION" 
+                               value="CAN_TT_EVENT_SYNC_TIME_TRIGGERED">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerSyncDeviation" type="FLOAT" 
+                               value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTURRestore" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTimeMaster" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTimeMasterPriority" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTxEnableWindowLength" 
+                               type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerWatchTriggerGapTimeMark" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerWatchTriggerTimeMark" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTIRQProcessing" type="ENUMERATION" 
+                               value="POLLING">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="8a821d14-16eb-49d9-b514-7ef3d848981f"/>
+                      <d:var name="CanHwChannel" type="ENUMERATION" 
+                             value="FlexCAN_B">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanBusoffProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanControllerActivation" type="BOOLEAN" 
+                             value="true">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanControllerBaseAddress" type="INTEGER" 
+                             value="0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanTxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanWakeupProcessing" type="ENUMERATION" 
+                             value="POLLING">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanBccSupport" type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanWakeupSupport" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanControllerId" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanRxProcessing" type="ENUMERATION" 
+                             value="INTERRUPT"/>
+                      <d:var name="CanListenOnlyMode" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanLoopBackMode" type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanSoftwareBusOffRecovery" type="BOOLEAN" 
+                             value="true"/>
+                      <d:var name="CanAutoBusOffRecovery" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanTrippleSamplingEnable" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanLowestBuffTransmitFirst" type="BOOLEAN" 
+                             value="false"/>
+                      <d:var name="CanLocalPriorityEn" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanClockFromBus" type="BOOLEAN" value="false"/>
+                      <d:ref name="CanControllerDefaultBaudrate" 
+                             type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanCpuClockRef" type="REFERENCE" 
+                             value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockREF_CAN_CLK"/>
+                      <d:ref name="CanCpuClockRef_Alternate" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:var name="CanControllerRxFifoEnable" type="BOOLEAN" 
+                             value="false">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanRxFifoWarningNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanRxFifoOverflowNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanErrorControllerNotifEn" type="BOOLEAN" 
+                             value="true">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanErrorControllerNotification" 
+                             type="FUNCTION-NAME" value="NULL_PTR">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:ref name="CanWakeupSourceRef" type="REFERENCE" >
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanControllerBaudrateConfig" type="MAP">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                        <d:ctr name="J1939_Network_CANNODE_0" 
+                               type="IDENTIFIABLE">
+                          <a:a name="IMPORTER_INFO" value="can-import"/>
+                          <a:a name="UUID" 
+                               value="a7fa4525-d94f-4432-917f-2e6371ede483"/>
+                          <d:var name="CanControllerCheckCanStandard" 
+                                 type="BOOLEAN" value="true">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanAdvancedSetting" type="BOOLEAN" 
+                                 value="false">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanBusLength" type="INTEGER" value="40">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanPropDelayTranceiver" type="FLOAT" 
+                                 value="150.0">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanTxArbitrationStartDelay" 
+                                 type="INTEGER" value="12">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanControllerPrescaller" type="INTEGER" 
+                                 value="2"/>
+                          <d:var name="CanControllerPrescaller_Alt" 
+                                 type="INTEGER" value="100">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanControllerBaudRate" type="INTEGER" 
+                                 value="250"/>
+                          <d:var name="CanControllerBaudRateConfigID" 
+                                 type="INTEGER" value="1">
+                            <a:a name="IMPORTER_INFO" value="can-import"/>
+                          </d:var>
+                          <d:var name="CanControllerSyncSeg" type="INTEGER" 
+                                 value="1">
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                          </d:var>
+                          <d:var name="CanControllerPropSeg" type="INTEGER" 
+                                 value="3"/>
+                          <d:var name="CanControllerSeg1" type="INTEGER" 
+                                 value="6"/>
+                          <d:var name="CanControllerSeg2" type="INTEGER" 
+                                 value="6"/>
+                          <d:var name="CanControllerSyncJumpWidth" 
+                                 type="INTEGER" value="2"/>
+                          <d:ctr name="CanControllerFdBaudrateConfig" 
+                                 type="IDENTIFIABLE">
+                            <a:a name="ENABLE" value="false"/>
+                            <d:var name="CanControllerFDPrescaller" 
+                                   type="INTEGER" value="100">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdBaudRate" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdSyncSeg" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerPropSeg" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSeg1" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSeg2" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSyncJumpWidth" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var 
+                                   name="CanControllerTrcvDelayCompensationOffset" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerTxBitRateSwitch" 
+                                   type="BOOLEAN" value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdIsoCANFD" 
+                                   type="BOOLEAN" value="true">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdPrExcEn" type="BOOLEAN" 
+                                   value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerFdEdgeFilterDis" 
+                                   type="BOOLEAN" value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="CanControllerCBT" type="IDENTIFIABLE">
+                            <d:var name="CanControllerCbtEnable" type="BOOLEAN" 
+                                   value="false">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtPrescaller" 
+                                   type="INTEGER" value="100">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtBaudRate" 
+                                   type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSyncSeg" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtPropSeg" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSeg1" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerCbtSeg2" type="INTEGER" 
+                                   value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:var name="CanControllerSyncJumpWidthCbt" 
+                                   type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:ctr>
+                      </d:lst>
+                      <d:lst name="CanRAMBlock" type="MAP"/>
+                      <d:lst name="CanFilterMask" type="MAP">
+                        <d:ctr name="CanFilterMask_0" type="IDENTIFIABLE">
+                          <d:var name="CanFilterMaskValue" type="INTEGER" 
+                                 value="536870911"/>
+                        </d:ctr>
+                      </d:lst>
+                      <d:ctr name="CanRxFifo" type="IDENTIFIABLE">
+                        <d:var name="CanControllerIDAcceptanceMode" 
+                               type="ENUMERATION" value="A">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanRxFifoFiltersNumber" type="ENUMERATION" 
+                               value="FILTERS_NUMBER_8">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanRxFifoGlobalMaskValue" type="INTEGER" 
+                               value="2047">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:lst name="CanRxFifoTable" type="MAP"/>
+                      </d:ctr>
+                      <d:ctr name="CanTTController" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="CanTTControllerApplWatchdogLimit" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerCycleCountMax" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerExpectedTxTrigger" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var 
+                               name="CanTTControllerExternalClockSynchronisation" 
+                               type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerGlobalTimeFiltering" 
+                               type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerInitialRefOffset" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerInterruptEnable" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerLevel2" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerNTUConfig" type="FLOAT" 
+                               value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerOperationMode" 
+                               type="ENUMERATION" 
+                               value="CAN_TT_EVENT_SYNC_TIME_TRIGGERED">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerSyncDeviation" type="FLOAT" 
+                               value="0.0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTURRestore" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTimeMaster" type="BOOLEAN" 
+                               value="false">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTimeMasterPriority" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerTxEnableWindowLength" 
+                               type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerWatchTriggerGapTimeMark" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTControllerWatchTriggerTimeMark" 
+                               type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:var name="CanTTIRQProcessing" type="ENUMERATION" 
+                               value="POLLING">
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                  </d:lst>
+                  <d:lst name="CanHardwareObject" type="MAP">
+                    <a:a name="IMPORTER_INFO" value="can-import"/>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="4cc4a1de-e786-49d6-a1a0-25a0d7421b4c"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="180"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_2" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="8008754d-86ad-49ea-858a-f4001510589e"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="483"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0"/>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_3" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="3ce7a96d-4f3b-4ebc-a71b-52f826064462"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="395"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_4" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="2ef46cd6-3099-469f-aa7f-518b40d88d9a"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="572"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_5" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="ef481742-34eb-4ceb-8593-58eea79b6b9f"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="771"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_6" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="9fbc4821-d7c5-48a6-8763-e083b3fbe8a3"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="497"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="5">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_7" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="9fc4e169-1967-4ccc-a81a-725de84e7932"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="1864"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="6">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_8" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="03e2a58e-3a33-42e7-83c3-f31ab77eb4b2"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="498"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="7">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_9" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="c46f1256-2397-4f25-92ab-1a2d8f8b47c3"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="355"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="8">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_10" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="29fc948f-e1cf-4024-80b4-11adb3f73668"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="851"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="9">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_11" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="59926798-ef4a-4456-a7f7-b4bca5de4aa7"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="2015"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="10">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_12" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="3eaf50a6-5e8d-447d-9174-8f0e3b889aa6"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="1375"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="11">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_13" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="a72b792e-0cad-4824-930b-25894bd29735"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="1540"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="12">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_14" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="a17a4034-f982-44e9-af6e-525b29a24da4"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="866"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="13">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Rx_Std_MailBox_15" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="d7fde76b-c9b3-4ae0-9043-afa4384fc919"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="1728"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="14">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="d69d623f-9334-491a-9ec6-f456315909b4"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="25"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_2" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="4d942ac6-a08f-4c69-9003-e726aa951371"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="26"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_3" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="e58e35fa-e056-4f3f-ae86-dad8bd057be9"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="17">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="27"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_4" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="f533b374-b23d-4c3b-8fa8-b8e181b1c6a4"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="18">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="28"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_5" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="3a198b5b-c9fc-4795-ac13-10c2e57ea024"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="19">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="29"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_6" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="c7928b29-2f7f-466c-9994-d50e93157dc7"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="20">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="30"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_7" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="a6795267-7b65-4171-acea-79e9838ece1b"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="21">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="31"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_8" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="d2fbab19-0c40-4bfc-bb15-5a0a325e9822"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="22">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="32"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_9" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="ae924fbb-39e0-4497-8a7c-f9ede766942a"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="23">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="33"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_10" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="71ada496-f83b-459c-b997-cbac550dbda3"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="24">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="34"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_11" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="183e4259-c5c0-4a5c-8325-19944021fa5c"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="25">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="35"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_12" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="a7156b8a-3c45-410b-a089-06e89d1fc268"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="26">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="36"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_13" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="68e52d39-69d8-4399-bae2-168ebab62b0b"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="27">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="37"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_14" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="0f1a795e-aef9-460d-b720-ebf5dc234a84"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="28">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="38"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_15" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="8287789a-9533-4474-a0e9-64a85d66db6d"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="29">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="39"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_16" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="397b3a4d-b8bb-4daf-8b59-526a15a20e75"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="30">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="40"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_17" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="e7dd79e6-3960-49fd-b953-33c4f67630ef"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="31">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="41"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="Can_Network_CANNODE_0_Tx_Std_MailBox_18" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="c3d9fc06-952c-422c-a757-06597199e633"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="32">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="42"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="STANDARD">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/Can_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="5dd5559a-6442-4499-bc53-f89a72972fb2"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="403174486"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="15"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_2" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="947e3ed6-3975-4580-af33-5664a1908244"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="404616278"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="16"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_3" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="68326b4b-a72a-4abb-b71d-d91ea102f1aa"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="270201942"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="17"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_4" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="c8906575-2458-4810-8e0d-363c006ef93a"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="405206102"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="18"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_5" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="f39a3be7-c9c1-4fc1-a963-d66a0f448484"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="269153366"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="19"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_6" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="31dc8185-e25a-482e-ba9f-16ab267fb055"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="136311894"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="20"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_7" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="021fc975-84c6-40ac-a19a-f702a09be793"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="403240022"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="21"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_8" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="4246fade-ba5d-4ae0-9e75-59ab9b645c25"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="403895382"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="22"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_9" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="b1989f7c-632e-44c8-905f-d3d20f7efa5b"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:var name="CanIdValue" type="INTEGER" value="402781270"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="23"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Rx_Ext_MailBox_10" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="53f29cd1-6ae9-4fd2-ab73-554e02bd6d0b"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="485291094"/>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="RECEIVE">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="24"/>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="BASIC"/>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/CanFilterMask_0">
+                        <a:a name="ENABLE" value="true"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_1" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="e95ece22-cdd6-4f03-a03f-e50748e116ba"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="43">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="43">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_2" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="d94f40d2-1ae3-47e1-8394-0322c371dd55"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="44">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="44">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_3" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="8d0bd61d-7f6a-4903-b04e-deecf161ccd6"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="45">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_4" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="a110c809-76ce-4046-853a-dec6bf8778f6"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="46">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="46">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_5" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="e4cef049-bf2e-457c-88e3-24ad845e3868"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="47">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="47">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_6" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="d9ec2b28-bcb3-49d2-b70f-76ce3eb5515a"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="48">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="48">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_7" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="9d966386-0142-4262-873c-158ab8260e0c"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="49">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="49">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_8" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="07227758-44ac-4a93-8087-ff5f6a25d4a8"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="50">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="50">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                    <d:ctr name="J1939_Network_CANNODE_0_Tx_Ext_MailBox_9" 
+                           type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="can-import"/>
+                      <a:a name="UUID" 
+                           value="5ca6770b-3a82-41fa-b35b-344eccf90925"/>
+                      <d:var name="CanFdPaddingValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanHandleType" type="ENUMERATION" 
+                             value="FULL">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdValue" type="INTEGER" value="51">
+                        <a:a name="IMPORTER_INFO">
+                          <a:v>@DEF</a:v>
+                          <a:v>@CALC</a:v>
+                        </a:a>
+                      </d:var>
+                      <d:var name="CanMBPrio" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="CanObjectType" type="ENUMERATION" 
+                             value="TRANSMIT">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanObjectId" type="INTEGER" value="51">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:var name="CanIdType" type="ENUMERATION" 
+                             value="EXTENDED">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:var>
+                      <d:ref name="CanControllerRef" type="REFERENCE" 
+                             value="ASPath:/Can/Can/CanConfigSet/J1939_Network_CANNODE_0">
+                        <a:a name="IMPORTER_INFO" value="can-import"/>
+                      </d:ref>
+                      <d:ref name="CanFilterMaskRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanMainFunctionRWPeriodRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="CanRAMBlockRef" type="REFERENCE" >
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:lst name="CanTTHardwareObjectTrigger" type="MAP"/>
+                    </d:ctr>
+                  </d:lst>
+                </d:ctr>
+              </d:lst>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <d:var name="ArReleaseMajorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseMinorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseRevisionVersion" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="80">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="2"/>
+                <d:var name="SwMinorVersion" type="INTEGER" value="0"/>
+                <d:var name="SwPatchVersion" type="INTEGER" value="1"/>
+                <d:var name="VendorApiInfix" type="STRING" value="">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="43">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

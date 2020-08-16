@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_WdgM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>WdgM</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Watchdog Manager</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the WdgM (Watchdog Manager) module (with vendor specific enhancements of RB).</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2017-06-02</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>42.2.1.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2017-10-31</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/WdgM</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgMConfigSet</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Configuration set for WdgM</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container describes one of multiple configuration sets of WdgM.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <REFERENCES>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>WdgMInitialMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">WdgM initial mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The mode that the Watchdog Manager is in after it has been initialized.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMConfigSet/WdgMMode</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                  </REFERENCES>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgMDemEventParameterRefs</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem Event Parameters</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <REFERENCES>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WDGM_E_IMPROPER_CALLER</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Impropper caller detect</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the defensive behavior checks have detected an improper caller.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WDGM_E_SET_MODE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Mode switch failed detect</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Watchdog drivers&apos; mode switch has failed&quot; has occured.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WDGM_E_SUPERVISION</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Supervision failed detect</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Supervision has failed (Global Supervision Status has reached WDGM_GLOBAL_STATUS_STOPPED) and a watchdog reset will occur&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgMMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">WdgM mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The container describes one of several modes of the Watchdog Manager.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>WdgMExpiredSupervisionCycleTol</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Expired supervision cycle tolarance</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter shall be used to define a value that fixes the amount of expired supervision cycles for how long the blocking of watchdog triggering shall be postponed, AFTER THE GLOBAL SUPERVISION STATUS HAS REACHED THE STATE EXPIRED.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>WdgMModeId</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Mode Identifier</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter fixes the identfier for the mode. This identifier is for instance passed as a parameter to the WdgM_SetMode service.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>255</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <ECUC-FLOAT-PARAM-DEF>
+                          <SHORT-NAME>WdgMSupervisionCycle</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">WdgM MainFunction Period</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter defines the schedule period of the main function WdgM_MainFunction. Unit: [s]</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MIN>0</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMAliveSupervision</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Alive supervision</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all configuration parameters of Alive-Supervision of one Checkpoint. Note that each Checkpoint may have different parameters. For example, it may have different min and max margin.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMExpectedAliveIndications</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Expected alive indication</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the amount of expected alive indications of the Checkpoint within the referenced amount of defined supervision cycles according to corresponding SE.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMMaxMargin</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Alive indication maximum margin</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the amount of alive indications of the Checkpoint that are acceptable to be additional to the expected alive indications within the corresponding supervision reference cycle.<BR/>
+<BR/>
+Range specified by Autosar: 0 - 255<BR/>
+It is extended to: 0 - 65535.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMMinMargin</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Alive indication minimum margin</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the amount of alive indications of the Checkpoint that are acceptable to be missed from the expected alive indications within the corresponding supervision reference cycle.<BR/>
+<BR/>
+Range specified by Autosar: 0 - 255<BR/>
+It is extended to: 0 - 65535.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMSupervisionReferenceCycle</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Supervision reference cycle</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall contain the amount of supervision cycles to be used as reference by the alive-supervision mechanism to perform the checkup with counted alive indications according to corresponding SE.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMAliveSupervisionCheckpointRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Alive supervision checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to Checkpoint within a Supervised Entity that shall be supervised.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMDeadlineSupervision</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Deadline supervision</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all configuration parameters for Deadline Supervision for a Supervised Entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>WdgMDeadlineMax</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Maximum deadline</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the longest time span after which the deadline is considered to be met. Unit: [s]</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>WdgMDeadlineMin</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Minimum deadline</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the shortest time span after which the deadline is considered to be met. Unit: [s]</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMDeadlineStartRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Start checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the start Checkpoint for Deadline Supervision.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMDeadlineStopRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Stop checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the stop Checkpoint for Deadline Supervision.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMExternalLogicalSupervision</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">External logical supervision</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all configuration parameters for Logical Supervision for one external graph</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMExternalCheckpointFinalRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Final checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the final Checkpoint(s) for this External Graph.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMExternalCheckpointInitialRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Initial checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the initial Checkpoint(s) for this External Graph.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>WdgMExternalTransition</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">External transition checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container collects the Checkpoints for an External Transition across Supervised Entities.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <REFERENCES>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                  <SHORT-NAME>WdgMExternalTransitionDestRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Destination checkpoint</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the reference to the destination Checkpoint of an External Transition.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                  <SHORT-NAME>WdgMExternalTransitionSourceRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Source checkpoint</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the reference to the source Checkpoint of an External Transition.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                                </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMLocalStatusParams</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Local status parameter</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all configuration parameters for the Local Status of a Supervised Entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMFailedAliveSupervisionRefCycleTol</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Maximum failed alive supervision</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall contain the acceptable amount of reference cycles with incorrect/failed alive supervisions for this Supervised Entity.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMLocalStatusSupervisedEntityRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Supervised entity reference</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the Supervised Entity for which the Local Status parameters are specified.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMTrigger</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Hardware watchdog trigger</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all configuration parameters for the triggering of hardware watchdogs.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMTriggerConditionValue</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Trigger condition value</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall contain the value that is passed to WdgIf_SetTriggerCondition for this watchdog. Unit [msec]</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>1</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>WdgMWatchDogMode</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Watchdog mode</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter contains the watchdog mode that shall be used for the referenced watchdog in this Watchdog Manager mode. Implementation Type: WdgIf_ModeType</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>WDGIF_FAST_MODE</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">FastMode</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>WDGIF_OFF_MODE</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">OffMode</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>WDGIF_SLOW_MODE</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">SlowMode</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMTriggerWatchDogRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Watchdog reference</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter is a reference to the configured watchdog.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMWatchdog</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>WdgMGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">General configuration</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container defines all general configuration parameters of the Watchdog Manager.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMDefensiveBehavior</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Defensive behaviour</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to enable/disable the defensive behavior of the Watchdog Manager module.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMDemStoppedSupervisionReport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">DEM supervision support</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Parameter to enable/disable the error reporting to DEM.<BR/>
+true: A notification to DEM is sent if the Watchdog Manager reaches the state WDGM_GLOBAL_STATUS_STOPPED.<BR/>
+false: The notification is disabled.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Development error enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the development error detection and notification on or off.<BR/>
+<BR/>
+true: detection and notification is enabled.<BR/>
+false: detection and notification is disabled.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMImmediateReset</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Immediate reset enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter enables/disables the immediate reset feature in case of alive-supervision failure. true: Immediate reset is enabled false: Immediate reset is disabled.<BR/>
+<BR/>
+Additional information: If this parameter is set to TRUE and Global Supervision Status reaches the state WDGM_GLOBAL_STATUS_STOPPED, the Watchdog Manager module will call the MCU service Mcu_PerformReset.<BR/>
+This parameter can be set to TRUE only if parameter McuPerformResetApi is set to TRUE (McuPerformResetApi is set to TRUE implies, service  Mcu_PerformReset will be available).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMOffModeEnabled</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Off mode allowed enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter enables/disables the selection of the &quot;OffMode&quot; of the watchdog driver. true: &quot;OffMode&quot; selection is allowed false: &quot;OffMode&quot; selection is disallowed.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMRbDeadlineTimeOutDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Deadline Timeout detection enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to enable/disable deadline Monitoring Timeout detection by WdgM_MainFunction, if the end checkpoint is never reached. <BR/>
+Bugzilla reference: http://www.autosar.org/bugzilla/show_bug.cgi?id=56735</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:2.0.0:2013-01-05</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>WdgMRbDeadlineTimerSelection</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Deadline Supervision timer interface selection</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Selection of the Base software module whose interface to be used, to access timer for Deadline supervision.<BR/>
+<BR/>
+This parameter is not required to be configured if Deadline supervision&lt;WdgMDeadlineSupervision&gt; is not configured.<BR/>
+<BR/>
+Mcu_Rb: Timer is accessed via vendor (BOSCH) specific Mcu Interface. Non Autosar solution.<BR/>
+Reduces interrupt/multicore locking duration when WdgM_CheckPointReached() Api is called.<BR/>
+For DGS it is recommended to select this option.<BR/>
+Note: If this option is choosen , WdgM Os Counter reference &lt;WdgMOSCounter&gt; should not be configured in any Supervised entity&lt;WdgMSupervisedEntity&gt;.<BR/>
+<BR/>
+Os: Timer is accessed via Os interface. Autosar solution.<BR/>
+Note: If this option is choosen, WdgM Os Counter reference &lt;WdgMOSCounter&gt; should be configured in each Supervised entity&lt;WdgMSupervisedEntity&gt;<BR/>
+Whose checkpoint/s is/are part of Deadline supervision&lt;WdgMDeadlineSupervision&gt;.<BR/>
+<BR/>
+If this parameter is not configured then option &quot;Os&quot; is assumed.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:6.1.0:2015-03-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_TIMER</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Mcu_Rb</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:3.1.0:2015-03-24</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>AUTOSAR_OS_TIMER</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Os</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:3.1.0:2015-03-24</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMRbDebugOptionEnable</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Debug Option Enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to enable/disable the Debug option.<BR/>
+true: Debug Option is enabled.<BR/>
+false: Debug Option is disabled</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMRbInterruptLockDisable</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Interrupt Lock disable for WdgM_MainFunction</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to Enable/Disable the Interrupt Lock with WdgM MainFunction.<BR/>
+True: In your use case WdgM_Main function cannot be preempted by WdgM_SetMode vice versa, if WdgM_SetMode  is not preempted by MainFunction then keep this switch true i.e Interrupt Lock Disabled.<BR/>
+False: Interrupt lock is required in WdgM_MainFunction since SetMode can preempt it vice versa.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMRbRteDisabled</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">RTE disable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to enable/disable the Mode switch indication to RTE. Shall be used to remove unneeded code segments. By default if this switch is not configured, RTE mode indication will be enabled. true: Mode switch indication is disabled false: Mode switch indication is enabled.<BR/>
+Note: If configuration parameter &quot;EcuCRbRteInUse&quot; is provided in container &quot;EcuCRbSettings&quot; of module &quot;EcuC&quot; then, Mode switch Indication can be enabled only if &quot;EcuCRbRteInUse&quot; is set to True.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:2.0.0:2012-10-11</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>WdgMVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Version information enable</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Preprocessor switch to enable/disable the existence of the API WdgM_GetVersionInfo. Shall be used to remove unneeded code segments. true: API is enabled false: API is disabled</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgMCallerIds</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Called identifier container</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains the definition of valid CallerIds for the callers who have permission to call the function WdgM_SetMode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>WdgMCallerId</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Caller identifier</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter defines one valid CallerId for the callers who have permission to call the function WdgM_SetMode.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgMSupervisedEntity</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Supervised entity</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container collects all common (mode-independent) parameters of a Supervised Entity to be supervised by the Watchdog Manager.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>WdgMSupervisedEntityId</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Supervised entity identifier</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter shall contain the unique identifier of the supervised entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMEcucPartitionRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Supervised entity partition reference</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Denotes in which &quot;EcucPartition&quot; the supervised entity is executed. When the partition is stopped, the supervised entity shall be de-activated in the WdgM to avoid an ECU reset.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMInternalCheckpointFinalRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Final checkpoint</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is the reference to the final Checkpoint(s) for this Supervised Entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMInternalCheckpointInitialRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Initial checkpoint</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is the reference to the initial Checkpoint for this Supervised Entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMOSCounter</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">WdgM Os Counter reference</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">OS counter used by Watchdog Manager to perform the deadline monitoring of the Supervised Entity.<BR/>
+Note:<BR/>
+1) Do not configure this parameter If value selected for configuration parameter &quot;Deadline Supervision timer interface selection&quot; is &quot;Mcu_Rb&quot;.<BR/>
+<BR/>
+2) It&apos;s mandatory to configure this parameter if,<BR/>
+value selected for configuration parameter &quot;Deadline Supervision timer interface selection&quot; is &quot;Os&quot; and <BR/>
+&quot;Deadline Supervision&quot; is configured using checkpoint/s of this Supervised Entity.<BR/>
+<BR/>
+In the above mentioned case, also ensure the following.<BR/>
+Os-Application in whose context WdgM_CheckPointReached() is called for the checkpoint/s (which is/are part of Deadline Supervision) of this Supervised entity, either owns or needs to be configured (OsCounterAccessingApplication) to access this OsCounter.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsCounter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMOsApplicationRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">OS application reference</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Optional reference to an OS Application. Beware, the Watchdog Manager module will trigger a partition restart of this OS Application when the corresponding Supervised Entity reaches WDGM_LOCAL_STATUS_FAILED.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsApplication</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMCheckpoint</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Supervised entity checkpoint</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container collects all Checkpoints of this Supervised Entity. Each Supervised Entity has at least one Checkpoint.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>WdgMCheckpointId</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Checkpoint identifer</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter shall contain the unique identifier of Checkpoint.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>WdgMInternalTransition</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Internal transitions container</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container defines the graph of Internal Transitions within this Supervised Entity.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMInternalTransitionDestRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Destination checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the destination Checkpoint of a Internal Transition within this Supervised Entity.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>WdgMInternalTransitionSourceRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Source checkpoint</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the reference to the source Checkpoint of a Internal Transition within this Supervised Entity.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgM/WdgMGeneral/WdgMSupervisedEntity/WdgMCheckpoint</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>WdgMWatchdog</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Mode independent watchdog parameter</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container collects all common (mode-independent) parameters of a Watchdog to be triggered by the Watchdog Manager.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-STRING-PARAM-DEF>
+                          <SHORT-NAME>WdgMWatchdogName</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Watch dog name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This parameter shall contain the symbolic name of the watchdog instance.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                        </ECUC-STRING-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>WdgMWatchdogDeviceRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Watch dog device interface reference</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to one device container of Watchdog Interface. In the referenced container WdgIfDevice, the parameter WdgIfDeviceIndex contains the Index parameter that WdgM has to use for WdgIf_SetTriggerCondition calls for that watchdog instance.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WdgIf/WdgIfDevice</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

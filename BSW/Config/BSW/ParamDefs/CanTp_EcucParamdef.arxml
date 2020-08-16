@@ -1,0 +1,2124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_CanTp</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>CanTp</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">CanTp</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the CanTp (CAN Transport Protocol) module.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2016-12-14</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2017-03-29</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/CanTp</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>CanTpConfig</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CanTpConfig</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR CanTp module.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>CanTpMainFunctionPeriod</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpMainFunctionPeriod</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Allow to configure the time for the MainFunction (as float in seconds). The CanTpMainFunctionPeriod should be assigned a value which is optimal regarding all of the timers configured for CanTp in TX and RX data transfer i.e. the differences from the configured timing should be as small as possible. Please note: This period shall be the same as call cycle time of the periodic task were CanTp Main function is called.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>ECU</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>0.255</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpMaxChannelCnt</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpMaxChannelCnt</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum number of channels. This parameter is needed only in case of post-build loadable implementation using static memory allocation. Value of this shall be more than [ (2 x NUMBER_OF_FULL_DUPLEX_CHANNELS) + NUMBER_OF_HALF_DUPLEX_CHANNELS ]. This decides the size of CanTp_ChannelIdType.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1.84467440737095E+19</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>CanTpChannel</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpChannel</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the configuration parameters of the CanTp channel.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>CanTpChannelMode</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CanTpChannelMode</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">The CAN Transport Layer supports half and full duplex channel modes.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>CANTP_MODE_FULL_DUPLEX</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CANTP_MODE_FULL_DUPLEX</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>CANTP_MODE_HALF_DUPLEX</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CANTP_MODE_HALF_DUPLEX</L-4>
+                              </LONG-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>CanTpRxNSdu</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CanTpRxNSdu</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">The following parameters needs to be configured for each CAN N-SDU that the CanTp module receives via the CanTpChannel.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>CanTpBs</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpBs</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Sets the number of N-PDUs the CanTp receiver allows the sender to send, before waiting for an authorization to continue transmission of the following N-PDUs.For further details on this parameter value see ISO 15765-2 specification.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Note: For reasons of buffer length, the CAN Transport Layer can adapt the BS value within the limit of this maximum BS</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNar</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNar</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_Ar timeout. N_Ar is the time for transmission of a CAN frame (any N_PDU) on the receiver side. Note: Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNbr</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNbr</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the performance requirement for (N_Br + N_Ar). N_Br is the elapsed time between the receiving indication of a FF or CF or the transmit confirmation of a FC, until the transmit request of the next FC. This timer is reset if the FC is sent with Flow Status - Wait. Note: Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNcr</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNcr</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_Cr timeout. N_Cr is the time until reception of the next Consecutive Frame N_PDU. Note: Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>CanTpRbRxFcDisabled</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRbRxFcDisabled</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Vendor specific extension defines whether Flow Control Frame is supported in this connection. For an ISO 15765-2 Specific Implementation its value should be false.
+false: The connection will send Flow Control Frames during segmented reception.
+true - No Flow Control Frame is sent during segmented reception.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpRxAddressingFormat</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxAddressingFormat</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Declares which communication addressing mode is supported for this RxNSdu. Definition of Enumeration values:
+CanTpStandard to use normal addressing format. CanTpExtended to use extended addressing format. CanTpMixed to use mixed 11 bit addressing format.
+CanTpNormalFixed to use normal fixed addressing format. CanTpMixed29Bit to use mixed 29 bit addressing format.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Enum values: CanTpStandard. To use normal addressing format. CanTpExtended. To use extended addressing format. CanTpMixed. To use mixed addressing format.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_EXTENDED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_EXTENDED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_MIXED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_MIXED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_MIXED29BIT</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_MIXED29BIT</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_NORMALFIXED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_NORMALFIXED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_STANDARD</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_STANDARD</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>CanTpRxNSduId</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxNSduId</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Unique identifier user by the upper layer to call CanTp_CancelReceive, CanTp_ChangeParameter and CanTp_ReadParameter.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpRxPaddingActivation</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxPaddingActivation</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Defines if the receive frame uses padding or not. This parameter is restricted to 8 byte N-PDUs.
+Definition of enumeration values:
+CanTpOn: The N-PDU received uses padding for SF, FC and the last CF. (N-PDU length is always ≥ 8 bytes in case of CAN 2.0)
+CanTpOff: The N-PDU received does not use padding for SF, CF and the last CF. (N-PDU length is dynamic - any valid DLC value). Note: The mandatory mapping to the next higher valid DLC value for N-PDUs with a length &gt; 8 bytes is not affected by this parameter.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Definition of enumeration values: CanTpOn: The N-PDU received is validated for padding which include SF and the last CF. (N-PDU length is always 8 bytes). Tx FC N-PDU which is sent from this Rx N-Sdu shall also be set to DLC of 8. CanTpOff: The N-PDU received does not use padding for SF, CF and the last CF. (N-PDU length is dynamic) CanTpTxOn: The N-PDU received is not validated for padding which include SF and the last CF, but Tx FC N-PDU which is sent from this Rx N-Sdu shall be set to DLC of 8. Padding is enabled only for transmit Pdu&apos;s from ECU</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_OFF</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_OFF</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_ON</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_ON</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpRxTaType</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxTaType</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Declares the communication type of this Rx N-SDU.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_CANFD_FUNCTIONAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_CANFD_FUNCTIONAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_CANFD_PHYSICAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_CANFD_PHYSICAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_FUNCTIONAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_FUNCTIONAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_PHYSICAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_PHYSICAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>CanTpRxWftMax</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxWftMax</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This parameter indicates how many Flow Control wait N-PDUs can be consecutively transmitted by the receiver. It is local to the node and is not transmitted inside the FC protocol data unit.
+CanTpRxWftMax is used to avoid sender nodes being potentially hooked-up in case of a temporarily reception inability on the part of the receiver nodes, whereby the sender could be waiting continuously.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">CanTpRxWftMax is used to avoid sender nodes being potentially hooked-up in case of a temporarily reception inability on the part of the receiver nodes, whereby the sender could be waiting continuously.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpSTmin</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpSTmin</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Sets the duration of the minimum time the CanTp sender shall wait between the transmissions of two CF N-PDUs.
+For further details on this parameter value see ISO 15765-2 specification.
+
+Note: if StMin is configured 0 then, it should be made sure in lower layer (CanDriver) that, the respective hardware object runs in interrupt mode.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">For further details on this parameter value see ISO 15765-2 specification.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>0.127</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF>
+                              <SHORT-NAME>CanTpRxNSduRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxNSduRef</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNAe</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with AddressingFormat CANTP_MIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNAe</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol address extension value.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">format, this parameter contains the transport protocol address extension value.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNSa</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with RxTaType CANTP_PHYSICAL and CanTpAddressingFormat CANTP_EXTENDED. When DynIdSupport is enabled, this container is also required for each TxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT. When DynIdSupport is enabled and GenericConnectionSupport is not enabled, this container is also required for each RxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNSa</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol source address value.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNTa</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with AddressingFormat CANTP_EXTENDED. When DynIdSupport is enabled, this container is also required for each RxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT. When DynIdSupport is enabled and GenericConnectionSupport is not enabled, this container is also required for each TxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNTa</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol target address value.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpRxNPdu</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxNPdu</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU..</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpRxNPduId</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpRxNPduId</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The N-PDU identifier attached to the RxNsdu is identified by CanTpRxNSduId.
+Each RxNsdu identifier is linked to only one SF/FF/CF N-PDU identifier. Nevertheless, in the case of extended or mixed addressing format, the same N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by the N_TA or N_AE value (first data byte of SF or FF frames).</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">Each RxNsdu identifier is linked to only one SF/FF/CF N-PDU identifier. Nevertheless, in the case of extended or mixed addressing format, the same N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by the N_TA or N_AE value (first data byte of SF or FF frames).</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-REFERENCE-DEF>
+                                  <SHORT-NAME>CanTpRxNPduRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpRxNPduRef</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                </ECUC-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpTxFcNPdu</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxFcNPdu</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpTxFcNPduConfirmationPduId</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpTxFcNPduConfirmationPduId</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Handle Id to be used by the CanIf to confirm the transmission of the CanTpTxFcNPdu to the CanIf module.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-REFERENCE-DEF>
+                                  <SHORT-NAME>CanTpTxFcNPduRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpTxFcNPduRef</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to a Pdu in the COM-Stack</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                </ECUC-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>CanTpTxNSdu</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">CanTpTxNSdu</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">The following parameters needs to be configured for each CAN N-SDU that the CanTp module transmits via the CanTpChannel.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNas</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNas</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_As timeout. N_As is the time for transmission of a CAN frame (any N_PDU) on the part of the sender. Note: Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNbs</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNbs</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the N_Bs timeout. N_Bs is the time of transmission until reception of the next Flow Control N_PDU. Note: This value is reset on reception of a FC frame with Wait Status. Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>CanTpNcs</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNcs</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Value in seconds of the performance requirement of (N_Cs + N_As). N_Cs is the time which elapses between the transmit request of a CF N-PDU until the transmit request of the next CF N-PDU. Note: Real Maximum value as configurable is to depend on the clock frequency and the TickType variable holding the value. Theoretical Maximum limit given here is only as an indicator considering 100MHz System Timer frequency and 32bit TickType variable.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>42.9</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>CanTpRbTxFcDisabled</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRbTxFcDisabled</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Vendor specific extension defines whether Flow Control Frame is supported in this connection. For an ISO 15765-2 Specific Implementation. Its value should be false. 
+false: The connection will Receive and process the Flow Control Frames during segmented transmission.
+true - No Flow Control Frame is expected during segmented transmission.The Consecutive frames are transmitted one after the other without waiting for a flow control frame.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>CanTpTc</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTc</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Switch for enabling Transmit Cancellation.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpTxAddressingFormat</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxAddressingFormat</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Declares which communication addressing format is supported for this TxNSdu. Definition of Enumeration values:
+CanTpStandard to use normal addressing format. CanTpExtended to use extended addressing format. CanTpMixed to use mixed 11 bit addressing format. CanTpNormalFixed to use normal fixed addressing format. CanTpMixed29Bit to use mixed 29 bit addressing format.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Definition of Enumeration values: CanTpStandard to use normal addressing format. CanTpExtended to use extended addressing format (the N_TA container of this TxNsdu will be used). CanTpMixed to use mixed addressing format (the N_AE container of this TxNsdu will be used).</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_EXTENDED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_EXTENDED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_MIXED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_MIXED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_MIXED29BIT</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_MIXED29BIT</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_NORMALFIXED</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_NORMALFIXED</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_STANDARD</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_STANDARD</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>CanTpTxNSduId</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxNSduId</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Unique identifier to a structure that contains all useful information to process the transmission of a TxNsdu.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                              <WITH-AUTO>true</WITH-AUTO>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpTxPaddingActivation</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxPaddingActivation</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Defines if the transmit frame use padding or not. This parameter is restricted to 8 byte N-PDUs.
+Definition of Enumeration values:
+CanTpOn The transmit N-PDU uses padding for SF, FC and the last CF. (N-PDU length is always 8 bytes in case of CAN 2.0)
+CanTpOff The transmit N-PDU does not use padding for SF, CF and the last CF. (N-PDU length is dynamic - any valid DLC value). Note: The mandatory mapping to the next higher valid DLC value for N-PDUs with a length &gt; 8 bytes is not affected by this parameter.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Definition of Enumeration values: CanTpOn The transmit N-PDU uses padding for SF, and the last CF. (N-PDU length is always 8 bytes) and validating if the received FC is also padded accordingly. CanTpOff The transmit N-PDU does not use padding for SF, FC and the last CF. (N-PDU length is dynamic) CanTpTxOn The transmit N-PDU uses padding for SF, and the last CF. (N-PDU length is dynamic) but the received FC is not validated for padding.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_OFF</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_OFF</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_ON</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_ON</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>CanTpTxTaType</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxTaType</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Declares the communication type of this TxNsdu.
+Enumeration values: CanTpPhysical. Used for 1:1 communication. CanTpFunctional. Used for 1:n communication.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Enumeration values: CanTpPhysical. Used for 1:1 communication. CanTpFunctional. Used for 1:n communication.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_FUNCTIONAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_FUNCTIONAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>CANTP_PHYSICAL</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CANTP_PHYSICAL</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <ECUC-REFERENCE-DEF>
+                              <SHORT-NAME>CanTpTxNSduRef</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxNSduRef</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a Pdu in the COM-Stack.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNAe</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with AddressingFormat CANTP_MIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNAe</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNAe</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol address extension value.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">format, this parameter contains the transport protocol address extension value.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNSa</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with RxTaType CANTP_PHYSICAL and CanTpAddressingFormat CANTP_EXTENDED. When DynIdSupport is enabled, this container is also required for each TxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT. When DynIdSupport is enabled and GenericConnectionSupport is not enabled, this container is also required for each RxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNSa</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNSa</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol source address value.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpNTa</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container is required for each RxNSdu and TxNSdu with AddressingFormat CANTP_EXTENDED. When DynIdSupport is enabled, this container is also required for each RxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT. When DynIdSupport is enabled and GenericConnectionSupport is not enabled, this container is also required for each TxNSdu with AddressingFormat CANTP_NORMALFIXED or CANTP_MIXED29BIT.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpNTa</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpNTa</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This parameter contains the transport protocol target address value.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>255</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpRxFcNPdu</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpRxFcNPdu</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpRxFcNPduId</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpRxFcNPduId</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">N-PDU identifier attached to the FC N-PDU of this TxNsdu identified by CanTpTxNSduId.
+Each TxNsdu identifier is linked to one Rx FC N-PDU identifier only. However, in the case of extended addressing format, the same FC N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by means of the N_TA value (first data byte of FC frames).</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">Each TxNsdu identifier is linked to one Rx FC N-PDU identifier only. However, in the case of extended addressing format, the same FC N-PDU identifier can be used for several N-SDU identifiers. The distinction is made by means of the N_TA value or N_AE value (first data byte of FC frames).</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-REFERENCE-DEF>
+                                  <SHORT-NAME>CanTpRxFcNPduRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpRxFcNPduRef</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to a Pdu in the COM-Stack</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                </ECUC-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>CanTpTxNPdu</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">CanTpTxNPdu</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Used for grouping of the ID of a PDU and the Reference to a PDU.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>CanTpTxNPduConfirmationPduId</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpTxNPduConfirmationPduId</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Handle Id to be used by the CanIf to confirm the transmission of the CanTpTxNPdu to the CanIf module.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <ECUC-REFERENCE-DEF>
+                                  <SHORT-NAME>CanTpTxNPduRef</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">CanTpTxNPduRef</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to a Pdu in the COM-Stack</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                </ECUC-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>CanTpGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">CanTpGeneral</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container contains the general configuration parameters of the CanTp module.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpChangeParameterApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpChangeParameterApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter, if set to true, enables the CanTp_ChangeParameterRequest Api for this Module.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpDevErrorDetect</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.
+true: enabled (ON).
+false: disabled (OFF).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpDynIdSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpDynIdSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enable support for dynamic ID handling via N-PDU MetaData. Metadata is not supported so currently this parameter need not be configured.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpFlexibleDataRateSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpFlexibleDataRateSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enable support for CAN FD frames.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpGenericConnectionSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpGenericConnectionSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enable support for the handling of generic connections using N-SDUs with MetaData. Requires CanTpDynIdSupport. Metadata is not supported so currently this parameter need not be configured.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpPaddingByte</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpPaddingByte</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Used for the initialization of unused bytes with a certain value</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>255</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbBurstQsize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbBurstQsize</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Size of the burst Queue. If this value is configured, Burst Mode gets enabled. It gives maximum possible burst simultaniously.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>255</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbDynamicFlowControlSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbDynamicFlowControlSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables Dynamic BS/STmin values in subsequent FlowControl frames. Iso Document gives possibility to have dynamic values for STMin and BS values in single Reception process. Autosar has strategy to have only fixed Values. This parameter provides a means to override the Autosar behaviour. For more details refer section 9.6.5.6 of Iso document. Note: This parameter shall be set True only after considering that corresponding Client Server communication is compatible in this respect for all the RxConnections as this parameter enables this dynamic behaviour globally.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbExternalCounterSecondsPerTick</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbExternalCounterSecondsPerTick</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter is required if High resolution Timer (i.e. Autosar Os based or Project specific) is used. This gives number of seconds in one Tick of the used Timer. If this parameter is configured then Integrator shall provide the Call Out implementation for CanTp_GetElapsedValue. Its Signature: void CanTp_GetElapsedValue(TickType *Value, TickType *ElapsedValue). If this parameter is not configured then internal Cyclic counter based on CanTp_MainFunction period is used, in which case CallOut implementation shall not be provided by integrator.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>Inf</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbFdSupportInfoCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbFdSupportInfoCallback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">When user configures this parameter CanTp gives callback using this function. With this function CanTp passes ID, Data pointer and FlexibleDataRateSupport whether enabled for relevant connection.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbLegacySharedFcEnabled</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbLegacySharedFcEnabled</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This is vendor specific parameter. TRUE: single Flow Control Pdu frame can be shared between different connection. FALSE: single Flow Control Pdu frame cannot be shared between different connection. Note: This parameter is relevant only for sharing of FC NPDU with standard Addressing format. Limitation: Only such mechanism of sharing for FC NPDU works if one Connection is relavant for OBD and other for UDS Protocol of Dcm, and hence the disambiguation for the reception is possible due to overall PduLength difference created using padding bytes. For Extended Addressing Format relevant FC NPDU sharing is supported by usual method. This is only for legacy projects. For new Projects this is not recomended.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbLiteSupport</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbLiteSupport</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter helps Integrator to configure CanTp in such a way to have Lite footprint. For an ISO 15765-2 Specific and Autosar compliant Implementation, this parameter shall not be configured. If this parameter is TRUE then following features are not to be configured:  CanTpChangeParameterApi, CanTpReadParameterApi, CanTpVersionInfoApi. Also CanTp_TriggerTransmit and CanTp_CancelTransmit will not be supported.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbMaxRxConnectionCnt</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbMaxRxConnectionCnt</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum possible value of number of Rx Connection. If this value is to be updated then source code has to be recompiled. This decides number of different Stmin/Bs combination can be stored in RAM for CanTp_ChangeParameter Api. CanTpRbMaxRxConnectionCnt  and CanTpRbMaxTxConnectionCnt decides the size for CanTp_ConnectionIdType.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1.84467440737095E+19</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbMaxTxConnectionCnt</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbMaxTxConnectionCnt</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum possible value of number of Tx Connection. If this value is to be updated then source code has to be recompiled. CanTpRbMaxTxConnectionCnt  and CanTpRbMaxRxConnectionCnt decides the size for CanTp_ConnectionIdType.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1.84467440737095E+19</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbMaxTxNpduCnt</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbMaxTxNpduCnt</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum possible value of number of uinque CanIf referred Pdus. If this value is to be updated then source code has to be recompiled. This value decides the maximum value for CanTpTxFcNPduConfirmationPduId or  CanTpTxNPduConfirmationPduId.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbSTmin</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbSTmin</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This vender specific paramter is to support FC deactivation. This value is used for STmin. Sets the duration of the minimum time the CanTp sender shall wait between the transmissions of two CF N-PDUs. Also if this parameter is configured, it means that CanTp will not send the FC for the FF recieved.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>0.127</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbStrictBsCrTimeoutCheck</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbStrictBsCrTimeoutCheck</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">FC and CF frames are handled within event calls in CanTp_RxIndication; thus it is possible to accurately check for the current time within the CanTp_RxIndication before accepting that FC/CF frame. It is also known that this event call can also be triggered from the interrupt context and many projects may not intend to call OS functions within interrupt context. Thus, it is provided as a option to users to choose if TimeOut handling needs to be done before processing a received CF/FC frame within CanTp_RxIndication. If configured TRUE, This timeout check is done in CanTp_RxIndication also, if FALSE, the timeouts are handled only from CanTp_MainFunction. Dependency: CanTpRbExternalCounterSecondsPerTick.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbStrictDlcCheck</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbStrictDlcCheck</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">If this parameter is configured TRUE, the received frames are checked strictly for the exact DLC expected in the frame. Configuring this parameter as FALSE provides some leniency in the check for received DLC, where any DLC greater than the expected length of the frame (but not greater than 8) are accepted. For behaviour according to ISO 15765-2, please configure this parameter as FALSE. NOTE: The configuration of this parameter will not have any effect if the parameter CanTpRxPaddingActivation or CanTpTxPaddingActivation are configured as CANTP_ON</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpRbValidationDone</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbValidationDone</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration Validation Step executed in BCT? Note: This parameter is for internal use only. Do not configure it.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <WITH-AUTO>true</WITH-AUTO>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpReadParameterApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpReadParameterApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter, if set to true, enables the CanTp_ReadParameterApi for this module.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>CanTpVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpVersionInfoApi</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The function CanTp_GetVersionInfo is configurable (On/Off) by this configuration parameter.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <ECUC-REFERENCE-DEF>
+                      <SHORT-NAME>CanTpRbBurstTaskRef</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CanTpRbBurstTaskRef</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Absolute Reference to OsTask in which context the CanTp_MainFunction is called for Burst Mode. To enable Burst Mode this Reference configuration is a must. This task is activated in case of additional execution of Burstmode activity. Depending on the value of STmin (received through FC) is zero for a particular connection, the transmission will happen in Burst mode, else if the STmin is a non zero valid value, then the CFs shall be sent normally. Other modules MainFunction should not be mapped to this task. Dependency: CanTpRbBurstQsize. Note: Priority of this Task should be same as the Task in which Normal cyclic Timing Event is mapped w.r.t. CanTp_MainFunction. For more details on different type of events supported by CanTp please refer CanTp_Cfg_BSWMD.arxml generated.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:AR42.1.0.0:2016-10-24</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask</DESTINATION-REF>
+                    </ECUC-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

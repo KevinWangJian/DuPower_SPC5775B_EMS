@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+<AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_WdgIf</SHORT-NAME>
+      <AR-PACKAGES>
+       <!-- Start: Details of WdgIf implementation within BSW-->
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>WdgIf</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>3.0.0</SW-VERSION>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_WdgIf/BswModuleDescriptions/WdgIf/BswInternalBehavior</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+         <!-- End: Details of WdgIf implementation within BSW-->
+
+         <!-- Start: Description of properties and features of WdgIf-->
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>WdgIf</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Watchdog Interface</L-4>
+              </LONG-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>43</MODULE-ID>
+              <!-- Start: API's provided by this module-->
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_SetMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_SetTriggerCondition</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <!-- End: API's provided by this module-->
+
+               <!-- Start: WdgIf's dependency with other modules-->
+              <BSW-MODULE-DEPENDENCYS>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Wdg</SHORT-NAME>
+                  <TARGET-MODULE-ID>102</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+              </BSW-MODULE-DEPENDENCYS>
+              <!-- End: WdgIf's dependency with other modules-->
+
+              <!-- Start: Internal behavior of WdgIf. This module contains only called entities-->
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <ENTITYS>
+                   <!-- Start: WdgIf API's provided as Called Entities-->
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>SetMode</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_SetMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>SetTriggerCondition</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_SetTriggerCondition</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>GetVersionInfo</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgIf/BswModuleEntry/WdgIf_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                  </ENTITYS>
+                  <!-- End: WdgIf API's provided as Called Entities-->
+                </BSW-INTERNAL-BEHAVIOR>
+                <!-- End: Internal behavior of WdgIf. This module contains only called entities-->
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- End:  Description of properties and features of WdgIf-->
+
+        <!-- Start: Interfaces of WdgIf (API's) used to invoke code segment -->
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntry</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>WdgIf_SetMode</SHORT-NAME>  <!-- Start: Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex,WdgIf_ModeType WdgMode); -->
+              <LONG-NAME>
+                    <L-4 L="EN">Maps WdgIf_SetMode to service Wdg_SetMode of the corresponding Watchdog Driver.</L-4>
+              </LONG-NAME>
+              <DESC>
+                    <L-2 L="EN">The Watchdog Interface module maps the service WdgIf_SetMode to the service Wdg_SetMode of the corresponding Watchdog Driver.The service WdgIf_SetMode changes the mode of the lower layer watchdog drivers which will lead to longer(Slow Mode), shorter(Fast Mode) or turn off(Off Mode) timeout periods.</L-2>
+              </DESC>
+              <SERVICE-ID>1</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+				<DESC>
+					<L-2 L="EN">E_OK - Success(execution successful).E_NOT_OK - Failure (execution failed).</L-2>
+				</DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <DIRECTION>OUT</DIRECTION>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>DeviceIndex</SHORT-NAME>
+				  <DESC>
+						<L-2 L="EN">(In)Used to identify the watchdog driver instance.</L-2>
+				  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>                                   
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>WdgMode</SHORT-NAME>
+				  <DESC>
+						<L-2 L="EN">(In)Watchdog driver mode.</L-2>
+				  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgIf/ImplementationDataTypes/WdgIf_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY> <!-- End: Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex,WdgIf_ModeType WdgMode); -->
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>WdgIf_SetTriggerCondition</SHORT-NAME>
+              <LONG-NAME>
+                    <L-4 L="EN">Maps WdgIf_SetTriggerCondition to Wdg_SetTriggerCondition of the corresponding Watchdog Driver.</L-4>
+              </LONG-NAME>
+              <DESC>
+                    <L-2 L="EN">The Watchdog Interface module maps the service WdgIf_SetTriggerCondition to the service Wdg_SetTriggerCondition of the corresponding Watchdog Driver. WdgIf_SetTriggerCondition provides timeout period information to lower layer drivers. The lower layer driver should not timeout for the period passed by the higher layer.</L-2>
+              </DESC>
+              <SERVICE-ID>2</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>DeviceIndex</SHORT-NAME>
+				  <DESC>
+						<L-2 L="EN">(In)Used to identify the watchdog driver instance.</L-2>
+				  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Timeout</SHORT-NAME>
+				  <DESC>
+						<L-2 L="EN">(In)Timeout value for setting the trigger counter.</L-2>
+				  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>WdgIf_GetVersionInfo</SHORT-NAME>
+              <LONG-NAME>
+                    <L-4 L="EN">Provides the version information of this module.</L-4>
+              </LONG-NAME>
+              <DESC>
+                    <L-2 L="EN">The WdgIf_GetVersionInfo service returns the version information of this module. The version information includes: a)WdgIf Module Id(43) b) BOSCH vendor Id(06) c) Software release version number. </L-2>
+              </DESC>
+              <SERVICE-ID>3</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>VersionInfoPtr</SHORT-NAME>
+				  <DESC>
+					<L-2 L="EN">(Out)Pointer to where to store the version information of the module WdgIf.</L-2>
+				  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>INOUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- End: Interfaces of WdgIf (API's) used to invoke code segment -->
+
+       <!-- Start: CompuMethod for typedef enum WdgIf_ModeType -->
+        <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>WdgIf_ModeType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">In this mode, the watchdog driver is disabled (switched off).</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>WDGIF_OFF_MODE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">In this mode, the watchdog driver is set up for a long timeout period (slow triggering).</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>WDGIF_SLOW_MODE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">In this mode, the watchdog driver is set up for a short timeout period (fast triggering).</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>WDGIF_FAST_MODE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- End: CompuMethod for typedef enum WdgIf_ModeType-->
+
+        <!-- Start: Implemented datatypes-->
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>WdgIf_ModeType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Mode type of the WdgIf module</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The WdgIf_ModeType values are passed as parameters to the watchdog drivers mode switching function.</L-2>
+              </DESC>             
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_WdgIf/CompuMethods/WdgIf_ModeType</COMPU-METHOD-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+             <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE> 
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- End: Implemented datatypes-->
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>
+  

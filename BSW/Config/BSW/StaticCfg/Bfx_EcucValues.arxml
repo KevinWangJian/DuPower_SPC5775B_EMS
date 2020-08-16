@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_Project</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>Bfx</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>BfxGeneral</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxGeneral</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxGeneral/BfxRbOptimizationMcuExtract</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxGeneral/BfxRbOptimization</DEFINITION-REF>
+                      <VALUE>NO_OPTIMIZATION</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxGeneral/Bfx_VersionInfoAPI</DEFINITION-REF>
+                      <VALUE>ON</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>BfxRbMemoryLocations</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitMasku16u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitMasku32u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocClrBitMasku8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocCopyBitu16u8u16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocCopyBitu32u8u32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocCopyBitu8u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitu16u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitu32u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitu8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitsu16u8u8u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitsu32u8u8u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocGetBitsu8u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitu16u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitu32u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitu8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsu16u8u8u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsu32u8u8u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsu8u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsMasku16u16u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsMasku32u32u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocPutBitsMasku8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitLtu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitLtu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitLtu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitRtu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitRtu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocRotBitRtu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitMasku16u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitMasku32u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitMasku8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitsu16u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitsu32u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocSetBitsu8u8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitLtu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitLtu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitLtu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitRtu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitRtu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocShiftBitRtu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitMasku16u16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitMasku32u32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitMasku8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitsu16</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitsu32</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocToggleBitsu8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitLnMasku16u16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitLnMasku32u32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitLnMasku8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitMasku16u16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitMasku32u32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstBitMasku8u8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstParityEvenu16u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstParityEvenu32u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Bfx/EcucModuleDefs/Bfx/BfxRbMemoryLocations/bfxRbMemLocTstParityEvenu8u8</DEFINITION-REF>
+                      <VALUE>INLINE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd" xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <AR-PACKAGES> 
+  <AR-PACKAGE>
+   <SHORT-NAME>RB</SHORT-NAME>
+   <AR-PACKAGES>
+    <AR-PACKAGE>
+     <SHORT-NAME>UBK</SHORT-NAME>
+     <AR-PACKAGES>
+      <AR-PACKAGE>
+       <SHORT-NAME>Project</SHORT-NAME>
+       <AR-PACKAGES>
+        <AR-PACKAGE>
+         <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+         <ELEMENTS>
+          <ECUC-MODULE-CONFIGURATION-VALUES>
+           <SHORT-NAME>ComStack</SHORT-NAME>
+           <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_ComStack/EcucModuleDefs/ComStack</DEFINITION-REF>
+           <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+           <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+             <SHORT-NAME>ComStackRbSettings</SHORT-NAME>
+             <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_ComStack/EcucModuleDefs/ComStack/ComStackRbSettings</DEFINITION-REF>
+             <PARAMETER-VALUES>
+              <ECUC-TEXTUAL-PARAM-VALUE>
+               <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_ComStack/EcucModuleDefs/ComStack/ComStackRbSettings/ComStackRbArRelease</DEFINITION-REF>
+               <VALUE>AR42_Rev2</VALUE>
+              </ECUC-TEXTUAL-PARAM-VALUE>
+             </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+           </CONTAINERS>
+          </ECUC-MODULE-CONFIGURATION-VALUES>
+         </ELEMENTS>
+        </AR-PACKAGE>
+       </AR-PACKAGES>
+      </AR-PACKAGE>
+     </AR-PACKAGES>
+    </AR-PACKAGE>
+   </AR-PACKAGES>
+  </AR-PACKAGE>
+ </AR-PACKAGES>
+</AUTOSAR>
+<!-- Last modified by AEEE-Pro_2016.2.0 - BCT -->

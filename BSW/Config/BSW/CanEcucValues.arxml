@@ -1,0 +1,2281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE UUID="fd775cc5-e039-4cef-a98c-251f0eab3c43">
+      <SHORT-NAME>Can</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES UUID="1788c053-c77a-4e4c-a3e8-7d94a87e7571">
+          <SHORT-NAME>Can</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE UUID="b42a49ef-1bdc-4094-8b87-4e1f66c5db97">
+              <SHORT-NAME>CanGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanMainFunctionBusoffPeriod</DEFINITION-REF>
+                  <VALUE>0.0010</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanMainFunctionModePeriod</DEFINITION-REF>
+                  <VALUE>0.0010</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanMultiplexedTransmission</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanVersionInfoApi</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanIndex</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanPublicIcomSupport</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanTimeoutDuration</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanGeneral/CanDevErrorDetection</DEFINITION-REF>
+                  <VALUE>false</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE UUID="3f729f4b-1cdd-4ec1-b94a-641321617130">
+              <SHORT-NAME>CanConfigSet</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE UUID="2dca6252-d24d-4c1a-a18c-a86bbb11714e">
+                  <SHORT-NAME>Can_Network_CANNODE_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanBusoffProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerActivation</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaseAddress</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanTxProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupFunctionalityAPI</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupSupport</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanRxProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerDefaultBaudrate</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="6b2a758a-1981-4d77-a4ab-83c8c91340a9">
+                      <SHORT-NAME>Can_Network_CANNODE_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRate</DEFINITION-REF>
+                          <VALUE>500</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRateConfigID</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerPropSeg</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg1</DEFINITION-REF>
+                          <VALUE>10</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSyncJumpWidth</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8a821d14-16eb-49d9-b514-7ef3d848981f">
+                  <SHORT-NAME>J1939_Network_CANNODE_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanBusoffProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerActivation</DEFINITION-REF>
+                      <VALUE>true</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaseAddress</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanTxProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupFunctionalityAPI</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanWakeupSupport</DEFINITION-REF>
+                      <VALUE>false</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanRxProcessing</DEFINITION-REF>
+                      <VALUE>POLLING</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerDefaultBaudrate</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="a7fa4525-d94f-4432-917f-2e6371ede483">
+                      <SHORT-NAME>J1939_Network_CANNODE_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRate</DEFINITION-REF>
+                          <VALUE>500</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerBaudRateConfigID</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerPropSeg</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg1</DEFINITION-REF>
+                          <VALUE>10</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSeg2</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanController/CanControllerBaudrateConfig/CanControllerSyncJumpWidth</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="4cc4a1de-e786-49d6-a1a0-25a0d7421b4c">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="c0728827-5752-4bc4-b642-cc9f396a7f77">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>180</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8008754d-86ad-49ea-858a-f4001510589e">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_2</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="57337c00-28a3-4b86-a9b2-9daa532708f9">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>483</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="3ce7a96d-4f3b-4ebc-a71b-52f826064462">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_3</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="a000881a-920c-49d2-ab85-97fbfc744eef">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>395</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="2ef46cd6-3099-469f-aa7f-518b40d88d9a">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_4</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="93143631-ff56-46e9-8ac8-445363751ef8">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>572</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="ef481742-34eb-4ceb-8593-58eea79b6b9f">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_5</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="6c6450bf-b4be-4d19-806c-8273a0191e46">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>771</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9fbc4821-d7c5-48a6-8763-e083b3fbe8a3">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_6</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="6f6ce818-8543-49e9-8b5c-c127e489b6af">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>497</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9fc4e169-1967-4ccc-a81a-725de84e7932">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_7</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="de2f8492-f761-43bb-8b80-d214424438e6">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>1864</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="03e2a58e-3a33-42e7-83c3-f31ab77eb4b2">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="3b70fda5-4a4a-465f-ae8e-e7d1e6efc7ef">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>498</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c46f1256-2397-4f25-92ab-1a2d8f8b47c3">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_9</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="1fe0de47-45d7-41f4-9dde-74a230b14082">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>355</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="29fc948f-e1cf-4024-80b4-11adb3f73668">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_10</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>9</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="ae51668f-f158-49e9-87c9-0b505ed258ca">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>851</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="59926798-ef4a-4456-a7f7-b4bca5de4aa7">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_11</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>10</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="434345e3-dcd9-4ba6-9ff8-8c2075c13eff">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>2015</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="3eaf50a6-5e8d-447d-9174-8f0e3b889aa6">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_12</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>11</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="c5406c73-adc7-4e33-9a19-8dda82ca9887">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>1375</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a72b792e-0cad-4824-930b-25894bd29735">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_13</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>12</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="9d4aa03a-49dd-48ed-b7bb-72565497c5eb">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>1540</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a17a4034-f982-44e9-af6e-525b29a24da4">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_14</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>13</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="dbbe0c36-dc4f-486a-ab25-fa082210ce89">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>866</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d7fde76b-c9b3-4ae0-9043-afa4384fc919">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Rx_Std_MailBox_15</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>14</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="b94f3108-782e-4647-935d-73961945b49e">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>1728</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>2047</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d69d623f-9334-491a-9ec6-f456315909b4">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>15</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="4d942ac6-a08f-4c69-9003-e726aa951371">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_2</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>16</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="e58e35fa-e056-4f3f-ae86-dad8bd057be9">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_3</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>17</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="f533b374-b23d-4c3b-8fa8-b8e181b1c6a4">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_4</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>18</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="3a198b5b-c9fc-4795-ac13-10c2e57ea024">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_5</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>19</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c7928b29-2f7f-466c-9994-d50e93157dc7">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_6</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>20</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a6795267-7b65-4171-acea-79e9838ece1b">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_7</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>21</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d2fbab19-0c40-4bfc-bb15-5a0a325e9822">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>22</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="ae924fbb-39e0-4497-8a7c-f9ede766942a">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_9</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>23</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="71ada496-f83b-459c-b997-cbac550dbda3">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_10</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>24</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="183e4259-c5c0-4a5c-8325-19944021fa5c">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_11</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>25</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a7156b8a-3c45-410b-a089-06e89d1fc268">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_12</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>26</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="68e52d39-69d8-4399-bae2-168ebab62b0b">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_13</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>27</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="0f1a795e-aef9-460d-b720-ebf5dc234a84">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_14</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>28</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8287789a-9533-4474-a0e9-64a85d66db6d">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_15</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>29</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="397b3a4d-b8bb-4daf-8b59-526a15a20e75">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_16</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>30</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="e7dd79e6-3960-49fd-b953-33c4f67630ef">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_17</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>31</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c3d9fc06-952c-422c-a757-06597199e633">
+                  <SHORT-NAME>Can_Network_CANNODE_0_Tx_Std_MailBox_18</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>32</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>STANDARD</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/Can_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5dd5559a-6442-4499-bc53-f89a72972fb2">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>33</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="75357fb0-caba-4465-addc-f6df6ac9602c">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>403174486</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="947e3ed6-3975-4580-af33-5664a1908244">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_2</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>34</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="3d60cbab-4e56-4e77-b085-096c48f395f1">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>404616278</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="68326b4b-a72a-4abb-b71d-d91ea102f1aa">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_3</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>35</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="3fa867e5-6f7c-4f5c-aa7a-93e32239a7e0">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>270201942</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="c8906575-2458-4810-8e0d-363c006ef93a">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_4</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>36</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="cbc95bfb-2d96-40ae-aa5b-130f227dced2">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>405206102</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="f39a3be7-c9c1-4fc1-a963-d66a0f448484">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_5</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>37</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="cbf7f67a-d53f-4879-85a2-610aaf84720e">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>269153366</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="31dc8185-e25a-482e-ba9f-16ab267fb055">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_6</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>38</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="7bd350e4-6b0c-4392-89f1-cdb9a57fd1c4">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>136311894</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="021fc975-84c6-40ac-a19a-f702a09be793">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_7</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>39</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="35ccffd8-cacb-4201-82ef-9c2724fc3096">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>403240022</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="4246fade-ba5d-4ae0-9e75-59ab9b645c25">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>40</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="aa31f7d4-9c6c-4734-b9b6-6c16c82ac697">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>403895382</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="b1989f7c-632e-44c8-905f-d3d20f7efa5b">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_9</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>41</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="08a499a0-dfba-4924-9c98-62c3b8a005f9">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>402781270</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterMask</DEFINITION-REF>
+                          <VALUE>536870911</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="53f29cd1-6ae9-4fd2-ab73-554e02bd6d0b">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Rx_Ext_MailBox_10</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>RECEIVE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>42</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE UUID="640466cb-7345-4e79-8fb7-8f6fe786b5ee">
+                      <SHORT-NAME>CanHwFilter</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwFilter/CanHwFilterCode</DEFINITION-REF>
+                          <VALUE>485291094</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="e95ece22-cdd6-4f03-a03f-e50748e116ba">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>43</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d94f40d2-1ae3-47e1-8394-0322c371dd55">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_2</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>44</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="8d0bd61d-7f6a-4903-b04e-deecf161ccd6">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_3</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>45</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="a110c809-76ce-4046-853a-dec6bf8778f6">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_4</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>46</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="e4cef049-bf2e-457c-88e3-24ad845e3868">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_5</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>47</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="d9ec2b28-bcb3-49d2-b70f-76ce3eb5515a">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_6</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>48</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="9d966386-0142-4262-873c-158ab8260e0c">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_7</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>49</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="07227758-44ac-4a93-8087-ff5f6a25d4a8">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_8</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>50</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE UUID="5ca6770b-3a82-41fa-b35b-344eccf90925">
+                  <SHORT-NAME>J1939_Network_CANNODE_0_Tx_Ext_MailBox_9</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHwObjectCount</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanHandleType</DEFINITION-REF>
+                      <VALUE>FULL</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectType</DEFINITION-REF>
+                      <VALUE>TRANSMIT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanObjectId</DEFINITION-REF>
+                      <VALUE>51</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanIdType</DEFINITION-REF>
+                      <VALUE>EXTENDED</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR_Can/EcucModuleDefs/Can/CanConfigSet/CanHardwareObject/CanControllerRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Can/Can/CanConfigSet/J1939_Network_CANNODE_0</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

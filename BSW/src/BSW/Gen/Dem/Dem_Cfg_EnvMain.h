@@ -1,0 +1,229 @@
+/********************************************************************************************************************/
+/*                                                                                                                  */
+/* TOOL-GENERATED SOURCECODE, DO NOT CHANGE                                                                         */
+/*                                                                                                                  */
+/********************************************************************************************************************/
+
+#ifndef DEM_CFG_ENVMAIN_H
+#define DEM_CFG_ENVMAIN_H
+
+/* min number of bytes required for storing any eventIds ExtendedData and one FreezeFrame (=> EvBuff) */
+#define DEM_CFG_ENVMINSIZE_OF_RAWENVDATA           (74u + 0u)
+
+/* min number of bytes required for storing any eventIds ExtendedData and multiple FreezeFrame (=> EvMem) */
+#define DEM_CFG_ENVMINSIZE_OF_MULTIPLE_RAWENVDATA   (148u + 0u)
+
+#define DEM_CFG_ENVEVENTID2ENVDATA \
+{ \
+   { 0u,0u }                                                      /* DEM_EVENTID_INVALID */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_1_BusOff */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_2_BusOff */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_3_BusOff */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_4_BusOff */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_5_BusOff */ \
+   ,{  0u, 0u }                                                    /* DemEventParameter_Can_Network_6_BusOff */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0101F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0101F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0102F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0102F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P010900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P011600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0117F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0117F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0117F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0118F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0118F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0118F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0119F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0119F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0119F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0120F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0120F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0120F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0121F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0121F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0121F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0122F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0122F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0122F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0123F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0123F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0123F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012801 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P012900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0135F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0135F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0135F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0136F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0136F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0136F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0137F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0137F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0137F2 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P013900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P014900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P015900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P016900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P017900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P018900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P019900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P020900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P021900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P022900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P023900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0241F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0242F1 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P0243F0 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P024900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_P025600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U010900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011200 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011300 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011400 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011500 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011600 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011700 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011800 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U011900 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U012000 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U012100 */ \
+   ,{  DEM_EXTDATA_SET1_EXTD, DEM_FREEZEFRAME_SET1_FREEZE }        /* DemEventParameter_U012288 */ \
+}
+
+#endif
+

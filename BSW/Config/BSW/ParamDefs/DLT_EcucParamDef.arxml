@@ -1,0 +1,1823 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Dlt</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <!-- Module Definition: Dlt -->
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Dlt</SHORT-NAME>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.3.0</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2017-07-25</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00800</RELATED-TRACE-ITEM-REF>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Dlt</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <!-- Container Definition: DltConfigSet -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DltConfigSet</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container lists all the global Dlt functionalities that can be enabled or disabled at pre-compile time to optimize resource consumption.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00842</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: DltLogLevelSetting -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltLogLevelSetting</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains settings for thresholds.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00863</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltDefaultLogLevel -->
+                        <ECUC-ENUMERATION-PARAM-DEF>
+                          <SHORT-NAME>DltDefaultLogLevel</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is the effective log level used in case no filter matches the given AppicationId and ContextId. This can be seen as a fall-through filter definition with wildcard for AppicationId and ContextId, which will be used, when no other filter matches.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00864</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <LITERALS>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_DEBUG</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_ERROR</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_FATAL</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_INFO</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_OFF</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_VERBOSE</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                            <ECUC-ENUMERATION-LITERAL-DEF>
+                              <SHORT-NAME>DLT_LOG_WARN</SHORT-NAME>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                            </ECUC-ENUMERATION-LITERAL-DEF>
+                          </LITERALS>
+                        </ECUC-ENUMERATION-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- Container Definition: DltLogOutput -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltLogOutput</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains settings for log/trace message output</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00875</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <REFERENCES>
+                        <!-- Reference Definition: DltDefaultLogChannelRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>DltDefaultLogChannelRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the default log channel, which has to be used for a log/trace output, if no other match has been found.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00889</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dlt/DltConfigSet/DltLogOutput/DltLogChannel</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                      <SUB-CONTAINERS>
+                        <!-- Container Definition: DltLogChannel -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>DltLogChannel</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Contains settings for log/trace message output</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00876</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <!-- PARAMETER DEFINITION: DltLogChannelBufferOverflowTimer -->
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelBufferOverflowTimer</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the cycle time in seconds for resetting the buffer overflow flag in case a buffer overflow occurred.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00886</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX INTERVAL-TYPE="CLOSED">1</MAX>
+                              <MIN INTERVAL-TYPE="CLOSED">0.001</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelBufferSize -->
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelBufferSize</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Buffer size in bytes for the LogChannel specific message buffer.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00881</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <!-- Deviation from AUTOSAR due to CUBAS Dlt implementation. -->
+                              <MAX>65534</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelId -->
+                            <ECUC-STRING-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelId</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the 4 ASCII character long name of the log channel as used in the Dlt control messages as parameter name Dlt_interface</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00877</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                              </ECUC-STRING-PARAM-DEF-VARIANTS>
+                            </ECUC-STRING-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelMaxMessageLength -->
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelMaxMessageLength</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The maximum length of a Dlt log or trace message.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00882</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <!-- Deviation from AUTOSAR due to CUBAS Dlt implementation. -->
+                              <MAX>65534</MAX>
+                              <MIN>8</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelMaxNumOfRetries -->
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelMaxNumOfRetries</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">The maximum length of a Dlt log or trace message.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00884</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelThreshold -->
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelThreshold</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">LogLevel Threshold</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00878</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_DEBUG</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_ERROR</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_FATAL</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_INFO</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_OFF</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_VERBOSE</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>DLT_LOG_WARN</SHORT-NAME>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelTrafficShapingBandwidth -->
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelTrafficShapingBandwidth</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Set the maximum possible bandwith in bit/s.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00883</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>18446744073709551615</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogChannelTransmitCycle -->
+                            <ECUC-FLOAT-PARAM-DEF>
+                              <SHORT-NAME>DltLogChannelTransmitCycle</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the cycle time in seconds of the transmit functionality of this log channel.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00885</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX INTERVAL-TYPE="CLOSED">1</MAX>
+                              <MIN INTERVAL-TYPE="CLOSED">0.001</MIN>
+                            </ECUC-FLOAT-PARAM-DEF>
+                            <!-- PARAMETER DEFINITION: DltLogTraceStatusFlag -->
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>DltLogTraceStatusFlag</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Parameter to turn on/off on this LogChannel completely.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00879</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <SUB-CONTAINERS>
+                            <!-- Container Definition: DltTxPdu -->
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>DltTxPdu</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Contains the configuration parameters of the AUTOSAR Dlt module's Tx Pdus.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00907</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <PARAMETERS>
+                                <!-- PARAMETER DEFINITION: DltITxPduHandleId -->
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>DltITxPduHandleId</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">The numerical value used as the ID of this I-PDU.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">This handle Id is used for the APIs calls Dlt_TxConfirmation, Dlt_TriggerTransmit, Dlt_TriggerIPDUSend or Dlt_TriggerIPDUSendWithMetaData, Dlt_CopyTxData and Dlt_TpTxConfirmation to transmit respectively confirm transmissions of I-PDUs, as well as the PduId passed to the Tx-I-PDU-callout configured with DltIPduCallout and/or DltIPduTriggerTransmitCallout.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00893</RELATED-TRACE-ITEM-REF>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>ECU</SCOPE>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                  <MAX>65535</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <REFERENCES>
+                                <!-- Reference Definition: DltTxPduIdRef -->
+                                <ECUC-REFERENCE-DEF>
+                                  <SHORT-NAME>DltTxPduIdRef</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+                                  </DESC>
+                                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00892</RELATED-TRACE-ITEM-REF>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                </ECUC-REFERENCE-DEF>
+                              </REFERENCES>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: DltLogChannelAssignment -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>DltLogChannelAssignment</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains a preconfiguration of ApplicationId / ContextId pairs and their assigned log channel.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00887</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <REFERENCES>
+                            <!-- Reference Definition: DltLogChannelAssignmentSwcContextRef -->
+                            <ECUC-REFERENCE-DEF>
+                              <SHORT-NAME>DltLogChannelAssignmentSwcContextRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to an ApplicationId/ContextId pair that is assigned to a DltLogChannel.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00896</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dlt/DltSwc/DltSwcContext</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                            <!-- Reference Definition: DltLogChannelRef -->
+                            <ECUC-REFERENCE-DEF>
+                              <SHORT-NAME>DltLogChannelRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to a DltLogChannel that is assigned to an ApplicationId / ContextId pair.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00888</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dlt/DltConfigSet/DltLogOutput/DltLogChannel</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- Container Definition: DltProtocol -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltProtocol</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration parameters for handling the specific protocol variants.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00832</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltHeaderUseEcuId -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltHeaderUseEcuId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Corresponds to field WEID (With ECU ID). If set ECU ID shall be placed in the header, else not.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">If the parameter DltGeneralNvRamRef is used this parameter defines the initial value for the corresponding NVRam entry. If the parameter DltGeneralNvRamRef is not set, Link-Time or Post-Build configuration shall be used.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00811</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DltHeaderUseSessionID -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltHeaderUseSessionID</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Corresponds to field WSID (with Session ID). If set the Session ID shall be placed in the header, else not.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">If the parameter DltGeneralNvRamRef is used this parameter defines the initial value for the corresponding NVRam entry. If the parameter DltGeneralNvRamRef is not set, Link-Time or Post-Build configuration shall be used.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00813</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DltHeaderUseTimestamp -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltHeaderUseTimestamp</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Corresponds to field WTMS (With Timestamp). If set the timestamp shall be placed in the header, else not.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">If the parameter DltGeneralNvRamRef is used this parameter defines the initial value for the corresponding NVRam entry. If the parameter DltGeneralNvRamRef is not set, Link-Time or Post-Build configuration shall be used.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00814</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DltUseExtHeaderInNonVerbMode -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltUseExtHeaderInNonVerbMode</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Non Verbose messages (opposed to verbose messages) do not need an extended header. If this flag is set to true the extended header shall also be used for non verbose messages.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">If DltGeneralNvRAMSupport is enabled this parameter is the initial value for the corresponding NVRam entry. If DltGeneralNvRAMSupport is not set, Link-Time or Post-Build configuration shall be used.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00812</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <!-- Container Definition: DltEcuId -->
+                        <ECUC-CHOICE-CONTAINER-DEF>
+                          <SHORT-NAME>DltEcuId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is a choice container to choose between a EcuId value or a callout to get the EcuId.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00860</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <CHOICES>
+                            <!-- Container Definition: DltEcuIdCalloutChoice -->
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>DltEcuIdCalloutChoice</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">EcuId via user defined callout.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00902</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <!-- PARAMETER DEFINITION: DltEcuIdCallout -->
+                                <ECUC-FUNCTION-NAME-DEF>
+                                  <SHORT-NAME>DltEcuIdCallout</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">If this choice is used the EcuId shall be fetched by calling the here configured callout function.</L-2>
+                                  </DESC>
+                                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00862</RELATED-TRACE-ITEM-REF>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>ECU</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                  </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                </ECUC-FUNCTION-NAME-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <!-- Container Definition: DltEcuIdValueChoice -->
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>DltEcuIdValueChoice</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">EcuId value configuration</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00901</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <!-- PARAMETER DEFINITION: DltEcuIdValue -->
+                                <ECUC-STRING-PARAM-DEF>
+                                  <SHORT-NAME>DltEcuIdValue</SHORT-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">If this choice is used the EcuId shall be taken from the configured string.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">This is the name of the ECU for use within the Dlt protocol. If you want to use a number representation type this as character.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00861</RELATED-TRACE-ITEM-REF>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>ECU</SCOPE>
+                                  <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                                  </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                </ECUC-STRING-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </CHOICES>
+                        </ECUC-CHOICE-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- Container Definition: DltRxPdu -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltRxPdu</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains the Pdu IDs to be used for Dlt control messages reception.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00900</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltIRxPduHandleId -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>DltIRxPduHandleId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">The numerical value used as the ID of this I-PDU. The DltRxPduHandleId is required by the API calls Dlt_RxIndication, Dlt_TpRxIndication, Dlt_StartOfReception and Dlt_CopyRxData to receive I-PDUs from the PduR (DltIPduDirection: Receive), as well as the PduId passed to an Rx-I-PDU-callout.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00899</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>0</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                      <REFERENCES>
+                        <!-- Reference Definition: DltRxPduIdRef -->
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>DltRxPduIdRef</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00898</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <!-- Container Definition: DltTraceStatusSetting -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltTraceStatusSetting</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains settings for trace status</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00869</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltDefaultTraceStatus -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltDefaultTraceStatus</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This is the effective trace status used in case no filter matches the given ApplicationId and ContextId. This can be seen as a fall-through filter definition with wildcard for ApplicationId and ContextId, which will be used, when no other filter matches.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00870</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>ECU</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                      <SUB-CONTAINERS>
+                        <!-- Container Definition: DltTraceStatusAssignment -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>DltTraceStatusAssignment</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains a preconfiguration of ApplicationId / ContextId pairs and their assigned trace status.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00871</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <!-- PARAMETER DEFINITION: DltTraceStatus -->
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>DltTraceStatus</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Trace status for the given ApplicationId/ContextId tuple.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00874</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>ECU</SCOPE>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                          <REFERENCES>
+                            <!-- Reference Definition: DltTraceStatusAssignmentSwcContextRef -->
+                            <ECUC-REFERENCE-DEF>
+                              <SHORT-NAME>DltTraceStatusAssignmentSwcContextRef</SHORT-NAME>
+                              <DESC>
+                                <L-2 L="EN">Reference to an ApplicationId/ContextId pair to which a DltTraceStatus is assigned.</L-2>
+                              </DESC>
+                              <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00895</RELATED-TRACE-ITEM-REF>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dlt/DltSwc/DltSwcContext</DESTINATION-REF>
+                            </ECUC-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: DltGeneral -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DltGeneral</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">This container lists all the global Dlt functionalities that can be enabled or disabled at pre-compile time to optimize resource consumption.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00809</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: DltGeneralDevErrorDetect -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralDevErrorDetect</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">If the Default Error Tracer (Det) shall be used, this parameter shall be set to TRUE. Otherwise, it shall be set to FALSE.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00840</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralInjectionSupport -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralInjectionSupport</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables or disables the Dlt Injection feature.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00847</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralRegisterContextNotification -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralRegisterContextNotification</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">If this parameter is set to TRUE, a Dlt Control Message is sent every time a SWC registeres and/or de-registers at/from the Dlt Module. Else, this notification is not sent.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00846</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralRxDataPathSupport -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralRxDataPathSupport</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables or disables the Rx Data Path to control the Dlt module.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00848</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralStartUpDelayTimer -->
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralStartUpDelayTimer</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configurable delay in s of starting the transmission of Log and Trace messages after the Dlt module has been initialized.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00897</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX INTERVAL-TYPE="CLOSED">10</MAX>
+                      <MIN INTERVAL-TYPE="CLOSED">0.001</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralTimeStampSupport -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralTimeStampSupport</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">If a Time Stamp shall be added to the Dlt messages, this configuration parameter shall be set to TRUE.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Otherwise, it shall be set to FALSE.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00850</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralTrafficShapingSupport -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralTrafficShapingSupport</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Enables or disables the TrafficShaping feature to limit the maximum bandwidth for Dlt messages. If enabled, the maximum bandwidth can be configured per LogChannel.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00849</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltGeneralVersionInfoApi -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltGeneralVersionInfoApi</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch for enabling Version Info API support.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">* True: version information API activated * False: version information API deactivated</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00844</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <REFERENCES>
+                    <!-- Symbolic Name Reference Definition: DltGeneralGptChannelRef -->
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>DltGeneralGptChannelRef</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">If TimeStampSupport is used the Dlt module shall fetch the time from the Gpt module by calling Gpt_GetTimeElapsed with the here referenced GptChannel. The tick duration can be deduced from the GptChannelTickFrequency parameter of the GptChannelConfiguration container. This is necessary to calculate the microsecond resolution timestamp output in the Dlt message.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">A GPT timer shall be used which starts with value 0 at ECU start-up according to the PRS Dlt Protocol Specification.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00905</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Gpt/GptChannelConfigSet/GptChannelConfiguration</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <!-- Symbolic Name Reference Definition: DltGeneralNvRamRef -->
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>DltGeneralNvRamRef</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">If the Dlt module shall be able to store modified parameters during runtime persistently, this reference shall be set and shall point to the NvmBlock.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00845</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                  </REFERENCES>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: DltRbPGeneral -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltRbGeneral</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains RB specific configuration parameters.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltRbCheckApiConsistency -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DltRbCheckApiConsistency</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN"> The RTE generates some of the APIs which are already provided by Dlt itself. This results in redundant redeclarations of these functions, which is wanted to ensure consistency between generated and normal APIs.<BR/> Important:If no RTE is used, this parameter needs to be TRUE<BR/> <BR/> TRUE<BR/> Consistency check which results in compiler warnings<BR/> <BR/> FALSE<BR/> Only RTE-generated APIs are used<BR/></L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>RB:AR42.2.0.0:2017-28-</ORIGIN>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DltRbTaskTime -->
+                        <ECUC-FLOAT-PARAM-DEF>
+                          <SHORT-NAME>DltRbTaskTime</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">This RB-specific configuration parameter specifies Dlt task time. It allows to configure the time for the periodic cyclic task. Please note: this configuration value shall be equal to the value in the Basic Software Scheduler configuration of the RTE module. The AUTOSAR configuration standard is to use SI units, so this parameter is defined as float value in seconds. Exactly one task time must be specified per configuration. </L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>RB:42.2.0.0:2017-07-04</ORIGIN>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>0.1</MAX>
+                          <MIN>0.001</MIN>
+                        </ECUC-FLOAT-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: DltSwc -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DltSwc</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Contains necessary configuration parameters of the AUTOSAR Dlt module to interact with SWCs.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00856</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: DltSwcSessionId -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>DltSwcSessionId</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">An ECU wide unique ID to identify the port a SWC (instance) uses.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00852</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <WITH-AUTO>true</WITH-AUTO>
+                      <MAX>18446744073709551615</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DltSwcSupportLogLevelChangeNotification -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DltSwcSupportLogLevelChangeNotification</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Flag indicating, whether Dlt has to provide a R-Port for the notification of the SWC about LogLevel changes.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00853</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: MaxSwcLogMessageLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>MaxSwcLogMessageLength</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Defines the maximum allowed length (unit16) for LogMessages.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00909</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>18446744073709551615</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: MaxSwcTraceMessageLength -->
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>MaxSwcTraceMessageLength</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Defines the maximum allowed length (unit16) for TraceMessages.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00910</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>18446744073709551615</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: DltSwcContext -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DltSwcContext</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container contains the configuration of ApplicationId / ContextId pairs which are supported by this SWC.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00854</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DltSwcApplicationId -->
+                        <ECUC-STRING-PARAM-DEF>
+                          <SHORT-NAME>DltSwcApplicationId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Abbreviation for the SWC (4 characters)</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00858</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <ECUC-STRING-PARAM-DEF-VARIANTS>
+                            <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                          </ECUC-STRING-PARAM-DEF-VARIANTS>
+                        </ECUC-STRING-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DltSwcContextId -->
+                        <ECUC-STRING-PARAM-DEF>
+                          <SHORT-NAME>DltSwcContextId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Abbreviation for the ContextId (4 characters)</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_Dlt_00859</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <ECUC-STRING-PARAM-DEF-VARIANTS>
+                            <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                          </ECUC-STRING-PARAM-DEF-VARIANTS>
+                        </ECUC-STRING-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

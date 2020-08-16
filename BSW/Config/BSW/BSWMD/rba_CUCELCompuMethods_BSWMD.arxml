@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Common</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>CentralElements</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE>
+                      <SHORT-NAME>CompuMethods</SHORT-NAME>
+                      <CATEGORY>STANDARD</CATEGORY>
+                      <ELEMENTS>
+                        <COMPU-METHOD>
+                          <SHORT-NAME>Identical</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">The internal value and the physical one are identical. No physical unit available</L-4>
+                          </LONG-NAME>
+                          <CATEGORY>IDENTICAL</CATEGORY>
+                           <UNIT-REF DEST="UNIT">/RB/RBA/Common/CentralElements/Units/NoUnit</UNIT-REF>
+                        </COMPU-METHOD>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                    <AR-PACKAGE>
+                      <SHORT-NAME>Units</SHORT-NAME>
+                      <ELEMENTS>
+                        <UNIT>
+                          <SHORT-NAME>NoUnit</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">No Unit</L-4>
+                          </LONG-NAME>
+                          <DISPLAY-NAME>noUnit</DISPLAY-NAME>
+                          <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                          <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                          <PHYSICAL-DIMENSION-REF DEST="PHYSICAL-DIMENSION">/RB/RBA/Common/CentralElements/PhysicalDimensions/NoUnit</PHYSICAL-DIMENSION-REF>
+                        </UNIT>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                    <AR-PACKAGE>
+                      <SHORT-NAME>PhysicalDimensions</SHORT-NAME>
+                      <ELEMENTS>
+                        <PHYSICAL-DIMENSION>
+                        <SHORT-NAME>NoUnit</SHORT-NAME>
+                        <LENGTH-EXP>0</LENGTH-EXP>
+                        </PHYSICAL-DIMENSION>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

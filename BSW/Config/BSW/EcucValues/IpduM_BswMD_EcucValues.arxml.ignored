@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+ <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>UBK</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Project</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-CONFIGURATION-VALUES>
+                      <SHORT-NAME>rba_ArxmlGen</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-MODULE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen</DEFINITION-REF>
+                      <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>IpduM</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompCategory</DEFINITION-REF>
+                              <VALUE>BswModule</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompId</DEFINITION-REF>
+                              <VALUE>52</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsConfigurable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandalone</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandardized</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompLongName</DEFINITION-REF>
+                              <VALUE>IPDUMultiplexer</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionAr</DEFINITION-REF>
+                              <VALUE>4.2.2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionSw</DEFINITION-REF>
+                              <VALUE>8.0.0</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>BSWSE_MainFunctionRx</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityCategory</DEFINITION-REF>
+                                  <VALUE>Schedulable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityPeriod</DEFINITION-REF>
+                                  <VALUE>0.0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityImplEntryRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_IpduM/BswModuleEntrys/IpduM_MainFunctionRx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>BSWSE_MainFunctionTx</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityCategory</DEFINITION-REF>
+                                  <VALUE>Schedulable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityPeriod</DEFINITION-REF>
+                                  <VALUE>0.0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityImplEntryRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_IpduM/BswModuleEntrys/IpduM_MainFunctionTx</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </CONTAINERS>
+                    </ECUC-MODULE-CONFIGURATION-VALUES>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

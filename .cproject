@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.windriver.cdt.diab.configuration.exe.debug.493658031">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.windriver.cdt.diab.configuration.exe.debug.493658031" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.windriver.cdt.build.diab.core.dldErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.windriver.cdt.build.diab.core.dccErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="elf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="com.windriver.cdt.diab.configuration.exe.debug.493658031" name="Debug" parent="com.windriver.cdt.diab.configuration.exe.debug" postbuildStep="ddump -R -o DuPower_SPC5775B.s19 DuPower_SPC5775B.elf">
+					<folderInfo id="com.windriver.cdt.diab.configuration.exe.debug.493658031." name="/" resourcePath="">
+						<toolChain id="com.windriver.cdt.diab.toolChain.exe.debug.564947524" name="Wind River Diab" superClass="com.windriver.cdt.diab.toolChain.exe.debug">
+							<option id="com.windriver.cdt.diab.option.version.1332082004" name="Version" superClass="com.windriver.cdt.diab.option.version" useByScannerDiscovery="false" value="diab-5.9.4.0" valueType="string"/>
+							<option id="com.windriver.cdt.diab.option.target.1637397097" name="Target" superClass="com.windriver.cdt.diab.option.target" useByScannerDiscovery="false" value="PPCE200Z425N3VES:simple" valueType="string"/>
+							<targetPlatform binaryParser="org.eclipse.cdt.core.ELF" id="com.windriver.cdt.diab.targetPlatform.813115633" isAbstract="false" superClass="com.windriver.cdt.diab.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/DuPower_SPC5775B_AS_20180829}/Debug" id="cdt.managedbuild.builder.gnu.cross.1156854165" incrementalBuildTarget="bldall" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" parallelBuildOn="false" stopOnErr="true" superClass="cdt.managedbuild.builder.gnu.cross"/>
+							<tool command="dcc -c" id="com.windriver.cdt.diab.tool.assembler.1973613340" name="Diab Assembler" superClass="com.windriver.cdt.diab.tool.assembler">
+								<option defaultValue="true" id="com.windriver.cdt.diab.option.assembler.debug.194208034" name="Generate debug information (-g)" superClass="com.windriver.cdt.diab.option.assembler.debug" useByScannerDiscovery="false" valueType="boolean"/>
+								<option id="com.windriver.cdt.diab.option.assembler.preprocess.2046403411" name="Run preprocessor on assembly (-Xpreprocess-assembly)" superClass="com.windriver.cdt.diab.option.assembler.preprocess" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="com.windriver.cdt.diab.option.assembler.other.1942961743" name="Other options and flags" superClass="com.windriver.cdt.diab.option.assembler.other" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-g"/>
+									<listOptionValue builtIn="false" value="-XO"/>
+									<listOptionValue builtIn="false" value="-W1"/>
+									<listOptionValue builtIn="false" value="-Xisa-vle"/>
+									<listOptionValue builtIn="false" value="-Xasm-debug-on"/>
+									<listOptionValue builtIn="false" value="-Xdebug-dwarf2"/>
+								</option>
+								<inputType id="com.windriver.cdt.diab.inputType.assembler.s.845927726" superClass="com.windriver.cdt.diab.inputType.assembler.s"/>
+							</tool>
+							<tool command="dcc -c" id="com.windriver.cdt.diab.tool.compiler.c.1191781650" name="Diab C Compiler" superClass="com.windriver.cdt.diab.tool.compiler.c">
+								<option defaultValue="com.windriver.cdt.diab.enumValue.compiler.debugSymbols.g3" id="com.windriver.cdt.diab.option.compiler.debugSymbols.1691881737" name="Generate Symbolic Debugger Information" superClass="com.windriver.cdt.diab.option.compiler.debugSymbols" useByScannerDiscovery="false" value="com.windriver.cdt.diab.enumValue.compiler.debugSymbols.g3" valueType="enumerated"/>
+								<option id="com.windriver.cdt.diab.option.compiler.includePath.1344783476" name="Include Path (-I)" superClass="com.windriver.cdt.diab.option.compiler.includePath" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../BSW/integration/include"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Bfx"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Bfx/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Bfx/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/BswM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/BswM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/BswM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanIf"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanIf/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanIf/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanSM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanSM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanSM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Com"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Com/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Com/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/ComStack"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Crc"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Crc/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Crc/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Det"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Det/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Det/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/ComM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/ComM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/ComM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EcuM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EcuM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EcuM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/IpduM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/IpduM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/IpduM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/MemIf"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/MemIf/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/MemIf/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/NvM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/NvM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/NvM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/PduR"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/PduR/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/PduR/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_DiagLib"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_DiagLib/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_DiagLib/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgIf"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgIf/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgIf/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/WdgM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Xcp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Xcp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Xcp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthIf"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthIf/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthIf/src"/>
+									<listOptionValue builtIn="false" value="&quot;../INFRA\integration\include&quot;"/>
+									<listOptionValue builtIn="false" value="../INFRA/memmap"/>
+									<listOptionValue builtIn="false" value="../INFRA/rba_BswSrv/api"/>
+									<listOptionValue builtIn="false" value="../INFRA/schm/include"/>
+									<listOptionValue builtIn="false" value="../RTE/gen"/>
+									<listOptionValue builtIn="false" value="../RTE/include"/>
+									<listOptionValue builtIn="false" value="../CDD/Common"/>
+									<listOptionValue builtIn="false" value="../CDD/ComAb"/>
+									<listOptionValue builtIn="false" value="../CDD/IoAb"/>
+									<listOptionValue builtIn="false" value="../CDD/Afe"/>
+									<listOptionValue builtIn="false" value="../CDD/M95640"/>
+									<listOptionValue builtIn="false" value="../CDD/rtc"/>
+									<listOptionValue builtIn="false" value="../CDD/sbc"/>
+									<listOptionValue builtIn="false" value="../ASW/App_SWC/ASW_RTE"/>
+									<listOptionValue builtIn="false" value="../ASW/App_SWC/Common"/>
+									<listOptionValue builtIn="false" value="../ASW/App_SWC/Modules"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/J1939Tp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/J1939Tp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/J1939Tp/src"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/RTAOS/output/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/integration/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/Gen/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Adc/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Dio/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Gpt/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Mcu/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Port/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/RTAOS/integration/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Rte/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Mcl/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Can/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Spi/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Esci/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Pwm/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Fls/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Mcan/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/Eth/include"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/MCAL/modules/EthIf/include"/>
+									<listOptionValue builtIn="false" value="../CDD/esci"/>
+									<listOptionValue builtIn="false" value="../CDD/mtcard"/>
+									<listOptionValue builtIn="false" value="../CDD/TPanel"/>
+									<listOptionValue builtIn="false" value="../CDD/PowerEnergyMeter"/>
+									<listOptionValue builtIn="false" value="../CDD/DCDC"/>
+									<listOptionValue builtIn="false" value="../CDD/Fls"/>
+									<listOptionValue builtIn="false" value="../CDD/McanComm"/>
+									<listOptionValue builtIn="false" value="../CDD/Diag"/>
+									<listOptionValue builtIn="false" value="../CDD/StateMachine"/>
+									<listOptionValue builtIn="false" value="../CDD/DP83822"/>
+									<listOptionValue builtIn="false" value="../CDD/EthComm"/>
+									<listOptionValue builtIn="false" value="../CDD/SJA1105"/>
+									<listOptionValue builtIn="false" value="../CDD/TJA1101"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthSM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthSM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthSM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthTrcv"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthTrcv/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/EthTrcv/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthArp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthArp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthArp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthICMP"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthICMP/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthICMP/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthIPv4"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthIPv4/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthIPv4/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthTcp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthTcp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthTcp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthUdp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthUdp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_EthUdp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/SoAd"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/SoAd/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/SoAd/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/TcpIp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/TcpIp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/TcpIp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanTp"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanTp/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/CanTp/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dcm"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dcm/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dcm/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dem"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dem/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Dem/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/FiM"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/FiM/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/FiM/src"/>
+									<listOptionValue builtIn="false" value="../BSW/integration/src/DcmAppl"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Fee"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Fee/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Fee/src"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_FeeFs1/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Rba_FeeFs1/src"/>
+									<listOptionValue builtIn="false" value="../ASW/NvM_SWC/api"/>
+									<listOptionValue builtIn="false" value="../ASW/Diag_SWC/api"/>
+									<listOptionValue builtIn="false" value="../CDD/CCV"/>
+									<listOptionValue builtIn="false" value="../CDD/TBOXComm"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Ea"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Ea/api"/>
+									<listOptionValue builtIn="false" value="../BSW/src/BSW/Gen/Ea/src"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.compiler.extraOptimizations.695108386" name="Enable extra optimizations (-XO)" superClass="com.windriver.cdt.diab.option.compiler.extraOptimizations" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<option id="com.windriver.cdt.diab.option.compiler.forceFunctions.847900586" name="Warnings on undeclared functions" superClass="com.windriver.cdt.diab.option.compiler.forceFunctions" useByScannerDiscovery="false" value="com.windriver.cdt.diab.option.compiler.forceDeclarations.prototypes" valueType="enumerated"/>
+								<option id="com.windriver.cdt.diab.option.compiler.linkTimeLint.1473492862" name="Perform link-time lint (-Xlink-time-lint)" superClass="com.windriver.cdt.diab.option.compiler.linkTimeLint" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="com.windriver.cdt.diab.option.compiler.other.2052329755" name="Other options and flags" superClass="com.windriver.cdt.diab.option.compiler.other" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-Wa,-Xisa-vle"/>
+									<listOptionValue builtIn="false" value="-Xpass-source"/>
+									<listOptionValue builtIn="false" value="-Xlink-time-lint"/>
+									<listOptionValue builtIn="false" value="-Xdebug-local-cie"/>
+									<listOptionValue builtIn="false" value="-Xnested-interrupts"/>
+									<listOptionValue builtIn="false" value="-Xforce-declarations"/>
+									<listOptionValue builtIn="false" value="-Xaddr-sdata=0x11"/>
+									<listOptionValue builtIn="false" value="-Xaddr-sconst=0x11"/>
+									<listOptionValue builtIn="false" value="-Xsmall-data=0"/>
+									<listOptionValue builtIn="false" value="-g3 -Xdebug-inline-on"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.compiler.smallData.421213171" name="Size limit for &quot;small data&quot; variables (-Xsmall-data=&lt;n&gt;)" superClass="com.windriver.cdt.diab.option.compiler.smallData" useByScannerDiscovery="false" value="8" valueType="string"/>
+								<option id="com.windriver.cdt.diab.option.compiler.smallConst.1277203793" name="Size limit for &quot;small const&quot; variables (-Xsmall-const=&lt;n&gt;)" superClass="com.windriver.cdt.diab.option.compiler.smallConst" useByScannerDiscovery="false" value="0" valueType="string"/>
+								<option id="com.windriver.cdt.diab.option.compiler.mismatchWarning.875268682" name="Warn on type and argument mismatch" superClass="com.windriver.cdt.diab.option.compiler.mismatchWarning" useByScannerDiscovery="false" value="com.windriver.cdt.diab.option.compiler.mismatchWarning.high" valueType="enumerated"/>
+								<option id="com.windriver.cdt.diab.option.compiler.defines.1698012791" name="Defines (-D)" superClass="com.windriver.cdt.diab.option.compiler.defines" useByScannerDiscovery="false" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="DISABLE_MCAL_INTERMODULE_ASR_CHECK"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.compiler.lint.1925758020" name="Warnings on suspicious code (-Xlint=&lt;mask&gt;)" superClass="com.windriver.cdt.diab.option.compiler.lint" useByScannerDiscovery="false" value="0x1100" valueType="string"/>
+								<option id="com.windriver.cdt.diab.option.compiler.optimize.1009146894" name="Optimize code (-O)" superClass="com.windriver.cdt.diab.option.compiler.optimize" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+								<inputType id="com.windriver.cdt.diab.inputType.compiler.c.1221206803" superClass="com.windriver.cdt.diab.inputType.compiler.c"/>
+							</tool>
+							<tool command="dld" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} @objfiles.list" id="com.windriver.cdt.diab.tool.linker.c.1796716229" name="Diab C Linker" superClass="com.windriver.cdt.diab.tool.linker.c">
+								<option id="com.windriver.cdt.diab.option.linker.c.library.50489927" name="Library by name (-l)" superClass="com.windriver.cdt.diab.option.linker.c.library" useByScannerDiscovery="false" valueType="libs">
+									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value=":RTAOS.a"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.linker.mapFile.166280894" name="Generate mapfile (-m&lt;mask&gt;)" superClass="com.windriver.cdt.diab.option.linker.mapFile" useByScannerDiscovery="false" value="14" valueType="string"/>
+								<option id="com.windriver.cdt.diab.option.linker.linkTimeLint.2009132164" name="Perform link-time lint (-Xlink-time-lint)" superClass="com.windriver.cdt.diab.option.linker.linkTimeLint" useByScannerDiscovery="false" value="" valueType="string"/>
+								<option id="com.windriver.cdt.diab.option.linker.other.671069161" name="Other options and flags" superClass="com.windriver.cdt.diab.option.linker.other" useByScannerDiscovery="false" valueType="stringList">
+									<listOptionValue builtIn="false" value="-Xelf"/>
+									<listOptionValue builtIn="false" value="-lc"/>
+									<listOptionValue builtIn="false" value="-lm"/>
+									<listOptionValue builtIn="false" value="-li"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/LINK/autosar_flash.dld"/>
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/RTAOS/output/lib/RTAOS.a"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.linker.libraryPath.565108649" name="Library search path (-L)" superClass="com.windriver.cdt.diab.option.linker.libraryPath" useByScannerDiscovery="false" valueType="libPaths">
+									<listOptionValue builtIn="false" value="../Targets/SPC5775B/RTAOS/output/lib"/>
+								</option>
+								<option id="com.windriver.cdt.diab.option.linker.libraryFile.1564814458" name="Library by file name (-l:)" superClass="com.windriver.cdt.diab.option.linker.libraryFile" useByScannerDiscovery="false"/>
+								<inputType id="com.windriver.cdt.diab.inputType.linker.o.1717349673" superClass="com.windriver.cdt.diab.inputType.linker.o">
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.windriver.cdt.diab.tool.compiler.cxx.1060462881" name="Diab C++ Compiler" superClass="com.windriver.cdt.diab.tool.compiler.cxx">
+								<option defaultValue="com.windriver.cdt.diab.enumValue.compiler.debugSymbols.g3" id="com.windriver.cdt.diab.option.compiler.debugSymbols.941444471" name="Generate Symbolic Debugger Information" superClass="com.windriver.cdt.diab.option.compiler.debugSymbols" valueType="enumerated"/>
+							</tool>
+							<tool id="com.windriver.cdt.diab.tool.linker.cxx.2016740032" name="Diab C++ Linker" superClass="com.windriver.cdt.diab.tool.linker.cxx"/>
+							<tool id="com.windriver.cdt.diab.tool.archiver.857833319" name="Diab Archiver" superClass="com.windriver.cdt.diab.tool.archiver"/>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="DuPower_SPC5775B.com.windriver.cdt.diab.projectType.exe.877942447" name="Executable" projectType="com.windriver.cdt.diab.projectType.exe"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="org.eclipse.cdt.core.language.mapping">
+		<project-mappings>
+			<content-type-mapping configuration="com.windriver.cdt.diab.configuration.exe.debug.493658031" content-type="org.eclipse.cdt.core.cHeader" language="com.windriver.cdt.build.diab.core.c"/>
+			<content-type-mapping configuration="com.windriver.cdt.diab.configuration.exe.debug.493658031" content-type="org.eclipse.cdt.core.cSource" language="com.windriver.cdt.build.diab.core.c"/>
+			<content-type-mapping configuration="com.windriver.cdt.diab.configuration.exe.debug.493658031" content-type="org.eclipse.cdt.core.cxxHeader" language="com.windriver.cdt.build.diab.core.cpp"/>
+			<content-type-mapping configuration="com.windriver.cdt.diab.configuration.exe.debug.493658031" content-type="org.eclipse.cdt.core.cxxSource" language="com.windriver.cdt.build.diab.core.cpp"/>
+		</project-mappings>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/DuPower_SPC5775B"/>
+		</configuration>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="com.windriver.cdt.diab.configuration.exe.debug.493658031;com.windriver.cdt.diab.configuration.exe.debug.493658031.;com.windriver.cdt.diab.tool.compiler.c.1191781650;com.windriver.cdt.diab.inputType.compiler.c.1221206803">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.windriver.cdt.build.diab.core.diabScannerInfo"/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="org.eclipse.embsys" register_architecture="e200" register_board="---  none ---" register_chip="MPC5744P" register_core="e200z4251n3" register_vendor="Freescale"/>
+</cproject>

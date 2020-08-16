@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>rba_Dma</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-DEF>
+                      <SHORT-NAME>rba_Dma</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">MCAL rba_Dma Driver</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of the rba_Dma module.</L-2>
+                      </DESC>
+                      <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                      <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                          <DOC-REVISION>
+                            <REVISION-LABEL>42.1.0.0</REVISION-LABEL>
+                            <ISSUED-BY>RB</ISSUED-BY>
+                            <DATE>2016-10-05</DATE>
+                          </DOC-REVISION>
+                        </DOC-REVISIONS>
+                      </ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                      <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                      </SUPPORTED-CONFIG-VARIANTS>
+                      <CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_DmaConfigSet</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Configuration Data Sets</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration parameters and sub containers of  rba_Dma module.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_Dmachannel</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">rba_Dma channel</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the container of Dma channel</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A1_ChannelNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA channel number</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Used Dma channel Number</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>15</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A2_DataSize</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA transfer data size</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Dma transfer data size</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-06</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DATASIZE_BITS_8</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">8 data bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DATASIZE_BITS_16</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">16 data bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DATASIZE_BITS_32</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">32 data bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DATASIZE_BITS_64</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">64 data bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DATASIZE_BITS_128</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">128 data bits</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A3_srcdirection</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA source address count direction</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the count direction of the source address</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-07</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_SRC_COUNTDIRECTION_FIXED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address fixed</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_SRC_COUNTDIRECTION_INCREMENT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address incremented</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_SRC_COUNTDIRECTION_DECREMENT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address decremented</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A4_destdirection</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA destination address count direction</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the count direction of the destination address.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-08</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DST_COUNTDIRECTION_FIXED</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address fixed</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DST_COUNTDIRECTION_INCREMENT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address incremented</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>DMA_DST_COUNTDIRECTION_DECREMENT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">SRC address decremented</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A5_TXISR</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA transfer complete ISR</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Selection of transmission complete ISR is ON or OFF</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-09</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-ENUMERATION-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A6_cont_on_error</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">DMA transfer continue on transfer error</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Transfer error case DMA transfer disable setting</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-07</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <LITERALS>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>RBA_DMA_TRANSFERERROR_TRANS_ENABLE</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Dma cycles continue on transfer error</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                    <ECUC-ENUMERATION-LITERAL-DEF>
+                                      <SHORT-NAME>RBA_DMA_TRANSFERERROR_TRANS_DISABLE</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Dma cycles stop on transfer error</L-4>
+                                      </LONG-NAME>
+                                      <ORIGIN>RB:42.1.0.0:2016-10-05</ORIGIN>
+                                    </ECUC-ENUMERATION-LITERAL-DEF>
+                                  </LITERALS>
+                                </ECUC-ENUMERATION-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A7_PEID2</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master PEID2</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Channel master PEID setting Specifies the PEID information of the master
+assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the PEID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-12</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A8_PEID1</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master PEID1</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Channel master PEID setting Specifies the PEID information of the master
+assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the PEID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-13</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_A9_PEID0</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master PEID0</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Channel master PEID setting Specifies the PEID information of the master
+assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the PEID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-14</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D1_SPID4</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master SPID4</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the SPID information used by the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the SPID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-15</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D2_SPID3</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master SPID3</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the SPID information used by the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the SPID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-16</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D3_SPID2</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master SPID2</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the SPID information used by the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the SPID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-17</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D4_SPID1</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master SPID1</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the SPID information used by the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the SPID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-18</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D5_SPID0</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master SPID0</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the SPID information used by the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit which Specifies the SPID information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-19</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                                <ECUC-BOOLEAN-PARAM-DEF>
+                                  <SHORT-NAME>rba_Dma_D6_UM</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Channel master UM</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Specifies the UM information of the master assigned to the channel.If not selected default reset value of this bit will be generated.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">DMnnCM — DMAC Channel Master Setting
+has this bit Specifies the UM information of the master assigned to the channel.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-10-20</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                </ECUC-BOOLEAN-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_DmaGeneral</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">General Settings</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of general rba_Dma parameters.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_D1_DeverrorON</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">DMA Dev error detect</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Switches the Default Error Tracer (Det) detection ON or OFF.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-20</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_D2_ModuleID</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">DMA Module ID</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of Dma module ID</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-10-21</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CONTAINERS>
+                    </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

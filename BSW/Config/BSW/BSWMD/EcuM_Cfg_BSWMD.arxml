@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+			<SHORT-NAME>AUTOSAR_EcuM</SHORT-NAME>
+			<AR-PACKAGES>
+
+
+	  <!--##################################################
+		#                  ENTRYS                        #
+		##################################################-->
+
+
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>EcuM_MainFunction</SHORT-NAME>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+    	          <CALL-TYPE>SCHEDULED</CALL-TYPE>
+    	          <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+    	          <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+            </ELEMENTS>
+          </AR-PACKAGE>
+
+		  <!--##################################################
+			#                BswModuleDescription              #
+			##################################################-->
+   	      <AR-PACKAGE>
+    		<SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+            <ELEMENTS>
+              <BSW-MODULE-DESCRIPTION>
+    	          <SHORT-NAME>EcuM</SHORT-NAME>
+				  <LONG-NAME><L-4 L="EN">ECU State Manager</L-4></LONG-NAME>
+    	          <CATEGORY>BSW_MODULE</CATEGORY>
+    	          <MODULE-ID>10</MODULE-ID>
+
+					<!--             BswInternalBehavior              -->
+    	          <INTERNAL-BEHAVIORS>
+    	          	<BSW-INTERNAL-BEHAVIOR>
+    	          	  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+
+							<!--             Entitys              -->
+    	          	  <ENTITYS>
+    	          	    <BSW-SCHEDULABLE-ENTITY>
+							<SHORT-NAME>SE_MainFunction</SHORT-NAME>
+							<IMPLEMENTED-ENTRY-REF DEST='BSW-MODULE-ENTRY'>/AUTOSAR_EcuM/BswModuleEntrys/EcuM_MainFunction</IMPLEMENTED-ENTRY-REF>
+    	          	    </BSW-SCHEDULABLE-ENTITY>
+    	          	  </ENTITYS>
+
+							<!--             Events              -->
+    	          	  <EVENTS>
+						<BSW-TIMING-EVENT>
+                      		<SHORT-NAME>TE_EcuM_MainFunction</SHORT-NAME>
+                      		<STARTS-ON-EVENT-REF DEST='BSW-SCHEDULABLE-ENTITY'>/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswInternalBehavior/SE_MainFunction</STARTS-ON-EVENT-REF>
+    	          	 		 <PERIOD>0.01</PERIOD>
+    	          	    </BSW-TIMING-EVENT>
+    	          	    </EVENTS>
+
+    	          	</BSW-INTERNAL-BEHAVIOR>
+    	          </INTERNAL-BEHAVIORS>
+              </BSW-MODULE-DESCRIPTION>
+            </ELEMENTS>
+          </AR-PACKAGE>
+
+		  <!--##################################################
+			   #              BswImplementation                #
+			##################################################-->
+      	  <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+            <ELEMENTS>
+              <BSW-IMPLEMENTATION>
+      	        <SHORT-NAME>EcuM</SHORT-NAME>
+				<CODE-DESCRIPTORS>
+					<CODE>
+						<SHORT-NAME>CodeDescriptor</SHORT-NAME>
+						<ARTIFACT-DESCRIPTORS>
+							<AUTOSAR-ENGINEERING-OBJECT>
+								<SHORT-LABEL>ArEngObj</SHORT-LABEL>
+								<CATEGORY>SWSRC</CATEGORY>
+							</AUTOSAR-ENGINEERING-OBJECT>
+						</ARTIFACT-DESCRIPTORS>
+					</CODE>
+				</CODE-DESCRIPTORS>
+				<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+				<SW-VERSION>3.0.0</SW-VERSION>
+      	        <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+                <BEHAVIOR-REF DEST='BSW-INTERNAL-BEHAVIOR'>/AUTOSAR_EcuM/BswModuleDescriptions/EcuM/BswInternalBehavior</BEHAVIOR-REF>
+              </BSW-IMPLEMENTATION>
+            </ELEMENTS>
+			</AR-PACKAGE>
+			</AR-PACKAGES>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
+</AUTOSAR>
+

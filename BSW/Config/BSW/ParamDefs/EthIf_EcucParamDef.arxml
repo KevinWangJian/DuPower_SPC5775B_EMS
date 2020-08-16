@@ -1,0 +1,2314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA><USED-LANGUAGES><L-10 L="EN" xml:space="preserve">EN</L-10></USED-LANGUAGES>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>4.3.0</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+        <!-- AR-Package: AUTOSAR -->
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_EthIf</SHORT-NAME>
+            <AR-PACKAGES>
+                <!-- AR-Package: AUTOSAR -->
+                <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+					<ELEMENTS>
+					  <!-- Module Definition: EthIf -->
+                    <ECUC-MODULE-DEF>
+                     <SHORT-NAME>EthIf</SHORT-NAME>
+                     <DESC>
+                        <L-2 L="EN">Configuration of the EthIf (Ethernet Interface) module.</L-2>
+                     </DESC>
+                     <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                     <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                           <DOC-REVISION>
+                              <REVISION-LABEL>4.3.0</REVISION-LABEL>
+                              <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                           </DOC-REVISION>
+                        </DOC-REVISIONS>
+                     </ADMIN-DATA>
+                     <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00049</RELATED-TRACE-ITEM-REF>
+                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                     <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                      <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/EthIf</REFINED-MODULE-DEF-REF>
+                     <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                     </SUPPORTED-CONFIG-VARIANTS>
+                     <CONTAINERS>
+                        <!-- Container Definition: EthIfConfigSet -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>EthIfConfigSet</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">Collecting container for all parameters with post-build configuration classes.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00010</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: EthIfController -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfController</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of EthIfController.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00025</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfCtrlIdx -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfCtrlIdx</SHORT-NAME>
+                                            <LONG-NAME>
+                                                        <L-4 L="EN">EthIfCtrlIdx (automatically generated)</L-4>
+                                          </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter provides a zero-based consecutive index of the Ethernet Communication Controllers. Upper layer BSW modules and the EthIf itself use this index to identify a Ethernet CC.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00026</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                         <WITH-AUTO>true</WITH-AUTO>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfCtrlMtu -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfCtrlMtu</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies the maximum transmission unit (MTU) of the EthIfCtrl in [bytes].</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Note: in case a VLAN tag is used for the EthIfCtrl, the MTU is 4 bytes smaller
+                                                than the maximum payload size of an Ethernet frame which can be transmitted on the network.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00032</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>9000</MAX>
+                                       <MIN>64</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfMaxTxBufsTotal -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfMaxTxBufsTotal</SHORT-NAME>
+					                        <LONG-NAME>
+                                                <L-4 L="EN">EthIfMaxTxBufsTotal (currently unused)</L-4>
+                                            </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Limits the total number of transmit buffers.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00002</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>4294967295</MAX>
+                                       <MIN>1</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfVlanId -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfVlanId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">A virtual-LAN is identified by this attribute according to IEEE 802.1Q.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00029</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>4095</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: EthIfEthTrcvRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfEthTrcvRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to an Ethernet transceiver, which is handled by the Ethernet Interface.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00028</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfTransceiver</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: EthIfPhysControllerRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfPhysControllerRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to a physical Ethernet controller, which is handled by the Ethernet Interface.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00027</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfPhysController</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Choice Reference Definition: EthIfSwitchRefOrPortGroupRef -->
+                                    <ECUC-CHOICE-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfSwitchRefOrPortGroupRef</SHORT-NAME>
+				            <LONG-NAME>
+                                                <L-4 L="EN">EthIfSwitchRefOrPortGroupRef</L-4>
+                                            </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">The choice reference allows to configure either the EthIfController references an EthIfSwitch or an EthIfSwitchPortGroup.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Reference to a EthIfSwitchPortGroup. In case port groups are controlled by PNC EthIfSwitchPortGroupRefSemantics shall have the value ETHIF_SWITCH_PORT_GROUP_LINK_INFO. In case port groups are controlled by the EhtIfController EthIfSwitchPortGroupRefSemantics shall have the value ETHIF_SWITCH_PORT_GROUP_CONTROL.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00048</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REFS>
+                                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfSwitch</DESTINATION-REF>
+                                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfSwitchPortGroup</DESTINATION-REF>
+                                       </DESTINATION-REFS>
+                                    </ECUC-CHOICE-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfFrameOwnerConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfFrameOwnerConfig</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configuration of Ethernet frame owner</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00011</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfFrameType -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfFrameType</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Selects the Ethernet frame type.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00012</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfOwner -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfOwner</SHORT-NAME>
+				       	<LONG-NAME>
+                             			<L-4 L="EN">EthIfOwner (unused)</L-4>
+                          		</LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Selects the owner of an Ethernet frame type. The owner is a zero based index into the callback function configuration 'EthIfRxIndicationConfig'. I.e. an Ethernet frame of type IPv4 (0x800) at index 0 will call the first callback function configured in 'EthIfRxIndicationConfig'.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00013</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+				 <REFERENCES>
+	                                <!-- Vendor06: Symbolic Name Reference Definition: EthIfRxIndicationRef - RB Specific Reference -->
+	                                <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+	                                    <SHORT-NAME>EthIfRxIndicationRef</SHORT-NAME>
+	                                    <DESC>
+	                                        <L-2 L="EN">RB (Vendor06) specific parameter: Reference to the RxIndication function.</L-2>
+	                                    </DESC>
+	                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+	                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					     <SCOPE>LOCAL</SCOPE>
+	                           <ORIGIN>RB:AR41.19.0.0:2015-09-10</ORIGIN>
+	                           <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+	                           <VALUE-CONFIG-CLASSES>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                           </VALUE-CONFIG-CLASSES>
+	                           <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfRxIndicationConfig</DESTINATION-REF>
+	                                 </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+	                                 <!-- Vendor06: Symbolic Name Reference Definition: EthIfTxConfirmationRef - RB Specific Reference -->
+	                                 <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+	                                    <SHORT-NAME>EthIfTxConfirmationRef</SHORT-NAME>
+	                                    <DESC>
+	                                        <L-2 L="EN">RB (Vendor06) specific parameter: Reference to the TxConfirmation function.</L-2>
+	                                    </DESC>
+	                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+	                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+					     <SCOPE>LOCAL</SCOPE>
+	                           <ORIGIN>RB:AR41.19.0.0:2015-09-10</ORIGIN>
+	                           <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+	                           <VALUE-CONFIG-CLASSES>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                              <ECUC-VALUE-CONFIGURATION-CLASS>
+	                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+	                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+	                              </ECUC-VALUE-CONFIGURATION-CLASS>
+	                           </VALUE-CONFIG-CLASSES>
+	                                    <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfTxConfirmationConfig</DESTINATION-REF>
+	                                 </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+	                           </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfPhysController -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfPhysController</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of EthIfPhysController.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">The usage of EthIfEthCtrlRef and EthIfWEthCtrlRef is exclusive OR.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00045</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfPhysControllerIdx -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfPhysControllerIdx</SHORT-NAME>
+				                          <LONG-NAME>
+                                                <L-4 L="EN">EthIfPhysControllerIdx (Currently unused). </L-4>
+                                         </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter provides a zero-based consecutive index of the physical Ethernet controllers. Upper layer BSW modules and the Ethernet Interface itself use this index to identify a physical Ethernet controller.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00046</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: EthIfEthCtrlRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfEthCtrlRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to a physical Ethernet controller, which is handled by a specific Ethernet controller driver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00047</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: EthIfWEthCtrlRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfWEthCtrlRef</SHORT-NAME>
+				    	                <LONG-NAME>
+                                            <L-4 L="EN">EthIfWEthCtrlRef (currently unused)</L-4>
+                                        </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to a physical Wireless Ethernet controller, which is handled by a specific Wireless Ethernet controller driver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00073</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WEth/WEthConfigSet/WEthCtrlConfig</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: EthIfPhysCtrlRxMainFunctionPriorityProcessing -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>EthIfPhysCtrlRxMainFunctionPriorityProcessing</SHORT-NAME>
+				                       <LONG-NAME>
+                                            <L-4 L="EN">EthIfPhysCtrlRxMainFunctionPriorityProcessing (currently unused)</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Configuration of ingress FIFO based main function processing.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00050</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: EthIfPhysCtrlRxIndicationIterations -->
+                                          <ECUC-INTEGER-PARAM-DEF>
+                                             <SHORT-NAME>EthIfPhysCtrlRxIndicationIterations</SHORT-NAME>
+					                          <LONG-NAME>
+                                                  <L-4 L="EN">EthIfPhysCtrlRxIndicationIterations (currently unused)</L-4>
+                                              </LONG-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Max number of Ethernet frames polled per main function invocation.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00052</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>18446744073709551615</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: EthIfPhysCtrlRxMainFunctionPeriod -->
+                                          <ECUC-FLOAT-PARAM-DEF>
+                                             <SHORT-NAME>EthIfPhysCtrlRxMainFunctionPeriod</SHORT-NAME>
+					     <LONG-NAME>
+                                                  <L-4 L="EN">EthIfPhysCtrlRxMainFunctionPeriod (currently unused)</L-4>
+                                             </LONG-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Specifies the period of main function in seconds.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00051</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                          </ECUC-FLOAT-PARAM-DEF>
+                                       </PARAMETERS>
+                                       <REFERENCES>
+                                          <!-- Symbolic Name Reference Definition: EthIfPhysCtrlRxIngressFifoRef -->
+                                          <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                             <SHORT-NAME>EthIfPhysCtrlRxIngressFifoRef</SHORT-NAME>
+					      <LONG-NAME>
+                                                  <L-4 L="EN">EthIfPhysCtrlRxIngressFifoRef (currently unused)</L-4>
+                                             </LONG-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Reference to the reception FIFO.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00053</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Eth/EthConfigSet/EthCtrlConfig/EthCtrlConfigIngress/EthCtrlConfigIngressFifo</DESTINATION-REF>
+                                          </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfRxIndicationConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfRxIndicationConfig</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configuration of receive callback functions.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00014</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfRxIndicationFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfRxIndicationFunction</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies receive indication callback function.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00015</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfSwitch -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfSwitch</SHORT-NAME>
+				                     <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitch</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of EthIfSwitches.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00036</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+				     <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchIdx -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfSwitchIdx</SHORT-NAME>
+                                     <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchIdx (currently unused)</L-4>
+                                     </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter provides a zero-based consecutive index of the Ethernet Interface Switches. Upper layer BSW modules and the EthIf itself use this index to identify a Ethernet Switch.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00037</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: EthIfSwitchRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfSwitchRef</SHORT-NAME>
+				     <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchRef</L-4>
+                                     </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to a Ethernet Switch, which is handled by a specific Ethernet Switch driver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00038</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfSwitchMgmtInfoIndicationConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfSwitchMgmtInfoIndicationConfig</SHORT-NAME>
+			             <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchMgmtInfoIndicationConfig (currently unused)</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configuration of Switch Management callback function.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00065</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchMgmtInfoIndicationFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfSwitchMgmtInfoIndicationFunction</SHORT-NAME>
+				     <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchMgmtInfoIndicationFunction (currently unused)</L-4>
+                                     </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables/Disables the ingress Switch management info indication redirected call to upper layers who registered for the call.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00067</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfSwitchPortGroup -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfSwitchPortGroup</SHORT-NAME>
+			              <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchPortGroup</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of EthIfSwitchPortGroups.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">If EthIfSwitchPortGroups are controlled by PNC one EthIfSwitchPortGroup per PNC shall exist.
+
+                                        The host port shall be part of all EthIfSwitchPortGroups.
+
+                                        The up link port of a master switch and the up link port of the slave switch shall be part of all EthIfSwitchPortGroups that contain EthSwtPorts belonging to the slave switch.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00057</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchPortGroupIdx -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfSwitchPortGroupIdx</SHORT-NAME>
+				       <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchPortGroupIdx (automatically generated)</L-4>
+                                     </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter provides a zero-based consecutive index of the Ethernet Switch Port Groups. Upper layer BSW modules and the EthIf itself use this index to identify an Ethernet Switch Port Group.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00058</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <WITH-AUTO>true</WITH-AUTO>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchPortGroupRefSemantics -->
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                       <SHORT-NAME>EthIfSwitchPortGroupRefSemantics</SHORT-NAME>
+				       <LONG-NAME>
+                                         <L-4 L="EN">EthIfSwitchPortGroupRefSemantics</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines how the EthIfSwitchRefOrPortGroupRef refering to a EthIfSwitchPortGroup shall be interpreted.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00059</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <LITERALS>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>ETHIF_SWITCH_PORT_GROUP_CONTROL</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>ETHIF_SWITCH_PORT_GROUP_LINK_INFO</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                       </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: EthIfPortRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfPortRef</SHORT-NAME>
+				       <LONG-NAME>
+                                         <L-4 L="EN">EthIfPortRef</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to an Ethernet Switch Port.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00060</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthSwt/EthSwtConfig/EthSwtPort</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfSwitchTimeStampIndicationConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfSwitchTimeStampIndicationConfig</SHORT-NAME>
+				                  <LONG-NAME>
+                                      <L-4 L="EN">EthIfSwitchTimeStampIndicationConfig (currently unused)</L-4>
+                                  </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configuration of Switch timestamp indications.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00066</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchEgressTimeStampIndicationFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfSwitchEgressTimeStampIndicationFunction</SHORT-NAME>
+				                       <LONG-NAME>
+                                          <L-4 L="EN">EthIfSwitchEgressTimeStampIndicationFunction (currently unused)</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables/Disables to upper layers an egress timestamp indication function.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00068</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                    <!-- PARAMETER DEFINITION: EthIfSwitchIngressTimeStampIndicationFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfSwitchIngressTimeStampIndicationFunction</SHORT-NAME>
+				       <LONG-NAME>
+                                          <L-4 L="EN">EthIfSwitchIngressTimeStampIndicationFunction (currently unused)</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables/Disables to upper layers an ingress timestamp indication function.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00069</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfTransceiver -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfTransceiver</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of EthIfTransceiver.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">The usage of EthIfEthTrcvRef and EthIfWEthTrcvRefis exclusive OR.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00042</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfTransceiverIdx -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>EthIfTransceiverIdx</SHORT-NAME>
+				       <LONG-NAME>
+                                          <L-4 L="EN">EthIfTransceiverIdx (currently unused)</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter provides a zero-based consecutive index of the Ethernet transceivers. Upper layer BSW modules and the Ethernet Interface itself use this index to identify an Ethernet tranceiver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00043</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: EthIfEthTrcvRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfEthTrcvRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to an Ethernet transceiver, which is handled by a specific Ethernet transceiver driver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00044</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthTrcv/EthTrcvConfigSet/EthTrcvConfig</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: EthIfWEthTrcvRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>EthIfWEthTrcvRef</SHORT-NAME>
+				       <LONG-NAME>
+                                          <L-4 L="EN">EthIfWEthTrcvRef (currently unused)</L-4>
+                                       </LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to an Wireless Ethernet transceiver, which is handled by a specific Wireless Ethernet transceiver driver.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00074</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/WEthTrcv/WEthTrcvConfigSet/WEthTrcvConfig</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfTrcvLinkStateChgConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfTrcvLinkStateChgConfig</SHORT-NAME>
+                                            <LONG-NAME><L-4 L="EN">EthIfTrcvLinkStateChgConfig (currently unused).</L-4></LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies link state change callback function</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00018</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfTrcvLinkStateChgFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfTrcvLinkStateChgFunction</SHORT-NAME>
+                                       <LONG-NAME><L-4 L="EN">EthIfTrcvLinkStateChgFunction (currently unused).</L-4></LONG-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies link state change callback function</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00019</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: EthIfTxConfirmationConfig -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>EthIfTxConfirmationConfig</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configuration of transmit indication callback functions.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00016</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: EthIfTxConfirmationFunction -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>EthIfTxConfirmationFunction</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies transmit indication callback function</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00017</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: EthIfGeneral -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>EthIfGeneral</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container contains the general configuration parameters of the Ethernet Interface.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00001</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: EthIfDevErrorDetect -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfDevErrorDetect</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the development error detection and notification on or off.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">* true: detection and notification is enabled.
+                                        * false: detection and notification is disabled.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00004</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfEnableRxInterrupt -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfEnableRxInterrupt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables receive interrupt.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00005</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfEnableTxInterrupt -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfEnableTxInterrupt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables the transmit interrupt.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00006</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfEnableWEthApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfEnableWEthApi</SHORT-NAME>
+				  <LONG-NAME>
+                                          <L-4 L="EN">EthIfEnableWEthApi (currently unused)</L-4>
+                                  </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables API's for WEth / WEthTrcv</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00075</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetAndResetMeasurementDataApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetAndResetMeasurementDataApi</SHORT-NAME>
+				 <LONG-NAME>
+                                     <L-4 L="EN">EthIfGetAndResetMeasurementDataApi (currently unused)</L-4>
+                                  </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables the Get and Reset Measurement Data API</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00072</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetBaudRate -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetBaudRate</SHORT-NAME>
+				     <LONG-NAME>
+                                        <L-4 L="EN">EthIfGetBaudRate (currently unused)</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables GetBaudRate API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00034</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetCounterState -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetCounterState</SHORT-NAME>
+				     <LONG-NAME>
+                                        <L-4 L="EN">EthIfGetCounterState (currently unused)</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables GetCounterState API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00035</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetCtrlIdxList -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetCtrlIdxList</SHORT-NAME>
+				 <LONG-NAME>
+                                     <L-4 L="EN">EthIfGetCtrlIdxList (currently unused)</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables GetCtrlIdxList API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00070</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetTransceiverWakeupModeApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetTransceiverWakeupModeApi</SHORT-NAME>
+				     <LONG-NAME>
+                                        <L-4 L="EN">EthIfGetTransceiverWakeupModeApi (currently unused)</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables EthIf_GetTransceiverWakeupMode API</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00041</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGetVlanIdSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGetVlanIdSupport</SHORT-NAME>
+				                 <LONG-NAME>
+                                        <L-4 L="EN">EthIfGetVlanIdSupport</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables GetVlanId API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00071</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfGlobalTimeSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfGlobalTimeSupport</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables/Disables the Global Time APIs used amongst others by Global Time Synchronization over Ethernet.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00039</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+							  <!-- PARAMETER DEFINITION: EthIfVirtualAddressFilterSize -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>EthIfVirtualAddressFilterSize</SHORT-NAME>
+                                            <LONG-NAME>
+                                                <L-4 L="EN">EthIfVirtualAddressFilterSize</L-4>
+                                            </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies the size of virtual address filter over all configured EthCtrls. 
+It should be set to the overall number of simultaneously used multicast IP addresses and the size MUST NOT be greater than the summed capacity of physical address filters of all configured EthCtrls.
+Dependency: This parameter is only valid if Eth.EthGeneral.EthUpdatePhysAddrFilter is enabled. 
+If multicast communication is not used, then Eth.EthGeneral.EthUpdatePhysAddrFilter should be disabled in Eth and EthIfVirtualAddressFilterSize should not be configured.
+ </L-2>
+                                 </DESC>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>RB:42.3.5.0:2017-11-20</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>1</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+							  <!-- PARAMETER DEFINITION: EthIfMainFunctionPeriod -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>EthIfMainFunctionPeriod</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies the period of main function EthIf_MainFunctionRx and EthIf_MainFunctionTx in seconds. Ethernet Interface does not require this information but the BSW scheduler.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00023</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX INTERVAL-TYPE="OPEN">Inf</MAX>
+                                 <MIN INTERVAL-TYPE="OPEN">0</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfMainFunctionStatePeriod -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>EthIfMainFunctionStatePeriod</SHORT-NAME>
+			         <LONG-NAME>
+                                        <L-4 L="EN">EthIfMainFunctionStatePeriod</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies the period of main function EthIf_MainFunctionState in seconds. Ethernet Interface does not require this information but the BSW scheduler.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00056</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX INTERVAL-TYPE="OPEN">Inf</MAX>
+                                 <MIN INTERVAL-TYPE="OPEN">0</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfMaxTrcvsTotal -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>EthIfMaxTrcvsTotal</SHORT-NAME>
+                                 <LONG-NAME>
+                                     <L-4 L="EN">EthIfMaxTrcvsTotal (currently unused)</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Limits the total number of transceivers.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00003</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>1</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfPortStartupActiveTime -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>EthIfPortStartupActiveTime</SHORT-NAME>
+				 <LONG-NAME>
+                                        <L-4 L="EN">EthIfPortStartupActiveTime</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Denote the time delay in seconds after the mode "ETHTRCV_MODE_ACTIVE" of all EthIfSwitchPorts are requested via EthIf_StartAllPorts.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This is only used for ports in EthIfSwtPortGroups which are not referenced by a EthIfController.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00055</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX INTERVAL-TYPE="CLOSED">65.535</MAX>
+                                 <MIN INTERVAL-TYPE="CLOSED">0.001</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfPublicCddHeaderFile -->
+                              <ECUC-STRING-PARAM-DEF>
+                                 <SHORT-NAME>EthIfPublicCddHeaderFile</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Defines header files for callback functions which shall be included in case of CDDs. Range of characters is 1.. 32.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00024</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <SCOPE>ECU</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                       <MAX-LENGTH>32</MAX-LENGTH>
+                                       <MIN-LENGTH>1</MIN-LENGTH>
+                                    </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                                 </ECUC-STRING-PARAM-DEF-VARIANTS>
+                              </ECUC-STRING-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfRxIndicationIterations -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>EthIfRxIndicationIterations</SHORT-NAME>
+                                            <LONG-NAME>
+                                                <L-4 L="EN">EthIfRxIndicationIterations</L-4>
+                                            </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of Ethernet frames per Ethernet controller polled from the Ethernet driver within EthIf_MainFunctionRx.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00030</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfSetForwardingModeApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfSetForwardingModeApi</SHORT-NAME>
+				 <LONG-NAME>
+                                        <L-4 L="EN">EthIfSetForwardingModeApi (currently unused)</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables /disables EthIf_SetForwardingMode API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00062</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfStartAutoNegotiation -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfStartAutoNegotiation</SHORT-NAME>
+				     <LONG-NAME>
+                                        <L-4 L="EN">EthIfStartAutoNegotiation (currently unused)</L-4>
+                                     </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables StartAutoNegotiation API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00033</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfSwitchManagementSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfSwitchManagementSupport</SHORT-NAME>
+				 <LONG-NAME>
+                                        <L-4 L="EN">EthIfSwitchManagementSupport (currently unused)</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables/Disables the Switch management APIs to support a Switch-port specific communication attribute access.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00064</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfSwitchOffPortTimeDelay -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>EthIfSwitchOffPortTimeDelay</SHORT-NAME>
+				 <LONG-NAME>
+                                        <L-4 L="EN">EthIfSwitchOffPortTimeDelay</L-4>
+                                 </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Denote the time delay in seconds after the mode "ETHTRCV_MODE_DOWN" of a EthIfSwitchPortGroup will be executed.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This is only used for EthIfSwtPortGroups which not referenced by a EthIfController.
+
+                                        The time delay shall be greater than the UdpNm timings, because UdpNm shall finish its shutdown handling. (Repeat Message State, Prepare Bus-Sleep state, Bus-Sleep state).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00054</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX INTERVAL-TYPE="CLOSED">65.535</MAX>
+                                 <MIN INTERVAL-TYPE="CLOSED">0.001</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfTrcvLinkStateChgMainReload -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>EthIfTrcvLinkStateChgMainReload</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies the frequency of transceiver link state change checks in each</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">period of main function EthIf_MainFunctionTx.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00009</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>1</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfVerifyConfigApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfVerifyConfigApi</SHORT-NAME>
+				  <LONG-NAME>
+                                        <L-4 L="EN">EthIfVerifyConfigApi (currently unused)</L-4>
+                                  </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables /disables EthIf_VerifyConfig API.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00063</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfVersionInfoApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfVersionInfoApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables version info API</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00007</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfVersionInfoApiMacro -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfVersionInfoApiMacro</SHORT-NAME>
+                                   <LONG-NAME>
+                                       <L-4 L="EN">EthIfVersionInfoApiMacro (currently unused)</L-4>
+                                   </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables / Disables version info API macro implementation.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00008</RELATED-TRACE-ITEM-REF>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: EthIfWakeUpSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>EthIfWakeUpSupport</SHORT-NAME>
+                                   <LONG-NAME>
+                                       <L-4 L="EN">EthIfWakeUpSupport (currently unused)</L-4>
+                                   </LONG-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Configures if wakeup is supported or not.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_EthIf_00040</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                     </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+					</ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

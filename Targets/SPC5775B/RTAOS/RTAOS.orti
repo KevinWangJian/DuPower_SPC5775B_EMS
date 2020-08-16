@@ -1,0 +1,1006 @@
+/* ORTI Generated for Lauterbach debugger */
+VERSION {
+  KOIL = "AUTOSAR";
+  OSSEMANTICS = "ORTI", "2.2";
+};
+IMPLEMENTATION RTA_OS_ORTI  {
+  OS {
+    /************** Running Task ********************/
+    TOTRACE ENUM [
+      "BSW_OsTask_1000ms" = "Os_const_tasks[0]",
+      "BSW_OsTask_100ms" = "Os_const_tasks[1]",
+      "BSW_OsTask_50ms" = "Os_const_tasks[2]",
+      "BSW_OsTask_20ms" = "Os_const_tasks[3]",
+      "ASW_OsTask_10ms" = "Os_const_tasks[4]",
+      "BSW_OsTask_10ms" = "Os_const_tasks[5]",
+      "ASW_OsTask_5ms" = "Os_const_tasks[6]",
+      "BSW_OsTask_5ms" = "Os_const_tasks[7]",
+      "BSW_OsTask_2ms" = "Os_const_tasks[8]",
+      "BSW_OsTask_1ms" = "Os_const_tasks[9]",
+      "BSW_OsTask_SwcRequest" = "Os_const_tasks[10]",
+      "ECU_StartupTask" = "Os_const_tasks[11]",
+      "idle" = "0"
+    ] RUNNINGTASK, "Running Task";
+    /************** Running Task Priority ***********/
+    ENUM [
+      "23" = 1, /* Configured task priority */
+      "25" = 3, /* Configured task priority */
+      "27" = 7, /* Configured task priority */
+      "29" = 15, /* Configured task priority */
+      "30" = 31, /* Configured task priority */
+      "31" = 63, /* Configured task priority */
+      "32" = 127, /* Configured task priority */
+      "33" = 255, /* Configured task priority */
+      "34" = 511, /* Configured task priority */
+      "35" = 1023, /* Configured task priority */
+      "38" = 2047, /* Configured task priority */
+      "40" = 4095, /* Configured task priority */
+      "idle" = "0"
+    ] RUNNINGTASKPRIORITY, "Task priority";
+    /************** Running ISR2 ********************/
+    ENUM [
+      "Adc_Eqadc_EqadcACFifo0Empty" = "&Os_const_isrs[0]",
+      "Adc_Eqadc_EqadcARFifo0Full" = "&Os_const_isrs[1]",
+      "EMIOS_0_CH_16_ISR" = "&Os_const_isrs[2]",
+      "EMIOS_0_CH_18_ISR" = "&Os_const_isrs[3]",
+      "EMIOS_0_CH_19_ISR" = "&Os_const_isrs[4]",
+      "EMIOS_0_CH_20_ISR" = "&Os_const_isrs[5]",
+      "EMIOS_0_CH_21_ISR" = "&Os_const_isrs[6]",
+      "Can_IsrFCB_BO" = "&Os_const_isrs[7]",
+      "Can_IsrFCB_ERR" = "&Os_const_isrs[8]",
+      "Can_IsrFCB_MB_00" = "&Os_const_isrs[9]",
+      "Can_IsrFCB_MB_01" = "&Os_const_isrs[10]",
+      "Can_IsrFCB_MB_02" = "&Os_const_isrs[11]",
+      "Can_IsrFCB_MB_03" = "&Os_const_isrs[12]",
+      "Can_IsrFCB_MB_04" = "&Os_const_isrs[13]",
+      "Can_IsrFCB_MB_05" = "&Os_const_isrs[14]",
+      "Can_IsrFCB_MB_06" = "&Os_const_isrs[15]",
+      "Can_IsrFCB_MB_07" = "&Os_const_isrs[16]",
+      "Can_IsrFCB_MB_08" = "&Os_const_isrs[17]",
+      "Can_IsrFCB_MB_09" = "&Os_const_isrs[18]",
+      "Can_IsrFCB_MB_10" = "&Os_const_isrs[19]",
+      "Can_IsrFCB_MB_11" = "&Os_const_isrs[20]",
+      "Can_IsrFCB_MB_12" = "&Os_const_isrs[21]",
+      "Can_IsrFCB_MB_13" = "&Os_const_isrs[22]",
+      "Can_IsrFCB_MB_14" = "&Os_const_isrs[23]",
+      "Can_IsrFCB_MB_15" = "&Os_const_isrs[24]",
+      "Can_IsrFCB_MB_16_31" = "&Os_const_isrs[25]",
+      "Can_IsrFCB_MB_32_63" = "&Os_const_isrs[26]",
+      "Can_IsrCombined_IL0_IL1" = "&Os_const_isrs[27]",
+      "Can_IsrFCA_BO" = "&Os_const_isrs[28]",
+      "Can_IsrFCA_ERR" = "&Os_const_isrs[29]",
+      "Can_IsrFCA_MB_00" = "&Os_const_isrs[30]",
+      "Can_IsrFCA_MB_01" = "&Os_const_isrs[31]",
+      "Can_IsrFCA_MB_02" = "&Os_const_isrs[32]",
+      "Can_IsrFCA_MB_03" = "&Os_const_isrs[33]",
+      "Can_IsrFCA_MB_04" = "&Os_const_isrs[34]",
+      "Can_IsrFCA_MB_05" = "&Os_const_isrs[35]",
+      "Can_IsrFCA_MB_06" = "&Os_const_isrs[36]",
+      "Can_IsrFCA_MB_07" = "&Os_const_isrs[37]",
+      "Can_IsrFCA_MB_08" = "&Os_const_isrs[38]",
+      "Can_IsrFCA_MB_09" = "&Os_const_isrs[39]",
+      "Can_IsrFCA_MB_10" = "&Os_const_isrs[40]",
+      "Can_IsrFCA_MB_11" = "&Os_const_isrs[41]",
+      "Can_IsrFCA_MB_12" = "&Os_const_isrs[42]",
+      "Can_IsrFCA_MB_13" = "&Os_const_isrs[43]",
+      "Can_IsrFCA_MB_14" = "&Os_const_isrs[44]",
+      "Can_IsrFCA_MB_15" = "&Os_const_isrs[45]",
+      "Can_IsrFCA_MB_16_31" = "&Os_const_isrs[46]",
+      "Can_IsrFCA_MB_32_63" = "&Os_const_isrs[47]",
+      "Can_IsrFCC_BO" = "&Os_const_isrs[48]",
+      "Can_IsrFCC_ERR" = "&Os_const_isrs[49]",
+      "Can_IsrFCC_MB_00" = "&Os_const_isrs[50]",
+      "Can_IsrFCC_MB_01" = "&Os_const_isrs[51]",
+      "Can_IsrFCC_MB_02" = "&Os_const_isrs[52]",
+      "Can_IsrFCC_MB_03" = "&Os_const_isrs[53]",
+      "Can_IsrFCC_MB_04" = "&Os_const_isrs[54]",
+      "Can_IsrFCC_MB_05" = "&Os_const_isrs[55]",
+      "Can_IsrFCC_MB_06" = "&Os_const_isrs[56]",
+      "Can_IsrFCC_MB_07" = "&Os_const_isrs[57]",
+      "Can_IsrFCC_MB_08" = "&Os_const_isrs[58]",
+      "Can_IsrFCC_MB_09" = "&Os_const_isrs[59]",
+      "Can_IsrFCC_MB_10" = "&Os_const_isrs[60]",
+      "Can_IsrFCC_MB_11" = "&Os_const_isrs[61]",
+      "Can_IsrFCC_MB_12" = "&Os_const_isrs[62]",
+      "Can_IsrFCC_MB_13" = "&Os_const_isrs[63]",
+      "Can_IsrFCC_MB_14" = "&Os_const_isrs[64]",
+      "Can_IsrFCC_MB_15" = "&Os_const_isrs[65]",
+      "Can_IsrFCC_MB_16_31" = "&Os_const_isrs[66]",
+      "Can_IsrFCC_MB_32_63" = "&Os_const_isrs[67]",
+      "Can_IsrFCD_BO" = "&Os_const_isrs[68]",
+      "Can_IsrFCD_ERR" = "&Os_const_isrs[69]",
+      "Can_IsrFCD_MB_00" = "&Os_const_isrs[70]",
+      "Can_IsrFCD_MB_01" = "&Os_const_isrs[71]",
+      "Can_IsrFCD_MB_02" = "&Os_const_isrs[72]",
+      "Can_IsrFCD_MB_03" = "&Os_const_isrs[73]",
+      "Can_IsrFCD_MB_04" = "&Os_const_isrs[74]",
+      "Can_IsrFCD_MB_05" = "&Os_const_isrs[75]",
+      "Can_IsrFCD_MB_06" = "&Os_const_isrs[76]",
+      "Can_IsrFCD_MB_07" = "&Os_const_isrs[77]",
+      "Can_IsrFCD_MB_08" = "&Os_const_isrs[78]",
+      "Can_IsrFCD_MB_09" = "&Os_const_isrs[79]",
+      "Can_IsrFCD_MB_10" = "&Os_const_isrs[80]",
+      "Can_IsrFCD_MB_11" = "&Os_const_isrs[81]",
+      "Can_IsrFCD_MB_12" = "&Os_const_isrs[82]",
+      "Can_IsrFCD_MB_13" = "&Os_const_isrs[83]",
+      "Can_IsrFCD_MB_14" = "&Os_const_isrs[84]",
+      "Can_IsrFCD_MB_15" = "&Os_const_isrs[85]",
+      "Can_IsrFCD_MB_16_31" = "&Os_const_isrs[86]",
+      "Can_IsrFCD_MB_32_63" = "&Os_const_isrs[87]",
+      "ESCI_B1_ISR" = "&Os_const_isrs[88]",
+      "ESCI_A0_ISR" = "&Os_const_isrs[89]",
+      "ESCI_C2_ISR" = "&Os_const_isrs[90]",
+      "ESCI_F5_ISR" = "&Os_const_isrs[91]",
+      "Gpt_PIT_0_TIMER_0_ISR" = "&Os_const_isrs[92]",
+      "Gpt_PIT_0_TIMER_RTI_ISR" = "&Os_const_isrs[93]",
+      "NO_ISR" = "0"
+    ] RUNNINGISR2, "Running Cat 2 ISR";
+    /************** Service IDs *********************/
+    TOTRACE ENUM [
+      "ActivateTask" = 2,
+      "Os_AdvanceCounter" = 4,
+      "CancelAlarm" = 6,
+      "CallTrustedFunction" = 8,
+      "CheckISRMemoryAccess" = 10,
+      "CheckObjectAccess" = 12,
+      "CheckObjectOwnership" = 14,
+      "CheckTaskMemoryAccess" = 16,
+      "ChainTask" = 18,
+      "ClearEvent" = 20,
+      "ControlIdle" = 22,
+      "DisableAllInterrupts" = 24,
+      "EnableAllInterrupts" = 26,
+      "GetActiveApplicationMode" = 28,
+      "GetAlarm" = 30,
+      "GetAlarmBase" = 32,
+      "GetApplicationID" = 34,
+      "GetCurrentApplicationID" = 36,
+      "GetCounterValue" = 38,
+      "GetElapsedCounterValue" = 40,
+      "GetEvent" = 42,
+      "GetISRID" = 44,
+      "GetResource" = 46,
+      "GetScheduleTableStatus" = 48,
+      "GetTaskID" = 50,
+      "GetTaskState" = 52,
+      "GetVersionInfo" = 54,
+      "IncrementCounter" = 56,
+      "NextScheduleTable" = 58,
+      "Os_GetExecutionTime" = 60,
+      "Os_GetISRMaxExecutionTime" = 62,
+      "Os_GetTaskActivationTime" = 64,
+      "Os_GetTaskMaxExecutionTime" = 66,
+      "Os_ResetISRMaxExecutionTime" = 68,
+      "Os_ResetTaskMaxExecutionTime" = 70,
+      "Os_GetElapsedTime" = 72,
+      "Os_GetTaskElapsedTime" = 74,
+      "Os_GetISRElapsedTime" = 76,
+      "Os_GetIdleElapsedTime" = 78,
+      "Os_ResetTaskElapsedTime" = 80,
+      "Os_ResetISRElapsedTime" = 82,
+      "Os_ResetIdleElapsedTime" = 84,
+      "Os_GetStackSize" = 86,
+      "Os_GetStackUsage" = 88,
+      "Os_GetStackValue" = 90,
+      "Os_GetISRMaxStackUsage" = 92,
+      "Os_GetTaskMaxStackUsage" = 94,
+      "Os_ResetISRMaxStackUsage" = 96,
+      "Os_ResetTaskMaxStackUsage" = 98,
+      "ReleaseResource" = 100,
+      "Restart" = 102,
+      "ResumeAllInterrupts" = 104,
+      "ResumeOSInterrupts" = 106,
+      "Schedule" = 108,
+      "SetEvent" = 110,
+      "SetAbsAlarm" = 112,
+      "SetRelAlarm" = 114,
+      "SetRestartPoint" = 116,
+      "ShutdownOS" = 118,
+      "StartOS" = 120,
+      "StartScheduleTableAbs" = 122,
+      "StartScheduleTableRel" = 124,
+      "StartScheduleTableSynchron" = 126,
+      "SyncScheduleTable" = 128,
+      "SyncScheduleTableRel" = 130,
+      "SetScheduleTableAsync" = 132,
+      "StopScheduleTable" = 134,
+      "SuspendAllInterrupts" = 136,
+      "SuspendOSInterrupts" = 138,
+      "TerminateApplication" = 140,
+      "TerminateTask" = 142,
+      "WaitEvent" = 144,
+      "AllowAccess" = 146,
+      "GetApplicationState" = 148,
+      "n/a" = 0
+    ] SERVICETRACE, "OS API";
+    /************** Error codes *********************/
+    ENUM [
+      "E_OS_ACCESS" = 1,
+      "E_OS_CALLEVEL" = 2,
+      "E_OS_ID" = 3,
+      "E_OS_LIMIT" = 4,
+      "E_OS_NOFUNC" = 5,
+      "E_OS_RESOURCE" = 6,
+      "E_OS_STATE" = 7,
+      "E_OS_VALUE" = 8,
+      "E_OS_SERVICEID" = 9,
+      "E_OS_ILLEGAL_ADDRESS" = 10,
+      "E_OS_MISSINGEND" = 11,
+      "E_OS_DISABLEDINT" = 12,
+      "E_OS_STACKFAULT" = 13,
+      "E_OS_PROTECTION_MEMORY" = 14,
+      "E_OS_PROTECTION_TIME" = 15,
+      "E_OS_PROTECTION_ARRIVAL" = 16,
+      "E_OS_PROTECTION_LOCKED" = 17,
+      "E_OS_PROTECTION_EXCEPTION" = 18,
+      "E_OS_CORE" = 19,
+      "E_OS_SPINLOCK" = 20,
+      "E_OS_INTERFERENCE_DEADLOCK" = 21,
+      "E_OS_NESTING_DEADLOCK" = 22,
+      "E_OS_SYS_NO_RESTART" = 23,
+      "E_OS_SYS_RESTART" = 24,
+      "E_OS_SYS_OVERRUN" = 25,
+      "E_OS_XCORE_QFULL" = 26,
+      "E_OK" = 0
+    ] LASTERROR, "Last error";
+    /************** App Modes ***********************/
+    ENUM [
+      "OSDEFAULTAPPMODE" = 1,
+      "NO_APPMODE" = 0
+    ] CURRENTAPPMODE, "AppMode";
+    /************** Applications ********************/
+    ENUM [
+      "NO_APPLICATION" = 0
+    ] CURRENTAPPLICATION, "Application";
+    /************** Running Cat1 ISR *****************/
+    ENUM [
+      "NO_ISR" = "0"
+    ] RUNNINGISR, "Running Cat 1 ISR";
+  };
+  /************** Tasks ***************************/
+  TASK {
+    STRING vs_BASEPRIORITY, "Base priority";
+    STRING PRIORITY, "Dispatch priority";
+    ENUM [
+      "SUSPENDED" = 0, "RUNNING" = 1, "READY" = 2, "RUNNING" = 3,
+      "WAITING"   = 4, "RUNNING" = 5, "READY" = 6, "RUNNING" = 7
+
+    ] STATE, "State";
+    CTYPE "unsigned char" CURRENTACTIVATIONS, "Activations";
+  };
+  /************** ISRs ****************************/
+  ISR2 {
+    STRING vs_p_Pri, "Base priority";
+    STRING vs_p_Disp, "Dispatch priority";
+  };
+  ISR1 {
+    STRING vs_p_Pri, "Base priority";
+    STRING vs_p_Disp, "Dispatch priority";
+  };
+  /************** Alarms **************************/
+  ALARM {
+    CTYPE ALARMTIME, "Alarm Time";
+    CTYPE CYCLETIME, "Cycle Time";
+    ENUM [
+      "STOPPED" = 0,
+      "RUNNING" = 1
+    ] STATE, "Alarm state";
+    STRING ACTION, "Action";
+    STRING COUNTER, "Counter";
+  };
+  /************** ScheduleTables ******************/
+  SCHEDULETABLE { /* [$UKS 612] */
+    STRING COUNTER, "Counter";
+    ENUM [
+      "STOPPED" = 0,
+      "NEXT" = 1,
+      "WAITING" = 2,
+      "RUNNING" = 3,
+      "RUNNING_AND_SYNCHRONOUS" = 4
+    ] STATE, "State";
+    CTYPE EXPIRYTIME, "Expiry Time";
+    ENUM [
+      "Rte_ScheduleTable" = "&Os_const_scheduletables[0]",
+      "none" = 0
+    ] NEXT, "Next table";
+  };
+  /************** Resources ***********************/
+  RESOURCE {
+    ENUM [
+      "BSW_OsTask_1000ms" = "Os_const_tasks[0]",
+      "BSW_OsTask_100ms" = "Os_const_tasks[1]",
+      "BSW_OsTask_50ms" = "Os_const_tasks[2]",
+      "BSW_OsTask_20ms" = "Os_const_tasks[3]",
+      "ASW_OsTask_10ms" = "Os_const_tasks[4]",
+      "BSW_OsTask_10ms" = "Os_const_tasks[5]",
+      "ASW_OsTask_5ms" = "Os_const_tasks[6]",
+      "BSW_OsTask_5ms" = "Os_const_tasks[7]",
+      "BSW_OsTask_2ms" = "Os_const_tasks[8]",
+      "BSW_OsTask_1ms" = "Os_const_tasks[9]",
+      "BSW_OsTask_SwcRequest" = "Os_const_tasks[10]",
+      "ECU_StartupTask" = "Os_const_tasks[11]",
+      "Adc_Eqadc_EqadcACFifo0Empty" = "&Os_const_isrs[0]",
+      "Adc_Eqadc_EqadcARFifo0Full" = "&Os_const_isrs[1]",
+      "EMIOS_0_CH_16_ISR" = "&Os_const_isrs[2]",
+      "EMIOS_0_CH_18_ISR" = "&Os_const_isrs[3]",
+      "EMIOS_0_CH_19_ISR" = "&Os_const_isrs[4]",
+      "EMIOS_0_CH_20_ISR" = "&Os_const_isrs[5]",
+      "EMIOS_0_CH_21_ISR" = "&Os_const_isrs[6]",
+      "Can_IsrFCB_BO" = "&Os_const_isrs[7]",
+      "Can_IsrFCB_ERR" = "&Os_const_isrs[8]",
+      "Can_IsrFCB_MB_00" = "&Os_const_isrs[9]",
+      "Can_IsrFCB_MB_01" = "&Os_const_isrs[10]",
+      "Can_IsrFCB_MB_02" = "&Os_const_isrs[11]",
+      "Can_IsrFCB_MB_03" = "&Os_const_isrs[12]",
+      "Can_IsrFCB_MB_04" = "&Os_const_isrs[13]",
+      "Can_IsrFCB_MB_05" = "&Os_const_isrs[14]",
+      "Can_IsrFCB_MB_06" = "&Os_const_isrs[15]",
+      "Can_IsrFCB_MB_07" = "&Os_const_isrs[16]",
+      "Can_IsrFCB_MB_08" = "&Os_const_isrs[17]",
+      "Can_IsrFCB_MB_09" = "&Os_const_isrs[18]",
+      "Can_IsrFCB_MB_10" = "&Os_const_isrs[19]",
+      "Can_IsrFCB_MB_11" = "&Os_const_isrs[20]",
+      "Can_IsrFCB_MB_12" = "&Os_const_isrs[21]",
+      "Can_IsrFCB_MB_13" = "&Os_const_isrs[22]",
+      "Can_IsrFCB_MB_14" = "&Os_const_isrs[23]",
+      "Can_IsrFCB_MB_15" = "&Os_const_isrs[24]",
+      "Can_IsrFCB_MB_16_31" = "&Os_const_isrs[25]",
+      "Can_IsrFCB_MB_32_63" = "&Os_const_isrs[26]",
+      "Can_IsrCombined_IL0_IL1" = "&Os_const_isrs[27]",
+      "Can_IsrFCA_BO" = "&Os_const_isrs[28]",
+      "Can_IsrFCA_ERR" = "&Os_const_isrs[29]",
+      "Can_IsrFCA_MB_00" = "&Os_const_isrs[30]",
+      "Can_IsrFCA_MB_01" = "&Os_const_isrs[31]",
+      "Can_IsrFCA_MB_02" = "&Os_const_isrs[32]",
+      "Can_IsrFCA_MB_03" = "&Os_const_isrs[33]",
+      "Can_IsrFCA_MB_04" = "&Os_const_isrs[34]",
+      "Can_IsrFCA_MB_05" = "&Os_const_isrs[35]",
+      "Can_IsrFCA_MB_06" = "&Os_const_isrs[36]",
+      "Can_IsrFCA_MB_07" = "&Os_const_isrs[37]",
+      "Can_IsrFCA_MB_08" = "&Os_const_isrs[38]",
+      "Can_IsrFCA_MB_09" = "&Os_const_isrs[39]",
+      "Can_IsrFCA_MB_10" = "&Os_const_isrs[40]",
+      "Can_IsrFCA_MB_11" = "&Os_const_isrs[41]",
+      "Can_IsrFCA_MB_12" = "&Os_const_isrs[42]",
+      "Can_IsrFCA_MB_13" = "&Os_const_isrs[43]",
+      "Can_IsrFCA_MB_14" = "&Os_const_isrs[44]",
+      "Can_IsrFCA_MB_15" = "&Os_const_isrs[45]",
+      "Can_IsrFCA_MB_16_31" = "&Os_const_isrs[46]",
+      "Can_IsrFCA_MB_32_63" = "&Os_const_isrs[47]",
+      "Can_IsrFCC_BO" = "&Os_const_isrs[48]",
+      "Can_IsrFCC_ERR" = "&Os_const_isrs[49]",
+      "Can_IsrFCC_MB_00" = "&Os_const_isrs[50]",
+      "Can_IsrFCC_MB_01" = "&Os_const_isrs[51]",
+      "Can_IsrFCC_MB_02" = "&Os_const_isrs[52]",
+      "Can_IsrFCC_MB_03" = "&Os_const_isrs[53]",
+      "Can_IsrFCC_MB_04" = "&Os_const_isrs[54]",
+      "Can_IsrFCC_MB_05" = "&Os_const_isrs[55]",
+      "Can_IsrFCC_MB_06" = "&Os_const_isrs[56]",
+      "Can_IsrFCC_MB_07" = "&Os_const_isrs[57]",
+      "Can_IsrFCC_MB_08" = "&Os_const_isrs[58]",
+      "Can_IsrFCC_MB_09" = "&Os_const_isrs[59]",
+      "Can_IsrFCC_MB_10" = "&Os_const_isrs[60]",
+      "Can_IsrFCC_MB_11" = "&Os_const_isrs[61]",
+      "Can_IsrFCC_MB_12" = "&Os_const_isrs[62]",
+      "Can_IsrFCC_MB_13" = "&Os_const_isrs[63]",
+      "Can_IsrFCC_MB_14" = "&Os_const_isrs[64]",
+      "Can_IsrFCC_MB_15" = "&Os_const_isrs[65]",
+      "Can_IsrFCC_MB_16_31" = "&Os_const_isrs[66]",
+      "Can_IsrFCC_MB_32_63" = "&Os_const_isrs[67]",
+      "Can_IsrFCD_BO" = "&Os_const_isrs[68]",
+      "Can_IsrFCD_ERR" = "&Os_const_isrs[69]",
+      "Can_IsrFCD_MB_00" = "&Os_const_isrs[70]",
+      "Can_IsrFCD_MB_01" = "&Os_const_isrs[71]",
+      "Can_IsrFCD_MB_02" = "&Os_const_isrs[72]",
+      "Can_IsrFCD_MB_03" = "&Os_const_isrs[73]",
+      "Can_IsrFCD_MB_04" = "&Os_const_isrs[74]",
+      "Can_IsrFCD_MB_05" = "&Os_const_isrs[75]",
+      "Can_IsrFCD_MB_06" = "&Os_const_isrs[76]",
+      "Can_IsrFCD_MB_07" = "&Os_const_isrs[77]",
+      "Can_IsrFCD_MB_08" = "&Os_const_isrs[78]",
+      "Can_IsrFCD_MB_09" = "&Os_const_isrs[79]",
+      "Can_IsrFCD_MB_10" = "&Os_const_isrs[80]",
+      "Can_IsrFCD_MB_11" = "&Os_const_isrs[81]",
+      "Can_IsrFCD_MB_12" = "&Os_const_isrs[82]",
+      "Can_IsrFCD_MB_13" = "&Os_const_isrs[83]",
+      "Can_IsrFCD_MB_14" = "&Os_const_isrs[84]",
+      "Can_IsrFCD_MB_15" = "&Os_const_isrs[85]",
+      "Can_IsrFCD_MB_16_31" = "&Os_const_isrs[86]",
+      "Can_IsrFCD_MB_32_63" = "&Os_const_isrs[87]",
+      "ESCI_B1_ISR" = "&Os_const_isrs[88]",
+      "ESCI_A0_ISR" = "&Os_const_isrs[89]",
+      "ESCI_C2_ISR" = "&Os_const_isrs[90]",
+      "ESCI_F5_ISR" = "&Os_const_isrs[91]",
+      "Gpt_PIT_0_TIMER_0_ISR" = "&Os_const_isrs[92]",
+      "Gpt_PIT_0_TIMER_RTI_ISR" = "&Os_const_isrs[93]",
+      "none" = "0"
+    ] LOCKER, "Resource Locker";
+    STRING PRIORITY, "Ceiling priority";
+  };
+
+  /************** Stacks **************************/
+  STACK {
+    CTYPE SIZE, "Stack size (Byte)";
+    CTYPE "unsigned long *" BASEADDRESS, "Base address";
+    STRING STACKDIRECTION, "Stack Direction";
+    CTYPE "unsigned long *" FILLPATTERN, "Stack fill pattern";
+  };
+};
+OS RTAOS {
+  RUNNINGISR = "Os_RunningCat1ISR";
+  RUNNINGTASK = "Os_RunningTask"; /* [$UKS 615] */
+  RUNNINGTASKPRIORITY = "Os_RunningTPMask.t0"; /* [$UKS 616] */
+  RUNNINGISR2 = "Os_RunningISR"; /* [$UKS 617] */
+  CURRENTAPPLICATION = "0";
+  LASTERROR = "Os_OrtiLastError"; /* [$UKS 619] */
+  SERVICETRACE = "Os_OrtiApiID"; /* [$UKS 618] */
+  CURRENTAPPMODE = "Os_CurrentAppMode"; /* [$UKS 620] */
+};
+
+
+ISR2 Adc_Eqadc_EqadcACFifo0Empty {
+  vs_p_Pri = "10";
+  vs_p_Disp = "10";
+};
+
+ISR2 Adc_Eqadc_EqadcARFifo0Full {
+  vs_p_Pri = "10";
+  vs_p_Disp = "10";
+};
+
+ISR2 EMIOS_0_CH_16_ISR {
+  vs_p_Pri = "11";
+  vs_p_Disp = "11";
+};
+
+ISR2 EMIOS_0_CH_18_ISR {
+  vs_p_Pri = "11";
+  vs_p_Disp = "11";
+};
+
+ISR2 EMIOS_0_CH_19_ISR {
+  vs_p_Pri = "11";
+  vs_p_Disp = "11";
+};
+
+ISR2 EMIOS_0_CH_20_ISR {
+  vs_p_Pri = "11";
+  vs_p_Disp = "11";
+};
+
+ISR2 EMIOS_0_CH_21_ISR {
+  vs_p_Pri = "11";
+  vs_p_Disp = "11";
+};
+
+ISR2 Can_IsrFCB_BO {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_ERR {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_00 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_01 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_02 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_03 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_04 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_05 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_06 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_07 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_08 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_09 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_10 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_11 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_12 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_13 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_14 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_15 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_16_31 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrFCB_MB_32_63 {
+  vs_p_Pri = "12";
+  vs_p_Disp = "12";
+};
+
+ISR2 Can_IsrCombined_IL0_IL1 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_BO {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_ERR {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_00 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_01 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_02 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_03 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_04 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_05 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_06 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_07 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_08 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_09 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_10 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_11 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_12 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_13 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_14 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_15 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_16_31 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCA_MB_32_63 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_BO {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_ERR {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_00 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_01 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_02 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_03 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_04 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_05 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_06 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_07 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_08 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_09 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_10 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_11 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_12 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_13 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_14 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_15 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_16_31 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCC_MB_32_63 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_BO {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_ERR {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_00 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_01 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_02 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_03 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_04 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_05 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_06 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_07 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_08 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_09 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_10 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_11 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_12 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_13 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_14 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_15 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_16_31 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 Can_IsrFCD_MB_32_63 {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 ESCI_B1_ISR {
+  vs_p_Pri = "13";
+  vs_p_Disp = "13";
+};
+
+ISR2 ESCI_A0_ISR {
+  vs_p_Pri = "14";
+  vs_p_Disp = "14";
+};
+
+ISR2 ESCI_C2_ISR {
+  vs_p_Pri = "14";
+  vs_p_Disp = "14";
+};
+
+ISR2 ESCI_F5_ISR {
+  vs_p_Pri = "14";
+  vs_p_Disp = "14";
+};
+
+ISR2 Gpt_PIT_0_TIMER_0_ISR {
+  vs_p_Pri = "15";
+  vs_p_Disp = "15";
+};
+
+ISR2 Gpt_PIT_0_TIMER_RTI_ISR {
+  vs_p_Pri = "15";
+  vs_p_Disp = "15";
+};
+
+TASK BSW_OsTask_1000ms {
+  vs_BASEPRIORITY = "23";
+  PRIORITY = "23"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[0].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[0]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x1) << 1)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_100ms {
+  vs_BASEPRIORITY = "25";
+  PRIORITY = "25"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[1].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[1]) * 1) & 1) + (Os_ReadyTasks.p0 & 0x2)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_50ms {
+  vs_BASEPRIORITY = "27";
+  PRIORITY = "27"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[2].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[2]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x4) >> 1)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_20ms {
+  vs_BASEPRIORITY = "29";
+  PRIORITY = "29"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[3].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[3]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x8) >> 2)"; /* [$UKS 622] */
+};
+TASK ASW_OsTask_10ms {
+  vs_BASEPRIORITY = "30";
+  PRIORITY = "30"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[4].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[4]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x10) >> 3)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_10ms {
+  vs_BASEPRIORITY = "31";
+  PRIORITY = "31"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[5].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[5]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x20) >> 4)"; /* [$UKS 622] */
+};
+TASK ASW_OsTask_5ms {
+  vs_BASEPRIORITY = "32";
+  PRIORITY = "32"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[6].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[6]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x40) >> 5)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_5ms {
+  vs_BASEPRIORITY = "33";
+  PRIORITY = "33"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[7].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[7]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x80) >> 6)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_2ms {
+  vs_BASEPRIORITY = "34";
+  PRIORITY = "34"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[8].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[8]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x100) >> 7)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_1ms {
+  vs_BASEPRIORITY = "35";
+  PRIORITY = "35"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[9].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[9]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x200) >> 8)"; /* [$UKS 622] */
+};
+TASK BSW_OsTask_SwcRequest {
+  vs_BASEPRIORITY = "38";
+  PRIORITY = "38"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[10].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[10]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x400) >> 9)"; /* [$UKS 622] */
+};
+TASK ECU_StartupTask {
+  vs_BASEPRIORITY = "40";
+  PRIORITY = "40"; /* [$UKS 621] */
+  CURRENTACTIVATIONS = "Os_dyn_tasks[11].activation_count"; /* [$UKS 623] */
+  STATE = "(((Os_RunningTask == Os_const_tasks[11]) * 1) & 1) + ((Os_ReadyTasks.p0 & 0x800) >> 10)"; /* [$UKS 622] */
+};
+SCHEDULETABLE Rte_ScheduleTable {  /* [$UKS 612] */
+  COUNTER = "Rte_TickCounter";
+  STATE = "Os_dyn_scheduletables[0].state";
+  EXPIRYTIME = "Os_dyn_scheduletables[0].match";
+  NEXT = "Os_dyn_scheduletables[0].next";
+};
+RESOURCE RTE_RESOURCE {
+  PRIORITY = "Task: 38"; /* [$UKS 631] */
+  LOCKER = "Os_dyn_resources[0].locker"; /* [$UKS 630] */
+};
+STACK Core0 {
+  SIZE = "&OS_STACK0_SIZE";
+  BASEADDRESS = "&OS_STACK0_BASE";
+  STACKDIRECTION = "DOWN";
+  FILLPATTERN = "OS_STACK_FILL";
+};
+STACK Core1 {
+  SIZE = "&OS_STACK1_SIZE";
+  BASEADDRESS = "&OS_STACK1_BASE";
+  STACKDIRECTION = "DOWN";
+  FILLPATTERN = "OS_STACK_FILL";
+};
+
+

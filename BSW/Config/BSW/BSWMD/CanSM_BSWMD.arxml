@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_CanSM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>CanSM</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN" />
+              </LONG-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>140</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL S="">
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_RequestComMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_GetCurrentComMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_MainFunction</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_SetBaudrate</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <OUTGOING-CALLBACKS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_ControllerBusOff</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_ControllerModeIndication</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_TransceiverModeIndication</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_TxTimeoutException</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_ClearTrcvWufFlagIndication</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_CheckTransceiverWakeFlagIndication</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_ConfirmPnAvailability</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </OUTGOING-CALLBACKS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_Init</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">CanSM service to initialize the CanSM module</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Initializes the CanSM module</L-2>
+              </DESC>
+              <SERVICE-ID>0x00</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ConfigPtr</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to init structure for the post build parameters of the CanSM</L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_CanSM/ImplementationDataTypes/CanSM_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_RequestComMode</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This service shall change the communication mode of a CAN network to the requested one.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This service shall change the communication mode of a CAN network to the requested one.</L-2>
+              </DESC>
+              <SERVICE-ID>0x02</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                <DESC>
+                  <L-2 L="EN">Returns E_OK if the service is accepted and E_NOT_OK if the service is denied</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Handle of destined communication network for request</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ComM_Mode</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Requested communication mode</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_GetCurrentComMode</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This service shall put out the current communication mode of a CAN network.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This service shall put out the current communication mode of a CAN network.</L-2>
+              </DESC>
+              <SERVICE-ID>0x03</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                <DESC>
+                  <L-2 L="EN">Returns E_OK if service is accepted else returns E_NOT_OK if service is denied</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>network</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Network handle, whose current communication mode shall be put out</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ComM_ModePtr</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer, where to put out the current communication mode</L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_GetVersionInfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This service puts out the version information of this module</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This service puts out the version information of this module (module ID, vendor ID, vendor specific version numbers related to BSW00407)</L-2>
+              </DESC>
+              <SERVICE-ID>0x01</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>VersionInfo</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to where to store the version information of this module.</L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_SetBaudrate</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This servive changes the baud rate for the configured CAN controllers of a certain CAN network.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This service shall start an asynchronous process to change the baud rate for the configured CAN controllers of a certain CAN network. Depending on necessary baud rate modifications the controllers might have to reset.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0d</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <RETURN-TYPE>
+                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                <DESC>
+                  <L-2 L="EN">Returns E_OK if service request is accepted, setting of (new) baud rate started else returns E_NOT_OK if service request is not accepted</L-2>
+                </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                  <SW-DATA-DEF-PROPS-VARIANTS>
+                    <SW-DATA-DEF-PROPS-CONDITIONAL>
+                      <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                      <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                    </SW-DATA-DEF-PROPS-CONDITIONAL>
+                  </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+              </RETURN-TYPE>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Network</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Handle of the addressed CAN network for the baud rate change</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>BaudRateConfigID</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">references a baud rate configuration by ID (see CanControllerBaudRateConfigID)</L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_ControllerBusOff</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback function notifies the CanSM about a bus-off event on a certain CAN controller.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This callback function notifies the CanSM about a bus-off event on a certain CAN controller, which needs to be considered with the specified bus-off recovery handling for the impacted CAN network.</L-2>
+              </DESC>
+              <SERVICE-ID>0x04</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ControllerId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">CAN controller, which detected a bus-off event</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_ControllerModeIndication</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback shall notify the CanSM module about a CAN controller mode change.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This callback shall notify the CanSM module about a CAN controller mode change.</L-2>
+              </DESC>
+              <SERVICE-ID>0x07</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ControllerId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">CAN controller, whose mode has changed</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>ControllerMode</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Notified CAN controller mode</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_CanIf/ImplementationDataTypes/CanIf_ControllerModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_TransceiverModeIndication</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback shall notify the CanSM module about a CAN transceiver mode change.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This callback shall notify the CanSM module about a CAN transceiver mode change.</L-2>
+              </DESC>
+              <SERVICE-ID>0x09</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>TransceiverId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">CAN transceiver, whose mode has changed</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>TransceiverMode</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Notified CAN transceiver mode</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_TxTimeoutException</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This function shall notify the CanSM module, that the CanNm has detected for the affected partial CAN network a tx timeout exception</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This function shall notify the CanSM module, that the CanNm has detected for the affected partial CAN network a tx timeout exception, which shall be recovered within the respective network state machine of the CanSM module.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0b</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Channel</SHORT-NAME>
+                  <DESC>
+                    <L-2 S="" L="EN">Affected CAN network</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Comtype/ImplementationDataTypes/NetworkHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_ClearTrcvWufFlagIndication</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback function shall indicate the CanIf_ClearTrcvWufFlag API process end for the notified CAN Transceiver.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The lower layer communication interface module confirms the transmission of an I-PDU.</L-2>
+              </DESC>
+              <SERVICE-ID>0x08</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Transceiver</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Requested Transceiver</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_CheckTransceiverWakeFlagIndication</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback function indicates the CheckTransceiverWakeFlag API process end for the notified CAN Transceiver.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This callback function indicates the CheckTransceiverWakeFlag API process end for the notified CAN Transceiver.</L-2>
+              </DESC>
+              <SERVICE-ID>0x0a</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>Transceiver</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Requested Transceiver</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_ConfirmPnAvailability</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This callback function indicates that the transceiver is running in PN communication mode.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">The lower layer communication interface module confirms the transmission of an I-PDU.</L-2>
+              </DESC>
+              <SERVICE-ID>0x06</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>CALLBACK</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              <ARGUMENTS>
+                <SW-SERVICE-ARG>
+                  <SHORT-NAME>TransceiverId</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">CAN transceiver, which was checked for PN availability</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <DIRECTION>IN</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+              </ARGUMENTS>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CanSM_MainFunction</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Scheduled function of the CanSM</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Scheduled function of the CanSM</L-2>
+              </DESC>
+              <SERVICE-ID>0x05</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>CanSM_StateType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">CanSM module is initialized.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_INITED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">CanSM module is not initialized yet.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_UNINITED</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+            <COMPU-METHOD>
+              <SHORT-NAME>CanSM_BswMCurrentStateType</SHORT-NAME>
+              <CATEGORY>TEXTTABLE</CATEGORY>
+              <COMPU-INTERNAL-TO-PHYS>
+                <COMPU-SCALES>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Can specific communication modes / states notified to the BswM module is CANSM_BSWM_NO_COMMUNICATION.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_BSWM_NO_COMMUNICATION</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Can specific communication modes / states notified to the BswM module is CANSM_BSWM_SILENT_COMMUNICATION.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_BSWM_SILENT_COMMUNICATION</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Can specific communication modes / states notified to the BswM module is CANSM_BSWM_FULL_COMMUNICATION.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_BSWM_FULL_COMMUNICATION</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">Can specific communication modes / states notified to the BswM module is CANSM_BSWM_BUS_OFF.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_BSWM_BUS_OFF</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                  <COMPU-SCALE>
+                    <DESC>
+                      <L-2 L="EN">CANSM_BSWM_CHANGE_BAUDRATE.</L-2>
+                    </DESC>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                    <COMPU-CONST>
+                      <VT>CANSM_BSWM_CHANGE_BAUDRATE</VT>
+                    </COMPU-CONST>
+                  </COMPU-SCALE>
+                </COMPU-SCALES>
+              </COMPU-INTERNAL-TO-PHYS>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE UUID="">
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>CanSM_ConfigType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">This type defines a data structure for the post build parameters of the CanSM. At initialization the CanSM gets a pointer to a structure of this type to get access to its configuration data, which is necessary for initialization.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This is the base type for the configuration for Post Build of CanSM module..</L-2>
+              </DESC>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ConfigIndex</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Config set index (based on CanDrv)</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ChnlStartIdx</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Starting Channel index of the network belonging to this config set</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>NumChannels</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Number of channels belonging to this config set</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>CanSM_StateType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Enumeration type for internal states of the CanSM module</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Defines the values of the internal states of the CanSM module</L-2>
+              </DESC>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_CanSM/CompuMethods/CanSM_StateType</COMPU-METHOD-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>CanSM_BswMCurrentStateType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Enumeration type forCan specific communication modes / states notified to the BswM module</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Can specific communication modes / states notified to the BswM module</L-2>
+              </DESC>
+              <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_CanSM/CompuMethods/CanSM_BswMCurrentStateType</COMPU-METHOD-REF>
+                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

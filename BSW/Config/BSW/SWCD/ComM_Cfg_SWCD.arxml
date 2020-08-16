@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_ComM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+         <SHORT-NAME>SwcImplementations</SHORT-NAME>
+           <ELEMENTS>
+            <SWC-IMPLEMENTATION>
+              <SHORT-NAME>ComM_Imp</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>ComM_Imp_Code</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>Code</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AUTOSAR_ComM/SwComponentTypes/ComM/ComM_Int</BEHAVIOR-REF>
+            </SWC-IMPLEMENTATION>
+           </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>ComM_UserHandleArrayType</SHORT-NAME>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>numberOfRequesters</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>handleArray</SHORT-NAME>
+                  <CATEGORY>ARRAY</CATEGORY>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SUB-ELEMENTS>
+                    <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                      <SHORT-NAME>handleArrayElement</SHORT-NAME>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <ARRAY-SIZE SHORT-LABEL="size">1</ARRAY-SIZE>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_UserHandleType</IMPLEMENTATION-DATA-TYPE-REF>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  </SUB-ELEMENTS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+         <SHORT-NAME>SwComponentTypes</SHORT-NAME>
+           <ELEMENTS>
+              <SERVICE-SW-COMPONENT-TYPE>
+                <SHORT-NAME>ComM</SHORT-NAME>
+                <PORTS>
+                  <P-PORT-PROTOTYPE>
+                    <SHORT-NAME>UM_ComMUser_Can_Network_0_Channel</SHORT-NAME>
+                    <PROVIDED-COM-SPECS>
+                      <MODE-SWITCH-SENDER-COM-SPEC>
+                        <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_ComM/PortInterfaces/ComM_CurrentMode/currentMode</MODE-GROUP-REF>
+                        <QUEUE-LENGTH>1</QUEUE-LENGTH>
+                      </MODE-SWITCH-SENDER-COM-SPEC>
+                    </PROVIDED-COM-SPECS>
+                    <PROVIDED-INTERFACE-TREF DEST="MODE-SWITCH-INTERFACE">/AUTOSAR_ComM/PortInterfaces/ComM_CurrentMode</PROVIDED-INTERFACE-TREF>
+                  </P-PORT-PROTOTYPE>
+                  <P-PORT-PROTOTYPE>
+                    <SHORT-NAME>UR_ComMUser_Can_Network_0_Channel</SHORT-NAME>
+                    <PROVIDED-COM-SPECS>
+                      <SERVER-COM-SPEC>
+                        <OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/RequestComMode</OPERATION-REF>
+                        <QUEUE-LENGTH>5</QUEUE-LENGTH>
+                      </SERVER-COM-SPEC>
+                    </PROVIDED-COM-SPECS>
+                    <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest</PROVIDED-INTERFACE-TREF>
+                  </P-PORT-PROTOTYPE>
+                </PORTS>
+                <INTERNAL-BEHAVIORS>
+                  <SWC-INTERNAL-BEHAVIOR>
+                    <SHORT-NAME>ComM_Int</SHORT-NAME>
+                    <DATA-TYPE-MAPPING-REFS>
+                      <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_ComM/DataTypeMappingSets/ComMModeMapping</DATA-TYPE-MAPPING-REF>
+                    </DATA-TYPE-MAPPING-REFS>
+                    <EVENTS>
+                      <OPERATION-INVOKED-EVENT>
+                        <SHORT-NAME>OIE_UR_ComMUser_Can_Network_0_Channel_RequestComMode</SHORT-NAME>
+                        <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_ComM/SwComponentTypes/ComM/ComM_Int/RequestComMode</START-ON-EVENT-REF>
+                        <OPERATION-IREF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</CONTEXT-P-PORT-REF>
+                          <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/RequestComMode</TARGET-PROVIDED-OPERATION-REF>
+                        </OPERATION-IREF>
+                      </OPERATION-INVOKED-EVENT>
+                      <OPERATION-INVOKED-EVENT>
+                        <SHORT-NAME>OIE_UR_ComMUser_Can_Network_0_Channel_GetRequestedComMode</SHORT-NAME>
+                        <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_ComM/SwComponentTypes/ComM/ComM_Int/GetRequestedComMode</START-ON-EVENT-REF>
+                        <OPERATION-IREF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</CONTEXT-P-PORT-REF>
+                          <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/GetRequestedComMode</TARGET-PROVIDED-OPERATION-REF>
+                        </OPERATION-IREF>
+                      </OPERATION-INVOKED-EVENT>
+                      <OPERATION-INVOKED-EVENT>
+                        <SHORT-NAME>OIE_UR_ComMUser_Can_Network_0_Channel_GetCurrentComMode</SHORT-NAME>
+                        <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_ComM/SwComponentTypes/ComM/ComM_Int/GetCurrentComMode</START-ON-EVENT-REF>
+                        <OPERATION-IREF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</CONTEXT-P-PORT-REF>
+                          <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/GetCurrentComMode</TARGET-PROVIDED-OPERATION-REF>
+                        </OPERATION-IREF>
+                      </OPERATION-INVOKED-EVENT>
+                      <OPERATION-INVOKED-EVENT>
+                        <SHORT-NAME>OIE_UR_ComMUser_Can_Network_0_Channel_GetMaxComMode</SHORT-NAME>
+                        <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_ComM/SwComponentTypes/ComM/ComM_Int/GetMaxComMode</START-ON-EVENT-REF>
+                        <OPERATION-IREF>
+                          <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</CONTEXT-P-PORT-REF>
+                          <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/GetMaxComMode</TARGET-PROVIDED-OPERATION-REF>
+                        </OPERATION-IREF>
+                      </OPERATION-INVOKED-EVENT>
+                    </EVENTS>
+                    <PORT-API-OPTIONS>
+                      <PORT-API-OPTION>
+                        <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                        <INDIRECT-API>true</INDIRECT-API>
+                        <PORT-ARG-VALUES>
+                          <PORT-DEFINED-ARGUMENT-VALUE>
+                            <VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>UM_ComMUser_Can_Network_0_Channel</SHORT-LABEL>
+                                <VALUE>0</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </VALUE>
+                            <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_UserHandleType</VALUE-TYPE-TREF>
+                          </PORT-DEFINED-ARGUMENT-VALUE>
+                        </PORT-ARG-VALUES>
+                        <PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UM_ComMUser_Can_Network_0_Channel</PORT-REF>
+                      </PORT-API-OPTION>
+                      <PORT-API-OPTION>
+                        <ENABLE-TAKE-ADDRESS>false</ENABLE-TAKE-ADDRESS>
+                        <INDIRECT-API>false</INDIRECT-API>
+                        <PORT-ARG-VALUES>
+                          <PORT-DEFINED-ARGUMENT-VALUE>
+                            <VALUE>
+                              <NUMERICAL-VALUE-SPECIFICATION>
+                                <SHORT-LABEL>UR_ComMUser_Can_Network_0_Channel</SHORT-LABEL>
+                                <VALUE>0</VALUE>
+                              </NUMERICAL-VALUE-SPECIFICATION>
+                            </VALUE>
+                            <VALUE-TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_UserHandleType</VALUE-TYPE-TREF>
+                          </PORT-DEFINED-ARGUMENT-VALUE>
+                        </PORT-ARG-VALUES>
+                        <PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</PORT-REF>
+                      </PORT-API-OPTION>
+                    </PORT-API-OPTIONS>
+                    <RUNNABLES>
+                      <RUNNABLE-ENTITY>
+                        <SHORT-NAME>RequestComMode</SHORT-NAME>
+                        <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                        <DATA-SEND-POINTS>
+                        </DATA-SEND-POINTS>
+                        <SYMBOL>ComM_RequestComMode</SYMBOL>
+                      </RUNNABLE-ENTITY>
+                      <RUNNABLE-ENTITY>
+                        <SHORT-NAME>GetMaxComMode</SHORT-NAME>
+                        <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                        <SYMBOL>ComM_GetMaxComMode</SYMBOL>
+                      </RUNNABLE-ENTITY>
+                      <RUNNABLE-ENTITY>
+                        <SHORT-NAME>GetRequestedComMode</SHORT-NAME>
+                        <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                        <SYMBOL>ComM_GetRequestedComMode</SYMBOL>
+                      </RUNNABLE-ENTITY>
+                      <RUNNABLE-ENTITY>
+                        <SHORT-NAME>GetCurrentComMode</SHORT-NAME>
+                        <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                        <MODE-SWITCH-POINTS>
+                          <MODE-SWITCH-POINT>
+                            <SHORT-NAME>MSP_ComM_User_ComMUser_Can_Network_0_Channel</SHORT-NAME>
+                            <MODE-GROUP-IREF>
+                              <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UM_ComMUser_Can_Network_0_Channel</CONTEXT-P-PORT-REF>
+                              <TARGET-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_ComM/PortInterfaces/ComM_CurrentMode/currentMode</TARGET-MODE-GROUP-REF>
+                            </MODE-GROUP-IREF>
+                          </MODE-SWITCH-POINT>
+                        </MODE-SWITCH-POINTS>
+                        <SYMBOL>ComM_GetCurrentComMode</SYMBOL>
+                      </RUNNABLE-ENTITY>
+                    </RUNNABLES>
+                    <SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+                  </SWC-INTERNAL-BEHAVIOR>
+                </INTERNAL-BEHAVIORS>
+              </SERVICE-SW-COMPONENT-TYPE>
+              </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>PortInterfaces</SHORT-NAME>
+		  <ELEMENTS>
+		  <SENDER-RECEIVER-INTERFACE>
+		      <SHORT-NAME>ComM_CurrentChannelRequest</SHORT-NAME>
+		      <IS-SERVICE>true</IS-SERVICE>
+		      <DATA-ELEMENTS>
+		        <VARIABLE-DATA-PROTOTYPE>
+		          <SHORT-NAME>fullComRequestors</SHORT-NAME>
+		          <TYPE-TREF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_ComM/ImplementationDataTypes/ComM_UserHandleArrayType</TYPE-TREF>
+		        </VARIABLE-DATA-PROTOTYPE>
+		      </DATA-ELEMENTS>
+		    </SENDER-RECEIVER-INTERFACE>
+		    </ELEMENTS>
+         </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

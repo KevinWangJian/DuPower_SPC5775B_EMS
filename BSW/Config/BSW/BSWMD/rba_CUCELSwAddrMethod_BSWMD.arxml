@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Common</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>CentralElements</SHORT-NAME>
+                  <AR-PACKAGES>
+                    <AR-PACKAGE>
+                      <SHORT-NAME>SwAddrMethods</SHORT-NAME>
+                      <CATEGORY>STANDARD</CATEGORY>
+                      <ELEMENTS>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>INTERNAL_VAR_INIT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables accessible from a calibration tool that are initialized with values after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>CALIBRATION-VARIABLES</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>INTERNAL_VAR_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables accessible from a calibration tool that are cleared to zero after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>CALIBRATION-VARIABLES</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>INTERNAL_VAR_POWER_ON_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables accessible from a calibration tool that are cleared to zero only after power on reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>POWER_ON_CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>CALIBRATION-VARIABLES</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CALIB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for calibration constants.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CALPRM</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CALIB_FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for calibration constants. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CALPRM</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CALIB_SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for calibration constants. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CALPRM</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CODE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for code (application code, BSW code, boot code).</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CODE</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CALLOUT_CODE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for mapping callouts of the BSW Modules which shall typically use the global linker settings for callouts.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CODE</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CODE_FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for code (application code, BSW code, boot code) which are high frequently accessed.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CODE</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CODE_SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for code (application code, BSW code, boot code) which are low frequently accessed.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CODE</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONFIG_DATA</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for constants with attributes that show that they reside in one segment for link-time module configuration.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONFIG_DATA_FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for constants with attributes that show that they reside in one segment for link-time module configuration. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONFIG_DATA_SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for constants with attributes that show that they reside in one segment for link-time module configuration. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONFIG_DATA_POSTBUILD</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for constants with attributes that show that they reside in one segment for link-time module configuration. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONFIG_DATA_POSTBUILD_HEADER</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for constants with attributes that show that they reside in one segment for link-time module configuration. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONFIG-DATA</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static constants.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONST</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONST_FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static constants. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONST</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONST_SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static constants. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONST</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>CONST_SAVED_RECOVERY_ZONE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for ROM buffers of variables saved in non volatile memory.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-TYPE>CONST</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_INIT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are initialized with values after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are cleared to zero after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_POWER_ON_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are cleared to zero only after power on reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>POWER_ON_CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_FAST_INIT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables which are frequently used and that are initialized with values after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_FAST_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables which are frequently used and that are cleared to zero after every reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_FAST_POWER_ON_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables which are frequently used and that are cleared to zero only after power on reset.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>POWER_ON_CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_SLOW_INIT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are initialized with values after every reset. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>INIT</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_SLOW_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are cleared to zero after every reset. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_SLOW_POWER_ON_CLEARED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for global or static variables that are cleared to zero only after power on reset. This addressing method is an extension to AUTOSAR.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>POWER_ON_CLEARED</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                        <SW-ADDR-METHOD>
+                          <SHORT-NAME>VAR_SAVED_ZONE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Addressing method for RAM buffers of variables saved in non volatile memory.</L-4>
+                          </LONG-NAME>
+                          <MEMORY-ALLOCATION-KEYWORD-POLICY>ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT</MEMORY-ALLOCATION-KEYWORD-POLICY>
+                          <SECTION-INITIALIZATION-POLICY>NO_INIT</SECTION-INITIALIZATION-POLICY>
+                          <SECTION-TYPE>VAR</SECTION-TYPE>
+                        </SW-ADDR-METHOD>
+                      </ELEMENTS>
+                    </AR-PACKAGE>
+                  </AR-PACKAGES>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+ <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>UBK</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Project</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-CONFIGURATION-VALUES>
+                      <SHORT-NAME>rba_ArxmlGen</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-MODULE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen</DEFINITION-REF>
+                      <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>EthSM</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompCategory</DEFINITION-REF>
+                              <VALUE>BswModule</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompId</DEFINITION-REF>
+                              <VALUE>143</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsConfigurable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandalone</DEFINITION-REF>
+                              <VALUE>false</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandardized</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompLongName</DEFINITION-REF>
+                              <VALUE>EthernetStateManager</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionAr</DEFINITION-REF>
+                              <VALUE>4.2.2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionSw</DEFINITION-REF>
+                              <VALUE>2.0.0</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_NetworkModeStateType_Enum</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enum for NetworkMode StateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_Enum_NetworkModeStateType</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthTrcv_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_NetworkModeStateType_Enum_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_NetworkModeStateType_au8_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of NetworkMode StateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_NetworkModeStateType_au8_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>EthSM_Array_Element_of_NetworkModeStateType</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_NetworkModeStateType_Enum</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_Enum_NetworkModeStateType</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>Enumeration for EthSM Network Mode State Type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_0</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_OFFLINE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_1</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_WAIT_TRCVLINK</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_2</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>2</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_WAIT_ONLINE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_3</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>3</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_ONLINE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_4</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>4</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_ONHOLD</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>rba_ArxmlGen_CompuMethodTextEntry_5</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>5</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>ETHSM_STATE_WAIT_OFFLINE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthTrcv_DataConstraint_u8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>255</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_EthTrcv/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>BSWSE_MainFunction</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityCategory</DEFINITION-REF>
+                                  <VALUE>Schedulable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityPeriod</DEFINITION-REF>
+                                  <VALUE>0.01</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityImplEntryRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_EthSM/BswModuleEntrys/EthSM_MainFunction</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_NetworkModeStateType_Enum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Enumeration for EthSM Network Mode State Type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_NetworkModeStateType_au8_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of NetworkModeStateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>EthSM_Array_Element_of_NetworkModeStateType</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_NetworkModeStateType_Enum_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>EthSM_NetState_aen</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.1f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Gives information about states defined internally for EthSM Networks (ETHSM_STATE_OFFLINE - EthSM is initialized in this state, ETHSM_STATE_WAIT_TRCVLINK - ComM requests COMM_FULL_COMMUNICATION in this state, Ctrl and Trcv will be initialized and set to ACTIVE. EthSM waits for transceiver link state (ACTIVE),ETHSM_STATE_WAIT_ONLINE - Transceiver link state is ACTIVE. EthSM waits for IP communication (TcpIP state = ONLINE), ETHSM_STATE_ONLINE - IP communication is availabe ComM state COMM_FULL_COMMUNICATION is reached, ETHSM_STATE_ONHOLD - EthSM lost active transceiver link state, TcpIP state is still online, ETHSM_STATE_WAIT_OFFLINE - ComM requests COMM_NO_COMMUNICATION in this state)</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/EthSM/EthSM_NetworkModeStateType_au8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </CONTAINERS>
+                    </ECUC-MODULE-CONFIGURATION-VALUES>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,2228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="preserve">EN</L-10>
+    </USED-LANGUAGES>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Fls</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Fls</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Memory: Flash Driver</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">Configuration of the Fls (internal or external flash driver) module.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.0.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2010-07-22</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2011-09-09</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Fls</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FlsConfigSet</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Configuration data set</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container for runtime configuration parameters of the flash driver</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcErase</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Address offset in RAM for erase code</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Address offset in RAM to which the erase flash access code shall be loaded. Used as function pointer to access the erase flash access code.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcWrite</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Address offset in RAM for write code</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Address offset in RAM to which the write flash access code shall be loaded. Used as function pointer to access the write flash access code.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>FlsCallCycle</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Cycle time of main function</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Cycle time of calls of the flash driver&apos;s main function (in seconds).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FlsDefaultMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Default of FLS device mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Default setting of the FLS device moder after initialization.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MEMIF_MODE_FAST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">MEMIF_MODE_FAST</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MEMIF_MODE_SLOW</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">MEMIF_MODE_SLOW</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>FlsJobEndNotification</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job End Notification</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Function that is called after a job has been processed successfully.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>FlsJobErrorNotification</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job Error Notification</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Function that is called after a job has been aborted with an error.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsMaxReadFastMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read bytes in fast mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The maximum number of bytes to read or compare in one cycle of the flash driver&apos;s
+									job processing function in fast mode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsMaxReadNormalMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read bytes in normal mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The maximum number of bytes to read or compare in one cycle of the flash driver&apos;s
+									job processing function in normal mode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsMaxWriteFastMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write bytes in fast mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The maximum number of bytes to write in one cycle of the flash driver&apos;s
+									job processing function in fast mode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsMaxWriteNormalMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write bytes in normal mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The maximum number of bytes to write in one cycle of the flash driver&apos;s
+									job processing function in normal mode.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsProtection</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Protection settings</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Erase/write protection settings. Only relevant if supported by hardware.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>FlsRbDeviceID</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Device ID used (freely configurable)</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of Fls Device ID is not supported anymore! Configuring this
+						            parameter will be ignored by the driver.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <MAX-LENGTH>32</MAX-LENGTH>
+                          <MIN-LENGTH>1</MIN-LENGTH>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FlsRbDeviceType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Device type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Flash device type.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSIFX_DFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Infineon Data Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSIFX_UCB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Infineon UCB Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSIFX_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Infineon Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSIFX_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Infineon Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSIFX_DFLASH0_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Infineon HSM Data Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_DFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_DFLASH0_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Data Flash HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_PFLASH0_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Program Flash HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSJDP_UTEST</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP UTEST Flash (one-time-programmable)</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_LPD_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5643 Leopard Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_LPD_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5643 Leopard Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_LPD_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5643 Leopard Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC56XL_70XX_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMICROELECTRONICS SPC56XL70XX Device Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC56XL_70XX_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMICROELECTRONICS SPC56XL70XX Device Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC56XL_70XX_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMICROELECTRONICS SPC56XL70XX Device Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_KOMODO_PFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5675K Komodo Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_KOMODO_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5675K Komodo Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_BOLERO_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5646C Bolero Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_BOLERO_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5646C Bolero Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSMPC56XX_BOLERO_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5646C Bolero Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC58XX_CHORUS_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC58XX_CHORUS_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSPC58XX_CHORUS_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850FX4_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4 Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850FX4_PFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4 Program Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850R1X_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850R1X_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850R1X_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSV850R1X_CRASHDATA</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x Crash Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_BMDATA</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 Boot-Manager Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_CRASHDATA</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 Crash Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_DFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 BANK-A Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_DFLASH0_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 BANK-B Data Flash for HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 BANK-A Code Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 BANK-B Code Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSRH850P1XC_CFGAREA</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850 Config Area</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSTV0991_PFLASH0</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STV0991 Program Flash 0</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSTV0991_PFLASH1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STV0991 Program Flash 1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSSTV0991_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STV0991 Data Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSPC_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Data flash emulation for PC-based testing</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLS_ZYNQ_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ZYNQ  ULTRASCALE  DFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLS_ZYNQ_PFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ZYNQ  ULTRASCALE  PFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSS25FSXXXS_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCARH3 SERIAL DFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSS25FSXXXS_PFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCARH3 SERIAL PFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSS25FSXXXS_DFLASH0_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCARH3 SERIAL DFLASH HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSHYPERFLASH_DFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCARH3 HYPER DFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>RBA_FLSHYPERFLASH_PFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCARH3 HYPER PFLASH</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>FlsDemEventParameterRefs</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsDemEventParameterRefs</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized e</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <REFERENCES>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>FLS_E_COMPARE_FAILED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Failed compare event</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Flash compare failed (HW)&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>FLS_E_ERASE_FAILED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Failed erase event</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Flash erase failed (HW)&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>FLS_E_READ_FAILED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Failed read event</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Flash read failed (HW)&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>FLS_E_UNEXPECTED_FLASH_ID</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Failed Flash ID detection event</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Unexptected Flash ID (HW)&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                        <ECUC-REFERENCE-DEF>
+                          <SHORT-NAME>FLS_E_WRITE_FAILED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Failed write event</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to the DemEventParameter which shall be issued when the error &quot;Flash write failed (HW)&quot; has occurred.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                        </ECUC-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>FlsExternalDriver</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsExternalDriver</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container is present for external Flash drivers only. Internal Flash drivers do not use the parameter listed in this container, hence its multiplicity is 0 for internal drivers.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <REFERENCES>
+                        <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          <SHORT-NAME>FlsSpiReference</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">FlsSpiReference</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Reference to SPI sequence (required for external Flash drivers).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence</DESTINATION-REF>
+                        </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      </REFERENCES>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>FlsSectorList</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Sector list</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">List of flashable sectors and pages.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SUB-CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>FlsSector</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Sector descriptor</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration description of a flashable sector.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>FlsNumberOfSectors</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Number of identical sectors</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Number of continuous sectors with identical values for FlsSectorSize and FlsPageSize. The parameter FlsSectorStartAddress denotes the start address of the first sector.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>65535</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>FlsPageSize</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Page size</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Size of one page of this sector.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>FlsSectorSize</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Sector size</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Size of this sector.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>FlsSectorStartaddress</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Sector start address</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Start address of the first sector.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </SUB-CONTAINERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FlsGeneral</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">General Parameters</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Container for general parameters of the flash driver. These parameters are always pre-compile.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsAcLoadOnJobStart</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsAcLoadOnJobStart</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The flash driver shall load the flash access code to RAM whenever an erase or write job
+							            is started and unload (overwrite) it after that job has been finished or canceled.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Flash access code loaded on job start / unloaded on job end or error.
+											false: Flash access code not loaded to / unloaded from RAM at all.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsBaseAddress</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Base address</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The flash memory start address for user.
+						            This parameter defines the lower boundary for read / write / erase and compare jobs.
+						            Not necessary to configure. Automatically considered by the Fls script according to machine type configured.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsCancelApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of FlsCancel API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile switch to enable and disable the Fls_Cancel function.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsCompareApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of FlsCompare API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile switch to enable and disable the Fls_Compare function.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of Development Error Detection mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable and disable development error detection.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsDriverIndex</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsDriverIndex</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Index of the driver, used by FEE.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsGetJobResultApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the Fls_GetJobResult function</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile switch to enable and disable the Fls_GetJobResult function.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsGetStatusApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the Fls_GetStatus function</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile switch to enable and disable the Fls_GetStatus function.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsRbBlankCheckApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of Fls_BlankCheck API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the API to check for the erase pattern within a certain address area.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsRbDeactivateDeviceApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of Device Deactivation API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Deactivation of Device Id feature is not supported anymore.
+						            Configuration of FlsRbDeactivateDeviceApi will be ignored by the script of Fls.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsRbHclk</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CPU clock frequency [MHz] (only for V850R1x devices).</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">CPU clock frequency [MHz] that is used by the Low level driver&apos;s library for intialization of the device
+									(only necessary for TI devices and V850R1x devices).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsRbLibRamAddr</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">RAM address required to locate Library provided by vendor(only necessary for code flash users of V850R1x).</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Address required for copying the FCL code to RAM from the code flash area
+									(applicable for boot loader programming sequence)
+										--&gt; Only necessary for Code Flash users of Renesas V850R1x device.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>FlsRbMachineType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Machine type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Controller type.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev2 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV2_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev2 (B Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3_C</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 (C Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3_D</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 (D Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV3_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev3 (D Silicon) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 (B Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 (B Silicon) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV4_40NM_A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev4 40nm (A Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_A</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm (A Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm (A Silicon) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_A_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm (A Silicon) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_UC1_DEV5_40NM_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm (B Silicon) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_IFX_ADAS_TC397QA_B</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">IFX Dev5 40nm Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev1 Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV2_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev2 (Cut 2) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV3_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev3 (Cut 2) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV3_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev3 (Cut 2) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV4_C2</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev4 (Cut 2) Production Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV4_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">JDP Dev4 (Cut 2) Production Device HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_UC1_DEV3PLUS_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Dev3 Plus</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_JDP_UC1_DEV3_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Dev3 Plus HSM</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_UC1_DEV3_40NM_C3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Dev3 Plus C3</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_1M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus 1M C1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_2M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus 2M C1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ST_CHORUS_4M_C1</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ST Chorus 4M C1</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_LPD</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5643 Leopard Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_SPC56XL_70XX</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroelectronics SPC56XL70XX Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_SPC56XL_70XX_64K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STMicroelectronics SPC56XL70XX Device 64K</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_KOMODO</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5675 Komodo Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_MPC56XX_BOLERO</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Freescale MPC 5646C Bolero Device</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_512K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4-512K</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_768K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4-768K</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_1M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4-1M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850FX4_1_5M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850Fx4-1.5M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_256K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 256Kb Code Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_256K_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 256Kb Code Flash reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_512K</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 512Kb Code Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_512K_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 512Kb Code Flash reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_1M</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 1Mb Code Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_V850R1X_1M_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas V850R1x with 1Mb Code Flash reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev3</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev3 reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_6S</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev3 6 sectors</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_REDUCED_6S</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev3 6 sectors reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV3_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev3 with HSM active</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev4</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev4 reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV4_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev4 with HSM active</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev5</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5_REDUCED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev5 reduced by Crash Data</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RH850P1XC_DEV5_HSM</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Renesas RH850P1x Dev5 with HSM active</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_STV0991</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">STV0991 QSPI Flash</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_ZYNQ_V3H_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ZYNQ ULTRASCALE FLASH-128M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCARH3_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCAR RPC SERIAL FLASH-16M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCAR_V3M_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCAR RPC SERIAL FLASH-64M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCAR_V3H_SERIAL</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCAR RPC SERIAL FLASH-128M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_RCAR_H3_HYPERFLASH</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RCAR RPC HYPER FLASH-64M</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 6 sectors each 64kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_4SEC_64KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 4 sectors each 64kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_8SEC_16KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 8 sectors each 16kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_6SEC_128KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 6 sectors each 128kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>MCU_RB_PC_8SEC_64KB</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">PC-based simulation environment 8 sectors each 64kB</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsRbP1xSupportOlderDevice</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Support P1x Dev5EDv1 device and P1x Dev4v1 device(only for RH850P1x devices).</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile Switch to Enable the Support for P1x Dev5EDV1 device and P1x Dev4V1 Device
+									(only necessary for RH850P1x devices).Configure this parameter as True while using P1x Dev5EDV1 and P1x Dev4V1 controllers.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsRbSuspendApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the Suspend/Resume feature</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the suspend/resume feature (only possible for certain devices).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.0.0:2011-09-09</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsSetModeApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of the Fls_SetMode function</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Compile switch to enable and disable the Fls_SetMode function.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsTotalSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Amount of flash memory bytes</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The total amount of flash memory in bytes
+						            (This parameter in conjunction with FLS_BASE_ADDRESS defines the upper boundary for
+								    read / write / erase and compare jobs). Not necessary to configure this tag anymore
+									as the information of total size of configured sectors will be automatically
+									computed and considered by the Fls script based on user configuration.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsUseInterrupts</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsUseInterrupts</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Job processing triggered by hardware interrupt.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true:	Job processing triggered by interrupt (hardware controlled).
+											false:	Job processing not triggered by interrupt (software controlled)</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>FlsVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Activation of FlsVersionInfo API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the API to read out the modules version information.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>FlsPublishedInformation</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">FlsPublishedInformation</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">Additional published parameters not covered by CommonPublishedInformation container.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcLocationErase</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsAcLocationErase</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Position in RAM, to which the erase flash access code has to be loaded.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Only relevant if the erase flash access code is not position independent.
+											If this information is not provided it is assumed that the erase flash
+											access code is position independent and that therefore the RAM position
+											can be freely configured.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcLocationWrite</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsAcLocationWrite</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Position in RAM, to which the write flash access code has to be loaded.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Only relevant if the write flash access code is not position independent.
+											If this information is not provided it is assumed that the write flash
+											access code is position independent and that therefore the RAM position
+											can be freely configured.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcSizeErase</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsAcSizeErase</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of bytes in RAM needed for the erase flash access code.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsAcSizeWrite</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsAcSizeWrite</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of bytes in RAM needed for the write flash access code.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>FlsEraseTime</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsEraseTime</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum time to erase one complete flash sector.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsErasedValue</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Erase pattern</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">The contents of an erased flash memory cell.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>FlsExpectedHwId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">FlsExpectedHwId</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Unique identifier of the hardware device that is expected by this driver
+										(the device for which this driver has been implemented).</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">Only relevant for external flash drivers.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PUBLISHED-INFORMATION</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>FlsSpecifiedEraseCycles</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Maximum erase cycles</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Number of erase cycles specified for the flash device (usually given in the device data sheet).
+									If the number of specified erase cycles depends on the operating environment
+								   (temperature, voltage, ...) during reprogramming of the flash device, the minimum number for
+								   which a data retention of atleast 15 years over the temperature range from
+								   -40°C .. +125°C can be guaranteed shall be given. Fls will ignore the configuration of this tag as
+								   it is not considered for any purpose, hence it is not necessary to configure this tag any more!</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>4294967295</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>FlsWriteTime</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Maximum page programming time</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Maximum time to program one complete flash page.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FLOAT-PARAM-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

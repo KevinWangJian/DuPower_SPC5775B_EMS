@@ -1,0 +1,1118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <ADMIN-DATA>
+    <SDGS>
+      <SDG GID="RTABSW-GENERATED" />
+    </SDGS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>ETAS_Project</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-CONFIGURATION-VALUES>
+              <SHORT-NAME>EcuC</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC</DEFINITION-REF>
+              <CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>EcucConfigSet</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>PduCollection</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/PduIdTypeEnum</DEFINITION-REF>
+                          <VALUE>uint16</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/PduLengthTypeEnum</DEFINITION-REF>
+                          <VALUE>uint16</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>PEU_0B4h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>PEU_0B4h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_1E3h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_1E3h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>PEU_18Bh_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>PEU_18Bh_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_ABS_23Ch_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_ABS_23Ch_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>DCDC_303h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>DCDC_303h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_BCM_1F1h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_BCM_1F1h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Tester_748h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Tester_748h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_IPK_1F2h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_IPK_1F2h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_SRS_163h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_SRS_163h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_353h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_353h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Tester_7DFh_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Tester_7DFh_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_HCM_55Fh_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_HCM_55Fh_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>OBC_604h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>OBC_604h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_IPK_362h_Can_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>VCU_IPK_362h_Can_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>XCP_CMD_Can_Network_CANNODE_0_CanIf2Xcp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_329h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_329h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_503h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_503h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_501h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_501h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_1D8h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_1D8h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_795h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_795h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>XCP_RES_DAQ_Can_Network_CANNODE_0_Xcp2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3D7h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3D7h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_606h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_606h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_598h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_598h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_509h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_509h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_605h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_605h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_7C8h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_7C8h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_596h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_596h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3DAh_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3DAh_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_32Ah_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_32Ah_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3DBh_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_3DBh_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_603h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_603h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_594h_Can_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BMS_594h_Can_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CTS_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CTS_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CSD_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CSD_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CST_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CST_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CHM_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>3</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CHM_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>3</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CRO_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CRO_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CEM_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CEM_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CML_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CML_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CCS_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CCS_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CRM_CHG_J1939_Network_CANNODE_0_CanIf2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CRM_CHG_J1939_Network_CANNODE_0_PduR2Com</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BHM_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BHM_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BSM_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BSM_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BST_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BST_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BRO_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BRO_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BEM_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BEM_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCL_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCL_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BSD_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BSD_BCU_J1939_Network_CANNODE_0_PduR2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>NPDU_RX_CM_CMDT_J1939_Network_CANNODE_0_CanIf2J1939Tp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>NPDU_TX_DT_J1939_Network_CANNODE_0_J1939Tp2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>NPDU_TX_CM_J1939_Network_CANNODE_0_J1939Tp2CanIf</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCP_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>13</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCP_BCU_J1939_Network_CANNODE_0_PduR2J1939Tp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>13</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCS_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BCS_BCU_J1939_Network_CANNODE_0_PduR2J1939Tp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BRM_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>49</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>BRM_BCU_J1939_Network_CANNODE_0_PduR2J1939Tp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>49</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Old_BRM_BCU_J1939_Network_CANNODE_0_Com2PduR</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>41</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>Old_BRM_BCU_J1939_Network_CANNODE_0_PduR2J1939Tp</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR_EcuC/EcucModuleDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu/PduLength</DEFINITION-REF>
+                              <VALUE>41</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </CONTAINERS>
+            </ECUC-MODULE-CONFIGURATION-VALUES>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

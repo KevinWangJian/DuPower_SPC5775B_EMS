@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>TopLevelComposition</SHORT-NAME>
+      <ELEMENTS>
+        <COMPOSITION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>TopLevelComposition</SHORT-NAME>
+          <COMPONENTS>
+            <SW-COMPONENT-PROTOTYPE>
+              <SHORT-NAME>CPT_BswM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_BswM/SwComponentTypes/BswM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE>
+              <SHORT-NAME>CPT_ComM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_ComM/SwComponentTypes/ComM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE>
+              <SHORT-NAME>CPT_EcuM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_EcuM/SwComponentTypes/EcuM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="8a6206e2-af1d-493d-b33b-69d9a85c23b5">
+              <SHORT-NAME>CPT_Det</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_Det/SwComponentTypes/Det</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d42683e4-5003-41ff-aa44-1f0a6dddb8ba">
+              <SHORT-NAME>CPT_Xcp_SWC</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Xcp_SWC/Xcp_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="58778344-0495-4e58-91a6-61b31eac4173">
+              <SHORT-NAME>CPT_WdgM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_WdgM/WdgM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="1e189aa8-e305-42a9-ad3a-8d0470cbc0ec">
+              <SHORT-NAME>CPT_WdgM_SWC</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/WdgM_SWC/WdgM_SWC</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d11a621e-3afb-4b81-bd3f-fe615956b8ef">
+              <SHORT-NAME>CPT_NvM</SHORT-NAME>
+              <TYPE-TREF DEST="SERVICE-SW-COMPONENT-TYPE">/AUTOSAR_NvM/SwComponentTypes/NvM</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="d3b6f2f4-9146-48dc-9365-9d49d7c3b1bd">
+              <SHORT-NAME>CPT_IoHwAb</SHORT-NAME>
+              <TYPE-TREF DEST="ECU-ABSTRACTION-SW-COMPONENT-TYPE">/IoHwAb/IoHwAb</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="71a02158-60c9-480d-8ab8-b6c87c1544dc">
+              <SHORT-NAME>CPT_Cmu_Cdd</SHORT-NAME>
+              <TYPE-TREF DEST="COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE">/Cmu/Cmu_Cdd</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="432ad82b-9936-420f-93e0-f5dd9707c706">
+              <SHORT-NAME>CPT_Asw_Swc</SHORT-NAME>
+              <TYPE-TREF DEST="APPLICATION-SW-COMPONENT-TYPE">/Asw/Asw_Swc</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+            <SW-COMPONENT-PROTOTYPE UUID="f660093d-6b1a-4975-9eb7-95b42a7f7060">
+              <SHORT-NAME>CPT_Sbc_Cdd</SHORT-NAME>
+              <TYPE-TREF DEST="COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE">/Sbc/Sbc_Cdd</TYPE-TREF>
+            </SW-COMPONENT-PROTOTYPE>
+          </COMPONENTS>
+          <CONNECTORS>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Cmu_Cdd_PPort_CMUValue_CPT_Asw_Swc_RPort_CMUValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Cmu_Cdd</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Cmu/Cmu_Cdd/CmuValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/CmuValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_RelayValue_CPT_Asw_Swc_RPort_RelayValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RelayValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RelayValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Sbc_Cdd_PPort_SbcValue_CPT_Asw_Swc_RPort_SbcValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Sbc_Cdd</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Sbc/Sbc_Cdd/SbcValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/SbcValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_RelayCmd_CPT_IoHwAb_RPort_RelayCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/RelayCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RelayCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_FblCmd_CPT_IoHwAb_RPort_FblCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/FblCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/FblCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_McuValue_CPT_Asw_Swc_RPort_McuValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/McuValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/McuValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_CMUCmd_CPT_Cmu_Cdd_RPort_CMUCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/CmuCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Cmu_Cdd</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Cmu/Cmu_Cdd/CmuCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_NvM_NVDataBlock1_CPT_Asw_Swc_RPort_NVDataBlock1</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_NvM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_NVDataBlock1</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_NVDataBlock1_Finished_CPT_NvM_NVDataBlock1_Finished</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_NVDataBlock1_Finished</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_NvM</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_NvM/SwComponentTypes/NvM/NVDataBlock1_Finished</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_PowerValue_CPT_Asw_Swc_RPort_PowerValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PowerValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/PowerValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_BswMArbitration_BswM_MRP_SwcModeRequest_CPT_BswM_RP_BswMArbitration_BswM_MRP_SwcModeRequest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_BswMArbitration_BswM_MRP_SwcModeRequest</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_BswM</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_BswM/SwComponentTypes/BswM/RP_BswMArbitration_BswM_MRP_SwcModeRequest</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_EcuM_shutdownTarget_CPT_Asw_Swc_RPort_EcuM_ShutdownTarget</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_EcuM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_EcuM/SwComponentTypes/EcuM/shutdownTarget</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_EcuM_ShutdownTarget</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_ComM_UR_ComMUser_Can_Network_0_Channel_CPT_Asw_Swc_RPort_ComM_UserRequest</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_ComM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_ComM/SwComponentTypes/ComM/UR_ComMUser_Can_Network_0_Channel</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_ComM_UserRequest</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_100ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_100ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_100ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_100ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_10ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_10ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_10ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_10ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_20ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_20ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_20ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_20ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_5ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_5ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_5ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_5ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_50ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_50ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_50ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_50ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Asw_5ms_CPT_WdgM_SWC_RPort_AliveSupervision_Asw_5ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Asw_5ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Asw_5ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_WdgM_alive_WdgMAliveSupervisedEntity_Bsw_1000ms_CPT_WdgM_SWC_RPort_AliveSupervision_Bsw_1000ms</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/AUTOSAR_WdgM/WdgM/alive_WdgMAliveSupervisedEntity_Bsw_1000ms</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_WdgM_SWC</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/WdgM_SWC/WdgM_SWC/RPort_AliveSupervision_Bsw_1000ms</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_ChargeValue_CPT_Asw_Swc_RPort_ChargeValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/ChargeValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/ChargeValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_HighVoltValue_CPT_Asw_Swc_RPort_HighVoltValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/HighVoltValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/HighVoltValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_SbcValue_CPT_Asw_Swc_RPort_SbcValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/SbcValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/SbcValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_IsoValue_CPT_Asw_Swc_RPort_IsoValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/IsoValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/IsoValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_CurrValue_CPT_Asw_Swc_RPort_CurrValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/CurrValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/CurrValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_CrashValue_CPT_Asw_Swc_RPort_CrashValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/CrashValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/CrashValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_HvilValue_CPT_Asw_Swc_RPort_HvilValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/HvilValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/HvilValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_ThermalValue_CPT_Asw_Swc_RPort_ThermalValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/ThermalValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/ThermalValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_PPort_RsvValue_CPT_Asw_Swc_RPort_RsvValue</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RsvValue</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RsvValue</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_ChargeCmd_CPT_IoHwAb_RPort_ChargeCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/ChargeCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/ChargeCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_HvilCmd_CPT_IoHwAb_RPort_HvilCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/HvilCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/HvilCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_IsoCmd_CPT_IoHwAb_RPort_IsoCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/IsoCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/IsoCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_ThermalCmd_CPT_IoHwAb_RPort_ThermalCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/ThermalCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/ThermalCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_PPort_McuCmd_CPT_IoHwAb_RPort_McuCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/McuCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/McuCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Asw_Swc_HighVoltCmd_CPT_IoHwAb_HighVoltCmd</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/HighVoltCmd</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/HighVoltCmd</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_IoHwAb_Rtc_CPT_Asw_Swc_Rtc</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_IoHwAb</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/Rtc</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/Rtc</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+            <ASSEMBLY-SW-CONNECTOR>
+              <SHORT-NAME>ASC_CPT_Cmu_Cdd_Cmu_CPT_Asw_Swc_Cmu</SHORT-NAME>
+              <PROVIDER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Cmu_Cdd</CONTEXT-COMPONENT-REF>
+                <TARGET-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Cmu/Cmu_Cdd/Cmu</TARGET-P-PORT-REF>
+              </PROVIDER-IREF>
+              <REQUESTER-IREF>
+                <CONTEXT-COMPONENT-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Asw_Swc</CONTEXT-COMPONENT-REF>
+                <TARGET-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/Cmu</TARGET-R-PORT-REF>
+              </REQUESTER-IREF>
+            </ASSEMBLY-SW-CONNECTOR>
+          </CONNECTORS>
+        </COMPOSITION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

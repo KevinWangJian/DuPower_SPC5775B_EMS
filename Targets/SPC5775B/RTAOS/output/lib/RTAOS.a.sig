@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!-- Library signature file -->
+<library-signature>
+  <libinfo checksum="a9ae3966d62e44ed731c36b8f2fefdbf" size="548596" configuration="MPC5777C_sda_0_sdac_0_short_enum_false_spe_false_Diab_exe Rel 5.9.4.0" />
+  <objects checksum="0c8f455126959f51a35de0df125286ad">
+    <object ident="activatetask.c" size="66232" checksum="a02c02724099404dd020614d55913b46" />
+    <object ident="advancecounter.c" size="65110" checksum="482920e5032640af2c0f44a34f72d2ce" />
+    <object ident="allowaccess.c" size="65113" checksum="88024dabf2bcf8d47e243818ed4599ae" />
+    <object ident="calltrustedfunction.c" size="65560" checksum="41ad33b0398e73f345ef8eb78c9ce78b" />
+    <object ident="cancelalarm.c" size="65518" checksum="8507ed5b3c3f840b47318213a2948efe" />
+    <object ident="chaintask.c" size="66073" checksum="cdcb4728ab2c651c54c16880a17a13d8" />
+    <object ident="checkisrmemoryaccess.c" size="65369" checksum="5346bb819f9efa7761282e4fa564ad3f" />
+    <object ident="checkobjectaccess.c" size="65212" checksum="4ff2615782938a3cfdc2b721a21f6599" />
+    <object ident="checkobjectownership.c" size="65196" checksum="2faf3627e5fc0f22f0235daccab4ca20" />
+    <object ident="checktaskmemoryaccess.c" size="65378" checksum="19df0bcdb712d300b2690d41c2fd4c18" />
+    <object ident="clearevent.c" size="65483" checksum="8913990fcbc134016688482940ebf79d" />
+    <object ident="controlidle.c" size="66596" checksum="c71923cad4e15b803d0eb5ac2ea926b2" />
+    <object ident="disableallinterrupts.c" size="66340" checksum="6fe9a8907f0b8427d4c060c628b4c822" />
+    <object ident="dispatchtask.c" size="66776" checksum="c9d3ecb73ffd1526304f2303273ac88e" />
+    <object ident="elapsedtime.c" size="69834" checksum="f037cc25b1c88c5037a5ae9652b9ce2d" />
+    <object ident="enableallinterrupts.c" size="65435" checksum="62a2e221b4a66a3599306696aac5b7a3" />
+    <object ident="getactiveapplicationmode.c" size="65136" checksum="cea048e5b2e233e92a37ca4564129e18" />
+    <object ident="getalarm.c" size="65631" checksum="e707a52cdb6d02f6f67fdb2852f4a535" />
+    <object ident="getalarmbase.c" size="65217" checksum="a40370a911d71e4645b7c6cf90183eb5" />
+    <object ident="getapplicationid.c" size="65113" checksum="0629e92b9b49306c2eba6aeb64dee691" />
+    <object ident="getapplicationstate.c" size="78840" checksum="ca95ee088792344052314f8651497e09" />
+    <object ident="getcountervalue.c" size="65563" checksum="e96704a1c727bb01787fb02dc2f1895a" />
+    <object ident="getcurrentapplicationid.c" size="65151" checksum="85450428a63ec33ca8436b99c88b7b1b" />
+    <object ident="getelapsedcountervalue.c" size="65912" checksum="63ef9a328f84cece3694e4161b4d5396" />
+    <object ident="getevent.c" size="65575" checksum="8edb83fd01420bd2e5e594aa290cb239" />
+    <object ident="getexecutiontime.c" size="65506" checksum="768075a919aa4045bd89ae364cced6c0" />
+    <object ident="getisrid.c" size="65065" checksum="7930dd8eadd09921da59eb04542bfbde" />
+    <object ident="getisrmaxexecutiontime.c" size="65589" checksum="79606a6cfc8ccdb8151779dfb3c5840d" />
+    <object ident="getisrmaxstackusage.c" size="65586" checksum="db966cced66e79c725627d2c113e9d06" />
+    <object ident="getresource.c" size="65930" checksum="38f2a0c13223107d3e21d068fc99c96a" />
+    <object ident="getscheduletablestatus.c" size="65676" checksum="0a9a905f7d75e94c170aa6d5afdf4a73" />
+    <object ident="getstacksize.c" size="65115" checksum="01cb7349bdedcece0b17f073c025170a" />
+    <object ident="getstackusage.c" size="65461" checksum="bd0d19c4e9317c8e9132c7c45aba7aa3" />
+    <object ident="getstackvalue.c" size="65099" checksum="4494cb047d6b1dd6553b232bad494021" />
+    <object ident="gettaskid.c" size="65093" checksum="724d4cb21e58f9c81fee8bad73f972f8" />
+    <object ident="gettaskmaxexecutiontime.c" size="65597" checksum="ae5c9374da0b21ab5df8cb1c6d693e4e" />
+    <object ident="gettaskmaxstackusage.c" size="65592" checksum="0b6354b6c658f269ff6269f8fc71e3ee" />
+    <object ident="gettaskstate.c" size="65276" checksum="2f0cfd9a2f1bb07d6d553dd30584ff39" />
+    <object ident="getversioninfo.c" size="65293" checksum="0f49ce5e6aa57053be8e140f17f7d62f" />
+    <object ident="idle.c" size="64784" checksum="7680547b7b65fa9e2fe57cab40bc6286" />
+    <object ident="incrementcounter.c" size="65105" checksum="2c393257205c6466483bf844c5fbf0d3" />
+    <object ident="inshutdown.c" size="64809" checksum="1e5dcd6600e1c0ee761fdef4c51d44cb" />
+    <object ident="nextscheduletable.c" size="66394" checksum="9d9af036e4c3ba2ce30b8475eebc2616" />
+    <object ident="os_cfg.c" size="92047" checksum="095b8103886647ec939d667b71444bf3" />
+    <object ident="os_cfg_counters.c" size="99597" checksum="592546fae1be20110341fc5557a2a2e0" />
+    <object ident="os_cfg_kl.c" size="79309" checksum="3c40f7f4126be0863fe0a059180dba05" />
+    <object ident="os_getcurrentimask.c" size="64990" checksum="4ae15d93edfeb8af728759731fff109c" />
+    <object ident="os_getcurrenttpl.c" size="64997" checksum="1e9191dd3ca7da46c8480e4388c66c23" />
+    <object ident="protectionsupport.c" size="65299" checksum="bcc709f1266c99e9f1d4bd00baa619a8" />
+    <object ident="releaseresource.c" size="65901" checksum="1db4aea518ee02e7f810bae090410db0" />
+    <object ident="resetisrmaxexecutiontime.c" size="65548" checksum="ca33129b73412084a2919dc521df06af" />
+    <object ident="resetisrmaxstackusage.c" size="65546" checksum="c4a7d6f40d78d9c913a29b93702c7ce4" />
+    <object ident="resettaskmaxexecutiontime.c" size="65564" checksum="81bdf89cd8c15a63b4acccc4e8daed07" />
+    <object ident="resettaskmaxstackusage.c" size="65558" checksum="5609f6b18df557bdfd64aec54f17f9d1" />
+    <object ident="restartos.c" size="67017" checksum="85f90aed1eee3245b7d63a6c35f3feb6" />
+    <object ident="resumeallinterrupts.c" size="65480" checksum="a4023a838ce33995933659aa0b1dee39" />
+    <object ident="resumeosinterrupts.c" size="65478" checksum="56d27d183809a3c42ad872c1010a5145" />
+    <object ident="schedule.c" size="65932" checksum="5fe3a35fb2b34cc1717ab1994f9c3102" />
+    <object ident="setabsalarm.c" size="65561" checksum="7efbb1391b5df8eea6e5ee33c6dbaa85" />
+    <object ident="setevent.c" size="65524" checksum="5d1b747210d662c15de35d1608a596e0" />
+    <object ident="setrelalarm.c" size="65566" checksum="8185370a84f52a7b9158db4deea6f021" />
+    <object ident="setscheduletableasync.c" size="65627" checksum="27fa3bfbcb4f3e919079505e6d8ca0df" />
+    <object ident="shutdownos.c" size="65571" checksum="2c29359fb6b8c2167191f47dc679e0ec" />
+    <object ident="stackoverrunhook.c" size="65042" checksum="18677392f4aa008e5f703993b12d39c0" />
+    <object ident="startos.c" size="65842" checksum="4aa9d76033ca34cef777caba1fe37219" />
+    <object ident="startscheduletableabs.c" size="66362" checksum="6841604900e93db1d89d99d4e99b42d0" />
+    <object ident="startscheduletablerel.c" size="66171" checksum="c2e90f81a85b751baa7740db47a0962a" />
+    <object ident="startscheduletablesynchron.c" size="65669" checksum="bfff3b2c7a27d39437cf58618f5561f5" />
+    <object ident="stopscheduletable.c" size="65831" checksum="5f7b1e23b57e51f64f33bd5c3b13dd60" />
+    <object ident="suspendallinterrupts.c" size="66319" checksum="00c38c97ab70040f44286c73aae975e4" />
+    <object ident="suspendosinterrupts.c" size="66547" checksum="0bc20730775db8820b21d3911482f3db" />
+    <object ident="syncscheduletable.c" size="65623" checksum="fc909284b64ebf41e3eab5314373a4df" />
+    <object ident="syncscheduletablerel.c" size="65653" checksum="bfd6b1ddaec9018343ea31642dd73487" />
+    <object ident="terminatetask.c" size="65381" checksum="9a32d24f219fd3de7342c0bef4490ef6" />
+    <object ident="validatecounter.c" size="78620" checksum="ae6f039a3ae1af54603e63152260a00c" />
+    <object ident="validateisr.c" size="78739" checksum="cdb228d62a851acc957a98ff7cde744e" />
+    <object ident="validateresource.c" size="78779" checksum="6529c2e970dc4cf535dac60723585229" />
+    <object ident="validatescheduletable.c" size="78656" checksum="6caf80b30b3aaaee2b173b9be60bff49" />
+    <object ident="validatetask.c" size="78780" checksum="14046b23f96b09a6c10dd24a537994e7" />
+    <object ident="waitevent.c" size="65488" checksum="9b0631a6f94fe02b7d2999d7e7db0d4d" />
+    <object ident="multicoreinit.s" size="6101" checksum="9359608558a5fc9efc596248d8364d02" />
+    <object ident="os_setjmp.s" size="3054" checksum="4686ddf5b1d56c73e9e5a87a3ff7f2b0" />
+    <object ident="os_startcores.c" size="93997" checksum="98070a47856084bd7007e95f82d58df7" />
+    <object ident="os_syscall.s" size="376" checksum="bd832c9fb2ae4ca4cd6c466d3d6f5b33" />
+    <object ident="os_vec_init.c" size="70978" checksum="9781c194422c19d74934dbb02e0a990a" />
+    <object ident="os_vectors.s" size="44941" checksum="1ec60e25649b808d4a869afaa1eaf7d0" />
+    <object ident="os_wrapper.c" size="67375" checksum="19af769fb9585ae56889116295e840fa" />
+  </objects>
+  <sources checksum="d41d8cd98f00b204e9800998ecf8427e" />
+</library-signature>

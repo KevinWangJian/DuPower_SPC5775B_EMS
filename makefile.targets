@@ -1,0 +1,30 @@
+
+export JOBS := 8
+export PRJ_NAME := DuPower_SPC5775B
+export OBJ_LIST_FILE := objfiles.list
+export OBJ_FILES := $(patsubst %.o,%.obj,$(OBJS))
+
+.PHONY: bldall
+bldall: prebuild tgtbuild postbuild
+	-@echo ' '
+
+##################################################################
+tgtbuild:
+	make -j$(JOBS) all 1>&2
+	-@echo ' '
+##################################################################
+postbuild: $(PRJ_NAME).elf
+	
+	-@echo ' '
+##################################################################
+prebuild: objlistfile $(OBJ_FILES)
+	-@echo 'Finished building target: $(OBJ_LIST_FILE)'
+	-@echo ' '
+
+objlistfile:
+	-@echo ' '
+	-@echo 'Building target: $(OBJ_LIST_FILE)'
+	-@echo ' ' > $(OBJ_LIST_FILE)
+
+$(OBJ_FILES):
+	-@echo ./$(patsubst %.obj,%.o,$@) >> $(OBJ_LIST_FILE)

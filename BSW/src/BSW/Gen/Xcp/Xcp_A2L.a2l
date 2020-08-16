@@ -1,0 +1,183 @@
+  /* XcpTransportLayer "XcpTransportLayer" */
+  /begin XCP_ON_CAN
+/************************ start of CAN *********************/
+    0x0102                                                /* XCP on CAN version */
+    CAN_ID_MASTER 0x703                                   /* CMD/STIM CAN-ID */
+                                                          /* master -> slave */
+    CAN_ID_SLAVE 0x704                                    /* RES/ERR/EV/SERV/DAQ CAN-ID */
+                                                          /* slave -> master */
+                                                          /* Bit31= 1: extended identifier */
+    BAUDRATE 500000                                      /* BAUDRATE [Hz] */
+    SAMPLE_POINT 100                                       /* sample point */
+                                                          /* [% complete bit time] */
+    BTL_CYCLES 11                                         /* BTL_CYCLES */
+                                                          /* [slots per bit time] */
+    SJW 0                                                 /* length synchr. segment */
+                                                          /* [BTL_CYCLES] */
+    MAX_BUS_LOAD  100                                     /* maximum available bus */
+
+/************************* end of CAN **********************/
+
+
+  /* XcpTransportLayer "XcpTransportLayer" */
+/*************** start of PROTOCOL_LAYER *******************/
+
+  /begin PROTOCOL_LAYER                                   /* At MODULE */
+
+    0x0102                                                /* XCP protocol layer version */
+
+    2000                                                   /* T1 [ms] */
+    2000                                                   /* T2 [ms] */
+    0                                                     /* T3 [ms] */
+    0                                                     /* T4 [ms] */
+    0                                                     /* T5 [ms] */
+    0                                                     /* T6 [ms] */
+    2000                                                     /* T7 [ms] */
+
+    8                                                     /* MAX_CTO */
+    8                                                     /* MAX_DTO default for DAQ and STIM */
+
+    BYTE_ORDER_MSB_FIRST                                  /* BYTE_ORDER: MOTOROLA */
+    ADDRESS_GRANULARITY_BYTE                              /* ADDRESS_GRANULARITY */
+
+    OPTIONAL_CMD GET_SEED
+    OPTIONAL_CMD UNLOCK
+    OPTIONAL_CMD SET_MTA
+    OPTIONAL_CMD UPLOAD
+    OPTIONAL_CMD SHORT_UPLOAD
+    OPTIONAL_CMD BUILD_CHECKSUM
+    OPTIONAL_CMD DOWNLOAD
+    OPTIONAL_CMD DOWNLOAD_NEXT
+    OPTIONAL_CMD DOWNLOAD_MAX
+    OPTIONAL_CMD MODIFY_BITS
+    OPTIONAL_CMD CLEAR_DAQ_LIST
+    OPTIONAL_CMD SET_DAQ_PTR
+    OPTIONAL_CMD WRITE_DAQ
+    OPTIONAL_CMD SET_DAQ_LIST_MODE
+    OPTIONAL_CMD START_STOP_DAQ_LIST
+    OPTIONAL_CMD START_STOP_SYNCH
+    OPTIONAL_CMD GET_DAQ_CLOCK
+    OPTIONAL_CMD READ_DAQ
+    OPTIONAL_CMD GET_DAQ_PROCESSOR_INFO
+    OPTIONAL_CMD GET_DAQ_RESOLUTION_INFO
+    OPTIONAL_CMD GET_DAQ_EVENT_INFO
+    OPTIONAL_CMD FREE_DAQ
+    OPTIONAL_CMD ALLOC_DAQ
+    OPTIONAL_CMD ALLOC_ODT
+    OPTIONAL_CMD ALLOC_ODT_ENTRY
+
+    COMMUNICATION_MODE_SUPPORTED                          /* optional modes supported */
+      BLOCK
+        SLAVE                                             /* Slave Block Mode supported  */
+        MASTER                                            /* Master Block Mode supported */
+          255                                             /* MAX_BS */
+          0                                               /* MIN_ST */
+    SEED_AND_KEY_EXTERNAL_FUNCTION "XcpSeedNKey.dll"                   /* Name of the SeedAndKey function */
+                                                          /* including file extension      */
+                                                          /* without path                  */
+
+  /end PROTOCOL_LAYER
+
+/***************** end of PROTOCOL_LAYER *******************/
+
+
+  /* XcpTransportLayer "XcpTransportLayer" */
+/********************* start of DAQ ************************/
+
+  /begin DAQ                                              /* DAQ supported, at MODULE*/
+    DYNAMIC                                               /* DAQ_CONFIG_TYPE */
+    65535                                                 /* MAX_DAQ */
+    5                                                     /* MAX_EVENT_CHANNEL */
+    0                                                     /* MIN_DAQ */
+    OPTIMISATION_TYPE_DEFAULT                             /* OPTIMISATION_TYPE */
+    ADDRESS_EXTENSION_FREE                                /* ADDRESS_EXTENSION */
+    IDENTIFICATION_FIELD_TYPE_ABSOLUTE                    /* IDENTIFICATION_FIELD */
+    GRANULARITY_ODT_ENTRY_SIZE_DAQ_BYTE                   /* GRANULARITY_ODT_ENTRY_SIZE_DAQ */
+    255                                                   /* MAX_ODT_ENTRY_SIZE_DAQ */
+    NO_OVERLOAD_INDICATION                             /* OVERLOAD_INDICATION */
+    PRESCALER_SUPPORTED
+    /begin TIMESTAMP_SUPPORTED
+      1                           /* TIMESTAMP_TICKS */
+      SIZE_WORD             /* TIMESTAMP_SIZE */
+      UNIT_1MS  /* RESOLUTION OF TIMESTAMP */
+    /end TIMESTAMP_SUPPORTED
+    /begin DAQ_MEMORY_CONSUMPTION
+      8187                                                /* DAQ_MEMORY_LIMIT: in Elements[AG] */
+      46                                                  /* DAQ_SIZE: number of elements[AG] per DAQ list */
+      6                                                   /* ODT_SIZE: number of elements[AG] per ODT */
+      5                                                   /* ODT_ENTRY_SIZE: number of elements[AG] per ODT_entry */
+      2                                                   /* ODT_DAQ_BUFFER_ELEMENT_SIZE: number of */
+                                                          /* payload elements[AG]*factor = sizeof(send buffer)[AG] */
+      0                                                   /* ODT_STIM_BUFFER_ELEMENT_SIZE: number of */
+                                                          /* payload elements[AG]*factor = sizeof(receive buffer)[AG] */
+    /end DAQ_MEMORY_CONSUMPTION
+
+/******************* start of EVENT ************************/
+
+    /begin EVENT                                          /* EVENT               */
+      "XcpEvent_10ms_Raster"                             /* EVENT_CHANNEL_NAME       */
+      "10msRstr"                                             /* EVENT_CHANNEL_SHORT_NAME */
+      0                                                   /* EVENT_CHANNEL_NUMBER     */
+      DAQ                                                 /* EVENT_CHANNEL_TYPE     */
+      1                                                   /* MAX_DAQ_LIST */
+      1                                                  /* EVENT_CHANNEL_TIME_CYCLE */
+      7                                                   /* EVENT_CHANNEL_TIME_UNIT: UNIT_10MS */
+      5                                                   /* EVENT_CHANNEL_PRIORITY (0xFF = highest) */
+    /end EVENT
+
+    /begin EVENT                                          /* EVENT               */
+      "XcpEvent_20ms_Raster"                             /* EVENT_CHANNEL_NAME       */
+      "20msRstr"                                             /* EVENT_CHANNEL_SHORT_NAME */
+      1                                                   /* EVENT_CHANNEL_NUMBER     */
+      DAQ                                                 /* EVENT_CHANNEL_TYPE     */
+      1                                                   /* MAX_DAQ_LIST */
+      2                                                  /* EVENT_CHANNEL_TIME_CYCLE */
+      7                                                   /* EVENT_CHANNEL_TIME_UNIT: UNIT_10MS */
+      4                                                   /* EVENT_CHANNEL_PRIORITY (0xFF = highest) */
+    /end EVENT
+
+    /begin EVENT                                          /* EVENT               */
+      "XcpEvent_50ms_Raster"                             /* EVENT_CHANNEL_NAME       */
+      "50msRstr"                                             /* EVENT_CHANNEL_SHORT_NAME */
+      2                                                   /* EVENT_CHANNEL_NUMBER     */
+      DAQ                                                 /* EVENT_CHANNEL_TYPE     */
+      1                                                   /* MAX_DAQ_LIST */
+      5                                                  /* EVENT_CHANNEL_TIME_CYCLE */
+      7                                                   /* EVENT_CHANNEL_TIME_UNIT: UNIT_10MS */
+      3                                                   /* EVENT_CHANNEL_PRIORITY (0xFF = highest) */
+    /end EVENT
+
+    /begin EVENT                                          /* EVENT               */
+      "XcpEvent_100ms_Raster"                             /* EVENT_CHANNEL_NAME       */
+      "100msRstr"                                             /* EVENT_CHANNEL_SHORT_NAME */
+      3                                                   /* EVENT_CHANNEL_NUMBER     */
+      DAQ                                                 /* EVENT_CHANNEL_TYPE     */
+      1                                                   /* MAX_DAQ_LIST */
+      10                                                  /* EVENT_CHANNEL_TIME_CYCLE */
+      7                                                   /* EVENT_CHANNEL_TIME_UNIT: UNIT_10MS */
+      2                                                   /* EVENT_CHANNEL_PRIORITY (0xFF = highest) */
+    /end EVENT
+
+    /begin EVENT                                          /* EVENT               */
+      "XcpEvent_1000ms_Raster"                             /* EVENT_CHANNEL_NAME       */
+      "1sRstr"                                             /* EVENT_CHANNEL_SHORT_NAME */
+      4                                                   /* EVENT_CHANNEL_NUMBER     */
+      DAQ                                                 /* EVENT_CHANNEL_TYPE     */
+      1                                                   /* MAX_DAQ_LIST */
+      10                                                  /* EVENT_CHANNEL_TIME_CYCLE */
+      8                                                   /* EVENT_CHANNEL_TIME_UNIT: UNIT_100MS */
+      1                                                   /* EVENT_CHANNEL_PRIORITY (0xFF = highest) */
+    /end EVENT
+
+/********************* end of EVENT ************************/
+
+  /end DAQ
+
+/********************* end of DAQ **************************/
+
+  /* XcpTransportLayer "XcpTransportLayer" */
+  TRANSPORT_LAYER_INSTANCE "XCP_TPL"
+
+  /end XCP_ON_CAN
+
+

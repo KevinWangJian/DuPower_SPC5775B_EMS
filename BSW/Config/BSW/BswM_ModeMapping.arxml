@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_BswM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+          <ELEMENTS>
+            <MODE-DECLARATION-GROUP>
+              <SHORT-NAME>MDG_ECUM_STATE</SHORT-NAME>
+              <CATEGORY>EXPLICIT_ORDER</CATEGORY>
+              <INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_BswM/ModeDeclarationGroups/MDG_ECUM_STATE/ECUM_STATE_STARTUP_ONE</INITIAL-MODE-REF>
+              <MODE-DECLARATIONS>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_STARTUP_ONE</SHORT-NAME>
+                  <VALUE>1</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_STARTUP_TWO</SHORT-NAME>
+                  <VALUE>2</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_RUN</SHORT-NAME>
+                  <VALUE>3</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_APP_RUN</SHORT-NAME>
+                  <VALUE>4</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_POST_RUN</SHORT-NAME>
+                  <VALUE>5</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_PREP_SHUTDOWN</SHORT-NAME>
+                  <VALUE>6</VALUE>
+                </MODE-DECLARATION>
+                <MODE-DECLARATION>
+                  <SHORT-NAME>ECUM_STATE_SHUTDOWN</SHORT-NAME>
+                  <VALUE>7</VALUE>
+                </MODE-DECLARATION>
+              </MODE-DECLARATIONS>
+            </MODE-DECLARATION-GROUP>
+            <DATA-TYPE-MAPPING-SET>
+              <SHORT-NAME>ECUM_STATE_Mapping</SHORT-NAME>
+              <MODE-REQUEST-TYPE-MAPS>
+                <MODE-REQUEST-TYPE-MAP>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  <MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_BswM/ModeDeclarationGroups/MDG_ECUM_STATE</MODE-GROUP-REF>
+                </MODE-REQUEST-TYPE-MAP>
+              </MODE-REQUEST-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

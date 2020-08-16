@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_NvM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>NvM</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Memory: NVRAM Manager</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">[NVM539_Conf] Configuration of the NvM (Non volatile RAM Manager) module.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.0.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2010-12-03</DATE>
+                  </DOC-REVISION>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>8.0.0</REVISION-LABEL>
+                    <ISSUED-BY>RB</ISSUED-BY>
+                    <DATE>2016-07-31</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/NvM</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>NvMBlockDescriptor</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Block descriptor</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">[NVM061_Conf] Container for all block-specific configuration parameters. For each NvM block, one instance of this container shall be specified.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>2</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>65535</UPPER-MULTIPLICITY>
+                  <MULTIPLICITY-CONFIG-CLASSES>
+                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                  </MULTIPLICITY-CONFIG-CLASSES>
+                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockCrcType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CRC type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM476_Conf] Defines the CRC data width for the NVRAM block. 16 bits CRC configuration is allowed. Currently, the configuration of this parameter is superfluous. In fact, on one side, NvM currently does not monitor the RAM block validity by calculating a RAM block CRC. On the other side, lower layers always calculate CRC for the NV block data on persistent media independently from this parameter value.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>NVM_CRC16</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_CRC16</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">16 bit CRC</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockHeaderInclude</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Header file to include</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2997] Defines a header file that shall be included. Only the header file name without the extension has to be entered here. For example Bsw_MemMap instead of Bsw_MemMap.h. If a header file is used the declarations of the RAM data block, ROM data block and the callback functions must be ensured by the user. If one header file contains the declarations for different blocks (e.g. block A, B, C) it is not necessary to define this header file for each block (A, B, C) in each block descriptor. It is sufficient to define it for one of the blocks (e.g. A).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockJobPriority</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job priority</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM477_Conf] Defines the job priority for a NVRAM block. The current version of NvM supports two job priorities:&lt;BR&gt;
+  0 : Immediate priority,&lt;BR&gt;
+  1 : Standard priority.&lt;BR&gt;
+Immediate priority can be enabled only if priority jobs handling is enabled via the NvMJobPrioritization configuration paramter.&lt;BR&gt;
+Immediate priority blocks shall participate neither in multi-block-read (see also NvMSelectBlockForReadAll) nor in multi-block-write (see also NvMSelectBlockForWriteAll) operations. If an immediate block is selected for ReadAll or WriteAll, then it is not possible to queue an immediate write request for this block while the multiblock operation is being executed (as the state of this block would be PENDING (NVM385)).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockManagementType</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block management type</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM062_Conf] Defines the block management type for the NVRAM block. An NvM block can be a native, a redundant or a dataset block.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_BLOCK_NATIVE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Native</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_BLOCK_REDUNDANT</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Redundant</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_BLOCK_DATASET</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Dataset</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockUseAutoValidation</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Set block to changed during ValidateAll</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[ECUC_NvM_00557] Defines whether a NVRAM block shall be processed during NvM_ValidateAll or not. This configuration parameter is only allowed to be set for NVRAM blocks which are configured to have a permanent RAM block or which are configured to use explicit synchronization mechanism.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockUseCrc</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Use CRC</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM036_Conf] Enables/disables CRC usage for the NVRAM block. The current version of NvM only supports enabled CRC usage but does not do CRC checking on RAM blocks (see also the NvMCalcRamBlockCrc parameter). This is expressed by setting this parameter to true.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockUseSyncMechanism</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Explicit synchronization</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM519_Conf] Enables/disables the explicit synchronization mechanism with a RAM mirror and callback routines for transferring data to and from NvM module&apos;s RAM mirror.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMBlockWriteProt</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Initially write protected</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM033_Conf] Enables/disables an initial write protection of the NV block.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMCalcRamBlockCrc</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">CRC (re)calculation</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM119_Conf] Enables/disables the CRC (re)calculation for the permanent RAM block. The current version of NvM does not support this feature, so this parameter has always to be set to false.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMInitBlockCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Initialization callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM116_Conf] Name of the block-specific callback routine which shall be invoked if no ROM data is available for initialization of the NVRAM block. If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.&lt;BR&gt;
+For a user located above RTE and if NvMRbGenRteServicePort is set to TRUE, the name of this callback has to be set as: &quot;Rte_Call_&lt;BlockName&gt;_Init_InitBlock&quot;.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMMaxNumOfReadRetries</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Max. number of read retries</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM533_Conf] Defines the maximum number of read retries. The current version of NvM does not support this feature, so this parameter has always to be set to 0.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>0</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMMaxNumOfWriteRetries</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Max. number of write retries</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM499_Conf] Defines the maximum number of write retries. The current version of NvM does not support this feature, so this parameter has always to be set to 0.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>0</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMNvBlockBaseNumber</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block base number</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM478_Conf] According to the NvM specification, this setting shall perform the link to the IDs used in the memory hardware abstraction. Since this NvM implementation uses a different (more efficient) identification scheme towards the memory hardware abstraction, this parameter is and remains superfluous.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65534</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMNvBlockLength</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block length (fixed number)</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM479_Conf] Defines the NV block data length in bytes.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMNvBlockNum</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of NV blocks</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM480_Conf] Defines the number of multiple NV blocks in a contiguous area according to the given block management type. The allowed number of NV blocks is&lt;BR&gt;
+1 for a native block,&lt;BR&gt;
+2 for a redundant block and&lt;BR&gt;
+1..255 for a dataset block.&lt;BR&gt;
+Additionally, the following condition has to be satisfied: &lt;BR&gt;
+NvMNvBlockNum + NvMRomBlockNum &lt;= 255 [NVM444]</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>255</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMNvramBlockIdentifier</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block identifier</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM481_Conf] Identification of a NVRAM block via a unique block identifier which is used at the NvM API functions (not towards the memory hardware abstraction and also not on the media). The value 0 is reserved for multi block related operations and their results. The value 1 is reserved for the block containing the configuration ID used as part of the dynamic configuration feature. The identifiers of all blocks must be contiguous, i.e. there must not be any gaps in the sequence of block identifiers. All multi block operations operate in an ascending ID sequence, which means that blocks with lower IDs are read and written earlier than blocks with higher IDs. If you don&apos;t explicitly specify an identifier for a block, such an identifier is automatically assigned by NvM.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                      <MAX>65534</MAX>
+                      <MIN>2</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMNvramDeviceId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Device ID</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM035_Conf] Identification of the device where the NVRAM block is located. In contrast to AUTOSAR&apos;s NvM specification, this is not a parameter derived from the block configuration on the Ea/Fee module configuration, but the device identifier is directly specified here (and the Ea/Fee block configuration is completely auto-generated). Additionally, device ID 0 is fixed to address Fee and device IDs 1 onwards address Eep devices.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRamBlockDataAddress</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">RAM block data address</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM482_Conf] Defines the start address of permanent RAM block data. You may either give an address in hexadecimal notation here (e.g. 0x1234ABCD) or the name of a linker symbol (e.g. MyTestRamBlock) or the address (e.g. &amp;MyTestRamBlock). If you explicitly want to specify that no permanent RAM block shall be used for this block, enter NULL_PTR here.&lt;BR&gt;
+The NvM users shall allocate each NvM RAM block in a RAM section called &quot;saved zone&quot;. When using AUTOSAR mechanisms for memory allocation, the memory class &lt;MODULE&gt;_SEC_VAR_SAVED_ZONE_&lt;SIZE&gt; shall be used.&lt;BR&gt;
+Caution: Configuring the same permanent RAM for more than one NvM block is possible but highly not recommended. In fact, an owner of an NvM block sharing the same permanent RAM block with other NvM blocks has to be aware that the owners of those other blocks could also modify the content of the shared RAM block. Hence, a certain synchronization on read/write accesses, to the common RAM block, needs to be established between different NvM blocks&apos; owners sharing a common permanent RAM block.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMRbBlockPersistentId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Persistent ID</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2749] Defines a unique ID for this block representing its block-specific properties. It shall be changed if and only if these block-specific properties are modified in a non-compatible way. This ID is stored on the memory media and is the basis for block identification in the memory drivers (Fee, Eep). In contrast to the IDs which are taken for block identification at the C API, this ID is (for a given block) identical in all modules of the memory stack. Its value typically remains the same even if other blocks are added to or removed from the block layout. It is not allowed that any two blocks have the same persistent ID. Additionally, the persistent IDs 0 and 65535 are reserved for internal use. If you don&apos;t explicitly specify a persistent ID for a block, such an identifier is automatically assigned by NvM based on the block name and block length.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:0.2.0:2012-03-01</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65534</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbFirstReadDataMigration</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">First Read Data Migration</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-3027] Enables/disables First Read Data Migration feature for this block. When First Read Data Migration is enabled a read job is also performed when a missmatch between the configured NV block length and the block length on medium (EEPROM) occurs. In case the NV block length is smaller then the block on medium the remaining data are discarded. In case the NV block length is bigger then the block on medium the remaining data are filled with zero. If the feature is disabled and a length missmatch occurs the read job is not performed.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbGenRteAdminPort</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Generate RTE admin port</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Defines whether an administrative port shall be generated for this block. If enabled, an RTE P-Port of this kind is created for this NvM block which allows to invoke administrative operations such as SetBlockProtection via RTE. But since the demand for this feature is rather rare, the creation of administrative ports has to be explicitly enabled by setting this configuration parameter to true. Please note that enabling this feature is only possible if the RTE service port creation is also enabled for this block.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.4.0:2013-05-15</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbGenRteServicePort</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Generate RTE service port</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Defines whether a service port shall be generated for this block. Per default, an RTE P-Port is created for each NvM block which allows to invoke service operations such as ReadBlock or WriteBlock via RTE. In cases where callbacks have been configured for this block, this configuration parameter also controls the creation of the corresponding R-Ports. But since not all NvM blocks are accessed via RTE, the creation of all these RTE ports for this block can be suppressed by setting this configuration parameter to false.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:1.4.0:2013-05-15</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbInitBlockAtLayoutChange</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Initialize block in case of a layout change</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2881] Defines whether the NvM block shall be initialized if a block layout change is detected. In such case, the block is firstly read during ReadAll. If the block couldn&apos;t be retrieved from the medium, initialization data (from the ROM block or via the initialization callback) is written to the medium after the execution of ReadAll.&lt;BR&gt;
+This configuration parameter is allowed to be set to &quot;true&quot; under the following conditions:&lt;BR&gt;
+(1) The common configuration parameter NvMRbInitAtLayoutChange is set to &quot;true&quot;.&lt;BR&gt;
+(2) The block is native or redundant&lt;BR&gt;
+(3) The block has a standard priority&lt;BR&gt;
+(4) The block has a ROM block or an initialization callback&lt;BR&gt;
+(5) The block has a RAM block or is configured with explicit synchronization&lt;BR&gt;
+(6) The block is configured for ReadAll&lt;BR&gt;
+(7) Additionally, if dynamic configuration is enabled, then this block has to be resistant to sw change.&lt;BR&gt;
+Hint: The block is initialized (i.e. written to the medium after ReadAll) if a configuration ID mismatch is detected. Therefore, when configuring a block with this feature, a new compiled configuration ID should be configured via the NvMCompiledConfigId parameter (otherwise the block wouldn&apos;t be initialized). In later versions, the compiled ID will be automatically generated and it wouldn&apos;t be necessary anymore to update it when adding/reconfiguring an NvM block with the &quot;init at layout change&quot; feature.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:6.0.0:2015-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbNoFallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">No fallback to the old value</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2925] This tag activates or deactivates a fallback mechanism to older copies of the same block. It is only evaluated for blocks located on Fee and ignored for blocks located on Ea. By default, this feature is set to false which is the standard behavior for Fee blocks (i.e. older values of the same block are preferred over delivering no block data at all). In Ea, older values are never available by principle and therefore blocks located on Ea will behave as if this tag had been set to true, regardless of its actual setting. If this tag is set to true and the corresponding block is located on Fee, older values will not be returned if the latest block instance is completely corrupted. In this case, inconsistent state is reported instead.
+Caution: When enabling this feature for the first time, already existing instances of the corresponding block on the media might not be readable anymore. Additionally, some Fee configurations might not support this feature at all. Please refer to the Fee documentation for details.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:6.1.0:2015-10-30</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRbNvBlockLengthString</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Block length (C expression)</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2996] Defines the NV block data length in bytes. All possible R-VALUES in C programming language except stand alone numerical literals are supported. A semicolon at the end of the C expression is not necessary. For numerical literals use NvMNvBlockLength or a define directive instead. For example if the block length Null shall be configured use a define directive like NV_BLOCK_LENGTH_NULL. All R-Values used here have to be declared by the user. Furthermore the user has to make it known to NvM_Cfg.c. Therefore the configuration parameter NvMBlockHeaderInclude has to be used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRamBlockDataAddressString</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">RAM block data address (C expression)</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-] Defines the RAM block data length as C expression. All possible R-VALUES in C programming language are supported. A semicolon at the end of the C expression is not necessary. All R-Values used here have to be declared by the user. Furthermore the user has to make it known to NvM_Cfg.c. Therefore the configuration parameter NvMBlockHeaderInclude has to be used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbResistantToLayoutRemoval</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Resistant to layout removal</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2783] Defines whether the NvM block is resistant to layout removal. Once configured and written,  lower layers keep this block saved on the persistent media even when this block is not part of the layout anymore (i.e. when the configuration changes and this block is removed from the layout). In this case, this block is not accessible from NvM. If the configuration changes again and this block is reconfigured, access to this block is reenabled again. If dynamic configuration is active (via NvMDynamicConfiguration), then resistant-to-layout-removal blocks must be resistant-to-changed-SW (configurable via NvMResistantToChangedSw parameter).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:2.1.0:2013-10-28</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbSelectBlockForFirstInitAll</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Initialize block during FirstInitAll</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2828] Defines whether a NvM block shall be processed during NvM_Rb_FirstInitAll or not. This configuration parameter is allowed to be set in the following cases: &lt;BR&gt;
+(i) The NvM block (is native or redundant) and (has a ROM block or an InitblockCallback) and (has a permanent RAM block or is configured to use explicit synchronization mechanism) &lt;BR&gt;
+(ii) The NvM block (is native or redundant) and (has no ROM block and no InitBlockCallback). In this case the NvM block is simply invalidated by the NvM_Rb_FirstInitAll job. &lt;BR&gt;
+(iii)  The NvM block is of type NVM_BLOCK_DATASET. In this case, all the NV blocks of the NvM block are invalidated by the NvM_Rb_FirstInitAll job.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:3.1.0:2014-04-25</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMRbSingleBlockStartCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Single block start callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext_3062] Name of the block-specific callback routine which shall be invoked on start of each access to the actual memory media. If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMReadRamBlockFromNvCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read RAM copy callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM521_Conf] Name of the block-specific callback routine which shall be invoked in order to let the application copy data from the NvM module&apos;s mirror to RAM block (see also the NvMBlockUseSyncMechanism parameter). If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.&lt;BR&gt;
+For a user located above RTE and if NvMRbGenRteServicePort is set to TRUE, the name of this callback has to be set as: &quot;Rte_Call_&lt;BlockName&gt;_Mirror_ReadRamBlockFromNvmNvM&quot;.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMResistantToChangedSw</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Resistant to changed SW</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM483_Conf] Defines whether a NVRAM block shall be treated as resistant to configuration changes or not (see also the NvMCompiledConfigId and NvMDynamicConfiguration parameters for a description of this mechanism).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRomBlockDataAddress</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">ROM block data address</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM484_Conf] Defines the start address of ROM block data. You may either give an address in hexadecimal notation here (e.g. 0x2345BCDE) or the name of a linker symbol (e.g. MyTestRomBlock) or the address (e.g. &amp;MyTestRomBlock). If you explicitly want to specify that no ROM block shall be available for this block, enter NULL_PTR here.
+The NvM users shall allocate each NvM ROM block in the so called &quot;saved recovery zone&quot;. When using AUTOSAR mechanisms for memory allocation, the memory class &lt;MODULE&gt;_SEC_CONST_SAVED_RECOVERY_ZONE_&lt;SIZE&gt; shall be used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMRomBlockNum</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of ROM blocks</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM485_Conf] Defines the number of multiple ROM blocks in a contiguous area according to the given block management type. The allowed number of ROM blocks is &lt;BR&gt;
+0..1 for a native or a redundant block and &lt;BR&gt;
+0..254 for a dataset block. &lt;BR&gt;
+Additionally, the following condition has to be satisfied: &lt;BR&gt;
+NvMNvBlockNum + NvMRomBlockNum &lt;= 255 [NVM444]</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMSelectBlockForReadAll</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Read block during ReadAll</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM117_Conf] Defines whether a NVRAM block shall be processed during NvM_ReadAll or not. This configuration parameter is only allowed to be set for NVRAM blocks which are configured to have a permanent RAM block or which are configured to use explicit synchronization mechanism. Additionally, dataset blocks (configurable via NvMBlockManagementType parameter) as well as immediate priority blocks (configurable via NvMBlockJobPriority parameter) are not allowed to be selected for NvM_ReadAll.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMSelectBlockForWriteAll</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write block during WriteAll</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM549_Conf] Defines whether a NVRAM block shall be processed during NvM_WriteAll or not. This configuration parameter is only allowed to be set for NVRAM blocks which are configured to have a permanent RAM block or which are configured to use explicit synchronization mechanism.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMSingleBlockCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Single block callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM506_Conf] Name of the block-specific callback routine which shall be invoked on termination of each access to the actual memory media. If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.&lt;BR&gt;
+For a user located above RTE and if NvMRbGenRteServicePort is set to TRUE, the name of this callback has to be set as: &quot;Rte_Call_&lt;BlockName&gt;_Finished_JobFinished&quot;.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMStaticBlockIDCheck</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Static block ID check</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM532_Conf] Enables/disables the static block ID check for this block. The current version of NvM does not support this feature, so this parameter has currently always to be set to false.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMWriteBlockOnce</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write block once</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM072_Conf] Enables/disables automatic write protection of this block once it has been successfully read from or written to the memory media. This protects the block data to be overwritten once it has been successfully written. Please note that the fact that the block data has been successfully written is lost after NvM_Init; you typically recover this information by trying to read the block via NvM_ReadAll or NvM_ReadBlock before attempting any write/invalidate/erase operation on blocks configured to be written only once.
+An NvM block configured with the &quot;Write Once&quot; is allowed to be initialized at layout change (please see NvMRbInitBlockAtLayoutChange configuration parameter). If the block is initialized (i.e. its recovery data is written to the medium after ReadAll), attempting any write/invalidate/erase operation on this block will fail.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMWriteRamBlockToNvCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write RAM copy callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM520_Conf] Name of the block-specific callback routine which shall be invoked in order to let the application copy data from RAM block to the NvM module&apos;s mirror (see also the NvMBlockUseSyncMechanism parameter). If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.&lt;BR&gt;
+For a user located above RTE and if NvMRbGenRteServicePort is set to TRUE, the name of this callback has to be set as: &quot;Rte_Call_&lt;BlockName&gt;_Mirror_WriteRamBlockToNvmNvM&quot;.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF-CONDITIONAL>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMWriteVerification</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write verification</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM534_Conf] Enables/disables write verification. The current version of NvM does not support this feature, so this parameter has currently always to be set to false.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMWriteVerificationDataSize</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Write verification data size</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM538_Conf] Defines the number of bytes to compare in each step when comparing the content of a RAM Block and a block read back during write verification. This parameter is ignored if the write verification feature is disabled for this block.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-CHOICE-CONTAINER-DEF>
+                      <SHORT-NAME>NvMTargetBlockReference</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Reference to block in media</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM486_Conf] According to the NvM specification, this container shall collect all references to the related block configuration in Ea resp. Fee. Since this NvM implementation entirely generates this related block configuration, this container together with its contained reference parameters is and remains superfluous.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <CHOICES>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>NvMEaRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Reference to block in serial EEPROM</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[NVM487_Conf] Container for block-specific Ea parameters/references. Not used in this NvM implementation.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>NvMNameOfEaBlock</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Reference to block in serial EEPROM</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">[NVM488_Conf] Reference to block configuration in Ea module. Not used in this NvM implementation.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Ea/EaBlockConfiguration</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>NvMFeeRef</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Reference to block in flash EEPROM emulation</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[NVM489_Conf] Container for block-specific Fee parameters/references. Not used in this NvM implementation.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <REFERENCES>
+                            <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <SHORT-NAME>NvMNameOfFeeBlock</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Reference to block in flash EEPROM emulation</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">[NVM490_Conf] Reference to block configuration in Fee module. Not used in this NvM implementation.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                              <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Fee/FeeBlockConfiguration</DESTINATION-REF>
+                            </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                          </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CHOICES>
+                    </ECUC-CHOICE-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>NvMCommon</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Common options</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">[NVM028_Conf] Container for common (i.e. not block-specific) configuration options.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMApiConfigClass</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">API class</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM491_Conf] Allows to configure the feature set supported by the NvM service. Higher API classes mean more features at the expense of higher resource usage. Lower API classes mean less features but a smaller memory footprint. Please relate to the NvM documentation for a detailed description of which API class contains which set of features.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_API_CONFIG_CLASS_3</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">API Class 3</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMBswMMultiBlockJobStatusInformation</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Inform BswM about the multiblock job status</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2803] Enables/disables the notification of BswM about the current status of the multiblock job. The notification is made by invoking the function BswM_NvM_CurrentJobMode when multiblock operations are started, finished or canceled. If this notification is enabled, then a configured multiblock callback (configurable via NvMMultiBlockCallback) is not fired (BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2804).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMCompiledConfigId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Compiled configuration ID</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM492_Conf] Configuration ID uniquely identifying the NV memory layout version. This ID is used for compatibility decisions during NvM_ReadAll if dynamic configuration feature of NvM is enabled (see also the NvMDynamicConfiguration parameter) or if the initialization of blocks at a layout change is enabled (see also the NvMRbInitAtLayoutChange parameter). This parameter is also used for the &quot;initialization at layout change feature&quot; (see also NvMRbInitBlockAtLayoutChange parameter).&lt;BR&gt;
+The configuration of the compiled ID is currently mandatory. In later versions, if this ID is not manually configured, NvM will generate it automatically from the values of the following configuration parameters of each NvM block in the layout: NvMNvBlockLength, NvMNvBlockNum, NvMBlockManagementType, NvMRbBlockPersistentId, NvMRbInitBlockAtLayoutChange.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMCrcNumOfBytes</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of CRC bytes</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM493_Conf] If CRC (re-) calculation is configured for at least one permanent RAM block, this parameter defines the maximum number of bytes which shall be processed within one cycle of job processing. The current version of NvM does not support this feature, so the given setting is currently ignored.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>65535</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMDatasetSelectionBits</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Number of data selection bits</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM494_Conf] According to the NvM specification, this setting defines the number of least significant bits which shall be used to address a certain dataset of a NVRAM block within the interface to the memory hardware abstraction. Since this NvM implementation uses a different (more efficient) identification scheme towards the memory hardware abstraction, this parameter is and remains superfluous.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>8</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMDevErrorDetect</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Development error detection</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM495_Conf] Enables/disables the detection and notification of development errors. If this parameter is enabled, then extended error checking is performed during runtime; any errors detected by these checks are reported to the Det module. This feature should be switched off in series software.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMDrvModeSwitch</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Driver mode switch</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM496_Conf] Enables/disables switching memory drivers to fast mode during performing NvM_ReadAll and NvM_WriteAll. Fast node is not and will not be supported by layers underneath NvM. Therefore, NvM does not support this feature, so this parameter has currently always to be set to false.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMDynamicConfiguration</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dynamic configuration</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM497_Conf] Enables/disables the dynamic configuration management feature. If enabled, the currently configured compiled configuration ID (see NvMCompiledConfigId parameter) is compared against the configuration ID stored on the memory media during NvM_ReadAll. If these ID&apos;s don&apos;t match, only the blocks marked as being resistant to SW changes (see also the NvMResistantToChangedSw parameter) are read from the memory media. If this parameter is disabled, NvM_ReadAll is processed without taking care of any possibly stored configuration ID.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMJobPrioritization</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Job prioritization</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM498_Conf] Enables/disables job prioritization handling.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FLOAT-PARAM-DEF>
+                      <SHORT-NAME>NvMMainFunctionCycleTime</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Main function cycle time</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM540_Conf] Defines the cycle time in seconds of the periodic calling of NvM main function. If the cycle time is configured to be zero, the NvM main function is executed in a background task.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>1</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-FLOAT-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMMultiBlockCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Multiblock callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM500_Conf] Name of the common callback routine which shall be invoked on termination of each asynchronous multi block request (NvM_Rb_FirstInitAll, NvM_ReadAll, removing of non-resistant to changed SW blocks or NvM_WriteAll). If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMPollingMode</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Polling mode</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM501_Conf] Defines the way how NvM communicates to the memory media drivers. If set to true, the NvM_MainFunction polls the status from these drivers if some operation is ongoing. If set to false, the media drivers asynchronously report any changes in the operation status via dedicated callback functions provided by NvM. NvM does not support asynchronous notifications from the memory media drivers, so this parameter has currently always to be set to true.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbAuxInterface</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Auxiliary interface</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2945] Enables/disables the auxiliary service interface. This interface allows a special &quot;auxiliary&quot; user to trigger NvM single-block jobs for arbitrary blocks which do not interfere with jobs or states of &quot;regular&quot; users.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:7.0.0:2016-01-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMRbGenArxmlVersion</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Version of generated ARXML</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2746] Version of the generated ARXML file(s).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:0.2.0:2012-03-01</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>NVM_GEN_ARXML_VERSION_402</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_GEN_ARXML_VERSION_402</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">4.0R2</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:0.2.0:2012-03-01</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbInitAtLayoutChange</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Initialize blocks at a layout change</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2893] Enables/disables the initialization of NvM blocks having the configuration parameter NvMRbInitBlockAtLayoutChange set to &quot;true&quot;. This initialization is perfomed in case a layout change is detected.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:6.0.0:2015-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMRbMultiBlockStartCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Multiblock start callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2762] Entry address of the common callback routine which shall be invoked whenever an asynchronous multi block request is about to start.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:7.1.0:2016-04-30</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>NvMRbObserverCallback</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Observer callback</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2843]  Name of the callback routine which is invoked on the termination of the processing of a job for a block within an asynchronous request. 
+Unlike multiblock callback, if configured, this callback is invoked for any configured block including the configuration ID block (when dynamic configuration is enabled) and excluding block #0. Similar to the single block request, it provides the block specific request result when the processing of the block finishes. 
+If you explicitly want to specify that no such callback routine shall be called, enter NULL_PTR here.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:3.1.0:2014-04-25</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRamInitCheck</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">RAM init check</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2786] This parameter allows to choose the behavior of the NvM module when a reset occurs. &lt;BR&gt;
+NVM_RB_RAM_INIT_CHECK_NONE: After a reset, NvM_ReadAll() reads all blocks suitable for ReadAll. &lt;BR&gt;
+NVM_RB_RAM_INIT_CHECK_QUICK: After a reset, it is checked whether the saved zone is lost. If not lost, only blocks whose RAM status bits are INVALID are filled with data from Nv blocks during NvM_ReadAll(). If the RAM status bit of a block is found VALID, then the block is skipped by NvM_ReadAll().</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:2.1.0:2013-10-28</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>NVM_RB_RAM_INIT_CHECK_NONE</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_RB_RAM_INIT_CHECK_NONE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">None</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.1.0:2013-10-28</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_RB_RAM_INIT_CHECK_QUICK</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Quick</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:2.1.0:2013-10-28</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRemoveNonResistantBlocks</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Remove non-resistant blocks</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2787] Enables/disables enhanced dynamic configuration. If enabled and if the configured configuration ID is different from the configuration ID stored on the memory media, NV blocks which are configured to be non-resistant against SW changes (parameter NvMResistantToChangedSw set to false) are removed from the media directly after NvM_ReadAll has finished. Afterwards, the changed configuration ID is immediately written to the memory media before serving any other NvM request. This feature is only available if dynamic configuration is enabled (see parameter NvMDynamicConfiguration).
+Caution: if the enhanced dynamic configuration is enabled, all of the single block operations will be neither accepted nor executed before the ReadAll is called, if the block is as ReadAll block configured and is not resistant to changed software.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:2.1.0:2013-10-28</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMRbReqMonDevId</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Device ID for request monitoring</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-3141] This parameter defines the device where the NVRAM block for request monitoring will be located.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:10.0.0:2017-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>254</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-ENUMERATION-PARAM-DEF>
+                      <SHORT-NAME>NvMRbReqMonitor</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Request monitoring</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-3124] This parameter defines the request monitoring function for the NvM. &lt;BR&gt; NVM_RB_REQ_MON_DISABLED [Default]: Request monitoring disabled. &lt;BR&gt; NVM_RB_REQ_MON_WRITE: Monitoring of write requests enabled. In this case following counters are available: &lt;BR&gt; - NvM_Rb_cntrWrites_u16 = Number of write requests since last power-on, &lt;BR&gt; - NvM_Rb_nrBytesWritten_u32 = Number of bytes written since last power-on, &lt;BR&gt; - NvM_Rb_idLastWrittenBlock_uo = ID of the last written block, &lt;BR&gt; - NvM_Rb_WriteMon_st.nrBytesWrittenMax_u32 = maximum number of bytes written since last power-on, &lt;BR&gt; - NvM_Rb_WriteMon_st.cntrWritesAbs_u32 = accumulated number of all write requests, &lt;BR&gt; -  NvM_Rb_WriteMon_st.cntrWritesMax_u16 = maximum number of write requests since last power-on
+</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:10.0.0:2017-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>NVM_RB_REQ_MON_DISABLED</DEFAULT-VALUE>
+                      <LITERALS>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_RB_REQ_MON_DISABLED</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Disabled</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:10.0.0:2017-07-31</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                        <ECUC-ENUMERATION-LITERAL-DEF>
+                          <SHORT-NAME>NVM_RB_REQ_MON_WRITE</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Write requests</L-4>
+                          </LONG-NAME>
+                          <ORIGIN>RB:10.0.0:2017-07-31</ORIGIN>
+                        </ECUC-ENUMERATION-LITERAL-DEF>
+                      </LITERALS>
+                    </ECUC-ENUMERATION-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRuntimeRamBlockConfiguration</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Runtime RAM Block Configuration</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-3028] Enables/disables the runtime calculation of the NV block lengths and RAM block data addresses. When this feature is enabled the NV block length and the RAM block data address can be defined as C expression in NvMRbNvBlockLengthString and NvMRamBlockDataAddress. If this feature is enabled and explicit synchronization is used for a block the explicit synchronization buffer has to be defined by the user. Therefore the configuration parameters NvMRbRuntimeRamBufferAddressStart and NvMRbRuntimeRamBufferAddressEnd have to be used.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRuntimeRamBufferAddressEnd</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Explicit Sync RAM End Address</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-] Defines the end address of the RAM buffer used for explicit synchronisation when NV block lengths are calculated on runtime (NvMRbRuntimeRamBlockConfiguration is enabled).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-STRING-PARAM-DEF>
+                      <SHORT-NAME>NvMRbRuntimeRamBufferAddressStart</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Explicit Sync RAM Start Address</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-] Defines the start address of the RAM buffer used for explicit synchronisation when NV block lengths are calculated on runtime (NvMRbRuntimeRamBlockConfiguration is enabled).</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:9.0.0:2016-11-04</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-STRING-PARAM-DEF-VARIANTS>
+                        <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                          <DEFAULT-VALUE>NULL_PTR</DEFAULT-VALUE>
+                        </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+                      </ECUC-STRING-PARAM-DEF-VARIANTS>
+                    </ECUC-STRING-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMRbSetWriteAllTriggerApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">SetWriteAllTrigger API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2982] Enables/disables NvM_Rb_SetWriteAllTrigger API. This API allows to trigger WriteAll participation independent of RAM block states or whether a block is currently busy or not.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>RB:8.0.0: 2016-07-31</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMRepeatMirrorOperations</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Max. number of mirror operation retries</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM518_Conf] Defines the number of retries to let the application copy data to or from the NvM module&apos;s mirror before postponing the current job. The lower multiplicity is set to 0 in contrast to NVM518_Conf. In fact, this parameter doesn&apos;t have to be configured if none of the blocks is configured to use explicit synchronization. See also the NvMBlockUseSyncMechanism parameter in the block configuration.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                      <MAX>7</MAX>
+                      <MIN>0</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMSetRamBlockStatusApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">SetRamBlockStatus API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM502_Conf] Enables/disables the NvM_SetRamBlockStatus API. If enabled, NvM_WriteAll only writes blocks to memory which have been explicitly marked as changed by using this API. If disabled, this API is not available and NvM_WriteAll writes blocks to memory regardless of whether they have changed or not. The current version of NvM does not support disabling the NvM_SetRamBlockStatus API, so this parameter must always be set to true.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMSizeImmediateJobQueue</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Size of immediate job queue</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM503_Conf] Defines the number of queue entries for the immediate priority job queue. This parameter is only applicable if the NvMJobPrioritization parameter is set to true.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>1</DEFAULT-VALUE>
+                      <MAX>255</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-INTEGER-PARAM-DEF>
+                      <SHORT-NAME>NvMSizeStandardJobQueue</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Size of standard job queue</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM504_Conf] Defines the number of queue entries for the standard job queue.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <MAX>255</MAX>
+                      <MIN>1</MIN>
+                    </ECUC-INTEGER-PARAM-DEF>
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>NvMVersionInfoApi</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">GetVersionInfo API</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM505_Conf] Enables/disables the NvM_GetVersionInfo API.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>NvMRbApiOverloading</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">API overloading</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Container for API overloading options. The parameters within this container should only be used with extreme care after thoroughly consulting the NvM documentation. Using the API overloading feature the wrong way can corrupt the entire Mem stack&apos;s functionality.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <PARAMETERS>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbEraseNvBlock</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">EraseNvBlock function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_EraseNvBlock instead of NvM&apos;s own implementation (which is available as NvM_Rb_EraseNvBlockBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbInvalidateNvBlock</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">InvalidateNvBlock function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_InvalidateNvBlock instead of NvM&apos;s own implementation (which is available as NvM_Rb_InvalidateNvBlockBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbReadAll</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ReadAll function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_ReadAll instead of NvM&apos;s own implementation (which is available as NvM_Rb_ReadAllBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbReadBlock</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">ReadBlock function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_ReadBlock instead of NvM&apos;s own implementation (which is available as NvM_Rb_ReadBlockBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbRestoreBlockDefaults</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">RestoreBlockDefaults function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_RestoreBlockDefaults instead of NvM&apos;s own implementation (which is available as NvM_Rb_RestoreBlockDefaultsBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbWriteAll</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">WriteAll function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_WriteAll instead of NvM&apos;s own implementation (which is available as NvM_Rb_WriteAllBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                        <ECUC-FUNCTION-NAME-DEF>
+                          <SHORT-NAME>NvMRbWriteBlock</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">WriteBlock function name</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">[BSW_SWS_AR4_0_R2_NVRAMManager_Ext-2914] Name of the function to be called in the body of NvM_WriteBlock instead of NvM&apos;s own implementation (which is available as NvM_Rb_WriteBlockBase if this parameter is set).</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <MULTIPLICITY-CONFIG-CLASSES>
+                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          </MULTIPLICITY-CONFIG-CLASSES>
+                          <ORIGIN>RB:6.1.0:2015-10-31</ORIGIN>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-FUNCTION-NAME-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>NvmDemEventParameterRefs</SHORT-NAME>
+                  <LONG-NAME>
+                    <L-4 L="EN">Dem event parameter references</L-4>
+                  </LONG-NAME>
+                  <DESC>
+                    <L-2 L="EN">[NVM541_Conf] Container for the references to DemEventParameter elements which are invoked using the Dem_ReportErrorStatus API in case the corresponding error occurs. Dem events are not supported by NvM. So, this entire container shall not be provided.</L-2>
+                  </DESC>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                  <REFERENCES>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_INTEGRITY_FAILED</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;integrity failed&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM542_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case an inconsistent block is encountered on the memory media. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_LOSS_OF_REDUNDANCY</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;loss of redundancy&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM546_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a loss of redundancy is detected. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_QUEUE_OVERFLOW</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;queue overflow&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM547_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a queue overflow occurs. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_REQ_FAILED</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;request failed&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM543_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a request fails. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_VERIFY_FAILED</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;verify failed&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM545_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a verify operation fails. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_WRITE_PROTECTED</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;write protected&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM548_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a write operation to a write protected block is encountered. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                      <SHORT-NAME>NVM_E_WRONG_BLOCK_ID</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">Dem event &quot;wrong block ID&quot;</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">[NVM544_Conf] Reference to the DemEventParameter which is invoked using the Dem_ReportErrorStatus API in case a static block ID check fails. Dem events are not supported by NvM. So, this reference shall not be provided.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                  </REFERENCES>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

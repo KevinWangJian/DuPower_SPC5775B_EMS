@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>rba_Gtm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-DEF>
+                      <SHORT-NAME>rba_Gtm</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">MCAL rba_Gtm Driver</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of the rba_Gtm module.</L-2>
+                      </DESC>
+                      <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                      <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                          <DOC-REVISION>
+                            <REVISION-LABEL>42.1.0.0</REVISION-LABEL>
+                            <ISSUED-BY>RB</ISSUED-BY>
+                            <DATE>2016-09-28</DATE>
+                          </DOC-REVISION>
+                        </DOC-REVISIONS>
+                      </ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                      <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                      </SUPPORTED-CONFIG-VARIANTS>
+                      <CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_GtmConfigSet</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Configuration Data Sets</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR rba_Gtm module.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_Gtm_AtomSubModule</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">ATOM Submodule</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container has the configuration of ATOM channels.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <SUB-CONTAINERS>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Gtm_GptAtomChannels</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Gpt Channel</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Container to collect all the ATOM channels that support Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_0_GptAtomHwInst</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Atom Hardware Instance</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The Hardware instance where the channel is located.</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The ATOM hardware instance where the Gpt channel is located.
+RH850 controller has 3 Hardware instances 0..3.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>2</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_1_GptAtomHwCh</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Atom Hardware Channel</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The used Hardware channel in ATOM for Gpt.</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The Hardware channel of ATOM submodule used for Gpt.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>7</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_2_GptAtomClk</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">CMU clock Divider selection</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of Configurable clock divider for the ATOM channel(configured for Gpt).</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">For each channel, select the clock source divider to drive the channel.
+Please note that the selected clock source must also be present in &quot;Clock Management Unit&quot; container and configured with required clock divider value.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_0</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 0</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_1</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 1</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_2</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 2</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_3</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 3</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_4</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 4</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_5</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 5</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_6</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 6</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_7</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 7</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_3_GptChannelIndex</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Channel Index</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The index that specifies the location\placement of this channel configuration in an array containing the configurations of all the channels.
+Note : Do not fill this parameter. This parameter will be updated in the BCT action rba_Gtm_Prepare</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">Do not fill this parameter. It will be filled automatically during BCT build.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>255</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Gtm_PwmAtomChannels</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Pwm Channel</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Container to collect all the ATOM channels that support Pwm generation</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_0_PwmAtomHwInst</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Atom Hardware Instance</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The Hardware instance where the channel is located.</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The ATOM hardware instance where the Pwm channel is located.
+RH850 controller has 3 Hardware instances 0..3.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>2</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_1_PwmAtomHwCh</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Atom Hardware Channel</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The used Hardware channel in ATOM for Pwm generation.</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The Hardware channel of ATOM submodule used for Pwm generation.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>7</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_2_PwmAtomClk</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">CMU clock Divider selection</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of Configurable clock divider for the ATOM channel(configured for PWM).</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">For each channel, select the clock source divider to drive the channel.
+Please note that the selected clock source must also be present in &quot;Clock Management Unit&quot; container and configured with required clock divider value.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_0</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 0</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_1</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 1</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_2</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 2</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_3</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 3</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_4</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 4</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_5</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 5</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_6</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 6</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_7</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 7</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_3_PwmChannelIndex</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Channel Index</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The index that specifies the location\placement of this channel configuration in an array containing the configurations of all the channels.
+Note : Do not fill this parameter. This parameter will be updated in the BCT action rba_Gtm_Prepare</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">Do not fill this parameter. It will be filled automatically during BCT build.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>255</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_Gtm_TimSubModule</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">TIM Submodule</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This container has the configuration of TIM channels(currently for Icu).</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <SUB-CONTAINERS>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Gtm_TimIcuChannels</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Icu Channel</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">Container to collect all the TIM channels that support Icu generation</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_0_TimHwInst</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Tim Hardware Instance</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The Hardware instance where the channel is located.</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The TIM hardware instance where the channel is located.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>1</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_1_TimHwCh</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Tim Hardware Channel</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The used Hardware channel in TIM for Icu</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">The Hardware channel of TIM submodule used for Pwm generation.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>7</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_2_TimIcuClk</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">CMU clock Divider selection</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Selection of Configurable clock divider for the TIM channel(configured for Icu).</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">For each channel, select the clock source divider to drive the channel.
+Please note that the selected clock source must also be present in &quot;Clock Management Unit&quot; container and configured with required clock divider value.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_0</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 0</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_1</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 1</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_2</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 2</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_3</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 3</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_4</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 4</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_5</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 5</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_6</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 6</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_7</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 7</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_3_IcuChannelIndex</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Channel Index</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">The index that specifies the location\placement of this channel configuration in an array containing the configurations of all the channels.
+Note : Do not fill this parameter. This parameter will be updated in the BCT action rba_Gtm_Prepare</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">Do not fill this parameter. It will be filled automatically during BCT build.</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>255</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_GtmGeneral</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">General Settings</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Configuration of general rba_Gtm parameters.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G0_Controller</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">MicroController Selection</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of MicroController variant</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">Configure the used MicroController.
+Currently, rba_Gtm component supports only RH850P1X variant.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>MCAL_RH850_P1X</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">RH850P1X</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G1_BaseAddress</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">GTM Base Address</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Configure the Base Address of GTM module as mentioned in the data sheet.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">The base address where the registers of GTM module begin will be vary for different micro controllers.
+Configure this parameter by refering the DataSheet.
+Example : 0xFFE00000</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>4294967295</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G2_ARVersionCheck</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">AUTOSAR Version check</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Switch to ON\OFF intra module AUTOSAR version check</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">True : Enables intra module AUTOSAR version checks. rba_Gtm comp works with Pwm and Icu comp in AR4.2
+False : Disable intra module AUTOSAR version checks.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G3_DevErrorDetect</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Default Error Detection</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Switches the Default Error Tracer (Det) detection ON or OFF.
+Currently not supported.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">True: enable Default error tracer detection and notification to DET comp.
+False: Disable Default error tracer and notification.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-INTEGER-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G4_Index</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">rba_Gtm module instance ID</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <MAX>255</MAX>
+                              <MIN>0</MIN>
+                            </ECUC-INTEGER-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G5_Pwm_Gtm_Usage</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Usage of GTM by Pwm</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of GTM submodule that will be used by Pwm.
+If Pwm comp does not exist and\or does not use GTM, set this parameter to OFF.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">If Pwm comp exist and uses rba_Gtm comp, select the used GTM submodule for Pwm generation(currently only ATOM is supported for Pwm).
+If Pwm does not need rba_Gtm or if Pwm comp does not exist, set this to OFF.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>PWM_USE_GTM_ATOM</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">GTM_ATOM</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>PWM_GTM_OFF</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">OFF</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G6_Icu_Gtm_Usage</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Usage of GTM by Icu</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of GTM submodule that will be used by Icu.
+If Icu comp does not exist and\or does not use GTM, set this parameter to OFF.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">If Icu comp exist and uses rba_Gtm comp, select the used GTM submodule for Icu functionality (currently TIM is supported for Icu).
+If Icu does not need rba_Gtm or if Icu comp does not exist, set this to OFF.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>ICU_USE_GTM_TIM</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">GTM_TIM</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>ICU_GTM_OFF</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">OFF</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_Gtm_G7_Gpt_Gtm_Usage</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Usage of GTM by Gpt</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of GTM submodule that will be used by Gpt.
+If Gpt comp does not exist and\or does not use GTM, set this parameter to OFF.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">If Gpt comp exist and uses rba_Gtm comp, select the used GTM submodule for Gpt(currently only ATOM is supported for Gpt).
+If Gpt does not need rba_Gtm or if Gpt comp does not exist, set this to OFF.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>GPT_USE_GTM_ATOM</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">GTM_ATOM</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>GPT_GTM_OFF</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">OFF</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>RB:42.1.0.0:2016-12-05</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                          </PARAMETERS>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_Gtm_CmuClk</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Clock Management Unit</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This Sub-Container has the configuration for CMU clock sources and its division factors.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Gtm_G7_Gclock_Num</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">GTM Global clock Numerator</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">selection of numerator(Z) for fractional divider for GTM global input clock.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">Numerator for global clock divider. Defines numerator of the fractional divider(Z/N).</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>16777215</MAX>
+                                  <MIN>1</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_Gtm_G8_Gclock_Den</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">GTM Global clock Denominator</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">selection of Denominator(N) for fractional divider for GTM global input clock.</L-2>
+                                  </DESC>
+                                  <INTRODUCTION>
+                                    <P>
+                                      <L-1 L="EN">Denominator for global clock divider. Defines denominator of the fractional divider.</L-1>
+                                    </P>
+                                  </INTRODUCTION>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <SCOPE>LOCAL</SCOPE>
+                                  <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <MAX>16777215</MAX>
+                                  <MIN>1</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                              <SUB-CONTAINERS>
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                  <SHORT-NAME>rba_Gtm_CmuClk_Dividers</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Clock Source Divider</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">configurable Clock Generation sub-units</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>8</UPPER-MULTIPLICITY>
+                                  <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  </MULTIPLICITY-CONFIG-CLASSES>
+                                  <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                  <PARAMETERS>
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_CmuClkDivider</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Clock Source Divider</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Configure the clock source divider ( CMU_CLK_# )
+Example : for CMU clock source divider 1, write &lt;CMU_CLK_1&gt;</L-2>
+                                      </DESC>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <LITERALS>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_0</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 0</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_1</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 1</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_2</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 2</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_3</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 3</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_4</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 4</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_5</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 5</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_6</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 6</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                        <ECUC-ENUMERATION-LITERAL-DEF>
+                                          <SHORT-NAME>CMU_CLK_7</SHORT-NAME>
+                                          <LONG-NAME>
+                                            <L-4 L="EN">Clock Source Divider 7</L-4>
+                                          </LONG-NAME>
+                                          <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                        </ECUC-ENUMERATION-LITERAL-DEF>
+                                      </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                      <SHORT-NAME>rba_Gtm_CmuClkx_CLK_CNT</SHORT-NAME>
+                                      <LONG-NAME>
+                                        <L-4 L="EN">Global Clock Division value</L-4>
+                                      </LONG-NAME>
+                                      <DESC>
+                                        <L-2 L="EN">Define the count value for the clock divider of clock source CMU_CLK[x]</L-2>
+                                      </DESC>
+                                      <INTRODUCTION>
+                                        <P>
+                                          <L-1 L="EN">This is the value that will be used to divide the global clock signal. The resulting clock will correspond to CMU_CLK_x [x= 0…7]</L-1>
+                                        </P>
+                                      </INTRODUCTION>
+                                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                      <SCOPE>LOCAL</SCOPE>
+                                      <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                      <VALUE-CONFIG-CLASSES>
+                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                          <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                                      </VALUE-CONFIG-CLASSES>
+                                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      <MAX>16777215</MAX>
+                                      <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                  </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              </SUB-CONTAINERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_GtmOptionalApis</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Optional APIs</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains all configuration switches for configuring optional API services of the rba_Gtm driver.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_GtmGetVersionInfoApi</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">rba_Gtm Get VersionInfo API</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Adds / removes the service rba_Gtm_GetVersionInfo() from the code.</L-2>
+                              </DESC>
+                              <INTRODUCTION>
+                                <P>
+                                  <L-1 L="EN">True: rba_Gtm_GetVersionInfo() can be used.
+False: rba_Gtm_GetVersionInfo() can not be used.</L-1>
+                                </P>
+                              </INTRODUCTION>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <SCOPE>LOCAL</SCOPE>
+                              <ORIGIN>RB:42.1.0.0:2016-09-28</ORIGIN>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CONTAINERS>
+                    </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

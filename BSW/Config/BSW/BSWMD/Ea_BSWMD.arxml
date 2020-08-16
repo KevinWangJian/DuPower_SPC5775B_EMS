@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA> 
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Ea</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Ea</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>40</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Cancel</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_EraseImmediateBlock</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_GetJobResult</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_GetStatus</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_InvalidateBlock</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_MainFunction</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Rb_BlockMaintenance</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Rb_EndInit</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Read</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_SetMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Write</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <OUTGOING-CALLBACKS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                 <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Ea/BswModuleEntrys/Ea_Rb_ErrorHandling_CallBackFunction</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </OUTGOING-CALLBACKS>
+              <BSW-MODULE-DEPENDENCYS>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Crc</SHORT-NAME>
+                  <TARGET-MODULE-ID>201</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Det</SHORT-NAME>
+                  <TARGET-MODULE-ID>15</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+                <BSW-MODULE-DEPENDENCY>
+                  <SHORT-NAME>Eep</SHORT-NAME>
+                  <TARGET-MODULE-ID>90</TARGET-MODULE-ID>
+                </BSW-MODULE-DEPENDENCY>
+              </BSW-MODULE-DEPENDENCYS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+          
+          
+          
+        </AR-PACKAGE><AR-PACKAGE>
+            <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+            <ELEMENTS>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Cancel</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to cancel an ongoing asynchronous job (read/write/erase/compare) .</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >The function Ea_Cancel call the cancel function of the underlying EEPROM driver.
+If development error detection for the module EA is enabled: the function Ea_Cancel shall check that the module has been initialized. If this
+check fails, the function Ea_Cancel shall raise the development error EA_E_NOT_INITIALIZED and return without performing the requested
+function.
+If a cancel request is rejected by the function Ea_Cancel, i.e. requirement EA132 applies, the function Ea_Cancel shall not change the current
+module status or job result.
+The function Ea_Cancel shall reset the EA module's internal variables to make the module ready for a new job request. I.e. the function
+Ea_Cancel shall set the job result to MEMIF_JOB_CANCELED and the module status to MEMIF_IDLE.
+Note: The function Ea_Cancel and the cancel function of the underlying EEPROM driver are synchronous in their behaviour, i.e. their job is
+done once they return to the caller. On the other hand, they are asynchronous w.r.t. an ongoing read, erase or write job in the EEPROM
+memory. The cancel functions shall only reset their modules internal variables so that a new job can be accepted by the modules. They do
+not cancel an ongoing job in the hardware and they do not wait for an ongoing job to be finished by the hardware. This might lead to the
+situation in which the module's state is reported as IDLE while there is still an ongoing job being executed by the hardware. Therefore, the
+EEPROM driver's main function shall check that the hardware is indeed free before starting a new job.</L-2>
+                </DESC>
+                <SERVICE-ID>0x04</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>                              
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_EraseImmediateBlock</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to erase the Block Number.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > The function Ea_EraseImmediateBlock erases the block with in module Eep defined erase value.
+If development error detection for the module EA is enabled: the function Ea_EraseImmediateBlock shall check that the module has been
+initialized. If this check fails, the function Ea_EraseImmediateBlock shall raise the development error EA_E_NOT_INITIALIZED and return
+E_NOT_OK to the caller without performing the requested function; the function Ea_EraseImmediateBlock shall check whether the given
+block number is valid (i.e. inside the configured range). If this check fails, the function Ea_EraseImmediateBlock shall raise the development
+error EA_E_INVALID_BLOCK_NO and return E_NOT_OK to the caller without performing the requested function. Note: The function Ea_EraseImmediateBlock shall only be called by e.g. diagnostic or similar system services to pre−erase the area for
+immediate data if necessary.</L-2>
+                </DESC>
+                <SERVICE-ID>0x09</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+                                    <L-2 L="EN">E_OK is returned if the requested job has been accepted by the module. Otherwise, E_NOT_OK is returned.</L-2>
+                                </DESC>
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <INTRODUCTION>
+                                    <P>
+                                        <L-1 L="EN">Possible reasons for Ea_eraseImmediateBlock returning E_NOT_OK are:</L-1>
+                                    </P>
+                                    <LIST TYPE="UNNUMBER">
+                                        <ITEM>
+                                            <P>
+                                                <L-1 L="EN">The Given BlockNumber is Invalid.</L-1>
+                                            </P>
+                                        </ITEM><ITEM>
+    <P><L-1 L="EN">The Module is not yet initialized.</L-1></P>
+  </ITEM>
+                                    </LIST>
+                                </INTRODUCTION>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Number of logical block, also denoting start address of that block in EEPROM. </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_GetJobResult</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to return the JobResult</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > The function Ea_GetJobResult returns the current job (last job requested by the NVRAM manager) result of Ea running.
+If development error detection for the module EA is enabled: the function Ea_GetJobResult shall check that the module has been initialized.
+If this check fails, the function Ea_GetJobResult shall raise the development error EA_E_NOT_INITIALIZED and return MEMIF_JOB_FAILED to
+the caller without performing the requested function.</L-2>
+                </DESC>
+                <SERVICE-ID>0x06</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+								<L-2 L="EN">MEMIF_JOB_OK is returned if the last job has been finished successfully. MEMIF_JOB_PENDING is returned if the last job is waiting for execution or currently being executed.MEMIF_JOB_CANCELED is returned if The last job has been canceled (which means it failed).MEMIF_JOB_FAILED is returned if the last job was not finished successfully(it failed).MEMIF_BLOCK_INCONSISTENT is returned if  the requested block is inconsistent it may contain corrupted data. MEMIF_BLOCK_INVALID is returned if the requested block has been invalidated,the requested operation can not be performed. </L-2>
+								</DESC>                               
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_GetStatus</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to Return the Status</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > The function Ea_GetStatus reads the current status of Ea running.
+If development error detection for the module EA is enabled: the function Ea_GetStatus shall check that the module has been initialized. If
+this check fails, the function Ea_GetStatus shall raise the development error EA_E_NOT_INITIALIZED and return MEMIF_UNINIT to the caller
+without performing the requested function.
+The function Ea_GetStatus shall return MEMIF_UNINIT if the module has not (yet) been initialized.
+The function Ea_GetStatus shall return MEMIF_IDLE if it has not currently requested a job from the underlying EEPROM driver.
+The function Ea_GetStatus shall return MEMIF_BUSY if it has currently requested a job from the underlying EEPROM driver.
+The function Ea_GetStatus shall return MEMIF_BUSY_INTERNAL, if an internal management operation is currently ongoing.</L-2>
+                </DESC>
+                <SERVICE-ID>0x05</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                                                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+								<DESC>
+								<L-2 L="EN">MEMIF_UNINIT: The Eep module has not been initialized (yet).MEMIF_IDLE: The Eep module is currently idle.MEMIF_BUSY: The Eep module is currently busy.MEMIF_BUSY_INTERNAL: The Eep module is currently busy with internal management operations.</L-2>
+								</DESC>									
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_GetVersionInfo</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to get the version information of this module.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >The function Ea_GetVersionInfo shall return the version information of this module. The version information includes:
+− Module Id
+− Vendor Id
+− Vendor specific version numbers (BSW00407).
+The function Ea_GetVersionInfo shall be pre compile time configurable On/Off by the configuration parameter EA_VERSION_INFO_API.
+If development error detection for the module EA is enabled: the function EA_GetVersionInfo shall raise the development error EA_E_PARAM_
+POINTER if the argument is a NULL pointer and return without any action.</L-2>
+                </DESC>
+                <SERVICE-ID>0x08</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="VersioninfoPtr", Kind="in", Type="Std_VersionInfoType*", IsConst="False"-->
+                    <SHORT-NAME>VersioninfoPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Pointer to standard version information structure. </L-2>
+                    </DESC><CATEGORY>DATA_REFRENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-POINTER-TARGET-PROPS>
+                                                    <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                </SW-POINTER-TARGET-PROPS>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Init</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to initialize the EEPROM abstraction module</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > The function Ea_Init shall initialize the EEPROM abstraction module. It sets the module state to MEMIF_IDLE and the job result to MEMIF_JOB_
+OK after successful module initialization and before it returns to the caller.
+Note: The Ea module's user shall call the function Ea_Init before a running operation of the Ea module.
+Note: During the Ea_Init runs the migration prepare function for the EEPROM layout. </L-2>
+                </DESC>
+                <SERVICE-ID>0x00</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_InvalidateBlock</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to invalidate the BlockNumber</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >The function Ea_InvalidateBlock shall take the block number and calculate the corresponding memory write address, invalidate the block.
+If development error detection for the module Ea is enabled: the function Ea_InvalidateBlock shall check that the module has been initialized.
+If this check fails, the function Ea_InvalidateBlock shall raise the development error EA_E_NOT_INITIALIZED and return E_NOT_OK to the caller
+without performing the requested function; the function Ea_InvalidateBlock shall check whether the given block number is valid (i.e. inside the configured range). If this check fails, the function Ea_InvalidateBlock shall raise the development error EA_E_INVALID_BLOCK_NO and
+return E_NOT_OK to the caller without performing the requested function.
+Note: for redundant blocks, it invalidates all copies of block.
+Note: for invalidating block, block version will be incremented as usual.</L-2>
+                </DESC>
+                <SERVICE-ID>0x07</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                            <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+                                    <L-2 L="EN">E_OK is returned if the requested job has been accepted by the module. Otherwise, E_NOT_OK is returned.</L-2>
+                                </DESC>
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <INTRODUCTION>
+                                    <P>
+                                        <L-1 L="EN">Possible reasons for Ea_InvalidateBlock returning E_NOT_OK are:</L-1>
+                                    </P>
+                                    <LIST TYPE="UNNUMBER">
+                                        <ITEM>
+                                            <P>
+                                                <L-1 L="EN">The given BlockNumber is Invalid.</L-1>
+                                            </P>
+                                        </ITEM><ITEM>
+    <P><L-1 L="EN">The Module has not yet been initialized.</L-1></P>
+  </ITEM>
+                                    </LIST>
+                                </INTRODUCTION>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Number of logical block, also denoting start address of that block in EEPROM. </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_MainFunction</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to perform the processing of the EEPROM jobs (read/write/erase/compare) .</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >Service to handle the requested jobs and the internal management operations.</L-2>
+                </DESC>
+                <SERVICE-ID>0x12</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Rb_BlockMaintenance</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN"> Service to handle the requested jobs and the internal management operations. </L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >The function Ea_Rb_BlockMaintenance shall take the redundant block number and repair the corresponding data of both two copies.
+The function Ea_Rb_BlockMaintenance shall copy the given / computed parameters to module internal variables, initiate a maintain job, set
+the EA module status to MEMIF_BUSY, set the job result to MEMIF_JOB_PENDING and return with E_OK.
+The EA module shall execute the maintain job of the function Ea_Rb_BlockMaintenance asynchronously within the EA module's main function.
+The function Ea_Rb_BlockMaintenance shall detect the corrupted data copy and repair it with the right data from another copy. It changes
+nothing if both of copies are corrupted or both have the right data.
+If development error detection for the module EA is enabled: the function Ea_Rb_BlockMaintenance shall check that the module has been
+initialized. If this check fails, the function Ea_Rb_BlockMaintenance shall raise the development error EA_E_NOT_INITIALIZED and return
+E_NOT_OK to the caller without performing the requested function; The function Ea_Rb_BlockMaintenance shall check whether the given
+block number is valid and redundant (i.e. inside the configured range). If this check fails, the function Ea_Rb_BlockMaintenance shall raise
+the development error EA_E_INVALID_BLOCK_NO and return E_NOT_OK to the caller without performing the requested function.  </L-2>
+                </DESC>
+                <SERVICE-ID>0x0a</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+                                    <L-2 L="EN">E_OK is returned if the requested job has been accepted by the module.. Otherwise, E_NOT_OK is returned.</L-2>
+                                </DESC>
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <INTRODUCTION>
+                                    <P>
+                                        <L-1 L="EN">Possible reasons for Ea_Rb_BlockMaintenance returning E_NOT_OK are:</L-1>
+                                    </P>
+                                    <LIST TYPE="UNNUMBER">
+                                        <ITEM>
+                                            <P>
+                                                <L-1 L="EN">The given BlockNumber is Invalid.</L-1>
+                                            </P>
+											<P>
+											    <L-1 L="EN">The Module has not yet been initialized.</L-1>
+											</P>
+                                        </ITEM>
+                                    </LIST>
+                                </INTRODUCTION>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Number of logical block, also denoting start address of that block in EEPROM. </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Rb_EndInit</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service To indicate the end of the system's init phase and
+  therefore allow the Ea to start migration if necessary.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN"> This function indicates the end of the system's init phase and
+  therefore allows the Ea to start migration if necessary.
+ 
+  This function should be placed when the period of a necessary
+  fast start-up is finished, e.g. after calling NvM_ReadAll. This function should also be called right after the Ea_Init()
+  function in case the system uses the initialization function
+  inside a power down service (e.g. Shutdown). Otherwise migration
+  will not be formed inside this system state anymore. NOTE: Service Id is given for this function only to avoid validation Error.</L-2>
+                </DESC>
+                <SERVICE-ID>0xff</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Read</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to Read Length bytes of block Blocknumber at offset BlockOffset into the buffer DataBufferPtr.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > If the user data length is not equal to the configured data length during a read order, the order should not be rejected but the smaller amount
+of bytes should be transfered instead and the rest of the bytes should be filled up with zeros.
+− RAM data length &gt; EEPROM data length: Copy available EEPROM data to begin of target RAM and fill remaining RAM with a configurable
+default initialization value
+− RAM data length &lt; EEPROM data length: Copy available EEPROM data to begin of target RAM and cut exceeding data
+If development error detection for the module EA is enabled: the function Ea_Read shall check that the module has been initialized. If
+this check fails, the function Ea_Read shall raise the development error EA_E_NOT_INITIALIZED and return E_NOT_OK to the caller without
+performing the requested function; the function Ea_Read shall check whether the given block number is valid (i.e. inside the configured
+range). If this check fails, the function Ea_Read shall raise the development error EA_E_INVALID_BLOCK_NO and return E_NOT_OK to the
+caller without performing the requested function. </L-2>
+                </DESC>
+                <SERVICE-ID>0x02</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+                                    <L-2 L="EN">E_OK is returned if the read command has been accepted successfully. Otherwise, E_NOT_OK is returned.</L-2>
+                                </DESC>
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <INTRODUCTION>
+                                    <P>
+                                        <L-1 L="EN">Possible reasons for Ea_Read returning E_NOT_OK are:</L-1>
+                                    </P>
+                                    <LIST TYPE="UNNUMBER">
+                                        <ITEM>
+                                            <P>
+                                                <L-1 L="EN">The given BlockNumber is Invalid </L-1>
+					    </P>
+					</ITEM>
+				    <ITEM>
+					<P>
+					<L-1 L="EN">The Module has not yet been initialized.</L-1>
+					</P>
+                                    </ITEM>
+                                    </LIST>
+                                </INTRODUCTION>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Number of logical block, also denoting start address of that block in EEPROM </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockOffset", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockOffset</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Read address offset inside the block </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Pointer to data buffer </L-2>
+                    </DESC><CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-POINTER-TARGET-PROPS>
+                                                    <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                </SW-POINTER-TARGET-PROPS>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="Length", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Number of bytes to read </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_SetMode</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to set the Mode.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" >The function Ea_SetMode shall be enabled / disabled via the pre−compile time parameter EaSetModeSupported such that the function is
+completely removed from the code if it is disabled.
+If development error detection for the module EA is enabled: the function Ea_SetMode checks that the module has been initialized. If this
+check fails, the function Ea_SetMode will raise the development error EA_E_NOT_INITIALIZED and return without performing the requested
+function.
+It sets the transfer mode of underlying hardware, so it calls the "Eep_SetMode" function of the EEPROM driver with the gven "Mode"
+parameter.
+Note: For an Eep module driving an external EEPROM through SPI: there is no burst access defined by SPI, so it has no effect on this setting
+for the HW speed. But if it is set with fast mode for write order, no data compare is necessary before and after writing. The write time will
+be faster than slow mode.</L-2>
+                </DESC>
+                <SERVICE-ID>0x01</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="Mode", Kind="in", Type="MemIf_ModeType", IsConst="False"-->
+                    <SHORT-NAME>Mode</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Desired mode for the underlying EEPROM driver </L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Ea/ImplementationDataTypes/MemIf_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Ea_Write</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Service to Write the contents of the DataBufferPtr to the block BlockNumber.</L-4>
+              </LONG-NAME>                
+                <DESC>
+                  <L-2 L="EN" > The function Ea_Write shall take the block number and calculate the corresponding memory write address. The block offset shall be fixed to
+zero for this address calculation.
+The function Ea_Write shall copy the given / computed parameters to module internal variables, initiate a write job, set the EA module status
+to MEMIF_BUSY, set the job result to MEMIF_JOB_PENDING and return with E_OK.
+The EA module shall execute the write job of the function Ea_Write asynchronously within the EA module's main function.
+The function Ea_Write shall set the length parameter for the write job to the length configured for this logical block.
+If development error detection for the module EA is enabled: the function Ea_Write shall check that the module has been initialized. If
+this check fails, the function Ea_Write shall raise the development error EA_E_NOT_INITIALIZED and return E_NOT_OK to the caller without
+performing the requested function; The function Ea_Write shall check whether the given block number is valid (i.e. inside the configured
+range). If this check fails, the function Ea_Write shall raise the development error EA_E_INVALID_BLOCK_NO and return E_NOT_OK to the
+caller without performing the requested function.</L-2>
+                </DESC>
+                <SERVICE-ID>0x03</SERVICE-ID>
+                <IS-REENTRANT>false</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                                <SHORT-NAME>ReturnValue</SHORT-NAME>
+                                <DESC>
+                                    <L-2 L="EN">E_OK is returned if the Write command has been accepted successfully. Otherwise, E_NOT_OK is returned.</L-2>
+                                </DESC>
+                                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                <INTRODUCTION>
+                                    <P>
+                                        <L-1 L="EN">Possible reasons for Ea_write returning E_NOT_OK are:</L-1>
+                                    </P>
+                                    <LIST TYPE="UNNUMBER">
+                                        <ITEM>
+                                            <P>
+                                                <L-1 L="EN">The given BlockNumber is Invalid and redundant.</L-1>
+                                            </P><P><L-1 L="EN">The Module has not yet been Initialized.</L-1></P>
+                                        </ITEM>
+                                    </LIST>
+                                </INTRODUCTION>
+                                <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                </SW-DATA-DEF-PROPS>
+                            </RETURN-TYPE>                
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <!--Name="BlockNumber", Kind="in", Type="uint16", IsConst="False"-->
+                    <SHORT-NAME>BlockNumber</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" >Number of logical block, also denoting start address of that block in EEPROM.</L-2>
+                    </DESC><CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <!--Name="DataBufferPtr", Kind="in", Type="uint8*", IsConst="False"-->
+                    <SHORT-NAME>DataBufferPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN" > Pointer to data buffer </L-2>
+                    </DESC><CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <SW-POINTER-TARGET-PROPS>
+                                                    <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                                                    <SW-DATA-DEF-PROPS>
+                                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                                    </SW-DATA-DEF-PROPS>
+                                                </SW-POINTER-TARGET-PROPS>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+               <BSW-MODULE-ENTRY>
+                            <SHORT-NAME>Ea_Rb_ErrorHandling_CallBackFunction</SHORT-NAME>
+                            <LONG-NAME>
+                                <L-4 L="EN">CallBack function from the user for Error handling.</L-4>
+                            </LONG-NAME>
+                            <DESC>
+                                <L-2 L="EN">It is a  module-specific callback routine which shall be invoked if critical error in Ea occurs, for example migration not successful or not possible, so that some block can't been written any more.</L-2>
+                            </DESC>
+                            <IS-REENTRANT>false</IS-REENTRANT>
+                            <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                            <CALL-TYPE>CALLBACK</CALL-TYPE>
+                            <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                            <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                            <ARGUMENTS>
+                                <SW-SERVICE-ARG>
+                                    <SHORT-NAME>ErrorId</SHORT-NAME>
+                                    <DESC>
+                                        <L-2 L="EN">Parameter to store the Error Id.</L-2>
+                                    </DESC>
+                                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                                    <SW-DATA-DEF-PROPS>
+                                        <SW-DATA-DEF-PROPS-VARIANTS>
+                                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        </SW-DATA-DEF-PROPS-VARIANTS>
+                                    </SW-DATA-DEF-PROPS>
+                                </SW-SERVICE-ARG>
+                            </ARGUMENTS>
+                        </BSW-MODULE-ENTRY>
+            </ELEMENTS>
+          </AR-PACKAGE>
+          <AR-PACKAGE>
+          
+            <SHORT-NAME>CompuMethods</SHORT-NAME>
+            <ELEMENTS>
+            <COMPU-METHOD>
+                            <SHORT-NAME>MemIf_StatusType</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The EA component is not initialized yet.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_UNINIT</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The EA component is currently idle. This means that no memory operations (controlled by EA) are currently ongoing and that EA's last check of its request queues showed that all these queues were empty.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_IDLE</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The EA component is currently busy. This means that either a memory operation (controlled by EA) is currently ongoing or that EA's request queues contain further requests which have to be served by EA..</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_BUSY</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The EA component is currently busy. This means that either a memory operation (controlled by EA) is currently ongoing or that EA's request queues contain further requests which have to be served by EA.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_BUSY_INTERNAL</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE> 
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+                        <COMPU-METHOD>
+                            <SHORT-NAME>MemIf_JobResultType</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN"> The last job has been finished successfully.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_JOB_OK</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The last job was not finished successfully(it failed).</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_JOB_FAILED</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The last job is waiting for execution or currently being executed.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">2</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_JOB_PENDING</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The last job has been canceled (which means it failed).</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">3</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">3</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_JOB_CANCELED</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The requested block is inconsistent it may contain corrupted data.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">4</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_BLOCK_INCONSISTENT</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">The requested block has been invalidated,the requested operation can not be performed.</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">5</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">5</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_BLOCK_INVALID</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+						
+						<COMPU-METHOD>
+                            <SHORT-NAME>MemIf_ModeType</SHORT-NAME>
+                            <CATEGORY>TEXTTABLE</CATEGORY>
+                            <COMPU-INTERNAL-TO-PHYS>
+                                <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">EA and the underlying device driver could be switched into slow mode</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">0</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_MODE_SLOW</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>
+                                    <COMPU-SCALE>
+                                        <DESC>
+                                            <L-2 L="EN">EA and the underlying device driver could be switched into fast mode</L-2>
+                                        </DESC>
+                                        <LOWER-LIMIT INTERVAL-TYPE="CLOSED">1</LOWER-LIMIT>
+                                        <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                                        <COMPU-CONST>
+                                            <VT>MEMIF_MODE_FAST</VT>
+                                        </COMPU-CONST>
+                                    </COMPU-SCALE>                                  
+                                </COMPU-SCALES>
+                            </COMPU-INTERNAL-TO-PHYS>
+                        </COMPU-METHOD>
+						
+		    </ELEMENTS>
+          </AR-PACKAGE><AR-PACKAGE>
+            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+			<ELEMENTS>
+						<IMPLEMENTATION-DATA-TYPE>
+							<SHORT-NAME>MemIf_StatusType</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Type used for knowing the main state of the EA driver.</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">The Ea_GetStatus service returns information to variable of this Type.</L-2>
+							</DESC>
+							<CATEGORY>TYPE_REFERENCE</CATEGORY>
+							<SW-DATA-DEF-PROPS>
+								<SW-DATA-DEF-PROPS-VARIANTS>
+									<SW-DATA-DEF-PROPS-CONDITIONAL>
+									<COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Ea/CompuMethods/MemIf_StatusType</COMPU-METHOD-REF>
+										<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+									</SW-DATA-DEF-PROPS-CONDITIONAL>
+								</SW-DATA-DEF-PROPS-VARIANTS>
+							</SW-DATA-DEF-PROPS>
+							<TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+						</IMPLEMENTATION-DATA-TYPE>
+						<IMPLEMENTATION-DATA-TYPE>
+							<SHORT-NAME>MemIf_JobResultType</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Type used for JobResult of latest Job</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">The Ea_GetJobResult service returns information to variable of this Type.</L-2>
+							</DESC>
+							<CATEGORY>TYPE_REFERENCE</CATEGORY>
+							<SW-DATA-DEF-PROPS>
+								<SW-DATA-DEF-PROPS-VARIANTS>
+									<SW-DATA-DEF-PROPS-CONDITIONAL>
+										<COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Ea/CompuMethods/MemIf_JobResultType</COMPU-METHOD-REF>
+										<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+									</SW-DATA-DEF-PROPS-CONDITIONAL>
+								</SW-DATA-DEF-PROPS-VARIANTS>
+							</SW-DATA-DEF-PROPS>
+							<TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+						</IMPLEMENTATION-DATA-TYPE>	
+
+						<IMPLEMENTATION-DATA-TYPE>
+							<SHORT-NAME>MemIf_ModeType</SHORT-NAME>
+							<LONG-NAME>
+								<L-4 L="EN">Type used for storing the mode info of the module</L-4>
+							</LONG-NAME>
+							<DESC>
+								<L-2 L="EN">The Ea_SetMode service uses a  variable of this type.</L-2>
+							</DESC>
+							<CATEGORY>TYPE_REFERENCE</CATEGORY>
+							<SW-DATA-DEF-PROPS>
+								<SW-DATA-DEF-PROPS-VARIANTS>
+									<SW-DATA-DEF-PROPS-CONDITIONAL>
+									    <COMPU-METHOD-REF DEST="COMPU-METHOD">/AUTOSAR_Ea/CompuMethods/MemIf_ModeType</COMPU-METHOD-REF>
+										<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+									</SW-DATA-DEF-PROPS-CONDITIONAL>
+								</SW-DATA-DEF-PROPS-VARIANTS>
+							</SW-DATA-DEF-PROPS>
+							<TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+						</IMPLEMENTATION-DATA-TYPE>
+		    </ELEMENTS>
+          </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

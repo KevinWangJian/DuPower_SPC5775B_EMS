@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Asw</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>Asw_Swc</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="77c6edb1-1267-4418-89af-3189867e3f41">
+              <SHORT-NAME>PPort_RelayCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/RelayCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="ff191c80-e2d9-4da2-a105-4d4ee79635f4">
+              <SHORT-NAME>PPort_CMUCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/CMUCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="28dfac10-675c-4e35-9374-7336aea7aa1f">
+              <SHORT-NAME>PPort_HighVoltCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/HighVoltCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="b95b4946-dbd3-40c5-a822-eb1c1045c200">
+              <SHORT-NAME>PPort_SYSCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/SYSCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="826e6fb0-a248-414f-8c3e-f004fda480ca">
+              <SHORT-NAME>PPort_FblCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FblCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="a6e68496-4320-473f-90c2-3ff7c1905ea1">
+              <SHORT-NAME>RPort_PowerValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/PowerValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="adcfcb70-068f-44c5-a5c1-358792225378">
+              <SHORT-NAME>RPort_FanValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FanValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="2d8037f3-c565-41be-be35-d983769f8c84">
+              <SHORT-NAME>RPort_SbcValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/SbcValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="1f7890d3-93ae-4a26-8986-e401a60b255b">
+              <SHORT-NAME>RPort_RelayValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/RelayValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="bb326df7-aa8c-4514-b71d-5120b758c9d6">
+              <SHORT-NAME>RPort_CMUValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/CMUValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="f33f6535-a4d1-424b-b9d3-94a230262df8">
+              <SHORT-NAME>RPort_HVValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/HVValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="7838e3d1-7090-4867-9331-51ea1787a7a7">
+              <SHORT-NAME>RPort_SYSValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/SYSValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="aedd5bc3-cf74-4470-b2d3-8a161f4eb8b4">
+              <SHORT-NAME>RPort_McuValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/McuValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="355907e8-9219-457d-bb56-d745a8b4df5f">
+              <SHORT-NAME>RPort_CurrValue</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/CurrValue</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="a97d7e6d-d3a0-4035-be90-9e7199b33402">
+              <SHORT-NAME>PPort_FanCmd</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FanCmd</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="ae43ed90-8dfb-476f-b859-960d09e67052">
+              <SHORT-NAME>PPort_NVDataBlock1_Finished</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMNotifyJobFinished</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="6cf405c4-da67-47a1-aaaf-790891dea8a0">
+              <SHORT-NAME>RPort_NVDataBlock1</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="16dcbf58-efe8-47d0-9994-583e51e198ef">
+              <SHORT-NAME>PPort_BswMArbitration_BswM_MRP_SwcModeRequest</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SenderReceiverInterface_uint16</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="066c35c5-dd7a-4c58-90e1-ce6aa55a4cd5">
+              <SHORT-NAME>RPort_EcuM_ShutdownTarget</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="05e3df18-d165-465a-b9b3-a6770aab0a30">
+              <SHORT-NAME>RPort_ComM_UserRequest</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>SwcInternalBehavior</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_ComM/DataTypeMappingSets/ComMModeMapping</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT UUID="01181da1-bd96-4825-bab4-548563ece8d1">
+                  <SHORT-NAME>TE_Asw_MainFunction_5ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Asw/Asw_Swc/SwcInternalBehavior/Asw_MainFunction</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+                <OPERATION-INVOKED-EVENT UUID="c0baac05-2e3a-4905-9f5f-a578e70acad2">
+                  <SHORT-NAME>OE_Asw_NVDataBlock1_Finished</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Asw/Asw_Swc/SwcInternalBehavior/Asw_NVDataBlock1_Finished</START-ON-EVENT-REF>
+                  <OPERATION-IREF>
+                    <CONTEXT-P-PORT-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_NVDataBlock1_Finished</CONTEXT-P-PORT-REF>
+                    <TARGET-PROVIDED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMNotifyJobFinished/JobFinished</TARGET-PROVIDED-OPERATION-REF>
+                  </OPERATION-IREF>
+                </OPERATION-INVOKED-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="e9dae75d-469c-4ac6-bef2-843467f96c49">
+                  <SHORT-NAME>Asw_MainFunction</SHORT-NAME>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="51d61355-36b1-4de1-9f41-282439ee9540">
+                      <SHORT-NAME>DRPA_KL30Volt_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_PowerValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/PowerValue/KL30Volt_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="244b7049-528d-40b3-9b1a-eda96c3455e8">
+                      <SHORT-NAME>DRPA_KL30VoltVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_PowerValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/PowerValue/KL30VoltVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="10c104ff-6551-479f-989a-279610ecaf41">
+                      <SHORT-NAME>DRPA_BSWInitFinish_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_McuValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/McuValue/BSWInitFinish_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="c9aed9b1-453e-4a7b-88ee-b8af76b0c3a3">
+                      <SHORT-NAME>DRPA_KL15WakeupState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_SbcValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SbcValue/KL15WakeupState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="92705ad9-6e8a-4727-b59c-0da6fcc3fb33">
+                      <SHORT-NAME>DRPA_BMULastPwrDownState_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_SbcValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SbcValue/BMULastPwrDownState</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="09dbe4fa-0390-4dfd-9451-35e2f9417ea3">
+                      <SHORT-NAME>DRPA_VoltA_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltA_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="1c69068c-deab-42d7-af6c-537c693d128a">
+                      <SHORT-NAME>DRPA_VoltAVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltAVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="aef4e155-7897-4e36-a7fd-5de6e9c62c77">
+                      <SHORT-NAME>DRPA_VoltB_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltB_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="072ffe89-88d3-4584-bdc4-f81f9fb0d2c1">
+                      <SHORT-NAME>DRPA_VoltBVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltBVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b75bb57d-fd13-412a-b236-63897f1ca143">
+                      <SHORT-NAME>DRPA_VoltC_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltC_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="66949470-0167-46fb-b51b-813a3661a9f8">
+                      <SHORT-NAME>DRPA_VoltCVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_HVValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HVValue/VoltCVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="0d74dccc-54c9-41fe-bce7-a1d4d9327a2f">
+                      <SHORT-NAME>DRPA_BSWRequestReset_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_SYSValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SYSValue/BSWRequestReset_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="76bd2331-2d28-444c-aed0-089efdeea145">
+                      <SHORT-NAME>DRPA_PackCurr_A_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CurrValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CurrValue/PackCurr_A</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="99033ee1-404c-4bdc-b86e-9846942d8517">
+                      <SHORT-NAME>DRPA_PackCurrVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CurrValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CurrValue/PackCurrVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="df0aa1f4-76a4-44b7-af60-374c336fca9b">
+                      <SHORT-NAME>DRPA_GlobalHCtrState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_RelayValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayValue/GlobalHCtrState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="2d1efe79-6a3c-4c0a-b15c-7bb7a4f9f973">
+                      <SHORT-NAME>DRPA_PosCtrCmdState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_RelayValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayValue/PosCtrCmdState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="4fa1f453-2771-4dd9-a27c-6c9e4ffbde9d">
+                      <SHORT-NAME>DRPA_CellBalState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellBalState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="aa30434c-a61f-4a1c-a923-9501ff2ec40d">
+                      <SHORT-NAME>DRPA_CellTemp1_C_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellTemp1_C</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="de370c0e-1629-4d09-a61e-e3beffd526b9">
+                      <SHORT-NAME>DRPA_CellTemp1Vld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellTemp1Vld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="caaa290c-d5d7-4c4b-919a-6e679c35167c">
+                      <SHORT-NAME>DRPA_CellTemp2_C_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellTemp2_C</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="6c837873-9e4c-4827-b1f8-43cb0b84a055">
+                      <SHORT-NAME>DRPA_CellTemp2Vld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellTemp2Vld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="ded7481a-b165-4602-9d34-cca82454b950">
+                      <SHORT-NAME>DRPA_CMUPCBTemp1_C_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CMUPCBTemp1_C</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="6ee7e002-a026-4008-846a-42261ff7ae48">
+                      <SHORT-NAME>DRPA_CMUPCBTemp1Vld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CMUPCBTemp1Vld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="73618eb5-e5f4-4afd-b55f-fd8509ebac04">
+                      <SHORT-NAME>DRPA_CMUPCBTemp2_C_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CMUPCBTemp2_C</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="99d2f5f2-8ef2-4548-85a3-282a06c97004">
+                      <SHORT-NAME>DRPA_CMUPCBTemp2Vld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CMUPCBTemp2Vld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b8e4e214-7790-43a6-ae77-7e747708b64e">
+                      <SHORT-NAME>DRPA_CellVolt_mV_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellVolt_mV</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="52405ed2-0a90-4e73-9991-0f139e13df3e">
+                      <SHORT-NAME>DRPA_CellVoltVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellVoltVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="8b30ac3e-ac47-4c25-bf76-171ae944d7e8">
+                      <SHORT-NAME>DRPA_CellComErr_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellComErr_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="a01c51ed-3f31-4833-b01a-b5266c26ff38">
+                      <SHORT-NAME>DRPA_CellOpenErr_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellOpenErr_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="e262a246-3433-4182-b161-249d044c92f1">
+                      <SHORT-NAME>DRPA_CellMeasCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_CMUValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUValue/CellMeasCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="f8d006c8-fcd3-4d08-be78-e09e7dc59ec3">
+                      <SHORT-NAME>DRPA_FeedbackVolt_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_FanValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanValue/FeedbackVolt_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="aed660e0-4ab9-4482-a618-50232bd9b6ec">
+                      <SHORT-NAME>DSP_GlobalHCtrCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_RelayCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayCmd/GlobalHCtrCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="cc51ae8c-e28b-47d4-89e2-e36b01adb381">
+                      <SHORT-NAME>DSP_PosCtrCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_RelayCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayCmd/PosCtrCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="75ca97ac-745f-49ca-929f-73ed4ce7a47f">
+                      <SHORT-NAME>DSP_OutFanPWMFrq_Hz_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_FanCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanCmd/OutFanPWMFrq_Hz</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="b6511311-072d-489c-9f3a-95c2fb26b866">
+                      <SHORT-NAME>DSP_OutFanDuty_pct_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_FanCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanCmd/OutFanDuty_pct</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="2eb04c0c-7049-48e6-9426-991a2d050e0a">
+                      <SHORT-NAME>DSP_RadyToSleep_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_SYSCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SYSCmd/RadyToSleep_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="3554b1cf-521c-41a0-abf7-7ed79adc1af7">
+                      <SHORT-NAME>DSP_FBLForbid_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_FblCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FblCmd/FBLForbid_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="d4294f02-8af9-46fe-a70a-bae99312f567">
+                      <SHORT-NAME>DSP_CellBalCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_CMUCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/CMUCmd/CellBalCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="19ff4806-bc20-46f5-89bb-df422c059740">
+                      <SHORT-NAME>DSP_PackVoltMeasCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_HighVoltCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/HighVoltCmd/PackVoltMeasCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="0940886f-0ca5-472f-8dd4-59448ff02f40">
+                      <SHORT-NAME>DSP_VDP_uint16_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/Asw/Asw_Swc/PPort_BswMArbitration_BswM_MRP_SwcModeRequest</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/SenderReceiverInterface_uint16/VDP_uint16</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6c2e8a47-ac55-4f4a-a1dc-995e54e5484e">
+                      <SHORT-NAME>SynchronousServerCallPoint_1</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_NVDataBlock1</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="e429b8a8-de98-4579-afa5-4bdef6968c51">
+                      <SHORT-NAME>SynchronousServerCallPoint_0</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_NVDataBlock1</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="b0509a47-174c-4bcb-84d9-58cbbd475ad7">
+                      <SHORT-NAME>SynchronousServerCallPoint_2</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_EcuM_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="85aa0b00-6a59-4252-8de7-4ae4d0804c45">
+                      <SHORT-NAME>SynchronousServerCallPoint_3</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/Asw/Asw_Swc/RPort_ComM_UserRequest</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_ComM/PortInterfaces/ComM_UserRequest/GetCurrentComMode</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>Asw_MainFunction</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="b271e9fa-eb64-41ec-92fe-070792c7beb4">
+                  <SHORT-NAME>Asw_Init</SHORT-NAME>
+                  <SYMBOL>Asw_Init</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="8da27972-4248-4ee2-ad32-179625c7f5da">
+                  <SHORT-NAME>Asw_NVDataBlock1_Finished</SHORT-NAME>
+                  <SYMBOL>Asw_NVDataBlock1_Finished</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

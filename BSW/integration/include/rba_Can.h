@@ -1,0 +1,32 @@
+/*
+ * rba_Can.h
+ *
+ *  Created on: Jun 6, 2018
+ *      Author: CIX2SGH
+ */
+
+#ifndef RBA_CAN_H
+#define RBA_CAN_H
+
+#include "Can_Cfg.h"
+
+#if 0
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_1    Can_Network_CANNODE_0_Tx_Std_MailBox_1
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_2    Can_Network_CANNODE_0_Tx_Std_MailBox_2
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_3    Can_Network_CANNODE_0_Tx_Std_MailBox_3
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_4    Can_Network_CANNODE_0_Tx_Std_MailBox_4
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_5    Can_Network_CANNODE_0_Tx_Std_MailBox_5
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_6    Can_Network_CANNODE_0_Tx_Std_MailBox_6
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_7    Can_Network_CANNODE_0_Tx_Std_MailBox_7
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_8    Can_Network_CANNODE_0_Tx_Std_MailBox_8
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_9    Can_Network_CANNODE_0_Tx_Std_MailBox_9
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_10   Can_Network_CANNODE_0_Tx_Std_MailBox_10
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_11   Can_Network_CANNODE_0_Tx_Std_MailBox_11
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_12   Can_Network_CANNODE_0_Tx_Std_MailBox_12
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_13   Can_Network_CANNODE_0_Tx_Std_MailBox_13
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_14   Can_Network_CANNODE_0_Tx_Std_MailBox_14
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_15   Can_Network_CANNODE_0_Tx_Std_MailBox_15
+#define CanConf_CanHardwareObject_Can_Network_CANNODE_0_Tx_Std_MailBox_16   Can_Network_CANNODE_0_Tx_Std_MailBox_16
+#endif
+
+#endif /* RBA_CAN_H */

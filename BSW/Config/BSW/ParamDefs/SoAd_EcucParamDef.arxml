@@ -1,0 +1,3263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2016-03-11</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+        <!-- AR-Package: AUTOSAR -->
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_SoAd</SHORT-NAME>
+            <AR-PACKAGES>
+                <!-- AR-Package: AUTOSAR -->
+                <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+					<ELEMENTS>
+						  <!-- Module Definition: SoAd -->
+						  <ECUC-MODULE-DEF>
+							 <SHORT-NAME>SoAd</SHORT-NAME>
+							 <DESC>
+								<L-2 L="EN">Configuration of the SoAd (Socket Adaptor) module.</L-2>
+							 </DESC>
+                            				 <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+							 <ADMIN-DATA>
+								<DOC-REVISIONS>
+								   <DOC-REVISION>
+									  <REVISION-LABEL>4.2.2</REVISION-LABEL>
+									  <ISSUED-BY>AUTOSAR</ISSUED-BY>
+									  <DATE>2014-10-31</DATE>
+								   </DOC-REVISION>
+								</DOC-REVISIONS>
+							 </ADMIN-DATA>
+							 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00001</RELATED-TRACE-ITEM-REF>
+							 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+							 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							 <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+							 <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/SoAd</REFINED-MODULE-DEF-REF>
+							 <SUPPORTED-CONFIG-VARIANTS>
+								<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+							 </SUPPORTED-CONFIG-VARIANTS>
+							 <CONTAINERS>
+								<!-- Container Definition: SoAdBswModules -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF>
+								   <SHORT-NAME>SoAdBswModules</SHORT-NAME>
+								   <DESC>
+									  <L-2 L="EN">Each container describes a specific BSW module that the SoAd shall interface to.</L-2>
+								   </DESC>
+								   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00102</RELATED-TRACE-ITEM-REF>
+								   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+								   <PARAMETERS>
+									  <!-- PARAMETER DEFINITION: SoAdIf -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdIf</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the Communication Interface APIs or not. Value true means that the APIs are supported. A module can have both Communication Interface APIs and Transport Protocol APIs (e.g. the PduR module).</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00104</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdIfTriggerTransmit -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdIfTriggerTransmit</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the TriggerTransmit API or not. Value true means that the API is supported.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00145</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdIfTxConfirmation -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdIfTxConfirmation</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the TxConfirmation API or not. Value true means that the API is supported.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00106</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdLocalIpAddrAssigmentChg -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdLocalIpAddrAssigmentChg</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the LocalIpAddrAssigmentChg API or not. Value true means that the API is supported.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00143</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdSoConModeChg -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdSoConModeChg</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the SoConModeChg API or not. Value true means that the API is supported.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00107</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdTp -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdTp</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if the BSW module supports the TransportProtocol APIs or not. Value true means that the APIs are supported. A module can have both Communication Interface APIs and Transport Protocol APIs (e.g. the PduR module).</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00105</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdUseCallerInfix -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdUseCallerInfix</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if SoAd shall use (TRUE) the infix "SoAd" when calling an upper layer module function or not (FALSE). E.g. if SoAdUseCallerInfix is TRUE for the upper layer "ABC" then SoAd will call ABC_SoAdIfRxIndication() otherwise SoAd would call ABC_IfRxIndication().</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00128</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <DEFAULT-VALUE>true</DEFAULT-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdUseTypeInfix -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdUseTypeInfix</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies if SoAd shall use (TRUE) the API type infix "Tp" or "If" when calling an upper layer module function or not (FALSE). E.g. if SoAdUseTypeInfix is TRUE for the upper layer "ABC" then SoAd will call ABC_IfRxIndication(), otherwise SoAd would call ABC_RxIndication().</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00129</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <DEFAULT-VALUE>true</DEFAULT-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+				                                          <!-- Vendor06: PARAMETER DEFINITION: SoAdCddHeaderFileName - RB specific parameter -->
+				                                          <ECUC-STRING-PARAM-DEF>
+				                                            	 <SHORT-NAME>SoAdCddHeaderFileName</SHORT-NAME>
+					                                         <DESC>
+					                                             <L-2 L="EN">RB (Vendor06) specific parameter: If upper layer of SoAd is an AUTOSAR module, then the header files are statically specified and automatically included in SoAd. In case of non-AUTOSAR Upper Layer components, the name of the CDD header would be configured with this parameter and the same would be included.</L-2>
+					                                         </DESC>
+					                                         <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+					                                         <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+					                                         <ECUC-STRING-PARAM-DEF-VARIANTS>
+					                                             <ECUC-STRING-PARAM-DEF-CONDITIONAL>
+					                                                 <MAX-LENGTH>32</MAX-LENGTH>
+					                                                 <MIN-LENGTH>1</MIN-LENGTH>
+					                                             </ECUC-STRING-PARAM-DEF-CONDITIONAL>
+					                                         </ECUC-STRING-PARAM-DEF-VARIANTS>
+				                                          </ECUC-STRING-PARAM-DEF>
+								   </PARAMETERS>
+								   <REFERENCES>
+									  <!-- Foreign Reference Definition: SoAdBswModuleRef -->
+									  <ECUC-FOREIGN-REFERENCE-DEF>
+										 <SHORT-NAME>SoAdBswModuleRef</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">This is a reference to one BSW module's configuration (i.e. not the ECUC parameter definition template).</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">Example, there could be several configurations of PduR and this reference selects one of them.
+
+												SoAd has to figure out from the structure of the referenced BSW module's configuration, what kind of upper layer he deals with.
+												In case of a CDD SoAd expects UL-APIs in form of _SoAd&lt;If|Tp&gt;&lt;function&gt; and expects CDD Pdu configuration structures according to the Ecu Configuration specification (chapter CDD module\Socket Adaptor).
+												In case it is one of the standardized AUTOSAR BSW modules, the configuration structures and API names for interaction with SoAd are defined in the corresponding SWS.</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00124</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+									  </ECUC-FOREIGN-REFERENCE-DEF>
+								   </REFERENCES>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SoAdConfig -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF>
+								   <SHORT-NAME>SoAdConfig</SHORT-NAME>
+								   <DESC>
+									  <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR SoAd module.</L-2>
+								   </DESC>
+								   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00103</RELATED-TRACE-ITEM-REF>
+								   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+								   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								   <SUB-CONTAINERS>
+									  <!-- Container Definition: SoAdPduRoute -->
+									  <ECUC-PARAM-CONF-CONTAINER-DEF>
+										 <SHORT-NAME>SoAdPduRoute</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Describes the path of a PDU from an upper layer of the SoAd to the socket in the TCP/IP stack for transmission.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00007</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										 <PARAMETERS>
+                                            <!-- PARAMETER DEFINITION: SoAdTxPduCollectionSemantics -->
+                                            <ECUC-ENUMERATION-PARAM-DEF>
+                                               <SHORT-NAME>SoAdTxPduCollectionSemantics</SHORT-NAME>
+                                               <DESC>
+                                                  <L-2 L="EN">Specifies if this PDU shall be collected using a queued or last-is-best semantics. This parameter is only relevant if the PDU collection feature is enabled. Shall only be set to SOAD_COLLECT_LAST_IS_BEST if the related upper layer is configured with SoAdIfTriggerTransmit set to TRUE.</L-2>
+                                               </DESC>
+                                               <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00160</RELATED-TRACE-ITEM-REF>
+                                               <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                               <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                               <SCOPE>ECU</SCOPE>
+                                               <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                               <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                               <VALUE-CONFIG-CLASSES>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                               </VALUE-CONFIG-CLASSES>
+                                               <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                               <DEFAULT-VALUE>SOAD_COLLECT_QUEUED</DEFAULT-VALUE>
+                                               <LITERALS>
+                                                  <ECUC-ENUMERATION-LITERAL-DEF>
+                                                     <SHORT-NAME>SOAD_COLLECT_LAST_IS_BEST</SHORT-NAME>
+                                                     <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                  </ECUC-ENUMERATION-LITERAL-DEF>
+                                                  <ECUC-ENUMERATION-LITERAL-DEF>
+                                                     <SHORT-NAME>SOAD_COLLECT_QUEUED</SHORT-NAME>
+                                                     <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                  </ECUC-ENUMERATION-LITERAL-DEF>
+                                               </LITERALS>
+                                            </ECUC-ENUMERATION-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdTxPduId -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdTxPduId</SHORT-NAME>
+											   <LONG-NAME>
+				                                                               <L-4 L="EN">SoAdTxPduId (automatically Generated)</L-4>
+				                                                           </LONG-NAME>
+											   <DESC>
+												  <L-2 L="EN">Tx PDU ID of the PDU coming from the PDU Router.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00031</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											   <WITH-AUTO>true</WITH-AUTO>
+											   <MAX>65535</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+                 					        <!-- Vendor06: PARAMETER DEFINITION: SoAdUpperLayerTxPduId - RB specific parameter -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdUpperLayerTxPduId</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: Tx PDU ID of the upper layer module would be configured with this parameter if Upper Layer is CDD.</L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <MAX>65535</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdTxUpperLayerType -->
+											<ECUC-ENUMERATION-PARAM-DEF>
+											   <SHORT-NAME>SoAdTxUpperLayerType</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the upper layer interface type (must be "IF" in case of multiple PduRoutes).</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00118</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <LITERALS>
+												  <ECUC-ENUMERATION-LITERAL-DEF>
+													 <SHORT-NAME>IF</SHORT-NAME>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												  </ECUC-ENUMERATION-LITERAL-DEF>
+												  <ECUC-ENUMERATION-LITERAL-DEF>
+													 <SHORT-NAME>TP</SHORT-NAME>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												  </ECUC-ENUMERATION-LITERAL-DEF>
+											   </LITERALS>
+											</ECUC-ENUMERATION-PARAM-DEF>
+					                                                <!-- Vendor06: PARAMETER DEFINITION: SoAdTxUser - RB specific parameter -->
+											<ECUC-ENUMERATION-PARAM-DEF>
+											   <SHORT-NAME>SoAdTxUser</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: Specifies the upper layer module which owns this Pdu.</L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <LITERALS>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>PduR</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>Sd</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>Cdd</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>UdpNm</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>Xcp</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>DoIP</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                        <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            <SHORT-NAME>EthDiagMM</SHORT-NAME>
+					                                                            <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                        </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                    </LITERALS>
+											</ECUC-ENUMERATION-PARAM-DEF>
+											<!-- Vendor06: PARAMETER DEFINITION: UL_SoAdIfTxConfirmation - RB specific parameter -->
+											<ECUC-STRING-PARAM-DEF>
+											   <SHORT-NAME>UL_SoAdIfTxConfirmation</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify upper layers about IfTxConfirmation.</L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+
+
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-STRING-PARAM-DEF>
+											<!-- Vendor06: PARAMETER DEFINITION: UL_SoAdTpTxConfirmation - RB specific parameter -->
+											<ECUC-STRING-PARAM-DEF>
+											   <SHORT-NAME>UL_SoAdTpTxConfirmation</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify the upper layers about the TpTxConfirmation.</L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+
+
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-STRING-PARAM-DEF>
+											<!-- Vendor06: PARAMETER DEFINITION: UL_SoAdTpCopyTxData - RB specific parameter -->
+											<ECUC-STRING-PARAM-DEF>
+											   <SHORT-NAME>UL_SoAdTpCopyTxData</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback function that is called to retrieve the data from upper layer.</L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+
+
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-STRING-PARAM-DEF>
+										 </PARAMETERS>
+										 <REFERENCES>
+											<!-- Reference Definition: SoAdTxPduRef -->
+											<ECUC-REFERENCE-DEF>
+											   <SHORT-NAME>SoAdTxPduRef</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Reference to the global PDU structure</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00030</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+											</ECUC-REFERENCE-DEF>
+										 </REFERENCES>
+										 <SUB-CONTAINERS>
+											<!-- Container Definition: SoAdPduRouteDest -->
+											<ECUC-PARAM-CONF-CONTAINER-DEF>
+											   <SHORT-NAME>SoAdPduRouteDest</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the PDU route destination.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00119</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											   <PARAMETERS>
+												  <!-- PARAMETER DEFINITION: SoAdTxPduHeaderId -->
+												  <ECUC-INTEGER-PARAM-DEF>
+													 <SHORT-NAME>SoAdTxPduHeaderId</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">ID to be sent on the TCP/IP connection if the PDU header option is enabled.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00120</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>LOCAL</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <MAX>4294967296</MAX>
+													 <MIN>0</MIN>
+												  </ECUC-INTEGER-PARAM-DEF>
+												  <!-- PARAMETER DEFINITION: SoAdTxUdpTriggerMode -->
+												  <ECUC-ENUMERATION-PARAM-DEF>
+													 <SHORT-NAME>SoAdTxUdpTriggerMode</SHORT-NAME>
+												         <LONG-NAME>
+						                                                             <L-4 L="EN">SoAdTxUdpTriggerMode</L-4>
+						                                                         </LONG-NAME>
+													 <DESC>
+														<L-2 L="EN">Specifies whether a PDU triggers the transmission of the nPduUdpTxBuffer.</L-2>
+													 </DESC>
+													 <INTRODUCTION>
+														<P>
+														   <L-1 L="EN">If this parameter is set to TRIGGER_NEVER, SoAd shall use an nPduUdpTxBuffer for the related socket connection. nPduUdpTxBuffer can only be used for upper layers with IF API, i.e. this parameter shall only be set to TRIGGER_NEVER if all upper layers belonging to the related socket connection have SoAdTxUpperLayerType set to "IF".
+																This parameter is only relevant for UDP connections.</L-1>
+														</P>
+													 </INTRODUCTION>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00136</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>LOCAL</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF>
+														   <SHORT-NAME>TRIGGER_ALWAYS</SHORT-NAME>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF>
+														   <SHORT-NAME>TRIGGER_NEVER</SHORT-NAME>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													 </LITERALS>
+												  </ECUC-ENUMERATION-PARAM-DEF>
+												  <!-- PARAMETER DEFINITION: SoAdTxUdpTriggerTimeout -->
+												  <ECUC-FLOAT-PARAM-DEF>
+													 <SHORT-NAME>SoAdTxUdpTriggerTimeout</SHORT-NAME>
+													 <LONG-NAME>
+							                                                     <L-4 L="EN">SoAdTxUdpTriggerTimeout</L-4>
+							                                                 </LONG-NAME>
+													 <DESC>
+														<L-2 L="EN">Specifies the timeout in [s] the nPduUdpTxBuffer shall be transmitted at the latest after this PDU is put into the buffer. This optional parameter is only relevant if SoAdTxUdpTriggerMode is TRIGGER_NEVER.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00150</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>LOCAL</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <MAX>Inf</MAX>
+													 <MIN>0</MIN>
+												  </ECUC-FLOAT-PARAM-DEF>
+											   </PARAMETERS>
+											   <REFERENCES>
+												  <!-- Choice Reference Definition: SoAdTxSocketConnOrSocketConnBundleRef -->
+												  <ECUC-CHOICE-REFERENCE-DEF>
+													 <SHORT-NAME>SoAdTxSocketConnOrSocketConnBundleRef</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Choice Reference to a SocketConnection or to a SocketConnectionGroup on which the PDU is to be sent on. The reference to a SocketConnectionGroup shall only be used for upper layers with IF API.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00034</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>LOCAL</SCOPE>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <DESTINATION-REFS>
+														<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup/SoAdSocketConnection</DESTINATION-REF>
+														<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+													 </DESTINATION-REFS>
+												  </ECUC-CHOICE-REFERENCE-DEF>
+												  <!-- Reference Definition: SoAdTxRoutingGroupRef -->
+												  <ECUC-REFERENCE-DEF>
+													 <SHORT-NAME>SoAdTxRoutingGroupRef</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Reference to the routing group.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00123</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													 <SCOPE>LOCAL</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+												  </ECUC-REFERENCE-DEF>
+											   </REFERENCES>
+											</ECUC-PARAM-CONF-CONTAINER-DEF>
+										 </SUB-CONTAINERS>
+									  </ECUC-PARAM-CONF-CONTAINER-DEF>
+									  <!-- Container Definition: SoAdRoutingGroup -->
+									  <ECUC-PARAM-CONF-CONTAINER-DEF>
+										 <SHORT-NAME>SoAdRoutingGroup</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Each container describes a specific routing group which can be enabled or disabled. A routing group consists of PDUs. Routing of PDUs can either be forwarding of PDUs from the upper layer to a TCP or UDP socket of the TCP/IP stack specified by a SoAdPduRoute or the other way around specified by a SoAdSocketRoute.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00109</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										 <PARAMETERS>
+											<!-- PARAMETER DEFINITION: SoAdRoutingGroupId -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdRoutingGroupId</SHORT-NAME>
+											   <LONG-NAME>
+				                                                               <L-4 L="EN">SoAdRoutingGroupId (automatically Generated)</L-4>
+				                                                           </LONG-NAME>
+											   <DESC>
+												  <L-2 L="EN">Unique ID of Routing Group</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00121</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											   <WITH-AUTO>true</WITH-AUTO>										   
+											   <MAX>65535</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdRoutingGroupIsEnabledAtInit -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdRoutingGroupIsEnabledAtInit</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">If set to true this routing group will be enabled after initializing the SoAd module (i.e. enabled in the SoAd_Init function).</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00122</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdRoutingGroupTxTriggerable -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdRoutingGroupTxTriggerable</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies if the If-TxPDUs related to the PduRouteDest containers</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">referenced by this routing group can be triggered via
+														SoAd_IfRoutingGroupTransmit (TRUE) or not (FALSE).</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00146</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+										 </PARAMETERS>
+									  </ECUC-PARAM-CONF-CONTAINER-DEF>
+									  <!-- Container Definition: SoAdSocketConnectionGroup -->
+									  <ECUC-PARAM-CONF-CONTAINER-DEF>
+										 <SHORT-NAME>SoAdSocketConnectionGroup</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies the configuration of a socket connection group, i.e. specifies the socket connections belonging to the group and the parameters which are common for all socket connections of the group. A socket connection specifies how data can be received and transmited via a TCP or UDP socket.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00130</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										 <PARAMETERS>
+											<!-- Vendor06: PARAMETER DEFINITION: SoAdSocketConnectionGroupId - RB specific parameter -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketConnectionGroupId</SHORT-NAME>
+											   <LONG-NAME>
+				                                                               <L-4 L="EN">SoAdSocketConnectionGroupId (automatically Generated)</L-4>
+				                                                           </LONG-NAME>
+											   <DESC>
+												  <L-2 L="EN">RB (Vendor06) specific parameter: By this parameter the Identifier per SoAdConnectionGroup is configured. This is needed for other BSW modules to refer this configuration container. The configured ID must be unique across the configured SoAdConnectionGroups. This Socket Connection Group Id will be generated automatically in sequential incremental order which starts from '0' </L-2>
+											   </DESC>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>ECU</SCOPE>
+											   <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											   <WITH-AUTO>true</WITH-AUTO>
+											   <MAX>255</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdPduHeaderEnable -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdPduHeaderEnable</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Enables the transmission of the PDU header (ID, length) on this socket connection.</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">TRUE: add SoAd PDU header before PDU data
+														FALSE: No SoAd PDU header is used</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00131</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdResourceManagementEnable -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdResourceManagementEnable</SHORT-NAME>
+											   <LONG-NAME>
+				                                                               <L-4 L="EN">SoAdResourceManagementEnable (currently unused)</L-4>
+				                                                           </LONG-NAME>
+											   <DESC>
+												  <L-2 L="EN">Enables the resource management option for this socket.</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">May not be activated for UDP sockets in receive.
+
+														TRUE: resource management option enabled
+														FALSE: resource management option disabled</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00067</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketAutomaticSoConSetup -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketAutomaticSoConSetup</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies if the setup of the socket connection shall be done automatically (TRUE) or manually (FALSE) via SoAd_OpenSoCon() and SoAd_CloseSoCon().</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00110</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>true</DEFAULT-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketFramePriority -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketFramePriority</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the priority of the Ethernet frame.</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">If IEEE 802.1Q VLAN Tags are used, the specified priority will be used in the VLAN Tag PCP filed. If this optional parameter is not available the default priority specified in the TcpIp module is used.</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00138</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <MULTIPLICITY-CONFIG-CLASSES>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											   </MULTIPLICITY-CONFIG-CLASSES>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <MAX>7</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketIpAddrAssignmentChgNotification -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketIpAddrAssignmentChgNotification</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies if the local IP address assignment change notification callback function of the upper layer shall be called if the assignment of the local IP address used by this socket connection changes.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00112</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketLocalPort -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketLocalPort</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Local UDP or TCP port used for this connection. If this parameter set to 0 SoAd requests TcpIp to select an ephemeral port.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00018</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>0</DEFAULT-VALUE>
+											   <MAX>65535</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketMsgAcceptanceFilterEnabled -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketMsgAcceptanceFilterEnabled</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies if the message acceptance filter is enabled (TRUE) or not (FALSE).</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">Note: if a wildcard is used in SoAdSocketRemoteAddress AND SoAdSocketUdpListenOnly is FALSE, this parameter must be TRUE.
+														Note: if multiple SoAdSocketConnections are configured for one SoAdSocketConnectionGroup, this parameter must be TRUE.</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00137</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>true</DEFAULT-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketSoConModeChgNotification -->
+											<ECUC-BOOLEAN-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketSoConModeChgNotification</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies if the SoCon mode change notification callback function of the upper layer shall be called in case of SoCon mode change.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00111</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+											</ECUC-BOOLEAN-PARAM-DEF>
+											<!-- PARAMETER DEFINITION: SoAdSocketTpRxBufferMin -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdSocketTpRxBufferMin</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the amount of data in bytes (PDU data for the upper layer and PDU Header if used) the SoAd shall at least be able to buffer for data reception via each socket connection of the socket connection group and using an upper layer with TP.</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">Note: in case of a TCP socket where PduHeaderMode is used and an upper layer with IF-API, the required buffer size can be determined automatically.</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00134</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <MULTIPLICITY-CONFIG-CLASSES>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											   </MULTIPLICITY-CONFIG-CLASSES>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <MAX>65535</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+											<!-- Vendor06: PARAMETER DEFINITION: SoAdSocketIfRxBufferMin - RB specific parameter -->
+                                            <ECUC-INTEGER-PARAM-DEF>
+                                               <SHORT-NAME>SoAdSocketIfRxBufferMin</SHORT-NAME>
+                                               <DESC>
+                                                  <L-2 L="EN">RB (Vendor06) specific parameter: Specifies the amount of data in bytes (PDU data for the upper layer and PDU Header) the SoAd shall at least be able to buffer for data reception via each socket connection of the socket connection group for IF PDU.</L-2>
+                                               </DESC>
+                                               <INTRODUCTION>
+                                                  <P>
+                                                     <L-1 L="EN">Note: The Rx buffer size for each socket connection is determined based on SoAdSocketTpRxBufferMin and SoAdSocketIfRxBufferMin (the greatest value amongst them is used).</L-1>
+                                                  </P>
+                                               </INTRODUCTION>
+                                               <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                               <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                               <SCOPE>LOCAL</SCOPE>
+                                               <MULTIPLICITY-CONFIG-CLASSES>
+                                                  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                               </MULTIPLICITY-CONFIG-CLASSES>
+                                               <ORIGIN>RB:42.2.1.0:2017-04-03</ORIGIN>
+                                               <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                               <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                               <VALUE-CONFIG-CLASSES>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                     <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                               </VALUE-CONFIG-CLASSES>
+                                               <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                               <MAX>65535</MAX>
+                                               <MIN>0</MIN>
+                                            </ECUC-INTEGER-PARAM-DEF>
+										 </PARAMETERS>
+										 <REFERENCES>
+											<!-- Symbolic Name Reference Definition: SoAdSocketLocalAddressRef -->
+											<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											   <SHORT-NAME>SoAdSocketLocalAddressRef</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Local IP address and interface used for this connection.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00017</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/TcpIp/TcpIpConfig/TcpIpLocalAddr</DESTINATION-REF>
+											</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										 </REFERENCES>
+										 <SUB-CONTAINERS>
+											<!-- Container Definition: SoAdSocketConnection -->
+											<ECUC-PARAM-CONF-CONTAINER-DEF>
+											   <SHORT-NAME>SoAdSocketConnection</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the socket connection (Id and remote address information).</L-2>
+											   </DESC>
+											   <INTRODUCTION>
+												  <P>
+													 <L-1 L="EN">Note: Parameters which are common to all socket connections of a socket connection group are specified directly at the group.</L-1>
+												  </P>
+											   </INTRODUCTION>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00009</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+											   <PARAMETERS>
+												  <!-- PARAMETER DEFINITION: SoAdSocketId -->
+												  <ECUC-INTEGER-PARAM-DEF>
+													 <SHORT-NAME>SoAdSocketId</SHORT-NAME>
+													 <LONG-NAME>
+						                                                              <L-4 L="EN">SoAdSocketId (automatically Generated)</L-4>
+						                                                         </LONG-NAME>
+													 <DESC>
+														<L-2 L="EN">Socket connection identifier used as SoConId in the interaction with upper layers.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00016</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+											   		 <WITH-AUTO>true</WITH-AUTO>
+													 <MAX>65535</MAX>
+													 <MIN>0</MIN>
+												  </ECUC-INTEGER-PARAM-DEF>
+												  <!-- Vendor06: PARAMETER DEFINITION: UL_LocalIpAddrAssignmentChg - RB specific parameter -->
+												  <ECUC-STRING-PARAM-DEF>
+														 <SHORT-NAME>UL_LocalIpAddrAssignmentChg</SHORT-NAME>
+													 <DESC>
+														 <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback function that is used to notify the upper layers about the Local Ip address assignment change. This parameter needs only to be configured if SoAdSocketIpAddrAssignmentChgNotification is set to TRUE for this group.</L-2>
+													 </DESC>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+							                                          </ECUC-STRING-PARAM-DEF>
+												  <!-- Vendor06: PARAMETER DEFINITION: UL_SoConModeChg - RB specific parameter -->
+							                                          <ECUC-STRING-PARAM-DEF>
+							                                            	 <SHORT-NAME>UL_SoConModeChg</SHORT-NAME>
+								                                         <DESC>
+								                                             <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify upper layers about SocketConnection Mode change information. This parameter needs only to be configured if SoAdSocketSoConModeChgNotification is set to TRUE for this group.</L-2>
+								                                         </DESC>
+								                                         <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								                                         <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+							                                          </ECUC-STRING-PARAM-DEF>
+											   </PARAMETERS>
+											   <SUB-CONTAINERS>
+												  <!-- Container Definition: SoAdSocketRemoteAddress -->
+												  <ECUC-PARAM-CONF-CONTAINER-DEF>
+													 <SHORT-NAME>SoAdSocketRemoteAddress</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Subcontainer of SoAdSocketConnection to specify the remote address (IP address and port) for a socket connection.</L-2>
+													 </DESC>
+													 <INTRODUCTION>
+														<P>
+														   <L-1 L="EN">If SoAdSocketRemoteAddress is not specified the remote address has to be set by the upper layer via SoAd_SetRemoteAddr().</L-1>
+														</P>
+													 </INTRODUCTION>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00113</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <PARAMETERS>
+														<!-- PARAMETER DEFINITION: SoAdSocketRemoteIpAddress -->
+														<ECUC-STRING-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketRemoteIpAddress</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">IP address of remote node. The configured address must be of the same TcpIpDomainType (i.e. IPv4 or IPv6) as the TcpIpLocalAddr referred by SoAdSocketLocalAddressRef .</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">To accept any remote IP address, set SoAdSocketRemoteIpAddress to "ANY". See message acceptance policy for more details.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00019</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <ECUC-STRING-PARAM-DEF-VARIANTS>
+															  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+														   </ECUC-STRING-PARAM-DEF-VARIANTS>
+														</ECUC-STRING-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketRemotePort -->
+														<ECUC-INTEGER-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketRemotePort</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">Remote UDP or TCP port used for this connection.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">To accept any remote port, set SoAdSocketRemotePort to 0. See message acceptance policy for more details.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00020</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>65535</MAX>
+														   <MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													 </PARAMETERS>
+												  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											   </SUB-CONTAINERS>
+											</ECUC-PARAM-CONF-CONTAINER-DEF>
+											<!-- Container Definition: SoAdSocketProtocol -->
+											<ECUC-CHOICE-CONTAINER-DEF>
+											   <SHORT-NAME>SoAdSocketProtocol</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Specifies the transport protocol and transport protocol specific parameters used for the socket connections of the socket connection group.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00139</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <CHOICES>
+												  <!-- Container Definition: SoAdSocketTcp -->
+												  <ECUC-PARAM-CONF-CONTAINER-DEF>
+													 <SHORT-NAME>SoAdSocketTcp</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Specifies that TCP is used as transport protocol for the socket connection group and parameters only related to TCP socket connections.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00141</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <PARAMETERS>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpImmediateTpTxConfirmation -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpImmediateTpTxConfirmation</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">If set to FALSE, SoAd notifies the TP upper layer via transmit confirmation after a Tcp Ack has been received. If set to TRUE, SoAd notifies the TP upper layer via transmit confirmation immediately after transmit has been accepted by TcpIp.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00147</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>ECU</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpInitiate -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpInitiate</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the initiator for this TCP connection. It will not be defined for UDP sockets.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">TRUE: This TCP connection is initiated by this module.
+																		FALSE: This TCP connection is to be initiated in the listen mode.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00022</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpKeepAlive -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpKeepAlive</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpKeepAlive</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies to use the keep-alive mechanism for this connection. It will not be defined for UDP sockets.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">TRUE: This TCP connection will use the keep-alive mechanism.
+																		FALSE: This TCP connection will not use the keep-alive mechanism.
+																		Note: This parameter must not be set to TRUE if TcpIpTcpKeepAliveEnabled is set to FALSE.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00148</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpKeepAliveInterval -->
+														<ECUC-FLOAT-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpKeepAliveInterval</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpKeepAliveInterval</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the interval in seconds between subsequent keepalive probes.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00152</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>Inf</MAX>
+														   <MIN>0</MIN>
+														</ECUC-FLOAT-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpKeepAliveProbesMax -->
+														<ECUC-INTEGER-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpKeepAliveProbesMax</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpKeepAliveProbesMax</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Maximum number of times that TCP retransmits an individual data segment before aborting the connection.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00151</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>65535</MAX>
+														   <MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpKeepAliveTime -->
+														<ECUC-FLOAT-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpKeepAliveTime</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpKeepAliveTime</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the time in seconds between the last data packet sent and the first keepalive probe.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00153</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <DEFAULT-VALUE>7200</DEFAULT-VALUE>
+														   <MAX>Inf</MAX>
+														   <MIN>0</MIN>
+														</ECUC-FLOAT-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpNoDelay -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpNoDelay</SHORT-NAME>
+								    						   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpNoDelay</L-4>
+						                		                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies not to use the congestion control mechanism for this connection. It will not be defined for UDP sockets.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">TRUE: This TCP connection will NOT use congestion control.
+																		FALSE: This TCP connection will use congestion control.
+																		If the optional parameter is not enabled, the default behavior configured for TcpIp via the parameter TcpIpTcpNagleEnabled is applied.
+																		Note: This parameter must not be set to FALSE if TcpIpTcpNagleEnabled is set to FALSE.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00023</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketTcpTxQuota -->
+														<ECUC-INTEGER-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketTcpTxQuota</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketTcpTxQuota (currently unused)</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the maximum amount of bytes (PDU data provided by the upper layer and PDU Header if used) the SoAd may queue for transmission via TCP at the TcpIp module for each socket connection of this socket connection group.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">Rationale: prohibits that a socket connection consumes all available transmit buffers at the TcpIp and blocks transmissions via other socket connections.
+																		If the optional parameter is not enabled, the amount of data is not limited.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00142</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>4294967295</MAX>
+														   <MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													 </PARAMETERS>
+												  </ECUC-PARAM-CONF-CONTAINER-DEF>
+												  <!-- Container Definition: SoAdSocketUdp -->
+												  <ECUC-PARAM-CONF-CONTAINER-DEF>
+													 <SHORT-NAME>SoAdSocketUdp</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Specifies that UDP is used as transport protocol for the socket connection group and parameters only related to UDP socket connections.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00140</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <PARAMETERS>
+														<!-- PARAMETER DEFINITION: SoAdSocketUdpAliveSupervisionTimeout -->
+														<ECUC-FLOAT-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketUdpAliveSupervisionTimeout</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketUdpAliveSupervisionTimeout</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the time in [s] a UDP socket connection remains in the mode SOAD_SOCON_ONLINE after the latest reception of a frame from the remote peer specified by the remote address. If this optional parameter is not enabled UDP Alive Supervision is deactivated for the related socket connection group.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00149</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>Inf</MAX>
+														   <MIN>0</MIN>
+														</ECUC-FLOAT-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketUdpListenOnly -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketUdpListenOnly</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies if the socket connection group is only used for reception (TRUE) or used for both reception and transmission (FALSE).</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00024</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketUdpStrictHeaderLenCheckEnabled -->
+														<ECUC-BOOLEAN-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketUdpStrictHeaderLenCheckEnabled</SHORT-NAME>
+														   <LONG-NAME>
+									                                               <L-4 L="EN">SoAdSocketUdpStrictHeaderLenCheckEnabled (currently unused)</L-4>
+									                                           </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies if UDP messages shall be dropped (TRUE) if the length of all contained PDUs does not match the length of the whole message or not (FALSE). Shall only be set to TRUE if SoAdPduHeaderEnable is also set to TRUE.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00154</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+														</ECUC-BOOLEAN-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketUdpTriggerTimeout -->
+														<ECUC-FLOAT-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketUdpTriggerTimeout</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketUdpTriggerTimeout</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the timeout in [s] a nPduUdpTxBuffer is waiting for a PDU with TriggerMode = TRIGGER_ALWAYS, i.e. when the timeout expires the nPduUdpTxBuffer is transmitted. Timer is reset after each UDP transmission. This optional parameter is only relevant if a nPduUdpTxBuffer is used.</L-2>
+														   </DESC>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00133</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>Inf</MAX>
+														   <MIN>0</MIN>
+														</ECUC-FLOAT-PARAM-DEF>
+														<!-- PARAMETER DEFINITION: SoAdSocketnPduUdpTxBufferMin -->
+														<ECUC-INTEGER-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketnPduUdpTxBufferMin</SHORT-NAME>
+														   <LONG-NAME>
+								                                                       <L-4 L="EN">SoAdSocketnPduUdpTxBufferMin</L-4>
+								                                                   </LONG-NAME>
+														   <DESC>
+															  <L-2 L="EN">Specifies the amount of data in bytes (PDU data provided by the upper layer and PDU Header if used) the SoAd shall be able to buffer for data transmission via this socket connection in case the UDP message shall be buffered for transmission of multiple PDUs per UDP.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">Note: in case of a UDP socket and an upper layer with TP API is configured, the required buffer size can be determined automatically. This optional parameter is only relevant if a nPduUdpTxBuffer is used.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00135</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>65535</MAX>
+														   <MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+														<!-- Vendor06: PARAMETER DEFINITION: SoAdSocketPduUdpTpTxBuffer - RB specific parameter -->
+														<ECUC-INTEGER-PARAM-DEF>
+														   <SHORT-NAME>SoAdSocketPduUdpTpTxBuffer</SHORT-NAME>
+														   <DESC>
+															  <L-2 L="EN">RB (Vendor06) specific parameter: Specifies the amount of data in bytes (PDU data provided by the upper layer and PDU Header if used) the SoAd shall buffer the data's under the relavant socket connection if TP PDU wanted to be buffered for UDP transmission.</L-2>
+														   </DESC>
+														   <INTRODUCTION>
+															  <P>
+																 <L-1 L="EN">Note: in case of a UDP socket and an upper layer with TP API is configured, the required buffer size can be determined automatically. This optional parameter is only relevant if a nPduUdpTxBuffer is used.</L-1>
+															  </P>
+														   </INTRODUCTION>
+														   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00135</RELATED-TRACE-ITEM-REF>
+														   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+														   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+														   <SCOPE>LOCAL</SCOPE>
+														   <MULTIPLICITY-CONFIG-CLASSES>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   </MULTIPLICITY-CONFIG-CLASSES>
+														   <ORIGIN>RB:AR42.2.0.0:2017-04-04</ORIGIN>
+														   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+														   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+														   <VALUE-CONFIG-CLASSES>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+															  <ECUC-VALUE-CONFIGURATION-CLASS>
+																 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+															  </ECUC-VALUE-CONFIGURATION-CLASS>
+														   </VALUE-CONFIG-CLASSES>
+														   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+														   <MAX>65535</MAX>
+														   <MIN>0</MIN>
+														</ECUC-INTEGER-PARAM-DEF>
+													 </PARAMETERS>
+												  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											   </CHOICES>
+											</ECUC-CHOICE-CONTAINER-DEF>
+										 </SUB-CONTAINERS>
+									  </ECUC-PARAM-CONF-CONTAINER-DEF>
+									  <!-- Container Definition: SoAdSocketRoute -->
+									  <ECUC-PARAM-CONF-CONTAINER-DEF>
+										 <SHORT-NAME>SoAdSocketRoute</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Describes the path of a PDU from a socket in the TCP/IP stack to an upper layer of the SoAd after reception in the TCP/IP Stack.</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00008</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										 <PARAMETERS>
+											<!-- PARAMETER DEFINITION: SoAdRxPduHeaderId -->
+											<ECUC-INTEGER-PARAM-DEF>
+											   <SHORT-NAME>SoAdRxPduHeaderId</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">ID contained in the packet received on the TCP/IP connection if the PDU header option is enabled.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00036</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <MULTIPLICITY-CONFIG-CLASSES>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											   </MULTIPLICITY-CONFIG-CLASSES>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											   <MAX>4294967296</MAX>
+											   <MIN>0</MIN>
+											</ECUC-INTEGER-PARAM-DEF>
+										 </PARAMETERS>
+										 <REFERENCES>
+											<!-- Choice Reference Definition: SoAdRxSocketConnOrSocketConnBundleRef -->
+											<ECUC-CHOICE-REFERENCE-DEF>
+											   <SHORT-NAME>SoAdRxSocketConnOrSocketConnBundleRef</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Choice Reference to a SocketConnection or to a SocketConnectionGroup on which the PDU was received.  The reference to a SocketConnectionGroup shall only be used for upper layers with IF API.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00035</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <SCOPE>LOCAL</SCOPE>
+											   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+											   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+											   <VALUE-CONFIG-CLASSES>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+												  <ECUC-VALUE-CONFIGURATION-CLASS>
+													 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												  </ECUC-VALUE-CONFIGURATION-CLASS>
+											   </VALUE-CONFIG-CLASSES>
+											   <DESTINATION-REFS>
+												  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup/SoAdSocketConnection</DESTINATION-REF>
+												  <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+											   </DESTINATION-REFS>
+											</ECUC-CHOICE-REFERENCE-DEF>
+										 </REFERENCES>
+										 <SUB-CONTAINERS>
+											<!-- Container Definition: SoAdSocketRouteDest -->
+											<ECUC-PARAM-CONF-CONTAINER-DEF>
+											   <SHORT-NAME>SoAdSocketRouteDest</SHORT-NAME>
+											   <DESC>
+												  <L-2 L="EN">Describes the upper layer destination PDU for a message received on a TcpIp socket.</L-2>
+											   </DESC>
+											   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00114</RELATED-TRACE-ITEM-REF>
+											   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											   <PARAMETERS>
+												  <!-- PARAMETER DEFINITION: SoAdRxPduId -->
+												  <ECUC-INTEGER-PARAM-DEF>
+													 <SHORT-NAME>SoAdRxPduId</SHORT-NAME>
+													 <LONG-NAME>
+						                                                              <L-4 L="EN">SoAdRxPduId (automatically Generated)</L-4>
+						                                                         </LONG-NAME>
+													 <DESC>
+														<L-2 L="EN">This unique identifier is used for a receive cancellation request from an upper layer of the SoAd.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00116</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <WITH-AUTO>true</WITH-AUTO>
+													 <MAX>65535</MAX>
+													 <MIN>0</MIN>
+												  </ECUC-INTEGER-PARAM-DEF>
+												  <!-- Vendor06: PARAMETER DEFINITION: SoAdUpperLayerRxPduId - RB specific parameter -->
+												  <ECUC-INTEGER-PARAM-DEF>
+													 <SHORT-NAME>SoAdUpperLayerRxPduId</SHORT-NAME>
+													 <DESC>											
+														<L-2 L="EN">RB (Vendor06) specific parameter: Rx PDU ID of the upper layer module would be configured with this parameter if Upper Layer is CDD.</L-2>
+													 </DESC>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <MAX>65535</MAX>
+													 <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+													 <!-- Vendor06: PARAMETER DEFINITION: SoAdRxUser - RB specific parameter -->
+												  	<ECUC-ENUMERATION-PARAM-DEF>
+													 <SHORT-NAME>SoAdRxUser</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">RB (Vendor06) specific parameter: Specifies the upper layer module, owner of this RxPdu.</L-2>
+													 </DESC>
+													 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <LITERALS>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>PduR</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>Sd</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>Cdd</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>UdpNm</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>Xcp</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>DoIP</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                <ECUC-ENUMERATION-LITERAL-DEF>
+					                                                                    <SHORT-NAME>EthDiagMM</SHORT-NAME>
+					                                                                    <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+					                                                                </ECUC-ENUMERATION-LITERAL-DEF>
+					                                                            </LITERALS>
+												  </ECUC-ENUMERATION-PARAM-DEF>
+												  <!-- PARAMETER DEFINITION: SoAdRxUpperLayerType -->
+												  <ECUC-ENUMERATION-PARAM-DEF>
+													 <SHORT-NAME>SoAdRxUpperLayerType</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Specifies the upper layer interface type (must be "IF" in case of multiple RxPdus).</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00115</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													 <LITERALS>
+														<ECUC-ENUMERATION-LITERAL-DEF>
+														   <SHORT-NAME>IF</SHORT-NAME>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+														<ECUC-ENUMERATION-LITERAL-DEF>
+														   <SHORT-NAME>TP</SHORT-NAME>
+														   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+														</ECUC-ENUMERATION-LITERAL-DEF>
+													 </LITERALS>
+												  </ECUC-ENUMERATION-PARAM-DEF>
+												  <!-- Vendor06: PARAMETER DEFINITION: UL_SoAdIfRxIndication - RB specific parameter -->
+												  <ECUC-STRING-PARAM-DEF>
+												     <SHORT-NAME>UL_SoAdIfRxIndication</SHORT-NAME>
+												     <DESC>
+													  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify upper layers about IfRxIndication.</L-2>
+												     </DESC>
+												     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												     <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+												     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												     <VALUE-CONFIG-CLASSES>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+												     </VALUE-CONFIG-CLASSES>
+												   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											  	   </ECUC-STRING-PARAM-DEF>
+												   <!-- Vendor06: PARAMETER DEFINITION: UL_SoAdTpRxIndication - RB specific parameter -->
+												  <ECUC-STRING-PARAM-DEF>
+												     <SHORT-NAME>UL_SoAdTpRxIndication</SHORT-NAME>
+												     <DESC>
+													  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify upper layers about TpRxIndication.</L-2>
+												     </DESC>
+												     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												     <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+												     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												     <VALUE-CONFIG-CLASSES>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+												     </VALUE-CONFIG-CLASSES>
+												   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											  	   </ECUC-STRING-PARAM-DEF>
+												   <!-- Vendor06: PARAMETER DEFINITION: UL_SoAdTpCopyRxData - RB specific parameter -->
+												  <ECUC-STRING-PARAM-DEF>
+												     <SHORT-NAME>UL_SoAdTpCopyRxData</SHORT-NAME>
+												     <DESC>
+													  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is called to copy received data to upper layer.</L-2>
+												     </DESC>
+												     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												     <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+												     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												     <VALUE-CONFIG-CLASSES>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+												     </VALUE-CONFIG-CLASSES>
+												   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											  	   </ECUC-STRING-PARAM-DEF>
+												   <!-- Vendor06: PARAMETER DEFINITION: UL_SoAdTpStartOfReception - RB specific parameter -->
+												  <ECUC-STRING-PARAM-DEF>
+												     <SHORT-NAME>UL_SoAdTpStartOfReception</SHORT-NAME>
+												     <DESC>
+													  <L-2 L="EN">RB (Vendor06) specific parameter: This parameter configures the name of the callback that is used to notify upper layers about the TpStartOfReception.</L-2>
+												     </DESC>
+												     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												     <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+												     <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												     <VALUE-CONFIG-CLASSES>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+													  <ECUC-VALUE-CONFIGURATION-CLASS>
+														 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													  </ECUC-VALUE-CONFIGURATION-CLASS>
+												     </VALUE-CONFIG-CLASSES>
+												   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											  	   </ECUC-STRING-PARAM-DEF>
+											   </PARAMETERS>
+											   <REFERENCES>
+												  <!-- Reference Definition: SoAdRxPduRef -->
+												  <ECUC-REFERENCE-DEF>
+													 <SHORT-NAME>SoAdRxPduRef</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Reference to the global PDU structure</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00038</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													 <SCOPE>ECU</SCOPE>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+												  </ECUC-REFERENCE-DEF>
+												  <!-- Reference Definition: SoAdRxRoutingGroupRef -->
+												  <ECUC-REFERENCE-DEF>
+													 <SHORT-NAME>SoAdRxRoutingGroupRef</SHORT-NAME>
+													 <DESC>
+														<L-2 L="EN">Reference to the routing group.</L-2>
+													 </DESC>
+													 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00117</RELATED-TRACE-ITEM-REF>
+													 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													 <SCOPE>LOCAL</SCOPE>
+													 <MULTIPLICITY-CONFIG-CLASSES>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													 </MULTIPLICITY-CONFIG-CLASSES>
+													 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													 <VALUE-CONFIG-CLASSES>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+														<ECUC-VALUE-CONFIGURATION-CLASS>
+														   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+														   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-VALUE-CONFIGURATION-CLASS>
+													 </VALUE-CONFIG-CLASSES>
+													 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+												  </ECUC-REFERENCE-DEF>
+											   </REFERENCES>
+											</ECUC-PARAM-CONF-CONTAINER-DEF>
+										 </SUB-CONTAINERS>
+									  </ECUC-PARAM-CONF-CONTAINER-DEF>
+								   </SUB-CONTAINERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+								<!-- Container Definition: SoAdGeneral -->
+								<ECUC-PARAM-CONF-CONTAINER-DEF>
+								   <SHORT-NAME>SoAdGeneral</SHORT-NAME>
+								   <DESC>
+									  <L-2 L="EN">This container contains all global configuration parameters of SoAd.</L-2>
+								   </DESC>
+								   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00003</RELATED-TRACE-ITEM-REF>
+								   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+								   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								   <PARAMETERS>
+									  <!-- PARAMETER DEFINITION: SoAdDevErrorDetect -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdDevErrorDetect</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">* true: enabled (ON).
+												* false: disabled (OFF).</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00002</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdIPv6AddressEnabled -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdIPv6AddressEnabled</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Allows for increased memory allocation to store IPv6 addresses.</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Enables support for IPv6 addresses
+												FALSE: Only IPv4 addresses are supported</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00039</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdChangeParameterEnabled - RB specific parameter -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdChangeParameterEnabled</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">RB (Vendor06) specific parameter: Allows Upper Layer to change the Parameter</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Allows Upper Layer to change the Parameter
+							                              FALSE: Does not allow Upper Layer to change the Parameter </L-1>
+											</P>
+										 </INTRODUCTION>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>RB:AR41.19.0.0:2015-10-29</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdDHCPNameEnabled - RB specific parameter -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdDHCPNameEnabled</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">RB (Vendor06) specific parameter: Allows the Upper Layer to read/write the DHCP host name options</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Allows the Upper Layer to read/write the DHCP host name options 
+								                          FALSE: Does not allow the Upper Layer to read/write the DHCP host name options </L-1>
+											</P>
+										 </INTRODUCTION>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>RB:AR41.19.0.0:2015-10-29</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdIPAddrAssignmentEnabled - RB specific parameter -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdIPAddrAssignmentEnabled</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">RB (Vendor06) specific parameter: Allows Upper Layer to release/request the IP address assignment</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Allows Upper Layer to release/request the IP address assignment 
+								                          FALSE: Does not allow Upper Layer to release/request the IP address assignment</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>RB:AR41.19.0.0:2015-10-29</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdTpCancelComEnabled - RB specific parameter -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdTpCancelComEnabled</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">RB (Vendor06) specific parameter: Allows the Upper Layer to request the cancelation of the active ongoing TP transmission/reception</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Upper Layer can cancel/terminate the active ongoing packets
+								                          FALSE: Upper Layer cannot cancel/terminate the active ongoing packets</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>RB:AR41.19.0.0:2015-10-29</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdRxBuffEnabled - RB specific parameter -->
+                                      <ECUC-BOOLEAN-PARAM-DEF>
+                                         <SHORT-NAME>SoAdRxBuffEnabled</SHORT-NAME>
+                                         <DESC>
+                                            <L-2 L="EN">RB (Vendor06) specific parameter: Enable or disable the SoAd Reception buffering.</L-2>
+                                         </DESC>
+                                         <INTRODUCTION>
+                                            <P>
+                                               <L-1 L="EN">TRUE: Reception buffer per socket connection are enabled
+                                                          FALSE: Reception buffer per socket connection are disabled</L-1>
+                                            </P>
+                                         </INTRODUCTION>
+                                         <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                         <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                         <SCOPE>ECU</SCOPE>
+                                         <ORIGIN>RB:AR42.2.1.0:2017-04-03</ORIGIN>
+                                         <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                         <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                         </VALUE-CONFIG-CLASSES>
+                                         <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                      </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdMainFunctionPeriod -->
+									  <ECUC-FLOAT-PARAM-DEF>
+										 <SHORT-NAME>SoAdMainFunctionPeriod</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Determines the frequency at which the SoAd_MainFunction() is called in [s].</L-2>
+										 </DESC>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00062</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>ECU</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <MAX>Inf</MAX>
+										 <MIN>0</MIN>
+									  </ECUC-FLOAT-PARAM-DEF>
+ 				                      			  <!-- PARAMETER DEFINITION: SoAdMainFunctionPeriod_1ms -->
+                                      <ECUC-FLOAT-PARAM-DEF>
+                                         <SHORT-NAME>SoAdMainFunctionPeriod_1ms</SHORT-NAME>
+                                         <LONG-NAME>
+                                              <L-4 L="EN">SoAdMainFunctionPeriod_1ms (automatically Generated)</L-4>
+                                         </LONG-NAME>
+                                         <DESC>
+                                              <L-2 L="EN">RB (Vendor06) Determines the frequency at which the SoAdMainFunctionPeriod_1ms() is called in [s].</L-2>
+                                         </DESC>
+                                         <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00062</RELATED-TRACE-ITEM-REF>
+                                                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                         <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                         <SCOPE>ECU</SCOPE>
+                                         <ORIGIN>RB:AR42.3.4.0:2017-10-18</ORIGIN>
+                                         <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                         <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                               <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                         </VALUE-CONFIG-CLASSES>
+                                         <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                     <WITH-AUTO>true</WITH-AUTO>
+                                         <MAX>Inf</MAX>
+                                         <MIN>0</MIN>
+                                      </ECUC-FLOAT-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdRoutingGroupMax -->
+									  <ECUC-INTEGER-PARAM-DEF>
+										 <SHORT-NAME>SoAdRoutingGroupMax</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies the maximum number of SoAd routing groups. Furthermore it defines the platform type used for RoutingGroupIdType. If SoAdRoutingGroupMax is not greater than 256, an uint8 is used,</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">otherwise an uint16.</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00127</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <MAX>65535</MAX>
+										 <MIN>0</MIN>
+									  </ECUC-INTEGER-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdSoConMax -->
+									  <ECUC-INTEGER-PARAM-DEF>
+										 <SHORT-NAME>SoAdSoConMax</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Specifies the maximum number of SoAd socket connections.</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">Furthermore it defines the platform type used for SoAd_SoConIdType. If SoAdSoConMax is not greater than 256, an uint8 is used, otherwise uint16.</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00126</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <MAX>65535</MAX>
+										 <MIN>0</MIN>
+									  </ECUC-INTEGER-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: SoAdVersionInfoApi -->
+									  <ECUC-BOOLEAN-PARAM-DEF>
+										 <SHORT-NAME>SoAdVersionInfoApi</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">Activates the SoAd_GetVersionInfo() API.</L-2>
+										 </DESC>
+										 <INTRODUCTION>
+											<P>
+											   <L-1 L="EN">TRUE: Enables the SoAd_GetVersionInfo() API.
+												FALSE: SoAd_GetVersionInfo() API is not included.</L-1>
+											</P>
+										 </INTRODUCTION>
+										 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00004</RELATED-TRACE-ITEM-REF>
+										 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  </ECUC-BOOLEAN-PARAM-DEF>
+									  <!-- Vendor06: PARAMETER DEFINITION: SoAdTpTcpTransmitRetryCount - RB specific parameter -->
+									  <ECUC-INTEGER-PARAM-DEF>
+										 <SHORT-NAME>SoAdTpTcpTransmitRetryCount</SHORT-NAME>
+										 <DESC>
+											<L-2 L="EN">RB (Vendor06) specific parameter: Determines the number of times SoAd shall retry Tp Tcp transmission through TcpIp_TcpTransmit when Tcp buffer is unavailable</L-2>
+										 </DESC>
+							        	  	 <INTRODUCTION>
+						                                      <P>
+						                                          <L-1 L="EN">If parameter is not configured or configured with 65535 then retry would happen infinitely</L-1>
+						                                      </P>
+					                                         </INTRODUCTION>
+										 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										 <SCOPE>LOCAL</SCOPE>
+										 <ORIGIN>RB:AR41.16.2.0:2015-02-04</ORIGIN>
+										 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+										 <VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										 </VALUE-CONFIG-CLASSES>
+										 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										 <MAX>65535</MAX>
+                                            					 <MIN>0</MIN>
+									  </ECUC-INTEGER-PARAM-DEF>
+								   </PARAMETERS>
+								</ECUC-PARAM-CONF-CONTAINER-DEF>
+							 </CONTAINERS>
+						  </ECUC-MODULE-DEF>
+					</ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Crc</SHORT-NAME>
+      <AR-PACKAGES>
+        <!-- BswImplementations -->
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>Crc</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>1.0.0</SW-VERSION>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Crc/EcucModuleDefs/Crc</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- BswModuleDescriptions -->
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Crc</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>201</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_CalculateCRC8</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_CalculateCRC8H2F</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_CalculateCRC16</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_CalculateCRC32</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_CalculateCRC32P4</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Crc/BswModuleEntrys/Crc_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+              <OUTGOING-CALLBACKS>
+              </OUTGOING-CALLBACKS>
+              <BSW-MODULE-DEPENDENCYS>
+              </BSW-MODULE-DEPENDENCYS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <!-- BswModuleEntrys -->
+        <AR-PACKAGE>
+            <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+            <ELEMENTS>
+              <!-- Crc_CalculateCRC8 -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_CalculateCRC8</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Crc_CalculateCRC8 provides the CRC8 routine based on the SAE-J1850 CRC8 Standard. 
+                    The calculation method has to be configured in the configuration container CrcGeneral by defining the parameter Crc8Mode. 
+                    Details can be found in the chapter about the configuration interface.</L-4>
+                </LONG-NAME>
+                <INTRODUCTION>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives two examples for the usage of the Crc_CalculateCRC8 routine. 
+                    The first example deals with a non-interrupted calculation of the checksum, whereas the second example deals 
+                    with an interrupted calculation of the checksum. Additionally, the usage of the public constant is given.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">/* -------------------------------------------------------------------------------------------------------*/
+/* Initialize input data and expected result */
+/* -------------------------------------------------------------------------------------------------------*/
+
+uint8 input_u8[9] = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39};
+uint8 res_u8;
+uint8 expected_res_u8 = 0x4B;
+
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC8 value in one step */
+/* -------------------------------------------------------------------------------------------------------*/
+
+/* without usage of the constant CRC_INITIAL_VALUE8 */
+
+/* AR4.0 Rev 2 */
+
+    res_u8 = Crc_CalculateCRC8(&amp;(input_u8[0]), 9, 0xFF, TRUE);
+
+/* Check the result */
+if (res_u8  != expected_res_u8)
+{
+    /* error handling */
+
+}
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC8 value in three steps */
+/* -------------------------------------------------------------------------------------------------------*/
+
+    /* AR4.0 Rev 2 */
+    /* First call, with 'initial value' and setting Crc_IsFirstCall to TRUE */
+    res_u8 = Crc_CalculateCRC8(&amp;(input_u8[0]), 2, CRC_INITIAL_VALUE8, TRUE);
+
+    /* for subsequent calls set Crc_IsFirstCall to FALSE and pass the result of the previous
+     * call as start value.
+     */
+    res_u8 = Crc_CalculateCRC8(&amp;(input_u8[2]), 4, res_u8, FALSE);
+
+    res_u8 = Crc_CalculateCRC8(&amp;(input_u8[6]), 3, res_u8, FALSE);
+
+
+/* Check the result */
+if (res_u8  != expected_res_u8)
+{
+    /* error handling */
+} </L-5>
+                  </VERBATIM>
+                  <NOTE NOTE-TYPE="HINT">
+                    <P>
+                      <L-1 L="EN">Note, the check for function Crc_CalculateCRC8, result given in the AR4, Rev1 of the CRC Library is false. 
+                      The failure is corrected in Rev2 and Rev3.</L-1>
+                    </P>
+                  </NOTE>
+                </INTRODUCTION>
+                <SERVICE-ID>1</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>uint8</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">8 bit result of CRC calculation.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to the beginning of the input data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Length of the data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_StartValue8</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Start Value is either the initial value, given by constant CRC_INITIAL_VALUE8
+                      or the result of the last CRC calculation. If AR4.0 Revision 1 is used, the former result 
+                      must be XORed with the constant, given by CRC_XOR_VALUE8.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">If it is set to TRUE, the start value is ignored and set to the standard start value. 
+                      Otherwise the start value is used to continue calculating from this value. 
+                      This means it is possible to divide the input into several parts and hand them in piecewise. 
+                      To continue a calculation, the former result is committed as start-value and Crc_IsFirstCall is set to FALSE.</L-2>
+                    </DESC>
+                    <CATEGORY>BOOLEAN</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <!-- Crc_CalculateCRC8H2F -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_CalculateCRC8H2F</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Crc_CalculateCRC8H2F provides a CRC8 routine based on the (truncated) generator polynomial 0x2F. 
+                    The calculation method has to be configured in the configuration container CrcGeneral by defining the parameter Crc8H2FMode. 
+                    Details can be found in the chapter about the configuration interface.</L-4>
+                </LONG-NAME>
+                <INTRODUCTION>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives two examples for the usage of the Crc_CalculateCRC8 routine. 
+                    The first example deals with a non-interrupted calculation of the checksum, whereas the second example deals 
+                    with an interrupted calculation of the checksum. Additionally, the usage of the public constant is given.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">/* -------------------------------------------------------------------------------------------------------*/
+/* Initialize input data and expected result */
+/* -------------------------------------------------------------------------------------------------------*/
+
+uint8 input_u8[9] = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39};
+uint8 res_u8;
+uint8 expected_res_u8 = 0x4B;
+
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC8 value in one step */
+/* -------------------------------------------------------------------------------------------------------*/
+
+/* without usage of the constant CRC_INITIAL_VALUE8 */
+
+/* AR4.0 Rev 2 */
+
+    res_u8 = Crc_CalculateCRC8H2F(&amp;(input_u8[0]), 9, 0xFF, TRUE);
+
+/* Check the result */
+if (res_u8  != expected_res_u8)
+{
+    /* error handling */
+
+}
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC8 value in three steps */
+/* -------------------------------------------------------------------------------------------------------*/
+
+    /* AR4.0 Rev 2 */
+    /* First step, with setting Crc_IsFirstCall to TRUE */
+    res_u8 = Crc_CalculateCRC8H2F(&amp;(input_u8[0]), 2, CRC_INITIAL_VALUE8, TRUE);
+
+    /* Second step, with setting Crc_IsFirstCall to FALSE  */
+    res_u8 = Crc_CalculateCRC8H2F(&amp;(input_u8[2]), 4, res_u8, FALSE);
+
+    /* Third step, with setting Crc_IsFirstCall to FALSE */
+    res_u8 = Crc_CalculateCRC8H2F(&amp;(input_u8[6]), 3, res_u8, FALSE);
+
+
+/* Check the result */
+if (res_u8  != expected_res_u8)
+{
+    /* error handling */
+} </L-5>
+                  </VERBATIM>
+                  <NOTE NOTE-TYPE="HINT">
+                    <P>
+                      <L-1 L="EN">Note, the check for function CalculateCRC8H2F, given in the AR4, Rev1 of the CRC Library, 
+                      has a false result value in the specification. The failure of the specification is corrected in Rev2 and Rev3.</L-1>
+                    </P>
+                  </NOTE>
+                </INTRODUCTION>
+                <SERVICE-ID>5</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>uint8</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">8 bit result of CRC calculation.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to the beginning of the input data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Length of the data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_StartValue8</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Start value, is either the initial value, given by constant CRC_INITIAL_VALUE8H2F 
+                      or CRC_INITIAL_VALUE8 or the result of the last CRC calculation.If AR4.0 Revision 1 is used, the former result 
+                      must be XORed with the constant, given by CRC_XOR_VALUE8H2F or CRC_XOR_VALUE8.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">If it is set to TRUE, the start value is ignored and set to the standard start value. 
+                      Otherwise the start value is used to continue calculating from this value. 
+                      This means it is possible to divide the input into several parts and hand them in piecewise. 
+                      To continue a calculation, the former result is committed as start-value and Crc_IsFirstCall is set to FALSE.</L-2>
+                    </DESC>
+                    <CATEGORY>BOOLEAN</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <!-- Crc_CalculateCRC16 -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_CalculateCRC16</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Crc_CalculateCRC16 provides the CRC16 routine based on the CCITT-FALSE CRC16 Standard. 
+                    The calculation method has to be configured in the configuration container CrcGeneral by defining the parameter Crc16Mode. 
+                    Details can be found in the chapter about the configuration interface.</L-4>
+                </LONG-NAME>
+                <INTRODUCTION>
+                  <P>
+                    <L-1 L="EN">
+                      <E TYPE="BOLD">Restrictions</E>: 
+                      The implementation is based on the assumption of a big byte endianness. In case of a big byte endianness, 
+                      the pointer to an input data stream "Crc_DataPtr" is also realizable as a cast pointer to an uint16 data stream. 
+                      In case of little byte endianness the usage of a cast pointer will lead to a wrong result as the byte sequence is not correct.
+                    </L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives four examples for the usage of the Crc_CalculateCRC16 routine. 
+                    The first example deals with a non-interrupted calculation of the checksum, whereas the second example deals 
+                    with an interrupted calculation of the checksum. Additionally, the usage of the public constant is given. 
+                    The third examples deals with an uint16 input vector under the assumption of big byte endianness, whereas 
+                    the forth examples assumes little byte endianness. For all examples, the expected result is identical. 
+                    Note, the difference in the input values BB_input_u16 and LB_input_u16, the correct input LB or BB has to 
+                    be selected with respect to the byte endianness of the target controller.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">/* -------------------------------------------------------------------------------------------------------*/
+/* Initialize input data and expected result */
+/* -------------------------------------------------------------------------------------------------------*/
+uint8  input_u8[9]  = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39};
+uint16 BB_input_u16 = {0x3231, 0x3433, 0x3635, 0x3837, 0x0039};
+uint16 LB_input_u16 = {0x3132, 0x3334, 0x3536, 0x3738, 0x3900};
+uint16 res_u16;
+uint16 expected_res_u16 = 0x29B1;
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC16 value in one step */
+/* -------------------------------------------------------------------------------------------------------*/
+
+/* without usage of the constant CRC_INITIAL_VALUE16 */
+
+/* AR4.0 Rev 2 */
+
+    res_u16 = Crc_CalculateCRC16(&amp;(input_u8[0]), 9, 0xFFFF, TRUE);
+
+/* Check the result */
+if (res_u16  != expected_res_u16)
+{
+    /* error handling */
+
+}
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC16 value in three steps */
+/* -------------------------------------------------------------------------------------------------------*/
+
+    /* AR4.0 Rev 2 */
+    /* First step, with setting Crc_IsFirstCall to TRUE */
+    res_u16 = Crc_CalculateCRC16(&amp;(input_u8[0]), 1, CRC_INITIAL_VALUE16, TRUE);
+
+    /* Second step, with setting Crc_IsFirstCall to FASLE */
+    res_u16 = Crc_CalculateCRC16(&amp;(input_u8[1]), 5, res_u16, FALSE);
+
+    /* Third step, without setting Crc_IsFirstCall to FALSE */
+    res_u16 = Crc_CalculateCRC16(&amp;(input_u8[6]), 3, res_u16, FALSE);
+
+
+/* Check the result */
+if (res_u8  != expected_res_u8)
+{
+    /* error handling */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC16 value in one step: big byte endianness
+ * Note, the expected result is only correctly calculated if the target works with big byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+    /* without usage of the constant CRC_INITIAL_VALUE16 */
+    res_u16 = Crc_CalculateCRC16((uint8*)(&amp;(BB_input_u16[0])), 9, 0xFFFF, TRUE);
+
+    /* Check the result */
+    if (res_u16  != expected_res_u16)
+    {
+        /* error handling */
+    }
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC16 value in one step: little byte endianness
+ * Note, the expected result is only correctly calculated if the target works with little byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+/* without usage of the constant CRC_INITIAL_VALUE16 */
+res_u16 = Crc_CalculateCRC16((uint8*)(&amp;(LB_input_u16[0])), 9, 0xFFFF, TRUE);
+
+/* Check the result */
+if (res_u16  != expected_res_u16)
+{
+    /* error handling */
+}
+  </L-5>
+                  </VERBATIM>
+                  <NOTE NOTE-TYPE="HINT">
+                    <P>
+                      <L-1 L="EN">Note, in the example Calculate AUTOSAR CRC16 value in three steps, in the third step, 
+                      there is no XOR operation as the CRC_XOR_VALUE16 is 0x0000 and does not have any impact.</L-1>
+                    </P>
+                  </NOTE>
+                </INTRODUCTION>
+                <SERVICE-ID>2</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>uint16</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">16 bit result of CRC calculation.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to the beginning of the input data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Length of the data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_StartValue16</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Start value, is either the initial value, given by constant CRC_INITIAL_VALUE16 
+                      or the result of the last CRC calculation. If AR4.0 Revision 1 is used, the former result 
+                      must be XORed with the constant, given by CRC_XOR_VALUE16.
+                      Hint: In case the calculation is the continuation the XOR operation of the previous result is not required. 
+                      Rationale, the CRC_XOR_VALUE16 is 0x0000, which does not have any impact in a XOR operation.</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">If it is set to TRUE, the start value is ignored and set to the standard start value. 
+                      Otherwise the start value is used to continue calculating from this value. 
+                      This means it is possible to divide the input into several parts and hand them in piecewise. 
+                      To continue a calculation, the former result is committed as start-value and Crc_IsFirstCall is set to FALSE.</L-2>
+                    </DESC>
+                    <CATEGORY>BOOLEAN</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <!-- Crc_CalculateCRC32 -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_CalculateCRC32</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Crc_CalculateCRC32 provides the CRC32 routine based on the IEEE-802.3 CRC32 Ethernet Standard. 
+                    The calculation method has to be configured in the configuration container CrcGeneral by defining the parameter Crc32Mode. 
+                    Details can be found in the chapter about the configuration interface.</L-4>
+                </LONG-NAME>
+                <INTRODUCTION>
+                  <P>
+                    <L-1 L="EN">
+                      <E TYPE="BOLD">Restrictions</E>: 
+                      The implementation is based on the assumption of a big byte endianness. In case of a big byte endianness, 
+                      the pointer to an input data stream "Crc_DataPtr" is also realizable as a cast pointer to an uint32 data stream. 
+                      In case of little byte endianness the usage of a cast pointer will lead to a wrong result as the byte sequence is not correct.
+                    </L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives four examples for the usage of the Crc_CalculateCRC32 routine. 
+                    The first example deals with a non-interrupted calculation of the checksum, whereas the second example deals 
+                    with an interrupted calculation of the checksum. Additionally the usage of the public constant is given. 
+                    The third example deals with an uint16 input vector under the assumption of big byte endianness, whereas 
+                    the forth examples assumes little byte endianness. For all examples, the expected result is identical. 
+                    Note, the difference in the input values BB_input_u32 and LB_input_u32, the correct input LB or BB has to 
+                    be selected with respect to the byte endianness of the target controller.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">/* -------------------------------------------------------------------------------------------------------*/
+/* Initialize input data and expected result */
+/* -------------------------------------------------------------------------------------------------------*/
+uint8  input_u8[9]  = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39};
+uint32 BB_input_u32 = {0x34333231, 0x38373635, 0x00000039};
+uint32 LB_input_u32 = {0x31323334, 0x35363738, 0x39000000};
+uint32 res_u32;
+uint32 expected_res_u32 = 0xCBF43926;
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32 value in one step
+ * -------------------------------------------------------------------------------------------------------*/
+ 
+/* without usage of the constant CRC_INITIAL_VALUE32 */
+
+/* AR4.0 Rev 2 */
+
+    res_u32 = Crc_CalculateCRC32(&amp;(input_u8[0]), 9, 0xFFFFFFFF, TRUE);
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+
+}
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC32 value in three steps */
+/* -------------------------------------------------------------------------------------------------------*/
+
+    /* AR4.0 Rev 2 */
+    /* First step,  with setting Crc_IsFirstCall to TRUE */
+    res_u32 = Crc_CalculateCRC32(&amp;(input_u8[0]), 3, CRC_INITIAL_VALUE32, TRUE);
+
+    /* Second step,  with setting Crc_IsFirstCall to FALSE */
+    res_u32 = Crc_CalculateCRC32(&amp;(input_u8[3]), 3, res_u32, FALSE);
+
+    /* Third step, with setting Crc_IsFirstCall to FALSE */
+    res_u32 = Crc_CalculateCRC32(&amp;(input_u8[6]), 3, res_u32, FALSE);
+
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32 value in one step: big byte endianness
+ * Note, the expected result is only correct calculated if the target works with big byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+    /* without usage of the constant CRC_INITIAL_VALUE32 */
+    res_u32 = Crc_CalculateCRC32((uint8*) (&amp;(BB_input_u32[0])), 9, 0xFFFFFFFF, TRUE);
+
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32 value in one step: little byte endianness
+ * Note, the expected result is only correct calculated if the target works with little byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+/* without usage of the constant CRC_INITIAL_VALUE32 */
+res_u32 = Crc_CalculateCRC32((uint8*) (&amp;(LB_input_u32[0])), 9, 0xFFFFFFFF, TRUE);
+
+
+
+/* Check the result */
+if (res_u16  != expected_res_u16)
+{
+    /* error handling */
+}  </L-5>
+                  </VERBATIM>
+                </INTRODUCTION>
+                <SERVICE-ID>3</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>uint32</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">32 bit result of CRC calculation.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to the beginning of the input data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Length of the data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_StartValue32</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Start Value, is either the initial value, given by constant CRC_INITIAL_VALUE32
+                      or the result of the last CRC calculation. If AR4.0 Revision 1 is used, the former result 
+                      must be back-manipulated. It has to be reflected and XORed with the constant, given by CRC_XOR_VALUE32 
+                      (see AUTOSAR specification of CRC Library 4.0 Rev 1)</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">If it is set to TRUE, the start value is ignored and set to the standard start value. 
+                      Otherwise the start value is used to continue calculating from this value. 
+                      This means it is possible to divide the input into several parts and hand them in piecewise. 
+                      To continue a calculation, the former result is committed as start-value and Crc_IsFirstCall is set to FALSE.</L-2>
+                    </DESC>
+                    <CATEGORY>BOOLEAN</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <!-- Crc_CalculateCRC32P4 -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_CalculateCRC32P4</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Crc_CalculateCRC32P4 provides the CRC32 routine for E2E Profile 4 (32-bit 0xF4ACFB13 polynomial CRC calculation).
+                    The calculation method has to be configured in the configuration container CrcGeneral by defining the parameter Crc32P4Mode. 
+                    Details can be found in the chapter about the configuration interface.</L-4>
+                </LONG-NAME>
+                <INTRODUCTION>
+                  <P>
+                    <L-1 L="EN">
+                      <E TYPE="BOLD">Restrictions</E>: 
+                      The implementation is based on the assumption of a big byte endianness. In case of a big byte endianness, 
+                      the pointer to an input data stream "Crc_DataPtr" is also realizable as a cast pointer to an uint32 data stream. 
+                      In case of little byte endianness the usage of a cast pointer will lead to a wrong result as the byte sequence is not correct.
+                    </L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives four examples for the usage of the Crc_CalculateCRC32P4 routine. 
+                    The first example deals with a non-interrupted calculation of the checksum, whereas the second example deals 
+                    with an interrupted calculation of the checksum. Additionally the usage of the public constant is given. 
+                    The third example deals with an uint16 input vector under the assumption of big byte endianness, whereas 
+                    the forth examples assumes little byte endianness. For all examples, the expected result is identical. 
+                    Note, the difference in the input values BB_input_u32 and LB_input_u32, the correct input LB or BB has to 
+                    be selected with respect to the byte endianness of the target controller.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">/* -------------------------------------------------------------------------------------------------------*/
+/* Initialize input data and expected result */
+/* -------------------------------------------------------------------------------------------------------*/
+uint8  input_u8[9]  = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39};
+uint32 BB_input_u32 = {0x34333231, 0x38373635, 0x00000039};
+uint32 LB_input_u32 = {0x31323334, 0x35363738, 0x39000000};
+uint32 res_u32;
+uint32 expected_res_u32 = 0x1697D06A;
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32P4 value in one step
+ * -------------------------------------------------------------------------------------------------------*/
+ 
+/* without usage of the constant CRC_INITIAL_VALUE32 */
+
+/* AR4.0 Rev 2 */
+
+    res_u32 = Crc_CalculateCRC32P4(&amp;(input_u8[0]), 9, 0xFFFFFFFF, TRUE);
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+
+}
+
+/* -------------------------------------------------------------------------------------------------------*/
+/* Calculate AUTOSAR CRC32P4 value in three steps */
+/* -------------------------------------------------------------------------------------------------------*/
+
+    /* AR4.0 Rev 2 */
+    /* First step,  with setting Crc_IsFirstCall to TRUE */
+    res_u32 = Crc_CalculateCRC32P4(&amp;(input_u8[0]), 3, CRC_INITIAL_VALUE32, TRUE);
+
+    /* Second step,  with setting Crc_IsFirstCall to FALSE */
+    res_u32 = Crc_CalculateCRC32P4(&amp;(input_u8[3]), 3, res_u32, FALSE);
+
+    /* Third step, with setting Crc_IsFirstCall to FALSE */
+    res_u32 = Crc_CalculateCRC32P4(&amp;(input_u8[6]), 3, res_u32, FALSE);
+
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32P4 value in one step: big byte endianness
+ * Note, the expected result is only correct calculated if the target works with big byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+    /* without usage of the constant CRC_INITIAL_VALUE32 */
+    res_u32 = Crc_CalculateCRC32P4((uint8*) (&amp;(BB_input_u32[0])), 9, 0xFFFFFFFF, TRUE);
+
+
+/* Check the result */
+if (res_u32  != expected_res_u32)
+{
+    /* error handling */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+ * Calculate AUTOSAR CRC32P4 value in one step: little byte endianness
+ * Note, the expected result is only correct calculated if the target works with little byte endianness
+ * -------------------------------------------------------------------------------------------------------*/
+    /* AR4.0 Rev 2 */
+/* without usage of the constant CRC_INITIAL_VALUE32 */
+res_u32 = Crc_CalculateCRC32P4((uint8*) (&amp;(LB_input_u32[0])), 9, 0xFFFFFFFF, TRUE);
+
+
+
+/* Check the result */
+if (res_u16  != expected_res_u16)
+{
+    /* error handling */
+}  </L-5>
+                  </VERBATIM>
+                </INTRODUCTION>
+                <SERVICE-ID>8</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <RETURN-TYPE>
+                  <SHORT-NAME>uint32</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">32 bit result of CRC calculation for E2E Profile 4.</L-2>
+                  </DESC>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </RETURN-TYPE>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_DataPtr</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Pointer to the beginning of the input data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>DATA_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <SW-POINTER-TARGET-PROPS>
+                            <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                            <SW-DATA-DEF-PROPS>
+                              <SW-DATA-DEF-PROPS-VARIANTS>
+                                <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                                  <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                              </SW-DATA-DEF-PROPS-VARIANTS>
+                            </SW-DATA-DEF-PROPS>
+                          </SW-POINTER-TARGET-PROPS>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_Length</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Length of the data stream.</L-2>
+                    </DESC>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_StartValue32</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">Start Value, is either the initial value, given by constant CRC_INITIAL_VALUE32
+                      or the result of the last CRC calculation. If AR4.0 Revision 1 is used, the former result 
+                      must be back-manipulated. It has to be reflected and XORed with the constant, given by CRC_XOR_VALUE32 
+                      (see AUTOSAR specification of CRC Library 4.0 Rev 1)</L-2>
+                    </DESC>
+                    <CATEGORY>VALUE</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                  <SW-SERVICE-ARG>
+                    <SHORT-NAME>Crc_IsFirstCall</SHORT-NAME>
+                    <DESC>
+                      <L-2 L="EN">If it is set to TRUE, the start value is ignored and set to the standard start value. 
+                      Otherwise the start value is used to continue calculating from this value. 
+                      This means it is possible to divide the input into several parts and hand them in piecewise. 
+                      To continue a calculation, the former result is committed as start-value and Crc_IsFirstCall is set to FALSE.</L-2>
+                    </DESC>
+                    <CATEGORY>BOOLEAN</CATEGORY>
+                    <DIRECTION>IN</DIRECTION>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/boolean</IMPLEMENTATION-DATA-TYPE-REF>
+                          <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+              <!-- Crc_GetVersionInfo -->
+              <BSW-MODULE-ENTRY>
+                <SHORT-NAME>Crc_GetVersionInfo</SHORT-NAME>
+                <LONG-NAME>
+                    <L-4 L="EN">Provides a function for reading the version information of the CRC module. 
+                    This information could be used to check the compatibility of the integrated software modules.</L-4>
+                </LONG-NAME>
+                <DESC>
+                  <L-2 L="EN">The function Crc_GetVersionInfo shall store the version information
+                              of this module into the parameter VersionInfo. The version information includes:</L-2>
+                </DESC>
+                <INTRODUCTION>
+                  <LIST TYPE="UNNUMBER">
+                    <ITEM>
+                      <P>
+                        <L-1 L="EN"> vendor ID </L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+                        <L-1 L="EN"> module ID </L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+                        <L-1 L="EN"> instance ID </L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+                        <L-1 L="EN"> sw_major_version </L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+                        <L-1 L="EN"> sw_minor_version </L-1>
+                      </P>
+                    </ITEM>
+                    <ITEM>
+                      <P>
+                       <L-1 L="EN"> sw_patch_version </L-1>
+                      </P>
+                    </ITEM>
+                  </LIST>
+                  <P>
+                    <L-1 L="EN"><E TYPE="BOLD">Example:</E></L-1>
+                  </P>
+                  <P>
+                    <L-1 L="EN">The following code snippet gives an example for the usage of the Crc_GetVersionInfo routine. 
+                    In the example, the terms VENDOR_ID, MODULE_ID, SW_MAJOR_VERSION, SW_MINOR_VERSION and SW_PATCH_VERSION 
+                    are place holders for user defined values.</L-1>
+                  </P>
+                  <VERBATIM ALLOW-BREAK="1">
+                    <L-5 xml:space="default" L="EN">Std_VersionInfoType  Crc_Std_VersionInfo;
+
+Crc_GetVersionInfo(&amp;Crc_Std_VersionInfo);
+
+/* Check the result */
+if ((CRC_Std_Version.vendorID !=  VENDOR_ID) ||
+    (CRC_Std_Version.moduleID !=  MODULE_ID) ||
+    (CRC_Std_Version.sw_major_!=  SW_MAJOR_VERSION) ||
+    (CRC_Std_Version.sw_minor_!=  SW_MINOR_VERSION) ||
+    (CRC_Std_Version.sw_patch_version != SW_PATCH_VERSION))
+{
+    /* error handling */
+}
+                    </L-5>
+                  </VERBATIM>
+                </INTRODUCTION>
+                <SERVICE-ID>4</SERVICE-ID>
+                <IS-REENTRANT>true</IS-REENTRANT>
+                <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                <CALL-TYPE>REGULAR</CALL-TYPE>
+                <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+                <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                <ARGUMENTS>
+                  <SW-SERVICE-ARG>
+                  <SHORT-NAME>VersionInfo</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Pointer to where to store the version information of this module.</L-2>
+                  </DESC>
+                  <CATEGORY>DATA_REFERENCE</CATEGORY>
+                  <DIRECTION>OUT</DIRECTION>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <SW-POINTER-TARGET-PROPS>
+                          <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-POINTER-TARGET-PROPS>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </SW-SERVICE-ARG>
+                </ARGUMENTS>
+              </BSW-MODULE-ENTRY>
+            </ELEMENTS>
+          </AR-PACKAGE>
+          <!-- CompuMethods -->
+          <AR-PACKAGE>
+            <SHORT-NAME>CompuMethods</SHORT-NAME>
+            <!--Not yet implemented.-->
+          </AR-PACKAGE>
+          <!-- ImplementationDataTypes -->
+          <AR-PACKAGE>
+            <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+            <ELEMENTS>
+              <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Crc_DcrRegister_tst</SHORT-NAME>
+                <LONG-NAME>
+                  <L-4 L="EN">Registers of the "Data CRC Function" for Renesas RH850 microcontroller family.</L-4>
+                </LONG-NAME>
+                <CATEGORY>STRUCTURE</CATEGORY>
+                <SUB-ELEMENTS>
+                  <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <SHORT-NAME>crcin</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <ADDITIONAL-NATIVE-TYPE-QUALIFIER>volatile</ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <SHORT-NAME>crcout</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                          <ADDITIONAL-NATIVE-TYPE-QUALIFIER>volatile</ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <SHORT-NAME>res</SHORT-NAME>
+                    <CATEGORY>ARRAY</CATEGORY>
+                    <SUB-ELEMENTS>
+                      <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                        <SHORT-NAME>res</SHORT-NAME>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <ARRAY-SIZE>6</ARRAY-SIZE>
+                        <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                        <SW-DATA-DEF-PROPS>
+                          <SW-DATA-DEF-PROPS-VARIANTS>
+                            <SW-DATA-DEF-PROPS-CONDITIONAL>
+                              <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                            </SW-DATA-DEF-PROPS-CONDITIONAL>
+                          </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                      </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    </SUB-ELEMENTS>
+                  </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                    <SHORT-NAME>crcctl</SHORT-NAME>
+                    <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                    <SW-DATA-DEF-PROPS>
+                      <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+                          <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                          <ADDITIONAL-NATIVE-TYPE-QUALIFIER>volatile</ADDITIONAL-NATIVE-TYPE-QUALIFIER>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                      </SW-DATA-DEF-PROPS-VARIANTS>
+                    </SW-DATA-DEF-PROPS>
+                  </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                </SUB-ELEMENTS>
+                <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+              </IMPLEMENTATION-DATA-TYPE>
+            </ELEMENTS>
+          </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

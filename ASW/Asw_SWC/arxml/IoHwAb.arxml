@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>IoHwAb</SHORT-NAME>
+      <ELEMENTS>
+        <ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>IoHwAb</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <P-PORT-PROTOTYPE UUID="140dce2e-a0c7-4af9-bc5b-71b39fbf1694">
+              <SHORT-NAME>PPort_RelayValue</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/RelayValue</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="e614e5b3-05d9-4974-a0a2-2f057d9acaf0">
+              <SHORT-NAME>PPort_SYSValue</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/SYSValue</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="bacc119a-5513-4537-a940-f3f5502131e8">
+              <SHORT-NAME>PPort_McuValue</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/McuValue</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="81dd3027-d7d2-4df5-95fe-a198e4e0e4cb">
+              <SHORT-NAME>PPort_FanValue</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FanValue</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="e9dfe29f-7498-4c9f-8fd8-67d75841df98">
+              <SHORT-NAME>RPort_FanCmd</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FanCmd</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="fda73469-232a-4fde-992a-d9668d02a977">
+              <SHORT-NAME>RPort_RelayCmd</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/RelayCmd</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="8155f5b9-0215-4bf3-ac7a-c7fdecdd5549">
+              <SHORT-NAME>RPort_SYSCmd</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/SYSCmd</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="0e2462ba-9b9f-4ee7-af21-398c13ec156f">
+              <SHORT-NAME>RPort_FblCmd</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/FblCmd</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="760c7425-172f-45f5-9bcc-137825606ab7">
+              <SHORT-NAME>PPort_PowerValue</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/SoftwareInterface/Interfaces/PowerValue</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>SwcInternalBehavior</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="6cccf8fc-f3f8-4aab-ad7b-d36322fa2392">
+                  <SHORT-NAME>TE_IoHwAb_MainFunction_2ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/IoHwAb/IoHwAb/SwcInternalBehavior/IoHwAb_MainFunction</START-ON-EVENT-REF>
+                  <PERIOD>0.002</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="b60ddb7d-1e2f-45a0-a2c2-f87ea72798ca">
+                  <SHORT-NAME>IoHwAb_Init</SHORT-NAME>
+                  <SYMBOL>IoHwAb_Init</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="5e0f4204-80ab-4ae6-8817-3d6e194a6577">
+                  <SHORT-NAME>IoHwAb_MainFunction</SHORT-NAME>
+                  <DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                    <VARIABLE-ACCESS UUID="4874de6b-8f61-4f4d-9515-9c027cb7fd33">
+                      <SHORT-NAME>DRPA_OutFanPWMFrq_Hz_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_FanCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanCmd/OutFanPWMFrq_Hz</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="3561c05f-6c4b-4ba5-85cf-557b3fa10c2a">
+                      <SHORT-NAME>DRPA_OutFanDuty_pct_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_FanCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanCmd/OutFanDuty_pct</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="87b54764-46d3-4956-86fc-544571708965">
+                      <SHORT-NAME>DRPA_RadyToSleep_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_SYSCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SYSCmd/RadyToSleep_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="ca6621ba-7275-4dc4-8eb1-9455e3c2abe2">
+                      <SHORT-NAME>DRPA_GlobalHCtrCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_RelayCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayCmd/GlobalHCtrCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="086b53ae-7d04-4dfd-9880-3e3cfb851fb0">
+                      <SHORT-NAME>DRPA_PosCtrCmd_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_RelayCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayCmd/PosCtrCmd_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="a54955d4-1af9-4d8a-93a9-761f1e1a0779">
+                      <SHORT-NAME>DRPA_FBLForbid_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/IoHwAb/IoHwAb/RPort_FblCmd</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FblCmd/FBLForbid_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-RECEIVE-POINT-BY-ARGUMENTS>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="95cce22e-1a48-4de9-aa32-6ee52e05d96c">
+                      <SHORT-NAME>DSP_FeedbackVolt_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_FanValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/FanValue/FeedbackVolt_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="aedbe6be-29c0-49a0-8f81-8108e711c412">
+                      <SHORT-NAME>DSP_BSWRequestReset_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_SYSValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/SYSValue/BSWRequestReset_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="90af2f76-310a-468e-aaa7-4e9db378b58d">
+                      <SHORT-NAME>DSP_GlobalHCtrState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_RelayValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayValue/GlobalHCtrState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="ff6f2054-c635-441c-97f2-b0e3f247f314">
+                      <SHORT-NAME>DSP_PosCtrCmdState_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_RelayValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/RelayValue/PosCtrCmdState_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="f34b4846-85a2-4c65-88fd-28c9fe217f1a">
+                      <SHORT-NAME>DSP_BSWInitFinish_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_McuValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/McuValue/BSWInitFinish_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="618db67a-b6b0-485d-89b0-8cbe300aca42">
+                      <SHORT-NAME>DSP_KL30Volt_V_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_PowerValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/PowerValue/KL30Volt_V</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                    <VARIABLE-ACCESS UUID="86778860-75b7-463a-8f58-28c390875800">
+                      <SHORT-NAME>DSP_KL30VoltVld_flg_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/IoHwAb/IoHwAb/PPort_PowerValue</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/SoftwareInterface/Interfaces/PowerValue/KL30VoltVld_flg</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SYMBOL>IoHwAb_MainFunction</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </ECU-ABSTRACTION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

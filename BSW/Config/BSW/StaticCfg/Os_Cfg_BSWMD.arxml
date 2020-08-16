@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+<ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="default">English</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA>
+<AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Os</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Os</SHORT-NAME>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+                  <ENTITYS>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_BSW_OsTask_1ms</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Os/BswModuleEntrys/RE_BSW_OsTask_1ms</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_BSW_OsTask_2ms</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Os/BswModuleEntrys/RE_BSW_OsTask_2ms</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_BSW_OsTask_5ms</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Os/BswModuleEntrys/RE_BSW_OsTask_5ms</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_BSW_OsTask_10ms</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Os/BswModuleEntrys/RE_BSW_OsTask_10ms</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_BSW_OsTask_50ms</SHORT-NAME>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Os/BswModuleEntrys/RE_BSW_OsTask_50ms</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_BSWSE_BSW_OsTask_1ms</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior/BSWSE_BSW_OsTask_1ms</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.001</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_BSWSE_BSW_OsTask_2ms</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior/BSWSE_BSW_OsTask_2ms</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.002</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_BSWSE_BSW_OsTask_5ms</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior/BSWSE_BSW_OsTask_5ms</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.005</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_BSWSE_BSW_OsTask_10ms</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior/BSWSE_BSW_OsTask_10ms</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>EV_BSWSE_BSW_OsTask_50ms</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior/BSWSE_BSW_OsTask_50ms</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.05</PERIOD>
+                    </BSW-TIMING-EVENT>
+                  </EVENTS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>RE_BSW_OsTask_1ms</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>RE_BSW_OsTask_2ms</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>RE_BSW_OsTask_5ms</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>RE_BSW_OsTask_10ms</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>RE_BSW_OsTask_50ms</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>Os</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <SW-VERSION>8.0.0</SW-VERSION>
+              <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Os/BswModuleDescriptions/Os/BswInternalBehavior</BEHAVIOR-REF>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR_Os/EcucModuleDefs/Os</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

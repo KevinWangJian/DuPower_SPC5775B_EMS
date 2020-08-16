@@ -1,0 +1,1407 @@
+<?xml version='1.0'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Adc</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>Adc</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/TS_T2D41M10I1R0/Adc</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>AdcConfigSet_0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>AdcDigitalFilterLength</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcDigitalFilterLength</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcDigitalFilterLength/AdcDigitalFilterLength0</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcDigitalFilterLength/AdcDigitalFilterLength1</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>AdcHwUnit_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcCalibration</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcClockSource</DEFINITION-REF>
+                      <VALUE>CLK_SRC_0</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcHwUnitId</DEFINITION-REF>
+                      <VALUE>ADC0</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcLogicalUnitId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcPrescale</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcTransferType</DEFINITION-REF>
+                      <VALUE>ADC_INTERRUPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AC_CC_IN</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_16</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>13</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_AC_CP</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_12</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>9</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_BAT_24_IN</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_0</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_V_K22_IN</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_2</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_V_KA5_IN</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_3</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>HSD1_12V_MULTI</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_37</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>21</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>HSD2_12V_MULTI</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_38</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>22</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>HV_ISO_AD</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_17</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>14</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_24</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>17</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_23</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>16</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_22</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>15</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD4</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_26</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>18</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD5</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_27</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>19</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_RES_AD6</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_28</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>20</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_8</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_10</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_13</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>10</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_5</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_6</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_4</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_11</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_5</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_10</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_6</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_9</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_8</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_15</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>IA_TEMP_9</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_14</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>11</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>LED_OUTPUT_MULTI</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_39</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>23</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_0_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/AD_BAT_24_IN</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_0_1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/AD_V_K22_IN</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/AD_V_KA5_IN</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_0_2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD2</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD3</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD4</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD5</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_RES_AD6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_0_3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_1</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_2</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_3</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_4</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_5</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_6</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_8</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_9</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/IA_TEMP_10</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_0_4</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/AC_CC_IN</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/AD_AC_CP</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/HSD2_12V_MULTI</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/HSD1_12V_MULTI</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/HV_ISO_AD</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_0/LED_OUTPUT_MULTI</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>AdcHwUnit_1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcCalibration</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcClockSource</DEFINITION-REF>
+                      <VALUE>CLK_SRC_1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcHwUnitId</DEFINITION-REF>
+                      <VALUE>ADC1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcLogicalUnitId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcTransferType</DEFINITION-REF>
+                      <VALUE>ADC_INTERRUPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_GLOBAL_H_1_CS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_22</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_GLOBAL_H_2_CS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_19</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>2</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_GLOBAL_H_3_CS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_18</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_GLOBAL_H_4_CS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_17</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AD_GLOBAL_H_5_CS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_21</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>SBC_MUX_OUT</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelCalibration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelId</DEFINITION-REF>
+                          <VALUE>AN_23</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelResolution</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcChannelSampTime</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcChannel/AdcLogicalChannelId</DEFINITION-REF>
+                          <VALUE>5</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>AdcGroup_1_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupAccessMode</DEFINITION-REF>
+                          <VALUE>ADC_ACCESS_MODE_SINGLE</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionMode</DEFINITION-REF>
+                          <VALUE>ADC_CONV_MODE_ONESHOT</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupConversionType</DEFINITION-REF>
+                          <VALUE>ADC_CONV_TYPE_NORMAL</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupId</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupPriority</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupTriggSrc</DEFINITION-REF>
+                          <VALUE>ADC_TRIGG_SRC_SW</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingBufferMode</DEFINITION-REF>
+                          <VALUE>ADC_STREAM_BUFFER_LINEAR</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcStreamingNumSamples</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcWithoutInterrupts</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <REFERENCE-VALUES>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/AD_GLOBAL_H_1_CS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/AD_GLOBAL_H_2_CS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/AD_GLOBAL_H_3_CS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/AD_GLOBAL_H_4_CS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/AD_GLOBAL_H_5_CS</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                        <ECUC-REFERENCE-VALUE>
+                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T2D41M10I1R0/Adc/AdcConfigSet/AdcHwUnit/AdcGroup/AdcGroupDefinition</DEFINITION-REF>
+                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Adc/Adc/AdcConfigSet_0/AdcHwUnit_1/SBC_MUX_OUT</VALUE-REF>
+                        </ECUC-REFERENCE-VALUE>
+                      </REFERENCE-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>AdcGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcConvTimeout</DEFINITION-REF>
+                  <VALUE>65535</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcDeInitApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcDevErrorDetect</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcEnableLimitCheck</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcEnableQueuing</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcEnableStartStopGroupApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcEnableUserModeSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcGrpNotifCapability</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcHwTriggerApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcPriorityImplementation</DEFINITION-REF>
+                  <VALUE>ADC_PRIORITY_NONE</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcPriorityQueueMaxDepth</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcReadGroupApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcResultAlignment</DEFINITION-REF>
+                  <VALUE>ADC_ALIGN_RIGHT</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcTimeout</DEFINITION-REF>
+                  <VALUE>65535</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcGeneral/AdcVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>AdcPublishedInformation</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/AdcPublishedInformation</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcPublishedInformation/AdcChannelValueSigned</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcPublishedInformation/AdcGroupFirstChannelFixed</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/AdcPublishedInformation/AdcMaxChannelResolution</DEFINITION-REF>
+                  <VALUE>12</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/ArReleaseMajorVersion</DEFINITION-REF>
+                  <VALUE>4</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/ArReleaseMinorVersion</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/ArReleaseRevisionVersion</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/ModuleId</DEFINITION-REF>
+                  <VALUE>123</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/SwMajorVersion</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/SwMinorVersion</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/SwPatchVersion</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Adc/CommonPublishedInformation/VendorId</DEFINITION-REF>
+                  <VALUE>43</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>NonAutosar</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Adc/NonAutosar</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/NonAutosar/AdcDisableDemReportErrorStatus</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/NonAutosar/AdcEnableCalibration</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/NonAutosar/AdcEnableDualClockMode</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Adc/NonAutosar/AdcEnableGroupDependentChannelNames</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

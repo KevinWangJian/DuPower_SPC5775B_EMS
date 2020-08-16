@@ -1,0 +1,153 @@
+<?xml version='1.0'?>
+<datamodel version="5.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/12/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/12/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Wdg" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Wdg" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/TS_T2D30M20I1R0/Wdg"/>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantLinkTime">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ctr name="WdgDemEventParameterRefs" type="IDENTIFIABLE">
+                <a:a name="ENABLE" value="false"/>
+                <d:ref name="WDG_E_DISABLE_REJECTED" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_MODE_FAILED" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_CORRUPT_CONFIG" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_UNLOCKED" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_INVALID_PARAMETER" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_FORBIDDEN_INVOCATION" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+                <d:ref name="WDG_E_INVALID_CALL" type="REFERENCE" >
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:ref>
+              </d:ctr>
+              <d:ctr name="WdgGeneral" type="IDENTIFIABLE">
+                <d:ctr name="NonAutosar" type="IDENTIFIABLE">
+                  <d:var name="WdgDisableDemReportErrorStatus" type="BOOLEAN" 
+                         value="false">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                </d:ctr>
+                <d:var name="WdgDevErrorDetect" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgEnableUserModeSupport" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgDisableAllowed" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgIndex" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgIndex1" type="INTEGER" value="1">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgIndex2" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgInitialTimeout" type="FLOAT" value="0.0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgMaxTimeout" type="FLOAT" value="0.0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgRunArea" type="ENUMERATION" value="ROM">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgTriggerLocation" type="FUNCTION-NAME" 
+                       value="NULL_PTR">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgCallbackNotification0" type="FUNCTION-NAME" 
+                       value="NULL_PTR">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgCallbackNotification1" type="FUNCTION-NAME" 
+                       value="NULL_PTR">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgCallbackNotification2" type="FUNCTION-NAME" 
+                       value="NULL_PTR">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="WdgVersionInfoApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:lst name="WdgSettingsConfig" type="MAP"/>
+              <d:lst name="WdgClockReferencePoint" type="MAP"/>
+              <d:ctr name="WdgPublishedInformation" type="IDENTIFIABLE">
+                <d:var name="WdgTriggerMode" type="ENUMERATION" value="WDG_BOTH">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <d:var name="ArReleaseMajorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseMinorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseRevisionVersion" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="102">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="2">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMinorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwPatchVersion" type="INTEGER" value="1">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorApiInfix" type="STRING" value="">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="43">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

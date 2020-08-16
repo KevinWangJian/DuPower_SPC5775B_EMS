@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>NvM_SWC</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>NvM_SWC</SHORT-NAME>
+          <ADMIN-DATA>
+            <SDGS>
+              <SDG GID="Master">
+                <SD>true</SD>
+              </SDG>
+            </SDGS>
+          </ADMIN-DATA>
+          <PORTS>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>RPort_NvM_SWC_BlockRedundant_1024</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE UUID="ffede9df-c623-4936-a2dd-fb419966a34b">
+              <SHORT-NAME>RPort_NvM_SWC_BlockNative_1024</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_NvM/PortInterfaces/NvMService</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <R-PORT-PROTOTYPE>
+              <SHORT-NAME>RPort_ShutdownTarget</SHORT-NAME>
+              <REQUIRED-INTERFACE-TREF DEST="CLIENT-SERVER-INTERFACE">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget</REQUIRED-INTERFACE-TREF>
+            </R-PORT-PROTOTYPE>
+            <P-PORT-PROTOTYPE UUID="24452873-2957-415b-bec0-697ed10449c5">
+              <SHORT-NAME>PPort_BswM_MRP_NvmModeRequest</SHORT-NAME>
+              <PROVIDED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SenderReceiverInterface_uint16</PROVIDED-INTERFACE-TREF>
+            </P-PORT-PROTOTYPE>
+          </PORTS>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR>
+              <SHORT-NAME>IB_NvM_SWC</SHORT-NAME>
+              <DATA-TYPE-MAPPING-REFS>
+                <DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/NvM/DataTypeMappingSets/DTMS</DATA-TYPE-MAPPING-REF>
+              </DATA-TYPE-MAPPING-REFS>
+              <EVENTS>
+                <TIMING-EVENT>
+                  <SHORT-NAME>TE_NvM_SWC_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/NvM_SWC/NvM_SWC/IB_NvM_SWC/RE_NvM_SWC</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <PER-INSTANCE-MEMORYS>
+                <PER-INSTANCE-MEMORY>
+                  <SHORT-NAME>NvM_SWC_BlockNative_1024</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/NvM/ImplementationDataTypes/Impl_NvM_DstPtrType_1024</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE>NvM_SWC_BlockNative_1024_Type</TYPE>
+                  <TYPE-DEFINITION>Impl_NvM_DstPtrType_1024</TYPE-DEFINITION>
+                </PER-INSTANCE-MEMORY>
+                <PER-INSTANCE-MEMORY>
+                  <SHORT-NAME>NvM_SWC_BlockRedundant_1024</SHORT-NAME>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/NvM/ImplementationDataTypes/Impl_NvM_DstPtrType_1024</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                  <TYPE>NvM_SWC_BlockRedundant_1024_Type</TYPE>
+                  <TYPE-DEFINITION>Impl_NvM_DstPtrType_1024</TYPE-DEFINITION>
+                </PER-INSTANCE-MEMORY>
+              </PER-INSTANCE-MEMORYS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY>
+                  <SHORT-NAME>RE_NvM_SWC</SHORT-NAME>
+                  <CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+                  <DATA-SEND-POINTS>
+                    <VARIABLE-ACCESS UUID="c63a9454-d6b0-4417-bc9b-edf603fbfc3d">
+                      <SHORT-NAME>DSP_VDP_uint16_0</SHORT-NAME>
+                      <ACCESSED-VARIABLE>
+                        <AUTOSAR-VARIABLE-IREF>
+                          <PORT-PROTOTYPE-REF DEST="P-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/PPort_BswM_MRP_NvmModeRequest</PORT-PROTOTYPE-REF>
+                          <TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/SenderReceiverInterface_uint16/VDP_uint16</TARGET-DATA-PROTOTYPE-REF>
+                        </AUTOSAR-VARIABLE-IREF>
+                      </ACCESSED-VARIABLE>
+                    </VARIABLE-ACCESS>
+                  </DATA-SEND-POINTS>
+                  <SERVER-CALL-POINTS>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="65936a33-6341-4c76-bf95-f16639496963">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_EraseBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/EraseBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="b6f8622c-1052-46a2-89bf-cf7e39cae09e">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_GetDataIndex</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetDataIndex</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="71342f92-7167-4e78-a43c-fb362724fe8b">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_SetRamBlockStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="fc204bef-1693-4bc0-a939-62ef7f40d25e">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_WriteBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0b24a49e-4b0f-4da0-9da4-56196ba8bcea">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_EraseBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/EraseBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0f7b192d-9c39-4b5e-b1f1-47cd931ff8aa">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_GetDataIndex</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetDataIndex</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="da6d886e-cc04-49fa-b131-c3dd001e7090">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_GetErrorStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetErrorStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="c8b011bf-1ccb-4ff1-ae4a-30ee6b8bcfff">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_InvalidateNvBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/InvalidateNvBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="efb0d8e1-6973-4f25-97e8-99d79b247906">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_ReadBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/ReadBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="eeb7b917-41b0-4391-ae4f-1e6d6a96213d">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_RestoreBlockDefaults</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/RestoreBlockDefaults</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="1eeeb5f8-1073-45b8-96f7-9398920ccbda">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_SetDataIndex</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetDataIndex</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="ad13b801-9c31-40d2-8abe-158a8e974902">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_SetRamBlockStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetRamBlockStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="0f15b3fe-0c46-4ba0-b8d6-fff704f8dcb7">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockRedundant_1024_WriteBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockRedundant_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/WriteBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="e89067e7-1f44-4cdc-9a55-6bbca8682034">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_GetErrorStatus</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/GetErrorStatus</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3ef3c5f4-8f7e-4a67-89db-8d2bc9ae3bfb">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_InvalidateNvBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/InvalidateNvBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="3a7d3527-92d0-4815-986c-04114c5e4543">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_ReadBlock</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/ReadBlock</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="cf155471-33ff-4756-a10d-ac36ff29c6f2">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_RestoreBlockDefaults</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/RestoreBlockDefaults</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="7ba77119-c4a5-4f23-880d-9c2e894c452e">
+                      <SHORT-NAME>SSCP_RPort_NvM_SWC_BlockNative_1024_SetDataIndex</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_NvM_SWC_BlockNative_1024</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_NvM/PortInterfaces/NvMService/SetDataIndex</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="6120b9f9-586b-43a1-9989-405ad5638b23">
+                      <SHORT-NAME>SSCP_RPort_ShutdownTarget_SelectShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="959971ce-172c-4abc-8604-d2e1c302625f">
+                      <SHORT-NAME>SSCP_RPort_ShutdownTarget_GetShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="2b910577-2939-47b5-8cdd-754511c32445">
+                      <SHORT-NAME>SSCP_RPort_ShutdownTarget_GetLastShutdownTarget</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetLastShutdownTarget</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="884fa22a-fd74-47b2-93e7-da86f5d6ac6c">
+                      <SHORT-NAME>SSCP_RPort_ShutdownTarget_SelectShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/SelectShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                    <SYNCHRONOUS-SERVER-CALL-POINT UUID="e8b477dc-20c9-4a61-a062-4e93dc21e767">
+                      <SHORT-NAME>SSCP_RPort_ShutdownTarget_GetShutdownCause</SHORT-NAME>
+                      <OPERATION-IREF>
+                        <CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/NvM_SWC/NvM_SWC/RPort_ShutdownTarget</CONTEXT-R-PORT-REF>
+                        <TARGET-REQUIRED-OPERATION-REF DEST="CLIENT-SERVER-OPERATION">/AUTOSAR_EcuM/PortInterfaces/EcuM_ShutdownTarget/GetShutdownCause</TARGET-REQUIRED-OPERATION-REF>
+                      </OPERATION-IREF>
+                    </SYNCHRONOUS-SERVER-CALL-POINT>
+                  </SERVER-CALL-POINTS>
+                  <SYMBOL>RE_NvM_SWC_func</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+              <SERVICE-DEPENDENCYS>
+                <SWC-SERVICE-DEPENDENCY>
+                  <SHORT-NAME>SwcSD_NvM_SWC_Block1</SHORT-NAME>
+                  <ASSIGNED-DATAS>
+                    <ROLE-BASED-DATA-ASSIGNMENT>
+                      <ROLE>ramBlock</ROLE>
+                      <USED-PIM-REF DEST="PER-INSTANCE-MEMORY">/NvM_SWC/NvM_SWC/IB_NvM_SWC/NvM_SWC_BlockNative_1024</USED-PIM-REF>
+                    </ROLE-BASED-DATA-ASSIGNMENT>
+                    <ROLE-BASED-DATA-ASSIGNMENT>
+                      <ROLE>ramBlock</ROLE>
+                      <USED-PIM-REF DEST="PER-INSTANCE-MEMORY">/NvM_SWC/NvM_SWC/IB_NvM_SWC/NvM_SWC_BlockRedundant_1024</USED-PIM-REF>
+                    </ROLE-BASED-DATA-ASSIGNMENT>
+                  </ASSIGNED-DATAS>
+                  <SERVICE-NEEDS>
+                    <NV-BLOCK-NEEDS>
+                      <SHORT-NAME>NvBlockNeeds_NvM</SHORT-NAME>
+                      <CATEGORY>READ</CATEGORY>
+                      <CALC-RAM-BLOCK-CRC>false</CALC-RAM-BLOCK-CRC>
+                      <CHECK-STATIC-BLOCK-ID>false</CHECK-STATIC-BLOCK-ID>
+                      <N-ROM-BLOCKS>0</N-ROM-BLOCKS>
+                      <READONLY>false</READONLY>
+                      <RESTORE-AT-START>true</RESTORE-AT-START>
+                      <STORE-AT-SHUTDOWN>true</STORE-AT-SHUTDOWN>
+                      <WRITE-ONLY-ONCE>false</WRITE-ONLY-ONCE>
+                    </NV-BLOCK-NEEDS>
+                  </SERVICE-NEEDS>
+                </SWC-SERVICE-DEPENDENCY>
+              </SERVICE-DEPENDENCYS>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>IMPL_NvM_SWC</SHORT-NAME>
+      <ELEMENTS>
+        <SWC-IMPLEMENTATION>
+          <SHORT-NAME>IMPL_NvM_SWC</SHORT-NAME>
+          <CODE-DESCRIPTORS>
+            <CODE>
+              <SHORT-NAME>IMPL_NvM_SWC_Code</SHORT-NAME>
+              <ARTIFACT-DESCRIPTORS>
+                <AUTOSAR-ENGINEERING-OBJECT>
+                  <SHORT-LABEL>CodeDescriptor_NvM_SWC</SHORT-LABEL>
+                  <CATEGORY>SWSRC</CATEGORY>
+                </AUTOSAR-ENGINEERING-OBJECT>
+              </ARTIFACT-DESCRIPTORS>
+            </CODE>
+          </CODE-DESCRIPTORS>
+          <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+          <BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/NvM_SWC/NvM_SWC/IB_NvM_SWC</BEHAVIOR-REF>
+        </SWC-IMPLEMENTATION>
+      </ELEMENTS>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>NvM</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>SwBaseTypes</SHORT-NAME>
+          <ELEMENTS>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint4</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>1</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint8</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint16</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>2</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint16</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint64</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>4</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint64</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint8_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>1</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint8_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint16_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>2</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint16_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>uint32_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>NONE</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>4</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>uint32_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>sint8_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>8</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>1</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>sint8_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>sint16_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>16</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>2</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>sint16_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+            <SW-BASE-TYPE>
+              <SHORT-NAME>sint32_least</SHORT-NAME>
+              <CATEGORY>FIXED_LENGTH</CATEGORY>
+              <BASE-TYPE-SIZE>32</BASE-TYPE-SIZE>
+              <BASE-TYPE-ENCODING>2C</BASE-TYPE-ENCODING>
+              <MEM-ALIGNMENT>4</MEM-ALIGNMENT>
+              <NATIVE-DECLARATION>sint32_least</NATIVE-DECLARATION>
+            </SW-BASE-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>Impl_NvM_BlockIdType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/NvM/SwBaseTypes/uint16</BASE-TYPE-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/NvM/DataConstrs/UInt16</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>Impl_NvM_RequestResultType</SHORT-NAME>
+              <CATEGORY>VALUE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                    <BASE-TYPE-REF DEST="SW-BASE-TYPE">/NvM/SwBaseTypes/uint4</BASE-TYPE-REF>
+                    <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataTypes/NvM_RequestResultType_DC</DATA-CONSTR-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>Impl_NvM_DstPtrType</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ArrayElement</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ARRAY-SIZE BINDING-TIME="SYSTEM-DESIGN-TIME" SHORT-LABEL="variationPoint">512</ARRAY-SIZE>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>Impl_NvM_DstPtrType_1024</SHORT-NAME>
+              <CATEGORY>ARRAY</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ArrayElement</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <ARRAY-SIZE BINDING-TIME="SYSTEM-DESIGN-TIME" SHORT-LABEL="variationPoint">1024</ARRAY-SIZE>
+                  <ARRAY-SIZE-SEMANTICS>FIXED-SIZE</ARRAY-SIZE-SEMANTICS>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+            </IMPLEMENTATION-DATA-TYPE>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataTypeMappingSets</SHORT-NAME>
+          <ELEMENTS>
+            <DATA-TYPE-MAPPING-SET>
+              <SHORT-NAME>DTMS</SHORT-NAME>
+              <DATA-TYPE-MAPS>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/Uint8</APPLICATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-ARRAY-DATA-TYPE">/DataTypes/NvM_DstPtrType</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/NvM/ImplementationDataTypes/Impl_NvM_DstPtrType</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+                <DATA-TYPE-MAP>
+                  <APPLICATION-DATA-TYPE-REF DEST="APPLICATION-ARRAY-DATA-TYPE">/DataTypes/NvM_DstPtrType</APPLICATION-DATA-TYPE-REF>
+                  <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/NvM/ImplementationDataTypes/Impl_NvM_DstPtrType_1024</IMPLEMENTATION-DATA-TYPE-REF>
+                </DATA-TYPE-MAP>
+              </DATA-TYPE-MAPS>
+            </DATA-TYPE-MAPPING-SET>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>DataConstrs</SHORT-NAME>
+          <CATEGORY>STANDARD</CATEGORY>
+          <ELEMENTS>
+            <DATA-CONSTR>
+              <SHORT-NAME>Boolean</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">1</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>SInt32</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-2147483648</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2147483647</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-2147483648</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">2147483647</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>SInt16</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-32768</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">32767</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>SInt8</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">-128</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">127</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>UInt32</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>UInt16</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">65535</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">65535</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>UInt4</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">15</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>UInt8</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+            <DATA-CONSTR>
+              <SHORT-NAME>UInt64</SHORT-NAME>
+              <DATA-CONSTR-RULES>
+                <DATA-CONSTR-RULE>
+                  <PHYS-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
+                  </PHYS-CONSTRS>
+                  <INTERNAL-CONSTRS>
+                    <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                    <UPPER-LIMIT INTERVAL-TYPE="CLOSED">4294967295</UPPER-LIMIT>
+                  </INTERNAL-CONSTRS>
+                </DATA-CONSTR-RULE>
+              </DATA-CONSTR-RULES>
+            </DATA-CONSTR>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>CompuMethods</SHORT-NAME>
+          <ELEMENTS>
+            <COMPU-METHOD>
+              <SHORT-NAME>OneToOne</SHORT-NAME>
+              <CATEGORY>IDENTICAL</CATEGORY>
+            </COMPU-METHOD>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>DataTypes</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>AuxU8_NvM_DstPtrType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>NvM_BlockIdType</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/NvM/CompuMethods/OneToOne</COMPU-METHOD-REF>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-PRIMITIVE-DATA-TYPE>
+          <SHORT-NAME>Uint8</SHORT-NAME>
+          <CATEGORY>VALUE</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+                <COMPU-METHOD-REF DEST="COMPU-METHOD">/NvM/CompuMethods/OneToOne</COMPU-METHOD-REF>
+                <DATA-CONSTR-REF DEST="DATA-CONSTR">/DataTypes/Uint8_DC</DATA-CONSTR-REF>
+                <INVALID-VALUE>
+                  <NUMERICAL-VALUE-SPECIFICATION>
+                    <VALUE BINDING-TIME="SYSTEM-DESIGN-TIME" SHORT-LABEL="Uint8">0</VALUE>
+                  </NUMERICAL-VALUE-SPECIFICATION>
+                </INVALID-VALUE>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+        </APPLICATION-PRIMITIVE-DATA-TYPE>
+        <APPLICATION-ARRAY-DATA-TYPE>
+          <SHORT-NAME>NvM_DstPtrType</SHORT-NAME>
+          <CATEGORY>ARRAY</CATEGORY>
+          <SW-DATA-DEF-PROPS>
+            <SW-DATA-DEF-PROPS-VARIANTS>
+              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                <SW-CALIBRATION-ACCESS>NOT-ACCESSIBLE</SW-CALIBRATION-ACCESS>
+              </SW-DATA-DEF-PROPS-CONDITIONAL>
+            </SW-DATA-DEF-PROPS-VARIANTS>
+          </SW-DATA-DEF-PROPS>
+          <ELEMENT>
+            <SHORT-NAME>ArrayElement</SHORT-NAME>
+            <CATEGORY>VALUE</CATEGORY>
+            <TYPE-TREF DEST="APPLICATION-PRIMITIVE-DATA-TYPE">/DataTypes/AuxU8_NvM_DstPtrType</TYPE-TREF>
+            <MAX-NUMBER-OF-ELEMENTS>5</MAX-NUMBER-OF-ELEMENTS>
+          </ELEMENT>
+        </APPLICATION-ARRAY-DATA-TYPE>
+        <DATA-CONSTR>
+          <SHORT-NAME>AuxU8_NvM_DstPtrType_DC</SHORT-NAME>
+          <DATA-CONSTR-RULES>
+            <DATA-CONSTR-RULE>
+              <PHYS-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </PHYS-CONSTRS>
+              <INTERNAL-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </INTERNAL-CONSTRS>
+            </DATA-CONSTR-RULE>
+          </DATA-CONSTR-RULES>
+        </DATA-CONSTR>
+        <DATA-CONSTR>
+          <SHORT-NAME>NvM_DstPtrType_DC</SHORT-NAME>
+          <DATA-CONSTR-RULES>
+            <DATA-CONSTR-RULE>
+              <PHYS-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </PHYS-CONSTRS>
+              <INTERNAL-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </INTERNAL-CONSTRS>
+            </DATA-CONSTR-RULE>
+          </DATA-CONSTR-RULES>
+        </DATA-CONSTR>
+        <DATA-CONSTR>
+          <SHORT-NAME>NvM_RequestResultType_DC</SHORT-NAME>
+          <DATA-CONSTR-RULES>
+            <DATA-CONSTR-RULE>
+              <PHYS-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+              </PHYS-CONSTRS>
+              <INTERNAL-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">6</UPPER-LIMIT>
+              </INTERNAL-CONSTRS>
+            </DATA-CONSTR-RULE>
+          </DATA-CONSTR-RULES>
+        </DATA-CONSTR>
+        <DATA-CONSTR>
+          <SHORT-NAME>Uint8_DC</SHORT-NAME>
+          <DATA-CONSTR-RULES>
+            <DATA-CONSTR-RULE>
+              <PHYS-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </PHYS-CONSTRS>
+              <INTERNAL-CONSTRS>
+                <LOWER-LIMIT INTERVAL-TYPE="CLOSED">0</LOWER-LIMIT>
+                <UPPER-LIMIT INTERVAL-TYPE="CLOSED">255</UPPER-LIMIT>
+              </INTERNAL-CONSTRS>
+            </DATA-CONSTR-RULE>
+          </DATA-CONSTR-RULES>
+        </DATA-CONSTR>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

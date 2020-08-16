@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+       <USED-LANGUAGES>
+          <L-10 xml:space="default" L="EN">EN</L-10>
+       </USED-LANGUAGES>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2017-01-13</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+	    <!-- AR-Package: AUTOSAR -->
+        <AR-PACKAGE>
+        <SHORT-NAME>AUTOSAR_LinTp</SHORT-NAME>
+        <AR-PACKAGES>
+		       <!-- AR-Package: AUTOSAR -->
+               <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                    <ELEMENTS>
+                  <!-- Module Definition: LinTp -->
+                  <ECUC-MODULE-DEF>
+                     <SHORT-NAME>LinTp</SHORT-NAME>
+                            <LONG-NAME>
+                            <L-4 L="EN">Lin Interface Transport Layer</L-4>
+                              </LONG-NAME>
+                     <DESC>
+                                <L-2 L="EN">Configuration of the LIN Transport Protocol(with vendor specific enhancements of RB).</L-2>
+                     </DESC>
+                     <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                           <DOC-REVISION>
+                              <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                              <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                              <DATE>2014-10-31</DATE>
+                           </DOC-REVISION>
+		   	   <DOC-REVISION>
+			   <REVISION-LABEL>2.0.0</REVISION-LABEL>
+			   <ISSUED-BY>RB</ISSUED-BY>
+			   <DATE>2017-01-15</DATE>
+			   </DOC-REVISION>
+                        </DOC-REVISIONS>
+                     </ADMIN-DATA>
+                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00425</RELATED-TRACE-ITEM-REF>
+                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                     <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+		     <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/LinTp</REFINED-MODULE-DEF-REF>
+                     <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-LINK-TIME</SUPPORTED-CONFIG-VARIANT>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-POST-BUILD</SUPPORTED-CONFIG-VARIANT>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                     </SUPPORTED-CONFIG-VARIANTS>
+                     <CONTAINERS>
+                        <!-- Container Definition: LinTpGeneral -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>LinTpGeneral</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">Container that holds all LIN transport protocol general parameters.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00617</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: LinTpChangeParameterApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>LinTpChangeParameterApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This parameter, if set to true, enables the LinTp_ChangeParameterRequest Api for this Module.This parameter is not supported</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00638</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: LinTpVersionInfoApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>LinTpVersionInfoApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the LinTp_GetVersionInfo function ON or OFF.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00068</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: LinTpGlobalConfig -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>LinTpGlobalConfig</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container contains the global configuration parameters of the LinTp.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00056</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: LinTpMaxRxNSduCnt -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>LinTpMaxRxNSduCnt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of NSdus. This parameter is needed only in case of post-build loadable implementation using static memory allocation.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00635</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: LinTpMaxTxNSduCnt -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>LinTpMaxTxNSduCnt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of NSdus. This parameter is needed only in case of post-build loadable implementation using static memory allocation.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00636</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+							  </ECUC-INTEGER-PARAM-DEF>							   						  
+                           </PARAMETERS>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: LinTpChannelConfig -->
+                                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>LinTpChannelConfig</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the channel specific configuration parameters of LinTp.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00071</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: LinTpDropNotRequestedNad -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>LinTpDropNotRequestedNad</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Configures if TP Frames of not requested LIN-Slaves are dropped or not.This parameter is not supported</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">TRUE: Drop TP Frames of not requested LIN-Slaves
+                                                FALSE: Keep TP Frames of not requested LIN-Slaves</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00072</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpScheduleChangeDiag -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>LinTpScheduleChangeDiag</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables or disables the call of BswM_LinTp_RequestMode() to diagnostic request/response schedule.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">false: BswM is not called
+                                                true: BswM is called</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00070</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>								
+									<!-- PARAMETER DEFINITION: LinTpSRCFTimer -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                        <SHORT-NAME>LinTpSRCFTimer</SHORT-NAME>
+                                        <DESC>
+                                            <L-2 L="EN">
+                                                Monitors the Slave Response Consecutive Frame timing in LinTp. Unit is Seconds.
+                                                The SRCF timer denotes the time between sending the First Frame and the LIN slave
+                                                being able to send the next consecutive frame.
+                                            </L-2>
+                                        </DESC>
+                                        <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                        <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                        <!-- SCOPE -->
+                                        <ORIGIN>RB:2015-04-10</ORIGIN>
+                                        <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                        <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                        </VALUE-CONFIG-CLASSES>
+                                        <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        <DEFAULT-VALUE>0.0</DEFAULT-VALUE>
+                                    </ECUC-FLOAT-PARAM-DEF>
+									<!-- PARAMETER DEFINITION: LinTpTimeoutCallbackName -->
+                                    <ECUC-STRING-PARAM-DEF >
+                                        <SHORT-NAME>LinTpTimeoutCallbackName</SHORT-NAME>
+                                        <DESC>
+                                            <L-2 L="EN">  Function defined by application layer and used by LinTp in order to notify  LinTp timeout notification.
+											              This parameter name will be used in generating function external prototype.
+											</L-2>
+                                        </DESC>
+                                        <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                        <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                        <!-- SCOPE -->
+                                        <ORIGIN>RB:2016-07-26</ORIGIN>
+                                        <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                        </VALUE-CONFIG-CLASSES>
+                                        <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                            <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                                        </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    </ECUC-STRING-PARAM-DEF>
+									<!-- PARAMETER DEFINITION: LinTpInterleavedClientTimer -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                        <SHORT-NAME>LinTpInterleavedClientTimer</SHORT-NAME>
+                                        <DESC>
+                                            <L-2 L="EN">
+                                                Monitoring timer for the  normal interleaved communication on bus with-in diagnostics mode and LinTp start this timer when Last MRF frame is placed successfully on bus.
+                                            </L-2>
+                                        </DESC>
+                                        <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                        <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                        <!-- SCOPE -->
+                                        <ORIGIN>RB:2016-07-26</ORIGIN>
+                                        <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                        </VALUE-CONFIG-CLASSES>
+                                        <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        <DEFAULT-VALUE>0</DEFAULT-VALUE>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpMaxNumberOfRespPendingFrames -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                <SHORT-NAME>LinTpMaxNumberOfRespPendingFrames</SHORT-NAME>
+                                <DESC>
+                                  <L-2 L="EN"> Specifies the Maximum number of response pending frames that can be allowed before the ongoing reception is aborted. </L-2>
+                                </DESC>
+                                <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00624</RELATED-TRACE-ITEM-REF>
+                                <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                <SCOPE>LOCAL</SCOPE>
+                                <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                <VALUE-CONFIG-CLASSES>
+                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                </VALUE-CONFIG-CLASSES>
+                                <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                <MAX>65535</MAX>
+                                <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                               <!-- PARAMETER DEFINITION: LinTpP2Max -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>LinTpP2Max</SHORT-NAME>
+                                 <DESC>
+                                  <L-2 L="EN">
+                                      Monitors the P2* timing (Enhanced P2 timing) parameter in LinTp. Unit is Seconds.
+                                      The P2* timer denotes the time between sending a NRC 0x78 and the LINslave being
+                                      able to provide data for a response.
+                                  </L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">Note that the minimum value of LinTpP2Max shall be more than or equal to the value of LinTpP2Timing.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00622</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>2</MAX>
+                                 <MIN>0.05</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>   
+                             <!-- PARAMETER DEFINITION: LinTpP2Timing -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>LinTpP2Timing</SHORT-NAME>
+                                 <DESC>
+                                  <L-2 L="EN">
+                                      Monitors the P2 timing parameter in LinTp. Unit is Seconds. The P2 timer denotes the
+                                      time between reception of the last frame of a diagnostic request on the LIN bus and
+                                      the slave node being able to provide data for a response. The maximum value defines
+                                      the time after which a slave node must received a slave response header before it
+                                      discards its response.
+                                  </L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00625</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>0.5</MAX>
+                                 <MIN>0.05</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Symbolic Name Reference Definition: LinTpChannelRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>LinTpChannelRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Index of the channel this LinTp channel belongs to.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00073</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: LinTpRxNSdu -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>LinTpRxNSdu</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container exists once for each received N-SDU on any channel the node is connected to.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00428</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: LinTpNcr -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>LinTpNcr</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Value in seconds of the N_Cr timeout. N_Cr is the time until reception of the next Consecutive Frame N_PDU. This parameter is not supported </L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00632</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>1</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+								    <!-- PARAMETER DEFINITION: LinTpDl -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                        <SHORT-NAME>LinTpDl</SHORT-NAME>
+                                        <DESC>
+                                        <L-2 L="EN">Data Length Code of this RxNsdu. In case of variable length message, this value indicates the minimum data length.
+														Range of minimum length is 1 to 4095.Note that this is not relevant for Tx. The reason for this is to have identical structures for Tx and Rx.
+										</L-2>
+                                        </DESC>
+                                        <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                        <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                        <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                        <VALUE-CONFIG-CLASSES>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                                        </VALUE-CONFIG-CLASSES>
+                                        <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        <MAX>4095</MAX>
+                                        <MIN>1</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpRxNSduId -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>LinTpRxNSduId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">The identifier of the Transport Protocol message. This ID will be used by upper layers to call LinTp_ChangeParameter and LinTp_CancelReceive.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00061</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>0</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpRxNSduNad -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>LinTpRxNSduNad</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">A N-SDU transported on LIN is identified using the NAD for the specific slave.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00062</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: LinTpRxNSduPduRef -->
+                                    <ECUC-REFERENCE-DEF>
+                                       <SHORT-NAME>LinTpRxNSduPduRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the global PDU</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00063</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: LinTpRxNSduChannelRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>LinTpRxNSduChannelRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Index of the channel this N-SDU belongs to.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00060</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: LinTpTxNSdu -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>LinTpTxNSdu</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container exists once for each transmitted N-SDU on any channel the node is connected to.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00511</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: LinTpMaxBufReq -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>LinTpMaxBufReq</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter defines the maximum number of times the LinTp should request upper layer for the Tx Buffer. It is also used to limit the number of retries for PduR_LinTpCopyTxData when no timer is active.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00637</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpNas -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>LinTpNas</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Value in seconds of the N_As timeout. N_As is the time for transmission of a LIN frame (any N_PDU) on the part of the sender.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00633</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>1</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpNcs -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>LinTpNcs</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Value in seconds of the performance requirement of N_Cs. N_Cs is the time which elapses between the transmit request of a CF N-PDU until the transmit request of the next CF N-PDU.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00634</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>Inf</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpTxNSduId -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>LinTpTxNSduId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">The identifier of the Transport Protocol message. This ID will be the one that is communicated with upper layers.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00065</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: LinTpTxNSduNad -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>LinTpTxNSduNad</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">A N-SDU transported on LIN is identified using the NAD for the specific slave.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00066</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: LinTpTxNSduPduRef -->
+                                    <ECUC-REFERENCE-DEF>
+                                       <SHORT-NAME>LinTpTxNSduPduRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the global PDU</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00067</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                    <!-- Symbolic Name Reference Definition: LinTpTxNSduChannelRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>LinTpTxNSduChannelRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Index of the channel this N-SDU belongs to.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_LinTp_00064</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                     </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

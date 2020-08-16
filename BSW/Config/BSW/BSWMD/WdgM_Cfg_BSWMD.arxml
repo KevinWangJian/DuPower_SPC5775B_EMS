@@ -1,0 +1,1428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+-->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+		<SHORT-NAME>AUTOSAR_WdgM</SHORT-NAME>
+		<CATEGORY>BSWMD</CATEGORY>
+		<!--##################################################
+		    #               REFERENCE BASE                   #
+		    ##################################################-->
+		<!--REFERENCE-BASES>
+           <REFERENCE-BASE>
+	           <SHORT-LABEL>WdgM_BSWMD_ReferenceBase_default</SHORT-LABEL>
+                <IS-DEFAULT>true</IS-DEFAULT>
+	            <PACKAGE-REF DEST="AR-PACKAGE">/AUTOSAR_WdgM</PACKAGE-REF>
+  	       </REFERENCE-BASE>
+  	    </REFERENCE-BASES-->
+  	    <AR-PACKAGES>
+
+  	        <!--##################################################
+			    #          MODE DECLARATION GROUPS               #
+			    ##################################################-->
+  	        <AR-PACKAGE>
+  	        	<SHORT-NAME>ModeDeclarationGroups</SHORT-NAME>
+  	        	<ELEMENTS>
+  	        		<MODE-DECLARATION-GROUP>
+  	        			<SHORT-NAME>WdgMSupervisionCycle</SHORT-NAME>
+  	        			<CATEGORY>ALPHABETIC_ORDER</CATEGORY>
+  	        			<INITIAL-MODE-REF DEST="MODE-DECLARATION">/AUTOSAR_WdgM/ModeDeclarationGroups/WdgMSupervisionCycle/SUPERVISION_CYCLE_0</INITIAL-MODE-REF>
+  	        			<MODE-DECLARATIONS>
+  	        				<MODE-DECLARATION>
+  	        					<SHORT-NAME>SUPERVISION_CYCLE_0</SHORT-NAME>
+  	        				</MODE-DECLARATION>
+
+  	        			</MODE-DECLARATIONS>
+  	        		</MODE-DECLARATION-GROUP>
+
+  	        		<DATA-TYPE-MAPPING-SET>
+  	        			<SHORT-NAME>WdgM_ModeRequestTypeMap</SHORT-NAME>
+  	        			<MODE-REQUEST-TYPE-MAPS>
+  	        				<MODE-REQUEST-TYPE-MAP>
+  	        					<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+  	        					<MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_WdgM/ModeDeclarationGroups/WdgMSupervisionCycle</MODE-GROUP-REF>
+  	        				</MODE-REQUEST-TYPE-MAP>
+  	        			</MODE-REQUEST-TYPE-MAPS>
+  	        		</DATA-TYPE-MAPPING-SET>
+
+  	        	</ELEMENTS>
+  	        </AR-PACKAGE>
+
+
+            <!--##################################################
+                #                  ENTRYS                        #
+                ##################################################-->
+
+            <AR-PACKAGE>
+                <SHORT-NAME>BswModuleEntry</SHORT-NAME>
+                <ELEMENTS>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_Init</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Initializes the Watchdog Manager</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">This function initializes the Watchdog Manager. After execution of this function, supervision is activated according to the list of supervised Entities defined in the Initial Mode.</L-2>
+                    </DESC>
+                    <SERVICE-ID>0</SERVICE-ID>
+                    <IS-REENTRANT>false</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>ConfigPtr</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(In)Pointer to post-build configuration data. This parameter is not relevant for Pre-compile configuration. "NULL_PTR" can be passed in case of Pre-compile configuration. </L-2>
+					  </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+						  <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY> 					  
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ConfigType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>CONST</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                   </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_DeInit</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Deinitialize the Watchdog manager module.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">De-Initializes the Watchdog Manager if the WdgM Global status is OK.</L-2>
+                    </DESC>
+                    <SERVICE-ID>1</SERVICE-ID>
+                    <IS-REENTRANT>false</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_GetVersionInfo</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Returns the version information of the module.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_GetVersionInfo service returns the version information of this module. The version information includes: a) WdgM Module Id(13) b) Bosch Vendor Id(6) c) Software release version number.</L-2>
+                    </DESC>
+                    <SERVICE-ID>2</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <ARGUMENTS>
+                        <SW-SERVICE-ARG>
+                          <SHORT-NAME>VersionInfo</SHORT-NAME>
+						  <DESC>
+								<L-2 L="EN">(Out)Pointer to where to store the version information of the module WdgM. </L-2>
+						  </DESC>
+                          <CATEGORY>DATA_REFERENCE</CATEGORY>
+                          <DIRECTION>OUT</DIRECTION>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <SW-POINTER-TARGET-PROPS>
+                                  <TARGET-CATEGORY>VALUE</TARGET-CATEGORY>
+                                  <SW-DATA-DEF-PROPS>
+                                    <SW-DATA-DEF-PROPS-VARIANTS>
+                                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_VersionInfoType</IMPLEMENTATION-DATA-TYPE-REF>
+                                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    </SW-DATA-DEF-PROPS-VARIANTS>
+                                  </SW-DATA-DEF-PROPS>
+                                </SW-POINTER-TARGET-PROPS>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-SERVICE-ARG>
+                    </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_SetMode</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Sets the mode of Watchdog Manager.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">Service to switch between different modes of the Watchdog Manager.</L-2>
+                    </DESC>
+                    <SERVICE-ID>3</SERVICE-ID>
+                    <IS-REENTRANT>false</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: Successfully changed to the new mode. E_NOT_OK: Changing to the new mode failed.</L-2>
+						</DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                  <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>Mode</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(In)One of the configured Watchdog Manager modes. </L-2>
+					  </DESC>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>CallerID</SHORT-NAME>
+					  <DESC>
+						<L-2 L="EN">(In)Module ID of the calling module. </L-2>
+					  </DESC>
+                      <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                      <DIRECTION>IN</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                            <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                  </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_GetMode</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Returns the current mode of the Watchdog Manager.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_GetMode service returns the currently active mode of the Watchdog Manager.</L-2>
+                    </DESC>
+                    <SERVICE-ID>11</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: Current mode successfully returned. E_NOT_OK: Returning mode failed.</L-2>						  
+						 </DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                    <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>Mode</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(Out)Current mode of the Watchdog Manager. </L-2>
+					  </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_CheckpointReached</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Indicates to the Watchdog Manager that a Checkpoint within a Supervised Entity has been reached.</L-4>
+                    </LONG-NAME>
+                    <SERVICE-ID>14</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: Successfully updated alive counter. E_NOT_OK: Update failed.</L-2>
+						</DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                      <ARGUMENTS>
+                        <SW-SERVICE-ARG>
+                          <SHORT-NAME>SEID</SHORT-NAME>
+						  <DESC>
+								<L-2 L="EN">(In)Identifier of the Supervised Entity that reports a Checkpoint.</L-2>
+						  </DESC>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <DIRECTION>IN</DIRECTION>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                                <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-SERVICE-ARG>
+                        <SW-SERVICE-ARG>
+                          <SHORT-NAME>CheckpointID</SHORT-NAME>
+						  <DESC>
+								<L-2 L="EN">(In)Identifier of the Checkpoint within a Supervised Entity that has been reached.</L-2>
+						  </DESC>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <DIRECTION>IN</DIRECTION>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                        </SW-SERVICE-ARG>
+                      </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_GetLocalStatus</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Returns the supervision status of an individual Supervised Entity.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_GetLocalStatus service returns the individual supervision status of the given Supervised Entity.</L-2>
+                    </DESC>
+                    <SERVICE-ID>12</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: Current supervision status successfully returned. E_NOT_OK: Returning current supervision status failed.</L-2>
+						</DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                    <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                        <SHORT-NAME>SEID</SHORT-NAME>
+					    <DESC>
+							<L-2 L="EN">(In)Identifier of the supervised entity whose supervision status shall be returned. </L-2>
+					    </DESC>
+                          <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                          <DIRECTION>IN</DIRECTION>
+                          <SW-DATA-DEF-PROPS>
+                            <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                              </SW-DATA-DEF-PROPS-CONDITIONAL>
+                            </SW-DATA-DEF-PROPS-VARIANTS>
+                          </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>Status</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(Out)Supervision status of the given supervised entity. </L-2>
+					  </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_LocalStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_GetGlobalStatus</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Returns the Global supervision status of the Watchdog Manager.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_GetGlobalStatus service returns the Global supervision status of the Watchdog Manager.</L-2>
+                    </DESC>
+                    <SERVICE-ID>13</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: Current supervision status successfully returned. E_NOT_OK: Returning current supervision status failed.</L-2>
+						</DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                    <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>Status</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(Out)Global supervision status of the Watchdog Manager.</L-2>
+					  </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_GlobalStatusType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_PerformReset</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Instructs the Watchdog Manager to cause a watchdog reset.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_PerformReset service instructs the Watchdog Manager to cause a watchdog reset.</L-2>
+                    </DESC>
+                    <SERVICE-ID>15</SERVICE-ID>
+                    <IS-REENTRANT>false</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_GetFirstExpiredSEID</SHORT-NAME>
+                    <LONG-NAME>
+                        <L-4 L="EN">Returns SEID(ID of the Supervised Entity)that first reached the state WDGM_LOCAL_STATUS_EXPIRED.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_GetFirstExpiredSEID service returns the ID of the Supervised Entity that first reached the state WDGM_LOCAL_STATUS_EXPIRED.</L-2>
+                    </DESC>
+                    <SERVICE-ID>16</SERVICE-ID>
+                    <IS-REENTRANT>true</IS-REENTRANT>
+                    <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+                    <CALL-TYPE>REGULAR</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                    <RETURN-TYPE>
+                        <SHORT-NAME>ReturnValue</SHORT-NAME>
+						<DESC>
+							<L-2 L="EN">E_OK: SEID successfully returned. E_NOT_OK: Error when returning the SEID.</L-2>
+						</DESC>
+                        <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                        <DIRECTION>OUT</DIRECTION>
+                        <SW-DATA-DEF-PROPS>
+                           <SW-DATA-DEF-PROPS-VARIANTS>
+                              <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                 <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Std/ImplementationDataTypes/Std_ReturnType</IMPLEMENTATION-DATA-TYPE-REF>
+                              <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                        </SW-DATA-DEF-PROPS>
+                    </RETURN-TYPE>
+                    <ARGUMENTS>
+                    <SW-SERVICE-ARG>
+                      <SHORT-NAME>SEID</SHORT-NAME>
+					  <DESC>
+							<L-2 L="EN">(Out)Identifier of the supervised entity that first reached the state WDGM_LOCAL_STATUS_EXPIRED.</L-2>
+					  </DESC>
+                      <CATEGORY>DATA_REFERENCE</CATEGORY>
+                      <DIRECTION>OUT</DIRECTION>
+                      <SW-DATA-DEF-PROPS>
+                        <SW-DATA-DEF-PROPS-VARIANTS>
+                          <SW-DATA-DEF-PROPS-CONDITIONAL>
+                            <SW-POINTER-TARGET-PROPS>
+                              <TARGET-CATEGORY>STRUCTURE</TARGET-CATEGORY>
+                              <SW-DATA-DEF-PROPS>
+                                <SW-DATA-DEF-PROPS-VARIANTS>
+                                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                                    <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+                                    <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                                </SW-DATA-DEF-PROPS-VARIANTS>
+                              </SW-DATA-DEF-PROPS>
+                            </SW-POINTER-TARGET-PROPS>
+                          </SW-DATA-DEF-PROPS-CONDITIONAL>
+                        </SW-DATA-DEF-PROPS-VARIANTS>
+                      </SW-DATA-DEF-PROPS>
+                    </SW-SERVICE-ARG>
+                    </ARGUMENTS>
+                </BSW-MODULE-ENTRY>
+
+                <BSW-MODULE-ENTRY>
+                    <SHORT-NAME>WdgM_MainFunction</SHORT-NAME><!-- This is going to be the name of Function to be scheduled by appending WdgM. I.e. "WdgM_MainFunction" -->
+                    <LONG-NAME>
+                        <L-4 L="EN">Performs the processing of the cyclic Watchdog Manager jobs.</L-4>
+                    </LONG-NAME>
+                    <DESC>
+                        <L-2 L="EN">The WdgM_MainFunction service performs the processing of the cyclic Watchdog Manager jobs. It is responsible to perform Monitoring analysis and provide servicing information to Wdg via WdgIf.</L-2>
+                    </DESC>
+                    <SERVICE-ID>8</SERVICE-ID>
+                    <CALL-TYPE>SCHEDULED</CALL-TYPE>
+                    <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+                    <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+                </BSW-MODULE-ENTRY>
+
+              </ELEMENTS>
+            </AR-PACKAGE> <!-- BswModuleEntry -->
+
+            <!--##################################################
+                #                DESCRIPTION                     #
+                ##################################################-->
+            <AR-PACKAGE>
+              <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+              <ELEMENTS>
+                <BSW-MODULE-DESCRIPTION>
+                    <SHORT-NAME>WdgM</SHORT-NAME>
+                    <!-- WdgM module ID -->
+                    <CATEGORY>BSW_MODULE</CATEGORY>
+                    <MODULE-ID>13</MODULE-ID>
+                   <PROVIDED-ENTRYS>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_Init</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_DeInit</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_SetMode</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetMode</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_CheckpointReached</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetLocalStatus</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetGlobalStatus</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_PerformReset</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetFirstExpiredSEID</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL> 
+                        <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                          <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_MainFunction</BSW-MODULE-ENTRY-REF>
+                        </BSW-MODULE-ENTRY-REF-CONDITIONAL>                             
+                   </PROVIDED-ENTRYS>                    
+
+					<PROVIDED-MODE-GROUPS>
+						<MODE-DECLARATION-GROUP-PROTOTYPE>
+							<SHORT-NAME>WdgMSupervisionCycle</SHORT-NAME>
+							<TYPE-TREF DEST="MODE-DECLARATION-GROUP">/AUTOSAR_WdgM/ModeDeclarationGroups/WdgMSupervisionCycle</TYPE-TREF>
+						</MODE-DECLARATION-GROUP-PROTOTYPE>
+					</PROVIDED-MODE-GROUPS>
+
+				    <REQUIRED-MODE-GROUPS>
+					    <MODE-DECLARATION-GROUP-PROTOTYPE>
+						    <SHORT-NAME>Current_WdgMSupervisionCycle</SHORT-NAME>
+						    <TYPE-TREF DEST='MODE-DECLARATION-GROUP'>/AUTOSAR_WdgM/ModeDeclarationGroups/WdgMSupervisionCycle</TYPE-TREF>
+					    </MODE-DECLARATION-GROUP-PROTOTYPE>
+ 				    </REQUIRED-MODE-GROUPS>
+
+					<INTERNAL-BEHAVIORS>
+						<BSW-INTERNAL-BEHAVIOR>
+							<SHORT-NAME>BswInternalBehavior</SHORT-NAME>
+
+							<DATA-TYPE-MAPPING-REFS>
+								<DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_WdgM/ModeDeclarationGroups/WdgM_ModeRequestTypeMap</DATA-TYPE-MAPPING-REF>
+							</DATA-TYPE-MAPPING-REFS>
+
+							<ENTITYS>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>Init</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_Init</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>DeInit</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_DeInit</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>GetVersionInfo</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>SetMode</SHORT-NAME>
+
+		                            <ACCESSED-MODE-GROUPS>
+		                               <MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+		                                  <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST='MODE-DECLARATION-GROUP-PROTOTYPE'>/AUTOSAR_WdgM/BswModuleDescriptions/WdgM/Current_WdgMSupervisionCycle</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+		                               </MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+		                            </ACCESSED-MODE-GROUPS>
+
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_SetMode</IMPLEMENTED-ENTRY-REF>
+
+									<MANAGED-MODE-GROUPS>
+										<MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+											 <MODE-DECLARATION-GROUP-PROTOTYPE-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_WdgM/BswModuleDescriptions/WdgM/WdgMSupervisionCycle</MODE-DECLARATION-GROUP-PROTOTYPE-REF>
+										</MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL>
+									</MANAGED-MODE-GROUPS>
+
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>GetMode</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetMode</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>CheckpointReached</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_CheckpointReached</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>GetLocalStatus</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetLocalStatus</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>GetGlobalStatus</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetGlobalStatus</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>PerformReset</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_PerformReset</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-CALLED-ENTITY>
+									<SHORT-NAME>GetFirstExpiredSEID</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_GetFirstExpiredSEID</IMPLEMENTED-ENTRY-REF>
+								</BSW-CALLED-ENTITY>
+								<BSW-SCHEDULABLE-ENTITY>
+									<SHORT-NAME>MainFunction</SHORT-NAME>
+									<IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_WdgM/BswModuleEntry/WdgM_MainFunction</IMPLEMENTED-ENTRY-REF>
+								</BSW-SCHEDULABLE-ENTITY>
+							</ENTITYS>
+
+							<EVENTS>
+  							    <BSW-TIMING-EVENT>
+								    <SHORT-NAME>TE_WdgMSupervisionCycle0</SHORT-NAME>
+								    <!-- Disabling dependency for the event corresponding to WdgM Supervision Cycle Time: 0.01 [Seconds] -->
+								    <DISABLED-IN-MODE-IREFS>
+
+
+							        </DISABLED-IN-MODE-IREFS>
+									<!-- As per reference "http://www.autosar.org/bugzilla/show_bug.cgi?id=50418#c18" wdgMSupervisionCycle is a precomplile time parameter -->
+ 									<STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_WdgM/BswModuleDescriptions/WdgM/BswInternalBehavior/MainFunction</STARTS-ON-EVENT-REF>
+									<PERIOD>0.01</PERIOD> <!-- Seconds -->
+							    </BSW-TIMING-EVENT>
+
+							</EVENTS>
+							<MODE-SENDER-POLICYS>
+								<BSW-MODE-SENDER-POLICY>
+									<PROVIDED-MODE-GROUP-REF DEST="MODE-DECLARATION-GROUP-PROTOTYPE">/AUTOSAR_WdgM/BswModuleDescriptions/WdgM/WdgMSupervisionCycle</PROVIDED-MODE-GROUP-REF>
+									<QUEUE-LENGTH>1</QUEUE-LENGTH>
+								</BSW-MODE-SENDER-POLICY>
+							</MODE-SENDER-POLICYS>
+
+						</BSW-INTERNAL-BEHAVIOR>
+					</INTERNAL-BEHAVIORS>
+				</BSW-MODULE-DESCRIPTION>
+			  </ELEMENTS>
+			</AR-PACKAGE> <!-- BswModuleDescriptions -->
+
+              <!--##################################################
+			    #              IMPLEMENTATION                    #
+			    ##################################################-->
+  	        <AR-PACKAGE>
+  	            <SHORT-NAME>BswImplementations</SHORT-NAME>
+                <ELEMENTS>
+                    <BSW-IMPLEMENTATION>
+                        <SHORT-NAME>WdgM</SHORT-NAME>
+                        <CODE-DESCRIPTORS>
+                         <CODE>
+                          <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                          <ARTIFACT-DESCRIPTORS>
+                           <AUTOSAR-ENGINEERING-OBJECT>
+                            <SHORT-LABEL>ArEngObj</SHORT-LABEL>
+                            <CATEGORY>SWSRC</CATEGORY>
+                           </AUTOSAR-ENGINEERING-OBJECT>
+                          </ARTIFACT-DESCRIPTORS>
+                         </CODE>
+                        </CODE-DESCRIPTORS>
+      	                <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+                        <SW-VERSION>3.0.0</SW-VERSION>
+                        <!--<VENDOR-ID>6</VENDOR-ID>--><!--VENDOR ID shall only be set if there are really instances of AUTOSAR based BSW driver modules are implemented-->
+                        <AR-RELEASE-VERSION>4.2.2</AR-RELEASE-VERSION>
+                        <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_WdgM/BswModuleDescriptions/WdgM/BswInternalBehavior</BEHAVIOR-REF>
+                    </BSW-IMPLEMENTATION>
+                </ELEMENTS>
+            </AR-PACKAGE> 
+
+
+              <!--##################################################
+                #              Implemented datatype                    #
+                ##################################################-->         
+        <AR-PACKAGE>
+          <SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+          <ELEMENTS>
+
+            <IMPLEMENTATION-DATA-TYPE>
+              <SHORT-NAME>WdgM_ConfigType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">WdgM configuration type contains all postbuild configurable parameters.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This structure contains all postbuild configurable parameters of the Watchdog Manager. A pointer to this structure is passed to the Watchdog Manager initialization function for configuration.</L-2>
+              </DESC>
+              <CATEGORY>STRUCTURE</CATEGORY>
+              <SUB-ELEMENTS>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>InitialMode</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>NoOfMode</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ErrorImproperCaller</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ErrorSupervision</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>ErrorSetMode</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>PtrToRunningCounterValue</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/TickType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>PtrToDeadlineIndices</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                <IMPLEMENTATION-DATA-TYPE-ELEMENT>
+                  <SHORT-NAME>PtrToMode</SHORT-NAME>
+                  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                  <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                      <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_PrvModeType</IMPLEMENTATION-DATA-TYPE-REF>
+                        <SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+                      </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                  </SW-DATA-DEF-PROPS>
+                </IMPLEMENTATION-DATA-TYPE-ELEMENT>
+              </SUB-ELEMENTS>
+             <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+            </IMPLEMENTATION-DATA-TYPE>
+						
+            <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>TickType</SHORT-NAME>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+							<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+             <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>			
+
+            <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>Rte_ModeType_WdgMSupervisionCycle</SHORT-NAME>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+							<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+             <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE>			
+            
+            <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>WdgM_ModeType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">WdgM Mode type distinguishes the different modes.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This type distinguishes the different modes that were configured for the Watchdog Manager.</L-2>
+              </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+              <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>                            
+            </IMPLEMENTATION-DATA-TYPE>
+           
+            <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>WdgM_LocalStatusType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Represent the current status of supervision for individual Supervised Entities.</L-4>
+              </LONG-NAME>
+			<DESC>
+                <L-2 L="EN">This type to be used for variables that represent the current status of supervision for individual Supervised Entities.<BR/></L-2>
+		<L-2 L="EN">Range : <BR/> 
+		WDGM_LOCAL_STATUS_OK - The supervision of this Supervised Entity has not shown any failures.<BR/>
+		WDGM_LOCAL_STATUS_FAILED - The supervision of this Supervised Entity has failed but can still be "healed". i.e., if the Supervised Entity
+                returns to a normal behavior, its supervision state will also return to WDGM_LOCAL_STATUS_OK. Furthermore, the number of times that the supervision has 
+                failed has not yet exceeded a configurable limit. When this limit has been exceeded the state will change to WDGM_LOCAL_STATUS_EXPIRED.<BR/>
+                WDGM_LOCAL_STATUS_EXPIRED - The supervision of this Supervised Entity has failed permanently. This state cannot be left.<BR/>
+                WDGM_LOCAL_STATUS_DEACTIVATED - The supervision of this Supervised Entity is temporarily disabled.
+                </L-2>
+              </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+			  <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE> 
+            
+            <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>WdgM_GlobalStatusType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">Represent the global supervision status of the Watchdog Manager module.</L-4>
+              </LONG-NAME>
+			  <DESC>
+                <L-2 L="EN">This type to be used for variables that represent the global supervision status of the Watchdog Manager module.<BR/></L-2>
+                <L-2 L="EN">Range : <BR/>
+                WDGM_GLOBAL_STATUS_OK - Supervision did not show any failures.<BR/>
+                WDGM_GLOBAL_STATUS_FAILED - Supervision has failed but is still within the limit of allowed failures.<BR/>
+                WDGM_GLOBAL_STATUS_EXPIRED - Supervision has failed, the allowed limit of failures has been exceeded, but the Watchdog Driver
+                has not yet been instructed to stop triggering.<BR/>
+                WDGM_GLOBAL_STATUS_STOPPED - Supervision has failed, the allowed limit of failures has been exceeded, and the Watchdog Driver
+                has been instructed to stop triggering. A watchdog reset is about to happen.<BR/>
+                WDGM_GLOBAL_STATUS_DEACTIVATED - WdgM is not initialized and therefore will not manage the watchdogs.
+                </L-2>
+              </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+              <SW-DATA-DEF-PROPS>
+                <SW-DATA-DEF-PROPS-VARIANTS>
+                  <SW-DATA-DEF-PROPS-CONDITIONAL>
+                        <IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+                  </SW-DATA-DEF-PROPS-CONDITIONAL>
+                </SW-DATA-DEF-PROPS-VARIANTS>
+              </SW-DATA-DEF-PROPS>
+			  <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>
+            </IMPLEMENTATION-DATA-TYPE> 
+
+			<IMPLEMENTATION-DATA-TYPE>
+			  <SHORT-NAME>WdgM_PrvModeType</SHORT-NAME>
+			  <LONG-NAME>
+				<L-4 L="EN">This type contains all Mode related configurable parameters.</L-4>
+			  </LONG-NAME>
+			  <DESC>
+				<L-2 L="EN">This structure contains all Mode related configurable parameters of the Watchdog Manager. A pointer to this structure is passed to access all the configuration parameter of Mode.</L-2>
+			  </DESC>
+			  <CATEGORY>STRUCTURE</CATEGORY>
+			  <SUB-ELEMENTS>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>ExpiredSupervisionCycleTol</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SchMWdgMSupervisionCycle</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/Rte_ModeType_WdgMSupervisionCycle</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>				
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SupervisionCycle</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint32</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>NoOfAliveSupervision</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>NoOfDeadlineSupervision</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>NoOfLocalStatusParams</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>NoOfTrigger</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>	
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>PtrToAliveSupervision</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_AliveSupervisionType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>PtrToDeadlineSupervision</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_DeadlineSupervisionType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>PtrToLocalStatusParams</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_LocalStatusParamsType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>PtrToTrigger</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_TriggerType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>							
+				
+			  </SUB-ELEMENTS>
+			 <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+			</IMPLEMENTATION-DATA-TYPE>
+						
+			<IMPLEMENTATION-DATA-TYPE>
+			  <SHORT-NAME>WdgM_TriggerType</SHORT-NAME>
+			  <LONG-NAME>
+				<L-4 L="EN">This type contains all Watchdog trigger related configuration parameters.</L-4>
+			  </LONG-NAME>
+			  <DESC>
+				<L-2 L="EN">This structure contains all configuration parameters needed for triggering of hardware watchdogs.</L-2>
+			  </DESC>
+			  <CATEGORY>STRUCTURE</CATEGORY>
+			  <SUB-ELEMENTS>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>TriggerConditionValue</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>DeviceIdx</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>WdgMode</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgIf/ImplementationDataTypes/WdgIf_ModeType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>													
+			  </SUB-ELEMENTS>
+			 <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+			</IMPLEMENTATION-DATA-TYPE>	
+
+			<IMPLEMENTATION-DATA-TYPE>
+			  <SHORT-NAME>WdgM_LocalStatusParamsType</SHORT-NAME>
+			  <LONG-NAME>
+				<L-4 L="EN">TThis contains configuration parameters for the Local Status of a Supervised Entity.</L-4>
+			  </LONG-NAME>
+			  <DESC>
+				<L-2 L="EN">This structure contains configuration parameters needed for evaluation of the Local Status of a Supervised Entity.</L-2>
+			  </DESC>
+			  <CATEGORY>STRUCTURE</CATEGORY>
+			  <SUB-ELEMENTS>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>FailedAliveSupervisionRefCycleTol</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SupervisedEntityId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>												
+			  </SUB-ELEMENTS>
+			 <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+			</IMPLEMENTATION-DATA-TYPE>	
+
+
+			<IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>WdgM_SupervisedEntityIdType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">WdgM SupervisedEntityId type identifies an individual Supervised Entity.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This type identifies an individual Supervised Entity for the Watchdog Manager. The datatype is unit8 or uint16, and it depends upon the number of configured WdgMSupervised Entity.</L-2>
+              </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+							
+							<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+							
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+			
+              <TYPE-EMITTER>RTE</TYPE-EMITTER>			
+			                
+            </IMPLEMENTATION-DATA-TYPE>	
+            
+            
+             <IMPLEMENTATION-DATA-TYPE>
+                <SHORT-NAME>WdgM_CheckpointIdType</SHORT-NAME>
+              <LONG-NAME>
+                <L-4 L="EN">WdgM CheckpointId type identifies a Checkpoint in the context of a Supervised Entity.</L-4>
+              </LONG-NAME>
+              <DESC>
+                <L-2 L="EN">This type identifies a Checkpoint in the context of a Supervised Entity for the Watchdog Manager. Note that an individual Checkpoint can only be identified by the pair of Supervised Entity ID and Checkpoint ID. The datatype is unit8 or uint16, and it depends upon the number of configured checkpoints.</L-2>
+              </DESC>
+                <CATEGORY>TYPE_REFERENCE</CATEGORY>
+                <SW-DATA-DEF-PROPS>
+                    <SW-DATA-DEF-PROPS-VARIANTS>
+                        <SW-DATA-DEF-PROPS-CONDITIONAL>
+							
+							<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</IMPLEMENTATION-DATA-TYPE-REF>
+							
+                        </SW-DATA-DEF-PROPS-CONDITIONAL>
+                    </SW-DATA-DEF-PROPS-VARIANTS>
+                </SW-DATA-DEF-PROPS>
+			
+              <TYPE-EMITTER>RTE</TYPE-EMITTER>			
+			                
+            </IMPLEMENTATION-DATA-TYPE>	
+			
+			
+			<IMPLEMENTATION-DATA-TYPE>
+			  <SHORT-NAME>WdgM_DeadlineSupervisionType</SHORT-NAME>
+			  <LONG-NAME>
+				<L-4 L="EN">This contains all configurable parameters of Deadline Supervision.</L-4>
+			  </LONG-NAME>
+			  <DESC>
+				<L-2 L="EN">This structure contains all Deadline Supervision configurable parameters of the Watchdog Manager. A pointer to this structure is passed to access all the Deadline Supervision configuration parameter for monitoring individual Deadline Supervision.</L-2>
+			  </DESC>
+			  <CATEGORY>STRUCTURE</CATEGORY>
+			  <SUB-ELEMENTS>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>StartCheckpointId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>StopCheckpointId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SupervisedEntityId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>DeadlineMin</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/TickType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>		
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>DeadlineMax</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/TickType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>						
+			  </SUB-ELEMENTS>
+			 <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+			</IMPLEMENTATION-DATA-TYPE>		
+			<IMPLEMENTATION-DATA-TYPE>
+			  <SHORT-NAME>WdgM_AliveSupervisionType</SHORT-NAME>
+			  <LONG-NAME>
+				<L-4 L="EN">This contains all the configurable parameters of Alive Supervision.</L-4>
+			  </LONG-NAME>
+			  <DESC>
+				<L-2 L="EN">This structure contains all Alive Supervision configurable parameters of the Watchdog Manager. A pointer to this structure is passed to access all the Alive Supervision configuration parameter for monitoring individual Alive Supervision.</L-2>
+			  </DESC>
+			  <CATEGORY>STRUCTURE</CATEGORY>
+			  <SUB-ELEMENTS>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>MinMargin</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>MaxMargin</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>AliveSupervisionCheckpointId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_CheckpointIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SupervisedEntityId</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_WdgM/ImplementationDataTypes/WdgM_SupervisedEntityIdType</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>	
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>ExpectedAliveIndications</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>		
+				<IMPLEMENTATION-DATA-TYPE-ELEMENT>
+				  <SHORT-NAME>SupervisionReferenceCycle</SHORT-NAME>
+				  <CATEGORY>TYPE_REFERENCE</CATEGORY>
+				  <SW-DATA-DEF-PROPS>
+					<SW-DATA-DEF-PROPS-VARIANTS>
+					  <SW-DATA-DEF-PROPS-CONDITIONAL>
+						<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+						<SW-IMPL-POLICY>STANDARD</SW-IMPL-POLICY>
+					  </SW-DATA-DEF-PROPS-CONDITIONAL>
+					</SW-DATA-DEF-PROPS-VARIANTS>
+				  </SW-DATA-DEF-PROPS>
+				</IMPLEMENTATION-DATA-TYPE-ELEMENT>						
+			  </SUB-ELEMENTS>
+			 <TYPE-EMITTER>HEADER_FILE</TYPE-EMITTER>              
+			</IMPLEMENTATION-DATA-TYPE>				
+          </ELEMENTS>
+        </AR-PACKAGE>
+                                 
+        </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

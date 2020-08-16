@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+       <USED-LANGUAGES>
+          <L-10 xml:space="default" L="EN">EN</L-10>
+       </USED-LANGUAGES>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>2.0.0</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2016-08-29</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Nm</SHORT-NAME>
+            <AR-PACKAGES>
+               <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                    <ELEMENTS>
+                        <!-- Module Definition: Nm -->
+                        <ECUC-MODULE-DEF >
+                            <SHORT-NAME>Nm</SHORT-NAME>
+                            <LONG-NAME>
+                            <L-4 L="EN">Network Management Interface Module</L-4>
+                              </LONG-NAME>
+                            <DESC>
+                        <L-2 L="EN">The Generic Network Management Interface module</L-2>
+                            </DESC>
+                            <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                            <ADMIN-DATA>
+                                <DOC-REVISIONS>
+                                    <DOC-REVISION>
+                              <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                                        <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                                        <DATE>2010-12-03</DATE>
+                                    </DOC-REVISION>
+                                    <DOC-REVISION>
+                                        <REVISION-LABEL>2.0.0</REVISION-LABEL>
+                                        <ISSUED-BY>RB</ISSUED-BY>
+                              <DATE>2014-10-31</DATE>
+                                    </DOC-REVISION>
+                                </DOC-REVISIONS>
+                            </ADMIN-DATA>
+                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+			             <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                      <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Nm</REFINED-MODULE-DEF-REF> 
+                            <SUPPORTED-CONFIG-VARIANTS>
+                              <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                            </SUPPORTED-CONFIG-VARIANTS>
+                            <CONTAINERS>
+                                <!-- Container Definition: NmChannelConfig -->
+                                <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                    <SHORT-NAME>NmChannelConfig</SHORT-NAME>
+                                    <DESC>
+                                        <L-2 L="EN">This container contains the configuration (parameters) of the bus channel(s). The channel parameter shall be harmonized within the whole communication stack.</L-2>
+                                    </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00197</RELATED-TRACE-ITEM-REF>
+                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: NmActiveCoordinator -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>NmActiveCoordinator</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This parameter indicates whether a NM channel - part of a Nm Coordination cluster - will be coordinated actively (NmActiveCoordinator = TRUE) or passively (NmActiveCoordinator = FALSE).</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00236</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: NmShutdownDelayTimer -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>NmShutdownDelayTimer</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter defines the time in seconds which the NM Coordination algorithm shall delay the release of this channel with.</L-2>
+                                       </DESC>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>Inf</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: NmChannelSleepMaster -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>NmChannelSleepMaster</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This parameter shall be set to indicate if the sleep of this network can be absolutely decided by the local node only and that no other nodes can oppose that decision.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">If this parameter is set to TRUE, the Nm shall assume that the channel is always ready to go to sleep and that no calls to Nm_RemoteSleepIndication or Nm_RemoteSleepCancellation will be made from the &lt;BusNm&gt; representing this channel. 
+
+                                        If this parameter is set to FALSE, the Nm shall not assume that the network is ready to sleep until a call has been made to Nm_RemoteSleepCancellation.</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00227</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: NmCoordClusterIndex -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>NmCoordClusterIndex</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If this parameter is undefined for a channel, the corresponding bus does not belong to an NM coordination cluster.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00221</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                     <!-- PARAMETER DEFINITION: NmStateReportEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>NmStateReportEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the NMS shall be set for the corresponding network.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">false: No NMS shall be set
+                                        true: The NMS shall be set</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00231</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: NmSynchronizingNetwork -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>NmSynchronizingNetwork</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If this parameter is true, then this network is a synchronizing network for the NM coordination cluster which it belongs to. The network is expected to call Nm_SynchronizationPoint() at regular intervals.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00223</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                           <REFERENCES>
+                              <!-- Symbolic Name Reference Definition: NmComMChannelRef -->
+                              <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 <SHORT-NAME>NmComMChannelRef</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Reference to the corresponding ComM Channel.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00217</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                              </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                              <!-- Symbolic Name Reference Definition: NmStateReportSignalRef -->
+                              <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 <SHORT-NAME>NmStateReportSignalRef</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Reference to the signal for setting the NMS by calling Com_SendSignal for the respective channel.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00232</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Com/ComConfig/ComSignal</DESTINATION-REF>
+                              </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                           </REFERENCES>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: NmBusType -->
+                              <ECUC-CHOICE-CONTAINER-DEF>
+                                 <SHORT-NAME>NmBusType</SHORT-NAME>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00218</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <CHOICES>
+                                    <!-- Container Definition: NmGenericBusNmConfig -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>NmGenericBusNmConfig</SHORT-NAME>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00225</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: NmGenericBusNmPrefix -->
+                                          <ECUC-STRING-PARAM-DEF>
+                                             <SHORT-NAME>NmGenericBusNmPrefix</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">The prefix which identifies the generic &lt;BusNm&gt;. This will be used to determine the API name to be called by Nm for the provided interfaces of the &lt;BusNm&gt;. This string will used for the module prefix before the "_" character in the API call name.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00219</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                                <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                                             </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                          </ECUC-STRING-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: NmGenericBusNmShutdownTime -->
+                                          <ECUC-FLOAT-PARAM-DEF>
+                                             <SHORT-NAME>NmGenericBusNmShutdownTime</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">This parameter shall be used to calculate shutdown delay time.</L-2>
+                                             </DESC>
+                                             
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00239</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>Inf</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-FLOAT-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <!-- Container Definition: NmStandardBusNmConfig -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>NmStandardBusNmConfig</SHORT-NAME>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00226</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: NmStandardBusType -->
+                                          <ECUC-ENUMERATION-PARAM-DEF>
+                                             <SHORT-NAME>NmStandardBusType</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Identifies the bus type of the channel for standard AUTOSAR &lt;BusNm&gt;s and is used to determine which set of API calls to be called by Nm for the &lt;BusNm&gt;s.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">Note: The Ethernet bus' NM is UdpNm !</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00220</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NM_BUSNM_CANNM</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NM_BUSNM_FRNM</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NM_BUSNM_J1939NM</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NM_BUSNM_LINNM</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NM_BUSNM_UDPNM</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                             </LITERALS>
+                                          </ECUC-ENUMERATION-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </CHOICES>
+                              </ECUC-CHOICE-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: NmGlobalConfig -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>NmGlobalConfig</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container contains all global configuration parameters of the Nm Interface.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00196</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: NmGlobalConstants -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>NmGlobalConstants</SHORT-NAME>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00198</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: NmNumberOfChannels -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>NmNumberOfChannels</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Number of NM channels allowed within one ECU.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00201</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>1</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmNumberOfClusters -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>NmNumberOfClusters</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Number of NM clusters allowed within one ECU.</L-2>
+                                       </DESC>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:1.0.0:2017-06-13</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+				    <!-- PARAMETER DEFINITION: NmRxIndicationCallback -->
+                                                <ECUC-FUNCTION-NAME-DEF >
+                                                    <SHORT-NAME>NmRxIndicationCallback</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Application callback that is called when Nm is indicated about a reception by
+                                                        BusNm. This should be of type "void Callback_Name(NetworkHandleType)". If no
+                                                        callback is configured, NULL_PTR will be assigned</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                 <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                                <!-- PARAMETER DEFINITION: NmRxCallbackHeader -->
+                                                <ECUC-STRING-PARAM-DEF >
+                                                    <SHORT-NAME>NmRxCallbackHeader</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">This is the header file that declares the protoype of NmRxIndicationCallback</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                                <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                                             </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                          </ECUC-STRING-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: NmRemoteSleepIndCallback  -->
+                                                <ECUC-FUNCTION-NAME-DEF >
+                                                    <SHORT-NAME>NmRemoteSleepIndCallback</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Upper layer callback that is called to indicate  Remote Sleep situation detected by BusNm</L-2>
+                                                    </DESC>
+                                                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                 <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                                <!-- PARAMETER DEFINITION: NmStateChangeIndCallback  -->
+                                                <ECUC-FUNCTION-NAME-DEF >
+                                                    <SHORT-NAME>NmStateChangeIndCallback</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Upper layer callback that is called to indicate  state change notifications</L-2>
+                                                    </DESC>
+                                                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                 <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                                <!-- PARAMETER DEFINITION: NmRemoteSleepCancelCallback  -->
+                                                <ECUC-FUNCTION-NAME-DEF >
+                                                    <SHORT-NAME>NmRemoteSleepCancelCallback</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Upper layer callback that is called to indicate    cancellation of Remote Sleep situation
+                                                        after BusNm receives NM messages/Votes</L-2>
+                                                    </DESC>
+                                                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                 <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: NmGlobalFeatures -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>NmGlobalFeatures</SHORT-NAME>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00200</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: NmBusSynchronizationEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmBusSynchronizationEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling bus synchronization support of the &lt;BusNm&gt;s. This feature is required for NM Coordinator nodes only.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00208</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmCarWakeUpCallout -->
+                                    <ECUC-FUNCTION-NAME-DEF>
+                                       <SHORT-NAME>NmCarWakeUpCallout</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Name of the callout function to be called if Nm_CarWakeUpIndication() is called. If this parameter is not configured, the NmIf will call BswM_CarWakeUpIndication.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00234</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                          <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                                       </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                                    </ECUC-FUNCTION-NAME-DEF>
+                                    <!-- PARAMETER DEFINITION: NmCarWakeUpRxEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmCarWakeUpRxEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables or disables CWU detection.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">FALSE - CarWakeUp not supported
+                                                TRUE - CarWakeUp supported</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00235</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmComControlEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmComControlEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling the Communication Control support.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00210</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmComUserDataSupport -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmComUserDataSupport</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enable/Disable setting of NMUserData via SW-C. If NmComUserDataSupport is enabled the API Nm_SetUserData shall not be available.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00230</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmCoordinatorSupportEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmCoordinatorSupportEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling NM Coordinator support.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00206</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmCoordinatorSyncSupport -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmCoordinatorSyncSupport</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Enables/disables the coordinator synchronisation support.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00240</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmGlobalCoordinatorTime -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>NmGlobalCoordinatorTime</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This parameter defines the maximum shutdown time of a connected and coordinated NM-Cluster.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Note:This includes nested connections.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00237</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>Inf</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmNodeDetectionEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmNodeDetectionEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling the Node Detection feature.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00212</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmNodeIdEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmNodeIdEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling transmission of the source node identifier in NM messages.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00213</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmPassiveModeEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmPassiveModeEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling support of Passive Mode of the &lt;BusNm&gt;s.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00209</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmPduRxIndicationEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmPduRxIndicationEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling the PDU Rx Indication.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00214</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmRemoteSleepIndEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmRemoteSleepIndEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling Remote Sleep Indication support. This feature is required for a Gateway or Nm Coordinator functionality.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00207</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmRepeatMsgIndEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmRepeatMsgIndEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling the Repeat Message Bit Indication.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00229</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmStateChangeIndEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmStateChangeIndEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling the Network Management state change notification.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00215</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmUserDataEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmUserDataEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling User Data support.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00211</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: NmGlobalProperties -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>NmGlobalProperties</SHORT-NAME>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00199</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: NmCycletimeMainFunction -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>NmCycletimeMainFunction</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">The period between successive calls to the Main Function of the NM Interface in seconds.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00205</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>Inf</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmDevErrorDetect -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmDevErrorDetect</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">* true: enabled (ON).
+                                                * false: disabled (OFF).</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00203</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: NmVersionInfoApi -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>NmVersionInfoApi</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Pre-processor switch for enabling Version Info API support.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Nm_00204</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                 </PARAMETERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+
+                                        <!-- Container Definition: NmGlobalConfigLinNm -->
+                                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                            <SHORT-NAME>NmGlobalConfigLinNm</SHORT-NAME>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                            <PARAMETERS>
+                                                 <!-- PARAMETER DEFINITION: LinNmStateChangeIndEnabled -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>LinNmStateChangeIndEnabled</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Pre-processor switch for enabling the Network Management state change notification.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: LinNmPassiveModeEnabled -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                    <SHORT-NAME>LinNmPassiveModeEnabled</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Pre-processor switch for enabling support of the Passive Mode of the LinNm.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                    <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+									   </ECUC-BOOLEAN-PARAM-DEF>
+									    <!-- PARAMETER DEFINITION: LinNmCoordinatorSyncSupport -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                    <SHORT-NAME>LinNmCoordinatorSyncSupport</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Enables/disables the coordinator synchronization support.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                    <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:1.0.0:2017-09-10</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                       </ECUC-BOOLEAN-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: LinNmMainFunctionPeriod -->
+                                        <ECUC-FLOAT-PARAM-DEF >
+                                            <SHORT-NAME>LinNmMainFunctionPeriod</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Call cycle in seconds of LinNm_MainFunction.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>B:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>0.255</MAX>
+                                       <MIN>0</MIN>
+                                        </ECUC-FLOAT-PARAM-DEF>
+                                         <!-- PARAMETER DEFINITION: LinNmTimeoutTime -->
+                                        <ECUC-FLOAT-PARAM-DEF >
+                                            <SHORT-NAME>LinNmTimeoutTime</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Network Timeout after passive start-up. It denotes the time in seconds how long the NM shall stay in Network Mode in case of passive start-up before transition into Bus-Sleep Mode is initiated.</L-2>
+                                            </DESC>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>B:1.0.0:2016-08-31</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65.535</MAX>
+                                       <MIN>0</MIN>
+                                        </ECUC-FLOAT-PARAM-DEF>
+                                            </PARAMETERS>
+                                      </ECUC-PARAM-CONF-CONTAINER-DEF>
+
+                                     </SUB-CONTAINERS>
+                                     </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

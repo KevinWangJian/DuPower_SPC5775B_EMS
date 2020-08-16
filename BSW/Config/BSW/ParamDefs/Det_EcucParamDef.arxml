@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <AR-PACKAGES>
+    <!-- AR-Package: AUTOSAR -->
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Det</SHORT-NAME>
+      <AR-PACKAGES>
+        <!-- AR-Package: AUTOSAR -->
+        <AR-PACKAGE>
+          <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+          <ELEMENTS>
+            <!-- Module Definition: Det -->
+            <ECUC-MODULE-DEF>
+              <SHORT-NAME>Det</SHORT-NAME>
+              <DESC>
+                <L-2 L="EN">Det configuration includes the functions to be called at notification. On one side the application functions are specified and in general it can be decided whether Dlt shall be called at each call of Det.</L-2>
+              </DESC>
+              <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+              <ADMIN-DATA>
+                <DOC-REVISIONS>
+                  <DOC-REVISION>
+                    <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                    <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                    <DATE>2014-10-31</DATE>
+                  </DOC-REVISION>
+                </DOC-REVISIONS>
+              </ADMIN-DATA>
+              <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00001</RELATED-TRACE-ITEM-REF>
+              <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+              <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+              <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Det</REFINED-MODULE-DEF-REF>
+              <SUPPORTED-CONFIG-VARIANTS>
+                <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+              </SUPPORTED-CONFIG-VARIANTS>
+              <CONTAINERS>
+                <!-- Container Definition: DetConfigSet -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DetConfigSet</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration set container for Det.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00007</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: DetModule -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DetModule</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This container describes a non BSW module that is using the Det via Service Interface.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00008</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DetModuleId -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>DetModuleId</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN"> The ModuleId is the identification number of a calling module.</L-2>
+                          </DESC>
+                          <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00009</RELATED-TRACE-ITEM-REF>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SCOPE>LOCAL</SCOPE>
+                          <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                          <MAX>65535</MAX>
+                          <MIN>4096</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: DetGeneral -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DetGeneral</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Generic configuration parameters of the Det module.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00002</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: DetForwardToDlt -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DetForwardToDlt</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Only if the parameter is present and set to true, the Det requires the Dlt interface and forwards it's call to the function Dlt_DetForwardErrorTrace. In this case the optional interface to Dlt_Det is required.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00006</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DetRbCheckApiConsistency -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DetRbCheckApiConsistency</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN"> The RTE generates some of the APIs which are already provided by Det itself. This results in redundant redeclarations of these functions, which is wanted to ensure consistency between generated and normal APIs.<BR/> Important:If no RTE is used, this parameter needs to be TRUE<BR/> <BR/> TRUE<BR/> Consistency check which results in compiler warnings if RTE is used<BR/> <BR/> FALSE<BR/> Only RTE-generated APIs are used<BR/></L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <ORIGIN>RB:AR42.2.0.0:2017-04-20</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                    <!-- PARAMETER DEFINITION: DetReportRuntimeErrorCallout -->
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>DetReportRuntimeErrorCallout</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the existence and the name of a callout function for the corresponding runtime error handler.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00010</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <!-- PARAMETER DEFINITION: DetReportTransientFaultCallout -->
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>DetReportTransientFaultCallout</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">This parameter defines the existence and the name of a callout function for the corresponding transient fault handler.</L-2>
+                      </DESC>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00011</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                    <!-- PARAMETER DEFINITION: DetVersionInfoApi -->
+                    <ECUC-BOOLEAN-PARAM-DEF>
+                      <SHORT-NAME>DetVersionInfoApi</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Pre-processor switch to enable / disable the API to read out the modules version information.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">true: Version info API enabled. false: Version info API disabled.</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00003</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <SCOPE>LOCAL</SCOPE>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                    </ECUC-BOOLEAN-PARAM-DEF>
+                  </PARAMETERS>
+                  <SUB-CONTAINERS>
+                    <!-- Container Definition: DetRbBuffer -->
+                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                      <SHORT-NAME>DetRbBuffer</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Contains Robert Bosch specific configuration parameters for the error entry buffer.</L-2>
+                      </DESC>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                      <PARAMETERS>
+                        <!-- PARAMETER DEFINITION: DetRbErrorBufferSize -->
+                        <ECUC-INTEGER-PARAM-DEF>
+                          <SHORT-NAME>DetRbErrorBufferSize</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Parameter to set the size of the error buffer.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">If the buffer is enabled the min size is 1 and the max size is 65536.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <IMPLEMENTATION-CONFIG-CLASSES>
+                            <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                          </IMPLEMENTATION-CONFIG-CLASSES>
+                          <ORIGIN>AR42.1.0.0</ORIGIN>
+                          <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                          <MAX>65536</MAX>
+                          <MIN>1</MIN>
+                        </ECUC-INTEGER-PARAM-DEF>
+                        <!-- PARAMETER DEFINITION: DetRbUseErrorBufferApi -->
+                        <ECUC-BOOLEAN-PARAM-DEF>
+                          <SHORT-NAME>DetRbUseErrorBufferApi</SHORT-NAME>
+                          <DESC>
+                            <L-2 L="EN">Pre-processor switch to enable / disable the API for error buffer handling.</L-2>
+                          </DESC>
+                          <INTRODUCTION>
+                            <P>
+                              <L-1 L="EN">TRUE: Buffer handler APIs enabled. FALSE: Buffer handler APIs disabled.</L-1>
+                            </P>
+                          </INTRODUCTION>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <ORIGIN>AR42.1.0.0</ORIGIN>
+                          <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                          <VALUE-CONFIG-CLASSES>
+                            <ECUC-VALUE-CONFIGURATION-CLASS>
+                              <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                              <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                            </ECUC-VALUE-CONFIGURATION-CLASS>
+                          </VALUE-CONFIG-CLASSES>
+                          <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                        </ECUC-BOOLEAN-PARAM-DEF>
+                      </PARAMETERS>
+                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                  </SUB-CONTAINERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                <!-- Container Definition: DetNotification -->
+                <ECUC-PARAM-CONF-CONTAINER-DEF>
+                  <SHORT-NAME>DetNotification</SHORT-NAME>
+                  <DESC>
+                    <L-2 L="EN">Configuration of the notification functions.</L-2>
+                  </DESC>
+                  <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00004</RELATED-TRACE-ITEM-REF>
+                  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                  <PARAMETERS>
+                    <!-- PARAMETER DEFINITION: DetErrorHook -->
+                    <ECUC-FUNCTION-NAME-DEF>
+                      <SHORT-NAME>DetErrorHook</SHORT-NAME>
+                      <DESC>
+                        <L-2 L="EN">Optional list of functions to be called by the Default Error Tracer in context of each call of Det_ReportError.</L-2>
+                      </DESC>
+                      <INTRODUCTION>
+                        <P>
+                          <L-1 L="EN">The type of these functions shall be identical the type of Det_ReportError itself: Std_ReturnType (*f)(uint16, uint8, uint8, uint8).</L-1>
+                        </P>
+                      </INTRODUCTION>
+                      <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_Det_00005</RELATED-TRACE-ITEM-REF>
+                      <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                      <SCOPE>LOCAL</SCOPE>
+                      <MULTIPLICITY-CONFIG-CLASSES>
+                        <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                      </MULTIPLICITY-CONFIG-CLASSES>
+                      <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                      <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                      <VALUE-CONFIG-CLASSES>
+                        <ECUC-VALUE-CONFIGURATION-CLASS>
+                          <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                          <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                        </ECUC-VALUE-CONFIGURATION-CLASS>
+                      </VALUE-CONFIG-CLASSES>
+                      <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                      <ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                        <ECUC-FUNCTION-NAME-DEF-CONDITIONAL/>
+                      </ECUC-FUNCTION-NAME-DEF-VARIANTS>
+                    </ECUC-FUNCTION-NAME-DEF>
+                  </PARAMETERS>
+                </ECUC-PARAM-CONF-CONTAINER-DEF>
+              </CONTAINERS>
+            </ECUC-MODULE-DEF>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

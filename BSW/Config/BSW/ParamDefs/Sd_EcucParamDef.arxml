@@ -1,0 +1,3273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2014-01-13</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+        <!-- AR-Package: AUTOSAR -->
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_Sd</SHORT-NAME>
+            <AR-PACKAGES>
+                <!-- AR-Package: AUTOSAR -->
+                <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+					<ELEMENTS>
+						<!-- Module Definition: Sd -->
+						<ECUC-MODULE-DEF>
+						 <SHORT-NAME>Sd</SHORT-NAME>
+						 <DESC>
+							<L-2 L="EN">Configuration of the Service Discovery module.</L-2>
+						 </DESC>
+						 <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+						 <ADMIN-DATA>
+							<DOC-REVISIONS>
+							   <DOC-REVISION>
+								  <REVISION-LABEL>4.2.2</REVISION-LABEL>
+								  <ISSUED-BY>AUTOSAR</ISSUED-BY>
+								  <DATE>2014-10-31</DATE>
+							   </DOC-REVISION>
+                               <DOC-REVISION>
+                                  <REVISION-LABEL>42.0.3.0</REVISION-LABEL>
+                                  <ISSUED-BY>RB</ISSUED-BY>
+                                  <DATE>2015-03-31</DATE>
+                               </DOC-REVISION>
+							</DOC-REVISIONS>
+						 </ADMIN-DATA>
+						 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00001</RELATED-TRACE-ITEM-REF>
+						 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+						 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+						 <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                         <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Sd</REFINED-MODULE-DEF-REF>
+						 <SUPPORTED-CONFIG-VARIANTS>
+							<SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+						 </SUPPORTED-CONFIG-VARIANTS>
+						 <CONTAINERS>
+							<!-- Container Definition: SdConfig -->
+							<ECUC-PARAM-CONF-CONTAINER-DEF>
+							   <SHORT-NAME>SdConfig</SHORT-NAME>
+							   <DESC>
+								  <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR Service Discovery module.</L-2>
+							   </DESC>
+							   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00003</RELATED-TRACE-ITEM-REF>
+							   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							   <SUB-CONTAINERS>
+								  <!-- Container Definition: SdInstance -->
+								  <ECUC-PARAM-CONF-CONTAINER-DEF>
+									 <SHORT-NAME>SdInstance</SHORT-NAME>
+									 <DESC>
+										<L-2 L="EN">This container represents an instance of the SD; i.e. the SD configuration for a certain link.</L-2>
+									 </DESC>
+									 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00084</RELATED-TRACE-ITEM-REF>
+									 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+									 <PARAMETERS>
+										<!-- PARAMETER DEFINITION: SdInstanceHostname -->
+										<ECUC-STRING-PARAM-DEF>
+										   <SHORT-NAME>SdInstanceHostname</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">Configuration parameter to specify the Hostname.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00012</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										   <SCOPE>LOCAL</SCOPE>
+										   <MULTIPLICITY-CONFIG-CLASSES>
+											  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+											  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+										   </MULTIPLICITY-CONFIG-CLASSES>
+										   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+										   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+										   <VALUE-CONFIG-CLASSES>
+											  <ECUC-VALUE-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+											  </ECUC-VALUE-CONFIGURATION-CLASS>
+											  <ECUC-VALUE-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											  </ECUC-VALUE-CONFIGURATION-CLASS>
+											  <ECUC-VALUE-CONFIGURATION-CLASS>
+												 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											  </ECUC-VALUE-CONFIGURATION-CLASS>
+										   </VALUE-CONFIG-CLASSES>
+										   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										   <ECUC-STRING-PARAM-DEF-VARIANTS>
+											  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+										   </ECUC-STRING-PARAM-DEF-VARIANTS>
+										</ECUC-STRING-PARAM-DEF>
+									 </PARAMETERS>
+									 <SUB-CONTAINERS>
+										<!-- Container Definition: SdClientService -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdClientService</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies all parameters used by Client services.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00005</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdClientServiceAutoRequire -->
+											  <ECUC-BOOLEAN-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceAutoRequire</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">If existing and set to true, this Service will be set to "required" on start.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00098</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+											  </ECUC-BOOLEAN-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientServiceHandleId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceHandleId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The HandleId by which the BswM can identify this Client Service Instance.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00079</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+												 <WITH-AUTO>true</WITH-AUTO>
+												 <MAX>65535</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientServiceId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Id to identify the service. This is unique for the service interface.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00020</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>65534</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientServiceInstanceId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceInstanceId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Configuration parameter to specify Instance Id of the service as used in SD entries.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00022</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>65534</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientServiceMajorVersion -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceMajorVersion</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Major version number of the Service as used in the SD entries.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00070</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>254</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientServiceMinorVersion -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientServiceMinorVersion</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Minor version number of the Service as used in the SD Service Entries.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00071</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>4294967295</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										   <REFERENCES>
+											  <!-- Reference Definition: SdClientServiceTcpRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdClientServiceTcpRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the SoAdSocketConnection representing the data path (TCP) for communication with methods.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">This element is also used to set the remote address of the server and to open the TCP connection.</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00100</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+											  <!-- Reference Definition: SdClientServiceTimerRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdClientServiceTimerRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The reference of the SdClientTimer container for this service.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00103</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Sd/SdConfig/SdInstance/SdClientTimer</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+											  <!-- Reference Definition: SdClientServiceUdpRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdClientServiceUdpRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the SoAdSocketConnection representing the data path (UDP) for communication with methods.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">This element is also used to set the remote address of the server.</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00101</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+										   </REFERENCES>
+										   <SUB-CONTAINERS>
+											  <!-- Container Definition: SdClientCapabilityRecord -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdClientCapabilityRecord</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Sd uses capability records to store arbitrary name/value pairs conveying additional information about the named service.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">The following use cases are supported:
+															1) Key present, with no value (e.g. "passreq" -- password required for this service)
+
+															2) Key present, with empty value (e.g. "PlugIns=" server supports plugins, but none are presently installed)
+
+															3) Key present, with non-empty value (e.g. "PlugIns=JPEG,MPEG2,MPEG4")</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00072</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+												 <PARAMETERS>
+													<!-- PARAMETER DEFINITION: SdClientServiceCapabilityRecordKey -->
+													<ECUC-STRING-PARAM-DEF>
+													   <SHORT-NAME>SdClientServiceCapabilityRecordKey</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Defines a CapabilityRecord key.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00073</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <ECUC-STRING-PARAM-DEF-VARIANTS>
+														  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+													   </ECUC-STRING-PARAM-DEF-VARIANTS>
+													</ECUC-STRING-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdClientServiceCapabilityRecordValue -->
+													<ECUC-STRING-PARAM-DEF>
+													   <SHORT-NAME>SdClientServiceCapabilityRecordValue</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Defines the corresponding CapabilityRecord value.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00074</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <ECUC-STRING-PARAM-DEF-VARIANTS>
+														  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+													   </ECUC-STRING-PARAM-DEF-VARIANTS>
+													</ECUC-STRING-PARAM-DEF>
+												 </PARAMETERS>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											  <!-- Container Definition: SdConsumedEventGroup -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdConsumedEventGroup</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">A Service may have event groups which can be consumed. A service consumer has to subscribe to the corresponding event-group. After the subscription the event consumer takes the role of a server and the event provider that of a client.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00056</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+												 <PARAMETERS>
+													<!-- PARAMETER DEFINITION: SdConsumedEventGroupAutoRequire -->
+													<ECUC-BOOLEAN-PARAM-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupAutoRequire</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">If existing and set to true, this EventGroup will be set to "required" on start.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00108</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <DEFAULT-VALUE>false</DEFAULT-VALUE>
+													</ECUC-BOOLEAN-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdConsumedEventGroupHandleId -->
+													<ECUC-INTEGER-PARAM-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupHandleId</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The HandleId by which the BswM can identify this EventGroup.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00116</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													   <WITH-AUTO>true</WITH-AUTO>
+													   <MAX>65535</MAX>
+													   <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdConsumedEventGroupId -->
+													<ECUC-INTEGER-PARAM-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupId</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The Eventgroup Id of this eventGroup as a unique identifier of the eventgroup in this service. This identifier is used for EventGroup entries as well.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00057</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <MAX>65534</MAX>
+													   <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+												 </PARAMETERS>
+												 <REFERENCES>
+													<!-- Reference Definition: SdConsumedEventGroupMulticastGroupRef -->
+													<ECUC-REFERENCE-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupMulticastGroupRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Reference to the SoAdSocketConnectionGroup representing the multicast data path (UDP).</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00119</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+													</ECUC-REFERENCE-DEF>
+													<!-- Reference Definition: SdConsumedEventGroupTimerRef -->
+													<ECUC-REFERENCE-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupTimerRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The reference of the SdClientTimer container for this eventGroup.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00107</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Sd/SdConfig/SdInstance/SdClientTimer</DESTINATION-REF>
+													</ECUC-REFERENCE-DEF>
+													<!-- Symbolic Name Reference Definition: SdConsumedEventGroupMulticastActivationRef -->
+													<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupMulticastActivationRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The reference of a Routing Group in order to activate and setup the Socket Connection for Multicast Events of this EventGroup. The multicast address from the received Multicast option is setup by SoAd_RequestIpAddrAssignment.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The local address is the same as for the unicast events; thus, it was sent in the UDP Endpoint option of the Subscribe EventGroup entry.</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00106</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+													</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													<!-- Symbolic Name Reference Definition: SdConsumedEventGroupTcpActivationRef -->
+													<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupTcpActivationRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The reference of the Routing Group for activation of the data path for receiving TCP events.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">This element is also being used for getting the IP address and port number for building the TCP endpoint option for the Subscribe EventGroup entry.
+
+																	If no TCP methods are used in the service, this element is also being used for setting the remote address (TCP Endpoint option referenced by the Offer Service entry) and opening the TCP connection to the server before sending the Subscribe EventGroup entry. If multiple EventGroups of the same Service Instance are subscribed the TCP connection will be shared and must be opened only once.</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00105</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+													</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													<!-- Symbolic Name Reference Definition: SdConsumedEventGroupUdpActivationRef -->
+													<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   <SHORT-NAME>SdConsumedEventGroupUdpActivationRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The reference of the Routing Group for activation of the data path for receiving UDP events.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">This element is also being used for getting the IP address and port number for building the UDP endpoint option for the Subscribe EventGroup entry.
+
+
+																	If no UDP methods are used in the service, this element is also being used for setting the remote address (UDP Endpoint option referenced by the Offer Service entry). If multiple EventGroups of the same Service Instance are subscribed the UDP Socket Connection will be shared and must be set only once.</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00104</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+													</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 </REFERENCES>
+												 <SUB-CONTAINERS>
+													<!-- Container Definition: SdClientCapabilityRecord -->
+													<ECUC-PARAM-CONF-CONTAINER-DEF>
+													   <SHORT-NAME>SdClientCapabilityRecord</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Sd uses capability records to store arbitrary name/value pairs conveying additional information about the named service.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The following use cases are supported:
+																	1) Key present, with no value (e.g. "passreq" -- password required for this service)
+
+																	2) Key present, with empty value (e.g. "PlugIns=" server supports plugins, but none are presently installed)
+
+																	3) Key present, with non-empty value (e.g. "PlugIns=JPEG,MPEG2,MPEG4")</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00072</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													   <PARAMETERS>
+														  <!-- PARAMETER DEFINITION: SdClientServiceCapabilityRecordKey -->
+														  <ECUC-STRING-PARAM-DEF>
+															 <SHORT-NAME>SdClientServiceCapabilityRecordKey</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Defines a CapabilityRecord key.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00073</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															 <ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+															 </ECUC-STRING-PARAM-DEF-VARIANTS>
+														  </ECUC-STRING-PARAM-DEF>
+														  <!-- PARAMETER DEFINITION: SdClientServiceCapabilityRecordValue -->
+														  <ECUC-STRING-PARAM-DEF>
+															 <SHORT-NAME>SdClientServiceCapabilityRecordValue</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Defines the corresponding CapabilityRecord value.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00074</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															 <ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+															 </ECUC-STRING-PARAM-DEF-VARIANTS>
+														  </ECUC-STRING-PARAM-DEF>
+													   </PARAMETERS>
+													</ECUC-PARAM-CONF-CONTAINER-DEF>
+												 </SUB-CONTAINERS>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											  <!-- Container Definition: SdConsumedMethods -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdConsumedMethods</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Container element for representing the data path for accessing the server methods.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00099</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <REFERENCES>
+													<!-- Symbolic Name Reference Definition: SdClientServiceActivationRef -->
+													<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   <SHORT-NAME>SdClientServiceActivationRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Reference to a SoAdRoutingGroupRef to activate/deactivate the data path for the methods.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00102</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+													</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 </REFERENCES>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+										   </SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdClientTimer -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdClientTimer</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies all timers used by the Service Discovery module for Client Services.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00043</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdClientTimerInitialFindDelayMax -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerInitialFindDelayMax</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Max value in [s] to delay randomly the transmission of a find message. This parameter is mandatory for ClientService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00063</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerInitialFindDelayMin -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerInitialFindDelayMin</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Min value in [s] to delay randomly the transmission of a find message. This parameter is mandatory for ClientService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00044</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerInitialFindRepetitionsBaseDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerInitialFindRepetitionsBaseDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The base delay in [s] for find repetitions. Successive finds have an exponential back off delay (1x base delay, 2x base delay, 4x base delay, ...). This parameter is mandatory for ClientService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00047</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerInitialFindRepetitionsMax -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerInitialFindRepetitionsMax</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Configuration for the maximum number of find repetitions. This parameter is mandatory for ClientService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00046</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>10</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerRequestResponseMaxDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerRequestResponseMaxDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Maximum allowable response delay to entries received by multicast in seconds. This parameter is mandatory for ConsumedEventGroups.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00036</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerRequestResponseMinDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerRequestResponseMinDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Minimum allowable response delay to the find message in seconds. This parameter is mandatory for ConsumedEventGroups.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00064</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdClientTimerTTL -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdClientTimerTTL</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Time to live for find and subscribe messages.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00075</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>16777215</MAX>
+												 <MIN>1</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdInstanceDemEventParameterRefs -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdInstanceDemEventParameterRefs</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00120</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										   <REFERENCES>
+											  <!-- Symbolic Name Reference Definition: SD_E_MALFORMED_MSG -->
+											  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 <SHORT-NAME>SD_E_MALFORMED_MSG</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the SD Instance received malformed messsage.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00121</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+											  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											  <!-- Symbolic Name Reference Definition: SD_E_OUT_OF_RES -->
+											  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 <SHORT-NAME>SD_E_OUT_OF_RES</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the DemEventParameter which shall be issued when the SD Instance does not have enough resources to handle client.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00122</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+											  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+											  <!-- Symbolic Name Reference Definition: SD_E_SUBSCR_NACK_RECV -->
+											  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 <SHORT-NAME>SD_E_SUBSCR_NACK_RECV</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the DemEventParameter which shall be issued when receiving SubscribeEventgroupNack entry.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00123</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+											  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+										   </REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdInstanceMulticastRxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdInstanceMulticastRxPdu</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies the received PDU.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00081</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdRxPduId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdRxPduId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">ID of the PDU that will be received via the API Sd_SoAdIfRxIndication().</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00028</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <WITH-AUTO>true</WITH-AUTO>
+												 <MAX>65535</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										   <REFERENCES>
+											  <!-- Reference Definition: SdRxPduRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdRxPduRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00029</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+										   </REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdInstanceTxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdInstanceTxPdu</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies the transmitted PDU.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00030</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										   <REFERENCES>
+											  <!-- Reference Definition: SdTxPduRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdTxPduRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00109</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+										   </REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdInstanceUnicastRxPdu -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdInstanceUnicastRxPdu</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies the received PDU.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00027</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdRxPduId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdRxPduId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">ID of the PDU that will be received via the API Sd_SoAdIfRxIndication().</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00082</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <WITH-AUTO>true</WITH-AUTO>
+												 <MAX>65535</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										   <REFERENCES>
+											  <!-- Reference Definition: SdRxPduRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdRxPduRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to the "global" Pdu structure to allow harmonization of handle IDs in the COM-Stack.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00083</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+										   </REFERENCES>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdServerService -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdServerService</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies all parameters used by Server services.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00004</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdServerServiceAutoAvailable -->
+											  <ECUC-BOOLEAN-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceAutoAvailable</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">If existing and set to true, this Service will be set to "Available" on start.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SoAd_00085</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+											  </ECUC-BOOLEAN-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerServiceHandleId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceHandleId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The HandleId by which the BswM can identify this Server Service Instance.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00110</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+												 <WITH-AUTO>true</WITH-AUTO>
+												 <MAX>65535</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerServiceId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Id to identify the service. This is unique for the service interface.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00009</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>65534</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerServiceInstanceId -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceInstanceId</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Configuration parameter to specify Instance Id of the Service implemented by the Server Service.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00011</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>65534</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerServiceMajorVersion -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceMajorVersion</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Major version number of the Service as used in SD Entries.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00068</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>254</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerServiceMinorVersion -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerServiceMinorVersion</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Minor version number of the Service as used e.g. in Offer Service entries.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00069</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>4294967294</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										   <REFERENCES>
+											  <!-- Reference Definition: SdServerServiceTcpRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdServerServiceTcpRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to SoAdSocketConnectionGroup used for methods.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">This is used to access the local IP address and port for building the endpoint option for offers of this service.</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00088</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+											  <!-- Reference Definition: SdServerServiceTimerRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdServerServiceTimerRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The reference of the SdServerTimer container for this service.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00086</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Sd/SdConfig/SdInstance/SdServerTimer</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+											  <!-- Reference Definition: SdServerServiceUdpRef -->
+											  <ECUC-REFERENCE-DEF>
+												 <SHORT-NAME>SdServerServiceUdpRef</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Reference to SoAdSocketConnectionGroup used for methods.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">This is used to access the local IP address and port for building the endpoint option for offers of this service.</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00089</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup</DESTINATION-REF>
+											  </ECUC-REFERENCE-DEF>
+										   </REFERENCES>
+										   <SUB-CONTAINERS>
+											  <!-- Container Definition: SdEventHandler -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdEventHandler</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Container Element for representing an EventGroup as part of the Service Instance.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00055</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+												 <PARAMETERS>
+													<!-- PARAMETER DEFINITION: SdEventHandlerEventGroupId -->
+													<ECUC-INTEGER-PARAM-DEF>
+													   <SHORT-NAME>SdEventHandlerEventGroupId</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The EventGroup Id of this EventGroup as a unique identifier of the EventGroup in this service. This identifier is used for EventGroup entries as well.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00061</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <MAX>65534</MAX>
+													   <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdEventHandlerHandleId -->
+													<ECUC-INTEGER-PARAM-DEF>
+													   <SHORT-NAME>SdEventHandlerHandleId</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The HandleId by which the BswM can identify this EventGroup.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00112</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>ECU</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+													   <WITH-AUTO>true</WITH-AUTO>
+													   <MAX>65535</MAX>
+													   <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdEventHandlerMulticastThreshold -->
+													<ECUC-INTEGER-PARAM-DEF>
+													   <SHORT-NAME>SdEventHandlerMulticastThreshold</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Specifies the number of subscribed clients that trigger the Server to change the transmission of events to Multicast. 
+                                                                 If configured to 0 only unicast will be used.
+                                                                 If configured to 1 the first client will be already served by multicast.
+                                                                 If configured to 2 the first client will be served with unicast and as soon as the second client arrives both will be served by multicast.
+
+                                                                    This does not influence the handling of initial events, which are served using unicast only.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">If configured to 0 only unicast will be used.
+																	If configured to 1 the first client will be already served by multicast.
+																	If configured to 2 the first client will be served with unicast and as soon as the second client arrives both will be served by multicast.
+
+																	This does not influence the handling of initial events, which are served using unicast only.</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00097</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <MAX>65535</MAX>
+													   <MIN>0</MIN>
+													</ECUC-INTEGER-PARAM-DEF>
+												 </PARAMETERS>
+												 <REFERENCES>
+													<!-- Reference Definition: SdEventHandlerTimerRef -->
+													<ECUC-REFERENCE-DEF>
+													   <SHORT-NAME>SdEventHandlerTimerRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The reference of the SdServerTimer container for this EventGroup.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00113</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Sd/SdConfig/SdInstance/SdServerTimer</DESTINATION-REF>
+													</ECUC-REFERENCE-DEF>
+												 </REFERENCES>
+												 <SUB-CONTAINERS>
+													<!-- Container Definition: SdEventHandlerMulticast -->
+													<ECUC-PARAM-CONF-CONTAINER-DEF>
+													   <SHORT-NAME>SdEventHandlerMulticast</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The subcontainer including the Routing Group for Activation of Events sent over Multicast.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The activation ref is also being used for identification of the related Socket Connection in order to find the Multicast Address used in the Multicast Option referenced by the Subscribe EventGroup Ack entry.</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00094</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <REFERENCES>
+														  <!-- Symbolic Name Reference Definition: SdEventActivationRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdEventActivationRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to a SoAdRoutingGroup for activation of the data path for a subscribed client (start sending events after subscribe).</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00096</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														  <!-- Symbolic Name Reference Definition: SdMulticastEventSoConRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdMulticastEventSoConRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to the SoAdSocketConnection representing the multicast data path (UDP).</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00118</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdSocketConnectionGroup/SoAdSocketConnection</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   </REFERENCES>
+													</ECUC-PARAM-CONF-CONTAINER-DEF>
+													<!-- Container Definition: SdEventHandlerTcp -->
+													<ECUC-PARAM-CONF-CONTAINER-DEF>
+													   <SHORT-NAME>SdEventHandlerTcp</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The subcontainer including the Routing Groups for Activation and Trigger Transmit for Events sent over TCP.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The activation ref (or triggering ref if no activation ref exists) is also being used for identification of the related socket connections in order to find the related client by iterating the SdEventHandlerTcp elements (remote address statically configured or automatically set by opening TCP connection before subscription).</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00093</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <REFERENCES>
+														  <!-- Symbolic Name Reference Definition: SdEventActivationRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdEventActivationRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to a SoAdRoutingGroup for activation of the data path for a subscribed client (start sending events after subscribe).</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00096</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														  <!-- Symbolic Name Reference Definition: SdEventTriggeringRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdEventTriggeringRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to a SoAdRoutingGroup that is used for triggered transmit. Triggering is needed to sent out initial events on the server side after a client got subscribed.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00095</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   </REFERENCES>
+													</ECUC-PARAM-CONF-CONTAINER-DEF>
+													<!-- Container Definition: SdEventHandlerUdp -->
+													<ECUC-PARAM-CONF-CONTAINER-DEF>
+													   <SHORT-NAME>SdEventHandlerUdp</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">The subcontainer including the Routing Groups for Activation and Trigger Transmit for Events sent over UDP.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The activation ref (or triggering ref if no activation ref exists) is also being used for identification of the related socket connections in order to set the remote address of the client or find the related client by iterating the SdEventHandlerUdp elements (remote address statically configured or automatically set by method call before subscription).</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00092</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <REFERENCES>
+														  <!-- Symbolic Name Reference Definition: SdEventActivationRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdEventActivationRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to a SoAdRoutingGroup for activation of the data path for a subscribed client (start sending events after subscribe).</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00096</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+														  <!-- Symbolic Name Reference Definition: SdEventTriggeringRef -->
+														  <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+															 <SHORT-NAME>SdEventTriggeringRef</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Reference to a SoAdRoutingGroup that is used for triggered transmit. Triggering is needed to sent out initial events on the server side after a client got subscribed.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00095</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+														  </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   </REFERENCES>
+													</ECUC-PARAM-CONF-CONTAINER-DEF>
+													<!-- Container Definition: SdServerCapabilityRecord -->
+													<ECUC-PARAM-CONF-CONTAINER-DEF>
+													   <SHORT-NAME>SdServerCapabilityRecord</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Sd uses capability records to store arbitrary name/value pairs conveying additional information about the named service.</L-2>
+													   </DESC>
+													   <INTRODUCTION>
+														  <P>
+															 <L-1 L="EN">The following use cases are supported:
+																	1) Key present, with no value (e.g. "passreq" -- password required for this service)
+
+																	2) Key present, with empty value (e.g. "PlugIns=" server supports plugins, but none are presently installed)
+
+																	3) Key present, with non-empty value (e.g. "PlugIns=JPEG,MPEG2,MPEG4")</L-1>
+														  </P>
+													   </INTRODUCTION>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00032</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+													   <PARAMETERS>
+														  <!-- PARAMETER DEFINITION: SdServerCapabilityRecordKey -->
+														  <ECUC-STRING-PARAM-DEF>
+															 <SHORT-NAME>SdServerCapabilityRecordKey</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Defines a CapabilityRecord key.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00033</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															 <ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+															 </ECUC-STRING-PARAM-DEF-VARIANTS>
+														  </ECUC-STRING-PARAM-DEF>
+														  <!-- PARAMETER DEFINITION: SdServerCapabilityRecordValue -->
+														  <ECUC-STRING-PARAM-DEF>
+															 <SHORT-NAME>SdServerCapabilityRecordValue</SHORT-NAME>
+															 <DESC>
+																<L-2 L="EN">Defines the corresponding CapabilityRecord value.</L-2>
+															 </DESC>
+															 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00034</RELATED-TRACE-ITEM-REF>
+															 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+															 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+															 <SCOPE>LOCAL</SCOPE>
+															 <MULTIPLICITY-CONFIG-CLASSES>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 </MULTIPLICITY-CONFIG-CLASSES>
+															 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+															 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+															 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+															 <VALUE-CONFIG-CLASSES>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+																<ECUC-VALUE-CONFIGURATION-CLASS>
+																   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+																   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+																</ECUC-VALUE-CONFIGURATION-CLASS>
+															 </VALUE-CONFIG-CLASSES>
+															 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+															 <ECUC-STRING-PARAM-DEF-VARIANTS>
+																<ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+															 </ECUC-STRING-PARAM-DEF-VARIANTS>
+														  </ECUC-STRING-PARAM-DEF>
+													   </PARAMETERS>
+													</ECUC-PARAM-CONF-CONTAINER-DEF>
+												 </SUB-CONTAINERS>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											  <!-- Container Definition: SdProvidedMethods -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdProvidedMethods</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Container element for representing the needed elements of the data path for the methods provided by the service.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00087</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <REFERENCES>
+													<!-- Symbolic Name Reference Definition: SdServerServiceActivationRef -->
+													<ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+													   <SHORT-NAME>SdServerServiceActivationRef</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Reference to a SoAdRoutingGroup to activated and deactivate the data path for methods of the service.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00090</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>ECU</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>LINK</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/SoAd/SoAdConfig/SoAdRoutingGroup</DESTINATION-REF>
+													</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+												 </REFERENCES>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+											  <!-- Container Definition: SdServerCapabilityRecord -->
+											  <ECUC-PARAM-CONF-CONTAINER-DEF>
+												 <SHORT-NAME>SdServerCapabilityRecord</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Sd uses capability records to store arbitrary name/value pairs conveying additional information about the named service.</L-2>
+												 </DESC>
+												 <INTRODUCTION>
+													<P>
+													   <L-1 L="EN">The following use cases are supported:
+															1) Key present, with no value (e.g. "passreq" -- password required for this service)
+
+															2) Key present, with empty value (e.g. "PlugIns=" server supports plugins, but none are presently installed)
+
+															3) Key present, with non-empty value (e.g. "PlugIns=JPEG,MPEG2,MPEG4")</L-1>
+													</P>
+												 </INTRODUCTION>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00032</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+												 <PARAMETERS>
+													<!-- PARAMETER DEFINITION: SdServerCapabilityRecordKey -->
+													<ECUC-STRING-PARAM-DEF>
+													   <SHORT-NAME>SdServerCapabilityRecordKey</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Defines a CapabilityRecord key.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00033</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <ECUC-STRING-PARAM-DEF-VARIANTS>
+														  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+													   </ECUC-STRING-PARAM-DEF-VARIANTS>
+													</ECUC-STRING-PARAM-DEF>
+													<!-- PARAMETER DEFINITION: SdServerCapabilityRecordValue -->
+													<ECUC-STRING-PARAM-DEF>
+													   <SHORT-NAME>SdServerCapabilityRecordValue</SHORT-NAME>
+													   <DESC>
+														  <L-2 L="EN">Defines the corresponding CapabilityRecord value.</L-2>
+													   </DESC>
+													   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00034</RELATED-TRACE-ITEM-REF>
+													   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													   <SCOPE>LOCAL</SCOPE>
+													   <MULTIPLICITY-CONFIG-CLASSES>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+														  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   </MULTIPLICITY-CONFIG-CLASSES>
+													   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+													   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+													   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+													   <VALUE-CONFIG-CLASSES>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+														  <ECUC-VALUE-CONFIGURATION-CLASS>
+															 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														  </ECUC-VALUE-CONFIGURATION-CLASS>
+													   </VALUE-CONFIG-CLASSES>
+													   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+													   <ECUC-STRING-PARAM-DEF-VARIANTS>
+														  <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+													   </ECUC-STRING-PARAM-DEF-VARIANTS>
+													</ECUC-STRING-PARAM-DEF>
+												 </PARAMETERS>
+											  </ECUC-PARAM-CONF-CONTAINER-DEF>
+										   </SUB-CONTAINERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+										<!-- Container Definition: SdServerTimer -->
+										<ECUC-PARAM-CONF-CONTAINER-DEF>
+										   <SHORT-NAME>SdServerTimer</SHORT-NAME>
+										   <DESC>
+											  <L-2 L="EN">This container specifies all timers used by the Service Discovery module for Server Services.</L-2>
+										   </DESC>
+										   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00035</RELATED-TRACE-ITEM-REF>
+										   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										   <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+										   <PARAMETERS>
+											  <!-- PARAMETER DEFINITION: SdServerTimerInitialOfferDelayMax -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerInitialOfferDelayMax</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Max value in [s] to delay randomly the first offer. This parameter is mandatory for ServerService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00039</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerInitialOfferDelayMin -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerInitialOfferDelayMin</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Min value in [s] to delay randomly the first offer. This parameter is mandatory for ServerService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00038</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerInitialOfferRepetitionBaseDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerInitialOfferRepetitionBaseDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">The base delay in [s] for offer repetitions. Successive offers have an exponential back off delay (1x base delay, 2x base delay, 4x base delay, ...). This parameter is mandatory for ServerService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00041</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerInitialOfferRepetitionsMax -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerInitialOfferRepetitionsMax</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Configure the maximum amount of offer repetition. This parameter is mandatory for ServerService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00040</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>10</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerOfferCyclicDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerOfferCyclicDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Interval between cyclic offers in the main phase. This parameter is mandatory for ServerService.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00076</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>LOCAL</SCOPE>
+												 <MULTIPLICITY-CONFIG-CLASSES>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+												 </MULTIPLICITY-CONFIG-CLASSES>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerRequestResponseMaxDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerRequestResponseMaxDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Maximum allowable response delay to entries received by multicast in seconds.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00114</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerRequestResponseMinDelay -->
+											  <ECUC-FLOAT-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerRequestResponseMinDelay</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Minimum allowable response delay to entries received by multicast in seconds.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00115</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>Inf</MAX>
+												 <MIN>0</MIN>
+											  </ECUC-FLOAT-PARAM-DEF>
+											  <!-- PARAMETER DEFINITION: SdServerTimerTTL -->
+											  <ECUC-INTEGER-PARAM-DEF>
+												 <SHORT-NAME>SdServerTimerTTL</SHORT-NAME>
+												 <DESC>
+													<L-2 L="EN">Time to live for offer service.</L-2>
+												 </DESC>
+												 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00037</RELATED-TRACE-ITEM-REF>
+												 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+												 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+												 <SCOPE>ECU</SCOPE>
+												 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+												 <VALUE-CONFIG-CLASSES>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>LINK</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>POST-BUILD</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+													<ECUC-VALUE-CONFIGURATION-CLASS>
+													   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+													</ECUC-VALUE-CONFIGURATION-CLASS>
+												 </VALUE-CONFIG-CLASSES>
+												 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+												 <MAX>16777215</MAX>
+												 <MIN>1</MIN>
+											  </ECUC-INTEGER-PARAM-DEF>
+										   </PARAMETERS>
+										</ECUC-PARAM-CONF-CONTAINER-DEF>
+									 </SUB-CONTAINERS>
+								  </ECUC-PARAM-CONF-CONTAINER-DEF>
+							   </SUB-CONTAINERS>
+							</ECUC-PARAM-CONF-CONTAINER-DEF>
+							<!-- Container Definition: SdGeneral -->
+							<ECUC-PARAM-CONF-CONTAINER-DEF>
+							   <SHORT-NAME>SdGeneral</SHORT-NAME>
+							   <DESC>
+								  <L-2 L="EN">This container lists the general configuration parameters for the Service Discovery module.</L-2>
+							   </DESC>
+							   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00002</RELATED-TRACE-ITEM-REF>
+							   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+							   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+							   <PARAMETERS>
+								  <!-- PARAMETER DEFINITION: SdDevErrorDetect -->
+								  <ECUC-BOOLEAN-PARAM-DEF>
+									 <SHORT-NAME>SdDevErrorDetect</SHORT-NAME>
+									 <DESC>
+										<L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+									 </DESC>
+									 <INTRODUCTION>
+										<P>
+										   <L-1 L="EN">* true: enabled (ON).
+											* false: disabled (OFF).</L-1>
+										</P>
+									 </INTRODUCTION>
+									 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00006</RELATED-TRACE-ITEM-REF>
+									 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									 <SCOPE>LOCAL</SCOPE>
+									 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+									 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								  </ECUC-BOOLEAN-PARAM-DEF>
+								  <!-- PARAMETER DEFINITION: SdMainFunctionCycleTime -->
+								  <ECUC-FLOAT-PARAM-DEF>
+									 <SHORT-NAME>SdMainFunctionCycleTime</SHORT-NAME>
+									 <DESC>
+										<L-2 L="EN">This parameter defines the cycle time in seconds of the periodic calling of Sd main function.</L-2>
+									 </DESC>
+									 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00008</RELATED-TRACE-ITEM-REF>
+									 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									 <SCOPE>LOCAL</SCOPE>
+									 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+									 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									 <MAX>1</MAX>
+									 <MIN>1E-4</MIN>
+								  </ECUC-FLOAT-PARAM-DEF>
+								  <!-- PARAMETER DEFINITION: SdVersionInfoApi -->
+								  <ECUC-BOOLEAN-PARAM-DEF>
+									 <SHORT-NAME>SdVersionInfoApi</SHORT-NAME>
+									 <DESC>
+										<L-2 L="EN">Enables and disables the version info API.</L-2>
+									 </DESC>
+									 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_SD_00007</RELATED-TRACE-ITEM-REF>
+									 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+									 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									 <SCOPE>LOCAL</SCOPE>
+									 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+									 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+									 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+								  </ECUC-BOOLEAN-PARAM-DEF>
+								  <!-- PARAMETER DEFINITION: SdIgnoreRetCodeMask -->
+								<ECUC-INTEGER-PARAM-DEF>
+									<SHORT-NAME>SdIgnoreRetCodeMask</SHORT-NAME>
+									<DESC>
+										<L-2 L="EN">RB (Vendor06) specific parameter: Ignore Return Code Mask, if this parameter is configured then the value configured describes which bits of the Return Code to be ignored. The  bits which are set to 0 will be ignored.For example, if the value is 0x00 then all the bits of return code are ignored. If it is 0xFF, then none of the bits are ignored. If it is 0x03, then MSB 6 bits are ignored.</L-2>
+									</DESC>
+									<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									<SCOPE>LOCAL</SCOPE>
+									<ORIGIN>RB:AR42.1.4.0:2016-10-25</ORIGIN>
+									<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									<VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										<CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									</VALUE-CONFIG-CLASSES>
+									<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									<MAX>255</MAX>
+									<MIN>0</MIN>
+								</ECUC-INTEGER-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: SdEnableConsistencyCheckOptions -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                            <SHORT-NAME>SdEnableConsistencyCheckOptions</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">RB (Vendor06) specific parameter: Enables (TRUE) or Disables (FALSE) the function to perform the consistency check on the received endpoint options IP.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <SCOPE>LOCAL</SCOPE>
+                                            <ORIGIN>RB:AR42.0.3.0:2016-03-25</ORIGIN>
+					    				 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: SdEnableClient -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                            <SHORT-NAME>SdEnableClient</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">RB (Vendor06) specific parameter: Enables (TRUE) or Disables (FALSE) the Client functionality.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <SCOPE>LOCAL</SCOPE>
+                                            <ORIGIN>RB:AR42.0.3.0:2016-03-25</ORIGIN>
+					                 		 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: SdEnableServer -->
+                                        <ECUC-BOOLEAN-PARAM-DEF>
+                                            <SHORT-NAME>SdEnableServer</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">RB (Vendor06) specific parameter: Enables (TRUE) or Disables (FALSE) the Server functionality.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <SCOPE>LOCAL</SCOPE>
+                                            <ORIGIN>RB:AR42.0.3.0:2016-03-25</ORIGIN>
+					    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+									 <VALUE-CONFIG-CLASSES>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+										<ECUC-VALUE-CONFIGURATION-CLASS>
+										   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-VALUE-CONFIGURATION-CLASS>
+									 </VALUE-CONFIG-CLASSES>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        <!-- PARAMETER DEFINITION: SdMaxRxOptions -->
+		                                <ECUC-INTEGER-PARAM-DEF>
+		                                    <SHORT-NAME>SdMaxRxOptions</SHORT-NAME>
+		                                    <DESC>
+		                                        <L-2 L="EN">RB (Vendor06) specific parameter: This parameter is to configure the Maximum number of Endpoint Options Module can process when Sd_RxIndication API is called from Lower Layer.</L-2>
+		                                    </DESC>
+		                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+		                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+		                                    <SCOPE>LOCAL</SCOPE>
+		                                    <ORIGIN>RB:AR42.3.2.0:2017-08-10</ORIGIN>
+		                                    <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+		                                    <VALUE-CONFIG-CLASSES>
+		                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+		                                        <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+		                                        <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+		                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+		                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+		                                        <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+		                                        <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+		                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+		                                        <ECUC-VALUE-CONFIGURATION-CLASS>
+		                                        <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+		                                        <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+		                                        </ECUC-VALUE-CONFIGURATION-CLASS>
+		                                    </VALUE-CONFIG-CLASSES>
+		                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                    <DEFAULT-VALUE>2</DEFAULT-VALUE>
+		                                    <MAX>255</MAX>
+		                                    <MIN>1</MIN>
+		                                </ECUC-INTEGER-PARAM-DEF>
+                                    </PARAMETERS>
+                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                            </CONTAINERS>
+                        </ECUC-MODULE-DEF>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>

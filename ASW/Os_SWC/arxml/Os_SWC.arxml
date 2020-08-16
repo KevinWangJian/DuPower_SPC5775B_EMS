@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Os_SWC</SHORT-NAME>
+      <ELEMENTS>
+        <APPLICATION-SW-COMPONENT-TYPE>
+          <SHORT-NAME>Os_SWC</SHORT-NAME>
+          <INTERNAL-BEHAVIORS>
+            <SWC-INTERNAL-BEHAVIOR UUID="502a8e44-b7eb-42f1-96b0-a3eea37c0b2d">
+              <SHORT-NAME>IB_Os_SWC</SHORT-NAME>
+              <EVENTS>
+                <TIMING-EVENT UUID="265362c4-c864-4172-a7ee-e5e5a31d26d4">
+                  <SHORT-NAME>TE_ASW_OsTask_1ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os_SWC/Os_SWC/IB_Os_SWC/RE_ASW_OsTask_1ms</START-ON-EVENT-REF>
+                  <PERIOD>0.001</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="33ca44d0-9823-4f80-99fc-812bc1afc28a">
+                  <SHORT-NAME>TE_ASW_OsTask_2ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os_SWC/Os_SWC/IB_Os_SWC/RE_ASW_OsTask_2ms</START-ON-EVENT-REF>
+                  <PERIOD>0.002</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="4aae4367-e681-4c39-8948-b762a354bcbd">
+                  <SHORT-NAME>TE_ASW_OsTask_5ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os_SWC/Os_SWC/IB_Os_SWC/RE_ASW_OsTask_5ms</START-ON-EVENT-REF>
+                  <PERIOD>0.005</PERIOD>
+                </TIMING-EVENT>
+                <TIMING-EVENT UUID="5f2e3075-f551-4538-b6e2-75e44a0f9106">
+                  <SHORT-NAME>TE_ASW_OsTask_10ms</SHORT-NAME>
+                  <START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/Os_SWC/Os_SWC/IB_Os_SWC/RE_ASW_OsTask_10ms</START-ON-EVENT-REF>
+                  <PERIOD>0.01</PERIOD>
+                </TIMING-EVENT>
+              </EVENTS>
+              <RUNNABLES>
+                <RUNNABLE-ENTITY UUID="5de14729-e499-4867-ace0-5c7db19bcf34">
+                  <SHORT-NAME>RE_ASW_OsTask_1ms</SHORT-NAME>
+                  <SYMBOL>RE_ASW_OsTask_1ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="fe498223-65a3-4305-9539-0edf12713f9f">
+                  <SHORT-NAME>RE_ASW_OsTask_2ms</SHORT-NAME>
+                  <SYMBOL>RE_ASW_OsTask_2ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="f9a33e4f-0e00-41de-b2c8-977512b32136">
+                  <SHORT-NAME>RE_ASW_OsTask_5ms</SHORT-NAME>
+                  <SYMBOL>RE_ASW_OsTask_5ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+                <RUNNABLE-ENTITY UUID="dcca8048-32b9-4d75-b30d-7d3fcc489d2e">
+                  <SHORT-NAME>RE_ASW_OsTask_10ms</SHORT-NAME>
+                  <SYMBOL>RE_ASW_OsTask_10ms</SYMBOL>
+                </RUNNABLE-ENTITY>
+              </RUNNABLES>
+            </SWC-INTERNAL-BEHAVIOR>
+          </INTERNAL-BEHAVIORS>
+        </APPLICATION-SW-COMPONENT-TYPE>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

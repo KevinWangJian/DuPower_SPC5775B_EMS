@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+   <ADMIN-DATA>
+      <DOC-REVISIONS>
+         <DOC-REVISION>
+            <REVISION-LABEL>4.2.2</REVISION-LABEL>
+            <ISSUED-BY>AUTOSAR</ISSUED-BY>
+            <DATE>2014-10-31</DATE>
+         </DOC-REVISION>
+      </DOC-REVISIONS>
+   </ADMIN-DATA>
+   <AR-PACKAGES>
+      <!-- AR-Package: AUTOSAR -->
+      <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_ComM</SHORT-NAME>
+         <AR-PACKAGES>
+            <!-- AR-Package: AUTOSAR -->
+            <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+               <ELEMENTS>
+                  <ECUC-DEFINITION-COLLECTION>
+                     <SHORT-NAME>AUTOSARParameterDefinition</SHORT-NAME>
+                     <MODULE-REFS>
+                        <MODULE-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/ComM</MODULE-REF>
+                     </MODULE-REFS>
+                  </ECUC-DEFINITION-COLLECTION>
+                  <!-- Module Definition: ComM -->
+					<ECUC-MODULE-DEF>
+                     <SHORT-NAME>ComM</SHORT-NAME>
+                     <LONG-NAME>
+                     <L-4 L="EN">Communication Manager Module</L-4>
+                       </LONG-NAME>
+                     <DESC>
+                        <L-2 L="EN">Configuration of the ComM (Communications Manager) module(with vendor specific enhancements of RB).</L-2>
+                     </DESC>
+                     <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                     <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                           <DOC-REVISION>
+                              <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                              <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                              <DATE>2014-10-31</DATE>
+                           </DOC-REVISION>
+							<DOC-REVISION>
+							<REVISION-LABEL>1.0.0</REVISION-LABEL>
+							<ISSUED-BY>RB</ISSUED-BY>
+							<DATE>2016-08-29</DATE>
+                           </DOC-REVISION>
+                        </DOC-REVISIONS>
+                     </ADMIN-DATA>
+                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT> 
+						<REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/ComM</REFINED-MODULE-DEF-REF> 
+                     	<SUPPORTED-CONFIG-VARIANTS>                        
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                     </SUPPORTED-CONFIG-VARIANTS>                     
+                     <CONTAINERS>
+                        <!-- Container Definition: ComMConfigSet -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>ComMConfigSet</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container contains the configuration parameters and sub containers of the AUTOSAR ComM module.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00879</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: ComMPncEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMPncEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Defines whether in this configuration set the partial networking is enabled.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00878</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>ECU</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                           <SUB-CONTAINERS>
+                              <!-- Container Definition: ComMChannel -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>ComMChannel</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration (parameters) of the bus channel(s). The channel parameters shall be harmonized within the whole communication stack.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00565</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>256</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: ComMBusType -->
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                       <SHORT-NAME>ComMBusType</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Identifies the bus type of the channel.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00567</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <LITERALS>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_CAN</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_CDD</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_ETH</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_FR</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_INTERNAL</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_BUS_TYPE_LIN</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                       </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMCDDBusPrefix -->
+                                    <ECUC-STRING-PARAM-DEF>
+                                       <SHORT-NAME>ComMCDDBusPrefix</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Prefix to be used for API calls to CDD. This feature is not supported</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00888</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <ECUC-STRING-PARAM-DEF-VARIANTS>
+                                          <ECUC-STRING-PARAM-DEF-CONDITIONAL/>
+                                       </ECUC-STRING-PARAM-DEF-VARIANTS>
+                                    </ECUC-STRING-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMChannelId -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>ComMChannelId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Channel identification number of the corresponding channel.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00635</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>255</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMFullCommRequestNotificationEnabled -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>ComMFullCommRequestNotificationEnabled</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines if the optional SenderReceiver Port of Interface ComM_CurrentChannelRequest will be provided for this channel.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">True means enabled. False means disabled</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00787</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMMainFunctionPeriod -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>ComMMainFunctionPeriod</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies the period in seconds that the MainFunction has to be triggered with.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Comment: ComM scheduling shall be at least as fast as the communication stack and a schedule longer than 100ms makes no sense for communication.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00556</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>0.02</DEFAULT-VALUE>
+                                       <MAX>0.1</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMNoCom -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>ComMNoCom</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Not allowed to change state of ComM channel to COMM_SILENT_COMMUNICATION or COMM_FULL_COMMUNICATION.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">true: Enabled - Not allowed to switch to Communication Modes above.
+                                                false: Disabled - Allowed to switch Communication Modes above.
+
+                                                Shall be possible to change parameter during runtime with ComM API's.
+                                                ECU/All channels: ComM_LimitECUToNoComMode().
+                                                Separate channels: ComM_LimitChannelToNoComMode().</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00571</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMNoWakeUpInhibitionNvmStorage -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>ComMNoWakeUpInhibitionNvmStorage</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">If this parameter is set to "true", the NoWakeUp inhibition state of the channel shall be stored (in some implementation specific way) in the block pointed to by ComMGlobalNvmBlockDescriptor.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00789</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMNoWakeup -->
+                                    <ECUC-BOOLEAN-PARAM-DEF>
+                                       <SHORT-NAME>ComMNoWakeup</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Defines if an ECU is not allowed to wake-up the channel.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">true: Enabled (not allowed to wake-up))
+                                                false: Disabled
+
+                                                This is the default/init value of a runtime variable that can be changed during runtime using ComM_PreventWakeUp().</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00569</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: ComMPncGatewayType -->
+                                    <ECUC-ENUMERATION-PARAM-DEF>
+                                       <SHORT-NAME>ComMPncGatewayType</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Identifies the Partial Network Gateway behaviour of a ComMChannel.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00842</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                       <LITERALS>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_GATEWAY_TYPE_ACTIVE</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                          <ECUC-ENUMERATION-LITERAL-DEF>
+                                             <SHORT-NAME>COMM_GATEWAY_TYPE_PASSIVE</SHORT-NAME>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                          </ECUC-ENUMERATION-LITERAL-DEF>
+                                       </LITERALS>
+                                    </ECUC-ENUMERATION-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: ComMNetworkManagement -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>ComMNetworkManagement</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This container contains the configuration parameters of the networkmanagement.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00607</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: ComMNmLightTimeout -->
+                                          <ECUC-FLOAT-PARAM-DEF>
+                                             <SHORT-NAME>ComMNmLightTimeout</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Defines the timeout (in seconds) after COMM_FULL_COMMUNICATION sub-state COMM_FULL_COM_READY_SLEEP is left.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">The range shall be greater than 0.0 and less or equal to 255.0.</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00606</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <MULTIPLICITY-CONFIG-CLASSES>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             </MULTIPLICITY-CONFIG-CLASSES>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <DEFAULT-VALUE>10</DEFAULT-VALUE>
+                                             <MAX>255</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-FLOAT-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: ComMNmVariant -->
+                                          <ECUC-ENUMERATION-PARAM-DEF>
+                                             <SHORT-NAME>ComMNmVariant</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Defines the functionality of the networkmanagement.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">Shall be harmonized with NM configuration.</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00568</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <DEFAULT-VALUE>FULL</DEFAULT-VALUE>
+                                             <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>FULL</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>LIGHT</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>NONE</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>PASSIVE</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                             </LITERALS>
+                                          </ECUC-ENUMERATION-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: ComMPncNmRequest -->
+                                          <ECUC-BOOLEAN-PARAM-DEF>
+                                             <SHORT-NAME>ComMPncNmRequest</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">If this parameter equals true then every time a FULL Communication is requested due to a change in the PNC state machine to PNC_REQUESTED Nm shall be called using the API Nm_NetworkRequest.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00886</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                          </ECUC-BOOLEAN-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                    <!-- Container Definition: ComMUserPerChannel -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>ComMUserPerChannel</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This container contains a list of identifiers that are needed to refer to a user in the system which is linked to a channel.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00657</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                                       <REFERENCES>
+                                          <!-- Reference Definition: ComMUserChannel -->
+                                          <ECUC-REFERENCE-DEF>
+                                             <SHORT-NAME>ComMUserChannel</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Reference to the ComMUser that corresponds to this channel user.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">ImplementationType: COMM_UserHandleType</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00658</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMUser</DESTINATION-REF>
+                                          </ECUC-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: ComMPnc -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>ComMPnc</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the configuration of the partial network cluster (PNC).</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00843</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>56</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: ComMPncId -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>ComMPncId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Partial network cluster identification number.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00874</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>55</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+								    <!-- PARAMETER DEFINITION: ComMPncMainFunctionPeriod -->
+									<ECUC-FLOAT-PARAM-DEF >
+										<SHORT-NAME>ComMPncMainFunctionPeriod</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Specifies the period in seconds that the Partial network MainFunction has to be triggered with.</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>RB:2015-04-10</ORIGIN>
+										<SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+										<MAX>0.1</MAX>
+										<MIN>0.001</MIN>
+									</ECUC-FLOAT-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: ComMChannelPerPnc -->
+                                    <ECUC-REFERENCE-DEF>
+                                       <SHORT-NAME>ComMChannelPerPnc</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the ComMChannel that is required for this PNC.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">ImplementationType: NetworkHandleType</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00880</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>256</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+									<!-- Symbolic Name Reference Definition: ComMPncEthIfSwitchPortGroupRef -->
+                                    <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       <SHORT-NAME>ComMPncEthIfSwitchPortGroupRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the PortGroups that correspond to this PNC. Note: This is only for documentation.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF BASE="ArTrace" DEST="TRACEABLE">ECUC_ComM_00891</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>RB:2017-07-24</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>LINK</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EthIf/EthIfConfigSet/EthIfSwitchPortGroup</DESTINATION-REF>
+                                    </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                    <!-- Reference Definition: ComMUserPerPnc -->
+                                    <ECUC-REFERENCE-DEF>
+                                       <SHORT-NAME>ComMUserPerPnc</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Reference to the ComMUsers that correspond to this PNC.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">ImplementationType: COMM_UserHandleType</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00876</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>true</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMUser</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                 </REFERENCES>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: ComMPncComSignal -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       <SHORT-NAME>ComMPncComSignal</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Represents the PncComSignals which are used to communicate the EIRA and ERA status of this PNC.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00881</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: ComMPncComSignalDirection -->
+                                          <ECUC-ENUMERATION-PARAM-DEF>
+                                             <SHORT-NAME>ComMPncComSignalDirection</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Indicates the communication direction of this PncComSignal.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00885</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>RX</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>TX</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                             </LITERALS>
+                                          </ECUC-ENUMERATION-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: ComMPncComSignalKind -->
+                                          <ECUC-ENUMERATION-PARAM-DEF>
+                                             <SHORT-NAME>ComMPncComSignalKind</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Indicates whether this PncComSignal represents EIRA or ERA PNC information.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">This parameter ComMPncComSignalKind is optional and shall be ignored when ComMPncComSignalDirection equals TX.</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00883</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <MULTIPLICITY-CONFIG-CLASSES>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             </MULTIPLICITY-CONFIG-CLASSES>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>EIRA</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                                   <SHORT-NAME>ERA</SHORT-NAME>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                             </LITERALS>
+                                          </ECUC-ENUMERATION-PARAM-DEF>
+                                       </PARAMETERS>
+                                       <REFERENCES>
+                                          <!-- Reference Definition: ComMPncComSignalChannelRef -->
+                                          <ECUC-REFERENCE-DEF>
+                                             <SHORT-NAME>ComMPncComSignalChannelRef</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Reference to the ComMChannel which is used to determine whether this PncComSignal shall participate in the active or passive role (via the parameter ComMPncGatewayType of the ComMChannel).</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00884</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <MULTIPLICITY-CONFIG-CLASSES>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             </MULTIPLICITY-CONFIG-CLASSES>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/ComM/ComMConfigSet/ComMChannel</DESTINATION-REF>
+                                          </ECUC-REFERENCE-DEF>
+                                          <!-- Symbolic Name Reference Definition: ComMPncComSignalRef -->
+                                          <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                             <SHORT-NAME>ComMPncComSignalRef</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Reference to the ComSignal which is used to transport the partial network channel request information.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00882</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>ECU</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Com/ComConfig/ComSignal</DESTINATION-REF>
+                                          </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                       </REFERENCES>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: ComMUser -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 <SHORT-NAME>ComMUser</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains a list of identifiers that are needed to refer to a user in the system which is designated to request Communication modes.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00653</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>255</UPPER-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: ComMUserIdentifier -->
+                                    <ECUC-INTEGER-PARAM-DEF>
+                                       <SHORT-NAME>ComMUserIdentifier</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">An identifier that is needed to refer to a user in the system which is designated to request Communication Modes.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">ImplementationType: ComM_UserHandleType</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00654</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>254</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: ComMUserEcucPartitionRef -->
+                                    <ECUC-REFERENCE-DEF>
+                                       <SHORT-NAME>ComMUserEcucPartitionRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Denotes in which "EcucPartition" the requester is executed. When the partition is stopped, the communication request shall be cancelled in the ComM. This feature is not supported</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">to avoid a stay-awake situation of the bus due to a stopped partition.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00786</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: ComMGeneral -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                           <SHORT-NAME>ComMGeneral</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">General configuration parameters of the Communication Manager.</L-2>
+                           </DESC>
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00554</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: ComMDevErrorDetect -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMDevErrorDetect</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00555</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+			       <!-- PARAMETER DEFINITION: ComMRteEnabled -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>ComMRteEnabled</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Enables or disables support of RTE.False: RTE is disabled.
+                                                True: RTE is enabled.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <IMPLEMENTATION-CONFIG-CLASSES>
+                                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                    <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                    <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                    <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                            </IMPLEMENTATION-CONFIG-CLASSES>
+                                            <ORIGIN>RB:2015-04-10</ORIGIN>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMDirectUserMapping -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMDirectUserMapping</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If this parameter is set to true the configuration tool shall automatically create a ComMUser per ComMPnc and a ComMUser per ComMChannel.This feature is not supported</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">The shortName of the generated ComMUsers shall follow the following naming convention:
+                                        PNCUser_ComMPncId, e.g. PNCUser_13
+                                        ChannelUser_ComMChannelId, e.g. ChannelUser_25
+
+                                        Restriction: ComMUser, which are created due to this configuration parameter, shall not be used by SWCs (only available for BswM).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00840</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMEcuGroupClassification -->
+                              <ECUC-INTEGER-PARAM-DEF>
+                                 <SHORT-NAME>ComMEcuGroupClassification</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Defines whether a mode inhibition affects the ECU or not.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">Examples:
+
+                                        000: No mode inhibition can be activated
+
+                                        001: Wake up inhibition can be enabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00563</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>3</DEFAULT-VALUE>
+                                 <MAX>255</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMModeLimitationEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMModeLimitationEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">true if mode limitation functionality shall be enabled.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00560</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMNmPassiveModeEnable -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMNmPassiveModeEnable</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables support of Passive Mode.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00889</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMPncGatewayEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMPncGatewayEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables or disables support of Partial Network Gateway.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">False: Partial Networking Gateway is disabled
+                                        True: Partial Networking Gateway is enabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00887</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMPncPrepareSleepTimer -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>ComMPncPrepareSleepTimer</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Time in seconds the PNC state machine shall wait in PNC_PREPARE_SLEEP.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00841</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>63</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMPncSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMPncSupport</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables or disables support of partial networking.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">False: Partial Networking is disabled
+                                        True: Partial Networking is enabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00839</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMResetAfterForcingNoComm -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMResetAfterForcingNoComm</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">ComM shall perform a reset after entering "No Communication" mode because of an active mode limitation to "No Communication" mode.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00558</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMSynchronousWakeUp -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMSynchronousWakeUp</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Wake up of one channel shall lead to a wake up of all channels if true.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00695</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMTMinFullComModeDuration -->
+                              <ECUC-FLOAT-PARAM-DEF>
+                                 <SHORT-NAME>ComMTMinFullComModeDuration</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Minimum time duration in seconds, spent in the COMM_FULL_COMMUNICATION sub-state COMM_FULL_COM_NETWORK_REQUESTED.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00557</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>5</DEFAULT-VALUE>
+                                 <MAX>65</MAX>
+                                 <MIN>0.001</MIN>
+                              </ECUC-FLOAT-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMVersionInfoApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMVersionInfoApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the possibility to read the published information with the service ComM_GetPublishedInformation().</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00622</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: ComMWakeupInhibitionEnabled -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>ComMWakeupInhibitionEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">true if wake up inhibition functionality enabled.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">true: Enabled
+                                        false: Disabled</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00559</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                           <REFERENCES>
+                              <!-- Symbolic Name Reference Definition: ComMGlobalNvMBlockDescriptor -->
+                              <ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                                 <SHORT-NAME>ComMGlobalNvMBlockDescriptor</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Reference to NVRAM block containing the none volatile data. If this parameter is not configured it means that no NVRam is used at all.This feature is not supported</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00783</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>ECU</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/NvM/NvMBlockDescriptor</DESTINATION-REF>
+                              </ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+                           </REFERENCES>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                     </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+               </ELEMENTS>
+            </AR-PACKAGE>
+         </AR-PACKAGES>
+      </AR-PACKAGE>
+   </AR-PACKAGES>
+</AUTOSAR>

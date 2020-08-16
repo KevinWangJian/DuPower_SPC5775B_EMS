@@ -1,0 +1,1817 @@
+<?xml version='1.0'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Mcu</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>Mcu</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/TS_T2D41M10I1R0/Mcu</DEFINITION-REF>
+          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-POST-BUILD</IMPLEMENTATION-CONFIG-VARIANT>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>CommonPublishedInformation</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/ArReleaseMajorVersion</DEFINITION-REF>
+                  <VALUE>4</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/ArReleaseMinorVersion</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/ArReleaseRevisionVersion</DEFINITION-REF>
+                  <VALUE>3</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/ModuleId</DEFINITION-REF>
+                  <VALUE>101</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/SwMajorVersion</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/SwMinorVersion</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/SwPatchVersion</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/VendorApiInfix</DEFINITION-REF>
+                  <VALUE></VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/CommonPublishedInformation/VendorId</DEFINITION-REF>
+                  <VALUE>43</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>McuDebugConfiguration</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuDisableCmuApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuDisableDemReportErrorStatus</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuEmiosConfigureGprenApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuGetMidrStructureApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuGetPeriphStateApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuGetPowerDomainApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuGetPowerModeStatetApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuGetSystemStatetApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuSscmGetMemConfigApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuSscmGetStatusApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuDebugConfiguration/McuSscmGetUopsApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>McuEMIOSConfiguration</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuEMIOSConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuEMIOSConfiguration/McuEMIOSControl</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>McuGeneralConfiguration</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuCalloutBeforePerformReset</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuDevErrorDetect</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuEnableUserModeSupport</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuEnterLowPowerMode</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuGetRamStateApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuInitClock</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuNoPll</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuPerformResetApi</DEFINITION-REF>
+                  <VALUE>0</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FUNCTION-NAME-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuPerformResetCallout</DEFINITION-REF>
+                  <VALUE>NULL_PTR</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuTimeout</DEFINITION-REF>
+                  <VALUE>10000</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuGeneralConfiguration/McuVersionInfoApi</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>McuModuleConfiguration_0</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSrcFailureNotification</DEFINITION-REF>
+                  <VALUE>ENABLED</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuCrystalFrequencyHz</DEFINITION-REF>
+                  <VALUE>4.0E7</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuNumberOfMcuModes</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectors</DEFINITION-REF>
+                  <VALUE>1</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuSIPIRefClockFrequencyHz</DEFINITION-REF>
+                  <VALUE>4.0E7</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuClockSettingConfig_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockSettingId</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuETPUClockDivider</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuETPUClockFrequency</DEFINITION-REF>
+                      <VALUE>7.2E7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFMClockPeripheralDivider</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFMPeripheralClockFrequency</DEFINITION-REF>
+                      <VALUE>1.32E8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMCANClockFrequency</DEFINITION-REF>
+                      <VALUE>4.0E7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuMCANClockReference</DEFINITION-REF>
+                      <VALUE>XOSC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuNonFMClockPeripheralDivider</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPcsEnable</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPerClockReference</DEFINITION-REF>
+                      <VALUE>PLL0_PHI</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPeripheralClockFrequency</DEFINITION-REF>
+                      <VALUE>7.2E7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPlatClockFrequency</DEFINITION-REF>
+                      <VALUE>1.32E8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll0ClockReference</DEFINITION-REF>
+                      <VALUE>XOSC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll1ClockReference</DEFINITION-REF>
+                      <VALUE>PLL0_PHI1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSysClockUnderMcuControl</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSystemClockDivider</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSystemClockFrequency</DEFINITION-REF>
+                      <VALUE>2.64E8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSystemClockSwitch</DEFINITION-REF>
+                      <VALUE>PLL1_PHI</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_0</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_0/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_0/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_0/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_0/McuRCDivisorFactor</DEFINITION-REF>
+                          <VALUE>DIV_8</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_1</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_1/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_1/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_1/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_2</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_2/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_2/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_2/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_3</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_3/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_3/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_3/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_4</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_4</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_4/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_4/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_4/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_5</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_5</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_5/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_5/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_5/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_6</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_6</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_6/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_6/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_6/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_7</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_7</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_7/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_7/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_7/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClkMonitor_8</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_8</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_8/McuClkMonitorEn</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_8/McuHighFrequencyRef</DEFINITION-REF>
+                          <VALUE>4095</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClkMonitor_8/McuLowFrequencyRef</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_EMIOSCLK0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>EMIOS0</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>1000000.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_FM_PER_CLK</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>FM_PER_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>1.32E8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_MCANCLK</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>MCAN_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>4.0E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_PERCLK</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>PER_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>7.2E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_PLATCLK</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>PLAT_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>1.32E8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_SYSCLK</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>SYS_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>2.64E8</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuClockReferencePoint_XOSC</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockFrequencySelect</DEFINITION-REF>
+                          <VALUE>XOSC_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint/McuClockReferencePointFrequency</DEFINITION-REF>
+                          <VALUE>4.0E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuEMIOS</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS</DEFINITION-REF>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuEMIOS_0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuEMIOS0ClockFrequency</DEFINITION-REF>
+                              <VALUE>1000000.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuExternalTimeBase</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuFreezeBit</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuGlobalPrescaler</DEFINITION-REF>
+                              <VALUE>72</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuGlobalPrescalerEnable</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuGlobalTimeBaseEnable</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuMdisBit</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_0/McuServerTimeSlot</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuEMIOS_1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuEMIOS1ClockFrequency</DEFINITION-REF>
+                              <VALUE>1000000.0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuExternalTimeBase</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuFreezeBit</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuGlobalPrescaler</DEFINITION-REF>
+                              <VALUE>72</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuGlobalPrescalerEnable</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuGlobalTimeBaseEnable</DEFINITION-REF>
+                              <VALUE>1</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuMdisBit</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuEMIOS/McuEMIOS_1/McuServerTimeSlot</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuExternalClock</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuCLKOUTFrequency</DEFINITION-REF>
+                          <VALUE>6.6E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuEngineeringClockDivisonFactor</DEFINITION-REF>
+                          <VALUE>66</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuEngineeringClockFrequency</DEFINITION-REF>
+                          <VALUE>1000000.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuEngineeringClockSource</DEFINITION-REF>
+                          <VALUE>PLAT_CLK</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuExternalBusDivisonFactor</DEFINITION-REF>
+                          <VALUE>4</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuExternalBusTapSelect</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuExternalClock/McuExternalClockUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuFlash</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlash</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlash/McuFlashAddrPipelineControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuFlash/McuFlashReadWaitStateControl</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuLFASTClockConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuLFASTClockConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuLFASTClockConfig/McuLFASTClockDivider</DEFINITION-REF>
+                          <VALUE>6</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuLFASTClockConfig/McuLFASTClockFrequency</DEFINITION-REF>
+                          <VALUE>2.4E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuLFASTClockConfig/McuLFASTClockSource</DEFINITION-REF>
+                          <VALUE>PER_CLK_UNDIV</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuLFASTClockConfig/McuLFASTClockUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPSI5ClockConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig/McuPSI51UsClockFrequency</DEFINITION-REF>
+                          <VALUE>1000000.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig/McuPSI5ClockDivider</DEFINITION-REF>
+                          <VALUE>36</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig/McuPSI5ClockDivider1Mhz</DEFINITION-REF>
+                          <VALUE>144</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig/McuPSI5ClockUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPSI5ClockConfig/McuPSI5RxClockFrequency</DEFINITION-REF>
+                          <VALUE>4000000.0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPll_0</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPllClockConfiguration</DEFINITION-REF>
+                          <VALUE>NORMAL_MODE_WITH_PLL_RUNNING</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPllUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuPll0_Parameter</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/McuInputClkPreDivider</DEFINITION-REF>
+                              <VALUE>5</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/McuLoopMultiplicationClkDivider</DEFINITION-REF>
+                              <VALUE>72</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/McuLossOfLockInt</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/McuPHI1_ReducedFreqDivider</DEFINITION-REF>
+                              <VALUE>12</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/McuPHI_ReducedFreqDivider</DEFINITION-REF>
+                              <VALUE>4</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/PLL0_PHI1_Frequency</DEFINITION-REF>
+                              <VALUE>4.8E7</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/PLL0_PHI_Frequency</DEFINITION-REF>
+                              <VALUE>1.44E8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_0/McuPll0_Parameter/PLL0_VCO_Frequency</DEFINITION-REF>
+                              <VALUE>1.152E9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPll_1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPllClockConfiguration</DEFINITION-REF>
+                          <VALUE>NORMAL_MODE_WITH_PLL_RUNNING</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPllUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuFdPll1_Parameter</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFdPll1_Parameter</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFdPll1_Parameter/McuDthDisable0</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFdPll1_Parameter/McuDthDisable1</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFdPll1_Parameter/McuFractionalDivider</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuFmPll1_Parameter</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFmPll1_Parameter</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFmPll1_Parameter/McuModulationIncrementStep</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFmPll1_Parameter/McuModulationPeriod</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuFmPll1_Parameter/McuSpreadSelection</DEFINITION-REF>
+                              <VALUE>Down_Spread</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuPll1_Parameter</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/McuFracDivEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/McuLoopMultiplicationClkDivider</DEFINITION-REF>
+                              <VALUE>22</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/McuLossOfLockInt</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/McuModulationEnable</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/McuPHI_ReducedFreqDivider</DEFINITION-REF>
+                              <VALUE>2</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/PLL1_PHI_Frequency</DEFINITION-REF>
+                              <VALUE>2.64E8</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuPll_1/McuPll1_Parameter/PLL1_VCO_Frequency</DEFINITION-REF>
+                              <VALUE>1.056E9</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuProgClkSwitch</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuProgresSwitchDuration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                      <SUB-CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuPcsConfig_0</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivEnd</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivInit</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivRate</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivStart</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_Name</DEFINITION-REF>
+                              <VALUE>PCS_1</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuPcsConfig_1</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivEnd</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivInit</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivRate</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivStart</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_Name</DEFINITION-REF>
+                              <VALUE>PCS_2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>McuPcsConfig_2</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivEnd</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivInit</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivRate</DEFINITION-REF>
+                              <VALUE>0</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_DivStart</DEFINITION-REF>
+                              <VALUE>999</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuProgClkSwitch/McuPcsConfig/McuPCS_Name</DEFINITION-REF>
+                              <VALUE>PCS_3</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                        </ECUC-CONTAINER-VALUE>
+                      </SUB-CONTAINERS>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuRam</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRam</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRam/McuRam_PRAMC_0_FT_DIS</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRam/McuRam_PRAMC_0_P0_BO_DIS</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRam/McuRam_PRAMC_1_FT_DIS</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuRam/McuRam_PRAMC_1_P0_BO_DIS</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuSigmaDeltaClockConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSigmaDeltaClockConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSigmaDeltaClockConfig/McuSDClockUnderMcuControl</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSigmaDeltaClockConfig/McuSigmaDeltaClockDivider</DEFINITION-REF>
+                          <VALUE>12</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuSigmaDeltaClockConfig/McuSigmaDeltaClockFrequency</DEFINITION-REF>
+                          <VALUE>1.2E7</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuInterruptEvents</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuInterruptEvents</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuInterruptEvents/McuTemperatureErrorEvent</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuInterruptEvents/McuVoltageErrorEvent</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuModeSettingConf_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuMode</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>Halt1Register</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltCORE0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltCORE1</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltCSE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDECFIL</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDSPIA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDSPIB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDSPIC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDSPID</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltDSPIE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltEBI</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltEMIOS0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltEMIOS1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltEQADCA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltEQADCB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCIA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCIB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCIC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCID</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCIE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltESCIF</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltETPUA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltETPUC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltFLEXCANA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltFLEXCANB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltFLEXCANC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltFLEXCAND</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltNPC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt1Register/HaltPIT</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>Halt2Register</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltCRC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltFEC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltMCANA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltMCANB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltPSI5A</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltPSI5B</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSDA</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSDB</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSDC</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSDD</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSIPI</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSRX0</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSRX1</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/Halt2Register/HaltSTCU</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuCore0ResetVectorRegister</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore0ResetVectorRegister</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore0ResetVectorRegister/McuCore0ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore0ResetVectorRegister/McuCore0ResetVector</DEFINITION-REF>
+                          <VALUE>4294967292</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore0ResetVectorRegister/McuCore0VLESelect</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuCore1ResetVectorRegister</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore1ResetVectorRegister</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore1ResetVectorRegister/McuCore1ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore1ResetVectorRegister/McuCore1ResetVector</DEFINITION-REF>
+                          <VALUE>4294967292</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuModeSettingConf/McuCore1ResetVectorRegister/McuCore1VLESelect</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuPlatformFlashConfig</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPFAPR</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster0AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster10AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster11AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster12AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster13AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster14AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster15AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster1AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster2AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster3AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster4AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster5AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster6AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster7AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster8AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFAPR/McuMaster9AccessProt</DEFINITION-REF>
+                          <VALUE>3</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPFCR1</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0DataPrefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0InstructionPrefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master0Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master10Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master11Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master12Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master13Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master14Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master15Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master1Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master2Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master3Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master4Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master5Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master6Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master7Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master8Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0Master9Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0PrefetchLimit</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR1/McuPort0ReadBufferEnable</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPFCR2</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1DataPrefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1InstructionPrefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master0Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master10Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master11Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master12Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master13Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master14Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master15Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master1Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master2Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master3Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master4Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master5Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master6Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master7Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master8Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1Master9Prefetch</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1PrefetchLimit</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR2/McuPort1ReadBufferEnable</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPFCR3</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3/McuArbitrationMode</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3/McuBFENLock</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3/McuDataErrorSuppression</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3/McuPort0PageBufferConfiguration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPlatformFlashConfig/McuPFCR3/McuPort1LineBufferConfiguration</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuPowerControl</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl</DEFINITION-REF>
+                  <SUB-CONTAINERS>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_ADCChannelSelectConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ADCChannelSelectConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ADCChannelSelectConfig/McuPMC_ADCChannelSelect</DEFINITION-REF>
+                          <VALUE>ADC_CHANNEL_OFF</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_IntConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_IntConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_IntConfig/McuTS0_0IE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_IntConfig/McuTS0_2IE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_IntConfig/McuTS1_0IE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_IntConfig/McuTS1_2IE</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_LVD_HVD_InterruptEnableConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_LVD_HVD_InterruptEnableConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_LVD_HVD_InterruptEnableConfig/McuPMC_HVD_CORE_InterruptEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_LVD_HVD_InterruptEnableConfig/McuPMC_HVD_FLASH_InterruptEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_LVD_HVD_InterruptEnableConfig/McuPMC_HVD_HV_InterruptEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_LVD_HVD_InterruptEnableConfig/McuPMC_LVD_CORE_COLD_InterruptEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_ResetEventEnableConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ResetEventEnableConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ResetEventEnableConfig/McuPMC_HVD_CORE_ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ResetEventEnableConfig/McuPMC_HVD_FLASH_ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ResetEventEnableConfig/McuPMC_HVD_HV_ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_ResetEventEnableConfig/McuPMC_LVD_CORE_COLD_ResetEnable</DEFINITION-REF>
+                          <VALUE>0</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_TempDetectorConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempDetectorConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempDetectorConfig/McuTS0_EN</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempDetectorConfig/McuTS1_EN</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_TempResetEventEnConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventEnConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventEnConfig/McuTEMP0_0E</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventEnConfig/McuTEMP0_2E</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventEnConfig/McuTEMP1_0E</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                        <ECUC-NUMERICAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventEnConfig/McuTEMP1_2E</DEFINITION-REF>
+                          <VALUE>1</VALUE>
+                        </ECUC-NUMERICAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                    <ECUC-CONTAINER-VALUE>
+                      <SHORT-NAME>McuPMC_TempResetEventSelConfig</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventSelConfig</DEFINITION-REF>
+                      <PARAMETER-VALUES>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventSelConfig/McuTEMP0_0S</DEFINITION-REF>
+                          <VALUE>POR_GENERATED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventSelConfig/McuTEMP0_2S</DEFINITION-REF>
+                          <VALUE>POR_GENERATED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventSelConfig/McuTEMP1_0S</DEFINITION-REF>
+                          <VALUE>POR_GENERATED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                        <ECUC-TEXTUAL-PARAM-VALUE>
+                          <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuPowerControl/McuPMC_TempResetEventSelConfig/McuTEMP1_2S</DEFINITION-REF>
+                          <VALUE>POR_GENERATED</VALUE>
+                        </ECUC-TEXTUAL-PARAM-VALUE>
+                      </PARAMETER-VALUES>
+                    </ECUC-CONTAINER-VALUE>
+                  </SUB-CONTAINERS>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuRamSectorSettingConf_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamDefaultValue</DEFINITION-REF>
+                      <VALUE>186</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionBaseAddrLinkerSym</DEFINITION-REF>
+                      <VALUE></VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionBaseAddress</DEFINITION-REF>
+                      <VALUE>1073741824</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionSize</DEFINITION-REF>
+                      <VALUE>1024</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectionSizeLinkerSym</DEFINITION-REF>
+                      <VALUE></VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuRamSectorSettingConf/McuRamSectorId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuResetConfig</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuResetConfig</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuResetConfig/McuResetEscalationThreshold</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuResetConfig/McuResetSource</DEFINITION-REF>
+                      <VALUE>SoftwareSystemReset</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>McuSSCMConfiguration</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuSSCMConfiguration</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuModuleConfiguration/McuSSCMConfiguration/McuSscmPae</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>McuPublishedInformation</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_CPU_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>5</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_EXTERNAL_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>6</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_FCCU_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>3</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_FOSU_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>4</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_MULTIPLE_RESET_REASON</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>9</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_NO_RESET_REASON</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>8</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_POWER_ON_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>7</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_RESET_UNDEFINED</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>10</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_SOFTWARE_EXTERNAL_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_SOFTWARE_SYSTEM_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>1</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MCU_STCU_RESET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T2D41M10I1R0/Mcu/McuPublishedInformation/McuResetReasonConf/McuResetReason</DEFINITION-REF>
+                      <VALUE>2</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

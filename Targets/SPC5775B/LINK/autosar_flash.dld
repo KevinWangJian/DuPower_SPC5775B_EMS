@@ -1,0 +1,225 @@
+/*==================================================================================================
+
+   @file        autosar_flash.dld
+   @version     1.0.1
+
+   @brief       DIAB Linker Command File for Internal FLASH for XPC574XR
+   @details     DIAB Linker Command File for Internal FLASH for XPC574XR.
+                This file contains sample code only. It is not part of the production code deliverables
+====================================================================================================    
+   Project      : AUTOSAR 4.0 MCAL
+   Platform     : PA
+   Peripheral   : 
+   Dependencies : Base Det Dem Port Dio Mcu Rte Wdg WdgIf CanIf LinIf FrIf EcuM
+   
+   Autosar Version       : 4.0.3
+   Autosar Revision      : ASR_REL_4_0_REV_0003
+   Autosar Conf. Variant : 
+   Software Version      : 1.0.1
+   Build Version         : MPC5777C_MCAL_1_0_0_RTM_ASR_REL_4_0_REV_0003_20160807
+
+   (c) Copyright 2006-2016 Freescale Semiconductor Inc and STMicroelectronics
+   All Rights Reserved.
+
+====================================================================================================
+
+Note: This linker command file to be used with MPC5777C device only
+==================================================================================================*/
+
+MEMORY {
+    /* 5775B - Flash 4.0 MB - 0x00800000 - 0x00FFFFFF */
+    flash_rsvd1         : ORIGIN = 0x00020000, LENGTH = 0x20
+    flash_memory        : ORIGIN = 0x00A00000, LENGTH = 0x1E0000
+    CALIB_DATA0         : ORIGIN = 0x00BE0000, LENGTH = 0x10000
+    flash_vec           : ORIGIN = 0x00BF0000, LENGTH = 0x10000 - 8
+    APP_VALID_FLAG		: ORIGIN = 0x00BFFFF8, LENGTH = 8 
+    flash_rsvd2         : ORIGIN = 0x00C00000, LENGTH = 0
+
+
+    /* 5775B - SRAM 512 KB : 0x40000000 - 0x4007FFFF */
+    /*
+    ram_rsvd1             : ORIGIN = 0x20000000, LENGTH = 0
+    int_sram              : ORIGIN = 0x40000000, LENGTH = 0x62b00
+    res_ram               : ORIGIN = 0x40062b00, LENGTH = 0x100
+    iram_stack            : ORIGIN = 0x40062c00, LENGTH = 0x4000
+    int_timers            : ORIGIN = 0x40066c00, LENGTH = 0x0400
+    int_results           : ORIGIN = 0x40067000, LENGTH = 0
+    int_sram_no_cacheable : ORIGIN = 0x40067000, LENGTH = 0x19000
+    ram_rsvd2             : ORIGIN = 0x40080000, LENGTH = 0
+    */
+    
+    ram_rsvd1             : ORIGIN = 0x20000000, LENGTH = 0
+    int_sram              : ORIGIN = 0x40000000, LENGTH = 0x50000
+    res_ram               : ORIGIN = 0x40050000, LENGTH = 0x100
+    iram_stack            : ORIGIN = 0x40050100, LENGTH = 0x4000
+    int_timers            : ORIGIN = 0x40054100, LENGTH = 0x0400
+    int_results           : ORIGIN = 0x40054500, LENGTH = 0
+    int_sram_no_cacheable : ORIGIN = 0x40054500, LENGTH = 0x2BAFF
+    ram_rsvd2             : ORIGIN = 0x40080000, LENGTH = 0
+}
+
+/*
+ Program layout for starting in ROM, copying data to RAM,
+ and continuing to execute out of ROM.
+*/
+
+SECTIONS
+{
+/* Place BINDED entries first, then place other entries    */
+/* in order of desired relative placement.                 */
+    GROUP  : {        
+        Os_intvec(TEXT) ALIGN(0x10000): {}  
+        Os_cpuvec(TEXT) : {}
+    }>flash_vec    
+/*----------------*/
+/* SECTIONS       */    
+/*----------------*/            
+      GROUP : {
+           .rcw : {}
+    }>flash_rsvd1
+     
+      GROUP : {
+            .text (TEXT) : {}
+            .text_vle(TEXT): {}
+            .Os_text_vle(TEXT): {}
+            .acfls_code_rom(TEXT)  ALIGN(4) : {}
+            .rodata(TEXT) :{}
+            .sdata2 (DATA) : {}
+            .mcal_const_cfg (TEXT) : {}
+            .mcal_const (TEXT) : {}
+            .fixaddr : {}
+            .fixtype : {}
+            .align_section ALIGN(16): {}
+            _load_ramcode = . ; /* The start of the flash region rezerved for ramcode section and for the .sdata0, .sdata and .data sections.*/
+    }>flash_memory
+
+    /* CAL */
+	/*     
+	GROUP : {
+        .ROM_cal_const ALIGN(4) : {}
+  	} > flash_calib   
+  	*/
+
+    GROUP : {
+  		__CALIB_DATA0_ROM = .;
+  	} > CALIB_DATA0
+
+	
+	GROUP : {
+		.AppProgramValid : {}
+	}>APP_VALID_FLAG
+	
+    
+
+      GROUP :  {
+            /* map consecutively .ramcode, .sdata0, .acfls_code, .sdata and .data sections */
+            .ramcode(TEXT) ALIGN(4) LOAD(_load_ramcode) : {}
+            .sdata0(DATA) ALIGN(4) LOAD( ADDR(.sdata0) - ADDR(.ramcode) + _load_ramcode) : {}
+            .sdabase ALIGN(8) LOAD( ADDR(.sdabase) - ADDR(.ramcode) + _load_ramcode) : {}
+            .sdata (DATA) LOAD( ADDR(.sdata) - ADDR(.ramcode) + _load_ramcode) : {}
+            .data (DATA) LOAD( ADDR(.data) - ADDR(.ramcode) + _load_ramcode) : {}
+            .mcal_data (DATA) LOAD( ADDR(.mcal_data) - ADDR(.ramcode) + _load_ramcode) : {}
+    }>int_sram
+
+      GROUP : {
+      /* Generic calib data */
+      . = ALIGN(4);
+      __CALIB_DATA_RAM = .;
+      .cal_data (DATA) LOAD(__CALIB_DATA0_ROM):{}  
+      __CALIB_DATA_END = .;
+      . = ALIGN(4);
+  } > int_sram
+      
+      GROUP : {
+            .sbss0(BSS) : {}
+            .sbss (BSS) : {}
+            .bss  (BSS) : {}
+            .mcal_bss  (BSS) : {}
+              }>int_sram
+              
+      GROUP :  {
+                .acfls_code_ram(TEXT) ALIGN(4): {}
+    }>res_ram
+    
+      GROUP :  {
+            
+            .mcal_data_no_cacheable (DATA) ALIGN(4) LOAD( ADDR(.mcal_data_no_cacheable) - ADDR(.ramcode) + _load_ramcode) : {}
+          
+    }>int_sram_no_cacheable
+    
+      GROUP : {
+            .mcal_bss_no_cacheable  (BSS) : {}
+    }>int_sram_no_cacheable
+
+    __IV_ADDR                   = ADDR(flash_vec);
+                        
+    INT_SRAM_START              = ADDR(int_sram);
+    INT_SRAM_SIZE               = (ADDR(ram_rsvd2) - ADDR(int_sram))/64;
+    SBSS_SRAM_START             = ADDR(.sbss);
+    SBSS_SRAM_SIZE              = (SIZEOF(.sbss)+3)/4;
+    BSS_SRAM_START              = ADDR(.bss);
+    BSS_SRAM_SIZE               = (SIZEOF(.bss)+SIZEOF(.mcal_bss_no_cacheable)+3)/4;
+    SDATA_RW_START              = _SDA_BASE_;
+    SDATA_RO_START              = _SDA2_BASE_;
+   
+    BSS_NO_CACHEABLE_SRAM_START      = ADDR(.mcal_bss_no_cacheable);
+    BSS_NO_CACHEABLE_SRAM_SIZE       = (SIZEOF(.mcal_bss_no_cacheable)+3)/4;
+  
+   /* generate symbols used in start-up code to init .ramcode section */
+    RC_RAMCODE_SRC              =  _load_ramcode;
+    RC_RAMCODE_DEST             = ADDR(.ramcode);
+    RC_RAMCODE_SIZE             = (SIZEOF(.ramcode)+3) / 4;
+
+    /* generate symbols used in start-up code to init .sdata0 section */
+    RC_PPC_SDATA2_SRC           = ADDR(.sdata0) - ADDR(.ramcode) + _load_ramcode;
+    RC_PPC_SDATA2_DEST          = ADDR(.sdata0);
+    RC_PPC_SDATA2_SIZE          = (SIZEOF(.sdata0)+3) / 4;
+
+    /* generate symbols used in start-up code to init .sdata section */
+    RC_SDATA_SRC                = ADDR(.sdata) - ADDR(.ramcode) + _load_ramcode;
+    RC_SDATA_DEST               = ADDR(.sdata);
+    RC_SDATA_SIZE               = (SIZEOF(.sdata)+3) / 4;
+
+    /* generate symbols used in start-up code to init .data section */
+    RC_DATA_SRC                 = ADDR(.data) - ADDR(.ramcode) + _load_ramcode;
+    RC_DATA_DEST                = ADDR(.data);
+    RC_DATA_SIZE                = (SIZEOF(.data)+SIZEOF(.mcal_data)+3) / 4;
+    
+    /* generate symbols used in start-up code to init .mcal_data_no_cacheable section */
+    RC_DATA_NO_CACHEABLE_SRC    = ADDR(.mcal_data_no_cacheable) - ADDR(.ramcode) + _load_ramcode ;
+    RC_DATA_NO_CACHEABLE_DEST   = ADDR(.mcal_data_no_cacheable);
+    RC_DATA_NO_CACHEABLE_SIZE   = (SIZEOF(.mcal_data_no_cacheable)+3) / 4;
+
+    /* generate symbols used in start-up code to init .cal_const section */
+   /*  RC_CAL_CONST_SRC  = ADDR(.ROM_cal_const);  */
+   /*  RC_CAL_CONST_DEST = ADDR(.cal_const);  */
+   /*  RC_CAL_CONST_SIZE = 0x4000;   */  /* Copy 4 bytes at a time,  16K */
+
+
+    RC_CAL_CONST_SRC  = __CALIB_DATA0_ROM;
+    RC_CAL_CONST_DEST = __CALIB_DATA_RAM;
+    RC_CAL_CONST_SIZE = (__CALIB_DATA_END - __CALIB_DATA_RAM + 3)/4;
+    
+    __SP_INIT                   = ADDR(iram_stack) + SIZEOF(iram_stack);
+    __SP_END                    = ADDR(iram_stack);
+    __STACK_SIZE                = SIZEOF(iram_stack);
+    
+    __RAM_NO_CACHEABLE_START    = ADDR(int_sram_no_cacheable);
+    __RAM_NO_CACHEABLE_END      = ADDR(ram_rsvd2) -1 ;
+    __RAM_CACHEABLE_START       = ADDR(int_sram);
+    __RAM_CACHEABLE_END         = ADDR(int_sram_no_cacheable) -1 ;
+
+ 
+    /* Fls module access code support */    
+    Fls_ACEraseRomStart         = ADDR(.acfls_code_rom);
+    Fls_ACEraseRomEnd           = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+    Fls_ACEraseSize             = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+
+    Fls_ACWriteRomStart         = ADDR(.acfls_code_rom);
+    Fls_ACWriteRomEnd           = ADDR(.acfls_code_rom) + SIZEOF(.acfls_code_rom);
+    Fls_ACWriteSize             = (SIZEOF(.acfls_code_rom)+3) / 4; /* Copy 4 bytes at a time*/
+    
+    _ERASE_FUNC_ADDRESS_        = ADDR(.acfls_code_ram);
+    _WRITE_FUNC_ADDRESS_        = ADDR(.acfls_code_ram);
+
+}

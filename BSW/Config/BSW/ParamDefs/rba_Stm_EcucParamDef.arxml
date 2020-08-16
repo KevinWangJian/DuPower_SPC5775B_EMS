@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+  <ADMIN-DATA>
+    <DOC-REVISIONS>
+      <DOC-REVISION>
+        <ISSUED-BY>RB</ISSUED-BY>
+      </DOC-REVISION>
+    </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>RBA</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>rba_Stm</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-DEF>
+                      <SHORT-NAME>rba_Stm</SHORT-NAME>
+                      <LONG-NAME>
+                        <L-4 L="EN">MCAL rba_Stm Driver</L-4>
+                      </LONG-NAME>
+                      <DESC>
+                        <L-2 L="EN">Configuration of the MCAL STM (System Timer Module) component</L-2>
+                      </DESC>
+                      <CATEGORY>VENDOR_SPECIFIC_MODULE_DEFINITION</CATEGORY>
+                      <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                          <DOC-REVISION>
+                            <REVISION-LABEL>42.1.0.0</REVISION-LABEL>
+                            <ISSUED-BY>RB</ISSUED-BY>
+                            <DATE>2016-10-05</DATE>
+                          </DOC-REVISION>
+                        </DOC-REVISIONS>
+                      </ADMIN-DATA>
+                      <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                      <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                      <POST-BUILD-VARIANT-SUPPORT>true</POST-BUILD-VARIANT-SUPPORT>
+                      <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/rba_Stm</REFINED-MODULE-DEF-REF>
+                      <SUPPORTED-CONFIG-VARIANTS>
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                      </SUPPORTED-CONFIG-VARIANTS>
+                      <CONTAINERS>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_StmRbConfigSet</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Stm configuration data set</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Defines one data set of post-build configuration. Which of these data sets is actually active is controlled by EcuM. Data sets can only be switched at initialization time.</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <SUB-CONTAINERS>
+                            <ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <SHORT-NAME>rba_StmRbGptChannel</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Stm Gpt channel</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This is the container for Stm channel selected by Gpt.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1000</UPPER-MULTIPLICITY>
+                              <MULTIPLICITY-CONFIG-CLASSES>
+                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              </MULTIPLICITY-CONFIG-CLASSES>
+                              <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                              <PARAMETERS>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_StmRbGptChannelCompareRegister</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Stm Compare register selected by Gpt</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the Stm channel used by Gpt component.Nothing to configure here,since it is forwarded from Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>RB:v0.1.0:2015-03-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>3</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-STRING-PARAM-DEF>
+                                  <SHORT-NAME>rba_StmRbGptChannelIndex</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Stm Channel Index selected by Gpt</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the Stm channel status used by Gpt component.Nothing to configure here,since it is forwarded from Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>RB:v0.1.0:2015-03-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                </ECUC-STRING-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_StmRbGptChannelInstance</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Stm HwInstance selected by Gpt</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the Stm instance used by Gpt component.Nothing to configure here,since it is forwarded from Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>RB:v0.1.0:2015-03-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>1</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                                <ECUC-STRING-PARAM-DEF>
+                                  <SHORT-NAME>rba_StmRbGptChannelInterrupt</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Stm Interrupt Number selected by Gpt</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the Stm instance used by Gpt component.Nothing to configure here,since it is forwarded from Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>RB:v0.1.0:2015-03-29</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                </ECUC-STRING-PARAM-DEF>
+                                <ECUC-INTEGER-PARAM-DEF>
+                                  <SHORT-NAME>rba_StmRbGptChannelNumber</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Stm Channel number selected by Gpt</L-4>
+                                  </LONG-NAME>
+                                  <DESC>
+                                    <L-2 L="EN">This is the Stm Channel number used by Gpt component.Nothing to configure here,since it is forwarded from Gpt.</L-2>
+                                  </DESC>
+                                  <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                  <ORIGIN>RB:v0.1.0:2015-03-28</ORIGIN>
+                                  <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                                  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                      <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                      <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                  </VALUE-CONFIG-CLASSES>
+                                  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <WITH-AUTO>true</WITH-AUTO>
+                                  <MAX>3</MAX>
+                                  <MIN>0</MIN>
+                                </ECUC-INTEGER-PARAM-DEF>
+                              </PARAMETERS>
+                            </ECUC-PARAM-CONF-CONTAINER-DEF>
+                          </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_StmRbConfigurationOfOptApiServices</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Stm configuration of optional API services</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">This container contains all configuration switches for</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_StmRbVersionInfoApi</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Enable version information API</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Adds / removes the service rba_Stm_GetVersionInfo() API.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:v0.1.0:2015-04-15</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <ECUC-PARAM-CONF-CONTAINER-DEF>
+                          <SHORT-NAME>rba_StmRbDriverConfiguration</SHORT-NAME>
+                          <LONG-NAME>
+                            <L-4 L="EN">Stm driver configuration</L-4>
+                          </LONG-NAME>
+                          <DESC>
+                            <L-2 L="EN">Stm general configuration parameter</L-2>
+                          </DESC>
+                          <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                          <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                          <PARAMETERS>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_StmRbBuildEnvironment</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Compilation and Build Environment</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Selection of Post build time or Pre compile time environment.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:v0.1.0:2015-04-14</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>GPT_RB_POSTBUILD</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Change configuration sets during run time</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>v1.0.0:2015-12-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>GPT_RB_PRECOMPILE</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Project runs with only one configuration set</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>v1.0.0:2015-12-11</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_StmRbCheckAutosarVersion</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Enable AUTOSAR version checking</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables/ disables AUTOSAR file version checking.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:v0.1.0:2015-04-15</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                            <ECUC-ENUMERATION-PARAM-DEF>
+                              <SHORT-NAME>rba_StmRbCounter_64_Enable</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Stm Gpt channel is 64bit value</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">This field has to selected same as selected in GPT layer</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:v0.1.0:2016-10-4</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>true</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              <LITERALS>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>Uint64</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uint64 -- ONLY channel Zero can be configured in his mode</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>v0.1.0:2016-10-4</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                <ECUC-ENUMERATION-LITERAL-DEF>
+                                  <SHORT-NAME>Uint32</SHORT-NAME>
+                                  <LONG-NAME>
+                                    <L-4 L="EN">Uint32 -- Except channel zero other channels can be configured</L-4>
+                                  </LONG-NAME>
+                                  <ORIGIN>v0.1.0:2016-10-4</ORIGIN>
+                                </ECUC-ENUMERATION-LITERAL-DEF>
+                              </LITERALS>
+                            </ECUC-ENUMERATION-PARAM-DEF>
+                            <ECUC-BOOLEAN-PARAM-DEF>
+                              <SHORT-NAME>rba_StmRbDevErrorDetect</SHORT-NAME>
+                              <LONG-NAME>
+                                <L-4 L="EN">Enable development error detection</L-4>
+                              </LONG-NAME>
+                              <DESC>
+                                <L-2 L="EN">Enables / disables the detection and notification of development errors. If this parameter is enabled, extended error checking will be performed during runtime. Any errors detected by these checks are reported to the DET module. This feature should be switched off for production software.</L-2>
+                              </DESC>
+                              <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                              <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                              <ORIGIN>RB:v0.1.0:2015-04-15</ORIGIN>
+                              <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                              <VALUE-CONFIG-CLASSES>
+                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                              </VALUE-CONFIG-CLASSES>
+                              <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                            </ECUC-BOOLEAN-PARAM-DEF>
+                          </PARAMETERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                      </CONTAINERS>
+                    </ECUC-MODULE-DEF>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

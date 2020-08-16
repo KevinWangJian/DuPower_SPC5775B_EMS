@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+ <ADMIN-DATA>
+    <LANGUAGE>EN</LANGUAGE>
+  </ADMIN-DATA>
+ <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>RB</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>UBK</SHORT-NAME>
+          <AR-PACKAGES>
+            <AR-PACKAGE>
+              <SHORT-NAME>Project</SHORT-NAME>
+              <AR-PACKAGES>
+                <AR-PACKAGE>
+                  <SHORT-NAME>EcucModuleConfigurationValuess</SHORT-NAME>
+                  <ELEMENTS>
+                    <ECUC-MODULE-CONFIGURATION-VALUES>
+                      <SHORT-NAME>rba_ArxmlGen</SHORT-NAME>
+                      <DEFINITION-REF DEST="ECUC-MODULE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen</DEFINITION-REF>
+                      <CONTAINERS>
+                        <ECUC-CONTAINER-VALUE>
+                          <SHORT-NAME>CanSM</SHORT-NAME>
+                          <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp</DEFINITION-REF>
+                          <PARAMETER-VALUES>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompCategory</DEFINITION-REF>
+                              <VALUE>BswModule</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompId</DEFINITION-REF>
+                              <VALUE>140</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsConfigurable</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandalone</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-NUMERICAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompIsStandardized</DEFINITION-REF>
+                              <VALUE>true</VALUE>
+                            </ECUC-NUMERICAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompLongName</DEFINITION-REF>
+                              <VALUE>CanStateManager</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionAr</DEFINITION-REF>
+                              <VALUE>4.2.2</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                            <ECUC-TEXTUAL-PARAM-VALUE>
+                              <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompVersionSw</DEFINITION-REF>
+                              <VALUE>3.4.0</VALUE>
+                            </ECUC-TEXTUAL-PARAM-VALUE>
+                          </PARAMETER-VALUES>
+                          <SUB-CONTAINERS>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_Au8_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of the type Uint8</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Au8_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_uint8</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u8_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_currBOR_State_a_Aenum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of enum</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_currBOR_State_a_Aenum_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_BusOffRecoveryStateType</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_BusOffRecoveryStateType_Enum_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_currComM_Mode_a_Aenum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of enum</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_currComM_Mode_a_Aenum_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_enum_CanSM_currComM_Mode_a_app</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_NetworkModeStateType_Enum_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerConfig_ast_Astruct_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of structure</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerConfig_ast_Astruct_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_TimerConfig_tst</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerConfig_tst_struct_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_Aboolean_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of the type Boolean</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Aboolean_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_boolean</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_boolean_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_u8_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint8 application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u8_Impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_u16_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint16 application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u16</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u16_Impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BusOffRecoveryStateType_Enum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_BusOffRecoveryStateType_Enum_comp</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_NetworkModeStateType_Enum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_NetworkModeStateType_Enum_comp</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerStateType_Enum_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerStateType_Enum_comp</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_PlatformTypes/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerConfig_tst_struct_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Struct</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>structure datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerConfig_tst_struct_impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>cntTick_u16</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u16_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>stTimer</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeSub/rba_ArxmlGen_ApplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerStateType_Enum_app</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_boolean_app</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>boolean application datatype in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeCompuMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="COMPU-METHOD">/RB/RBA/Common/CentralElements/CompuMethods/Identical</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeDataConstrOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_DataConstraint_u8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ApplDataType/rba_ArxmlGen_ApplDataTypeImplOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_boolean_Impl</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BusOffRecoveryStateType_Enum_comp</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>Computation method for the enum CanSM_BusOffRecoveryStateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BOR_IDLE</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BOR_IDLE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_S_BUS_OFF_CHECK</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>2</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_S_BUS_OFF_CHECK</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_S_NO_BUS_OFF</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>3</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_S_NO_BUS_OFF</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_S_TX_OFF</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>4</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_S_TX_OFF</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_S_RESTART_CC</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>5</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_S_RESTART_CC</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_S_RESTART_CC_WAIT</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>6</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_S_RESTART_CC_WAIT</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_NetworkModeStateType_Enum_comp</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>Computation method for the enum CanSM_NetworkModeStateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_NOCOM</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>0</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_NOCOM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_SILENTCOM</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_SILENTCOM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_FULLCOM</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>2</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_FULLCOM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_NOT_INITIALIZED</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>3</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_NOT_INITIALIZED</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_PRE_NOCOM</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>4</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_PRE_NOCOM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_PRE_FULLCOM</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>5</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_PRE_FULLCOM</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_BSM_S_CHANGE_BAUDRATE</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>6</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_BSM_S_CHANGE_BAUDRATE</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerStateType_Enum_comp</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodCategory</DEFINITION-REF>
+                                  <VALUE>TextTable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodLongName</DEFINITION-REF>
+                                  <VALUE>Computation method for the enum CanSM_TimerStateType</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_TIMER_INIT</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_TIMER_INIT</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_TIMER_RUNNING</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>2</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_TIMER_RUNNING</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_TIMER_ELAPSED</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>3</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_TIMER_ELAPSED</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CANSM_TIMER_CANCELLED</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry</DEFINITION-REF>
+                                  <PARAMETER-VALUES>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEIntVal</DEFINITION-REF>
+                                      <VALUE>4</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-NUMERICAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTENumVals</DEFINITION-REF>
+                                      <VALUE>1</VALUE>
+                                    </ECUC-NUMERICAL-PARAM-VALUE>
+                                    <ECUC-TEXTUAL-PARAM-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_CompuMethod/rba_ArxmlGen_CompuMethodTextEntry/rba_ArxmlGen_CompuMethodTEText</DEFINITION-REF>
+                                      <VALUE>CANSM_TIMER_CANCELLED</VALUE>
+                                    </ECUC-TEXTUAL-PARAM-VALUE>
+                                  </PARAMETER-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_DataConstraint_u8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>255</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_CanSM/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_DataConstraint_u16</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintCategory</DEFINITION-REF>
+                                  <VALUE>Physical</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintLower</DEFINITION-REF>
+                                  <VALUE>0</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                                <ECUC-NUMERICAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FLOAT-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUpper</DEFINITION-REF>
+                                  <VALUE>65535</VALUE>
+                                </ECUC-NUMERICAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_DataConstraint/rba_ArxmlGen_DataConstraintUnitRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="UNIT">/AUTOSAR_CanSM/Units/NoUnit</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>BSWSE_MainFunction</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityCategory</DEFINITION-REF>
+                                  <VALUE>Schedulable</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ExecEntity/rba_ArxmlGen_ExecEntityImplEntryRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_CanSM/BswModuleEntrys/CanSM_MainFunction</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_Au8_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>array of elements of the type Uint8</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_uint8_Impl</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u8_Impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_currComM_Mode_a_Aenum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of enum for implementation data type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_enum_CanSM_currComM_Mode_a_Impl</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_NetworkModeStateType_Enum_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_currBOR_State_a_Aenum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of enum for implementation data type</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_enum_CanSM_currBOR_State_a_Impl</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_BusOffRecoveryStateType_Enum_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_Aboolean_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>array of elements of the type Boolean</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_boolean_Impl</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_boolean_Impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_u8_Impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint8 implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_u16_Impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>uint16 implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_boolean_Impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Boolean implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BusOffRecoveryStateType_Enum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_NetworkModeStateType_Enum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerStateType_Enum_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Simple</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>enum implementation data type in CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeBaseRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint8</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerConfig_ast_Astruct_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>Array of structure</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>CanSM_TimerConfig_tst</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerConfig_tst_struct_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerConfig_tst_struct_impl</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeCategory</DEFINITION-REF>
+                                  <VALUE>Struct</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeLongName</DEFINITION-REF>
+                                  <VALUE>structure</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <SUB-CONTAINERS>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>cntTick_u16</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_u16_Impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                                <ECUC-CONTAINER-VALUE>
+                                  <SHORT-NAME>stTimer</SHORT-NAME>
+                                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub</DEFINITION-REF>
+                                  <REFERENCE-VALUES>
+                                    <ECUC-REFERENCE-VALUE>
+                                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_ImplDataType/rba_ArxmlGen_ImplDataTypeSub/rba_ArxmlGen_ImplDataTypeSubOwnRef</DEFINITION-REF>
+                                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerStateType_Enum_impl</VALUE-REF>
+                                    </ECUC-REFERENCE-VALUE>
+                                  </REFERENCE-VALUES>
+                                </ECUC-CONTAINER-VALUE>
+                              </SUB-CONTAINERS>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BusOff_Cntr_au8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Bus-Off counter for CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Au8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_currBOR_State_en</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Current Bus-Off recovery state for CanSM</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_currBOR_State_a_Aenum_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_ReqComM_Mode_en</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>stores the requested communication mode</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Au8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BORMode_au8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Variable to SET/RESET the BOR mode</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Au8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_BusOffISRPend_ab</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>To Set the BOR ISR Pending Request to True or False</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Aboolean_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_Network_Init_ab</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Setting this leads to initialisation of the network</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Aboolean_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_MutexMode_au8</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>Used to set</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_Au8_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_CurrNw_Mode_en</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>current ComM mode</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_currComM_Mode_a_Aenum_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                            <ECUC-CONTAINER-VALUE>
+                              <SHORT-NAME>CanSM_TimerConfig_ast</SHORT-NAME>
+                              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement</DEFINITION-REF>
+                              <PARAMETER-VALUES>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasCategory</DEFINITION-REF>
+                                  <VALUE>Array</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasDispFormat</DEFINITION-REF>
+                                  <VALUE>%5.0f</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                                <ECUC-TEXTUAL-PARAM-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasLongName</DEFINITION-REF>
+                                  <VALUE>CanSM timer configuration</VALUE>
+                                </ECUC-TEXTUAL-PARAM-VALUE>
+                              </PARAMETER-VALUES>
+                              <REFERENCE-VALUES>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-FOREIGN-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasAddrMethodRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="SW-ADDR-METHOD">/RB/RBA/Common/CentralElements/SwAddrMethods/INTERNAL_VAR_CLEARED</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                                <ECUC-REFERENCE-VALUE>
+                                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/RB/RBA/rba_ArxmlGen/EcucModuleDefs/rba_ArxmlGen/rba_ArxmlGen_Comp/rba_ArxmlGen_Measurement/rba_ArxmlGen_MeasApplDataTypeOwnRef</DEFINITION-REF>
+                                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/RB/UBK/Project/EcucModuleConfigurationValuess/rba_ArxmlGen/CanSM/CanSM_TimerConfig_ast_Astruct_app</VALUE-REF>
+                                </ECUC-REFERENCE-VALUE>
+                              </REFERENCE-VALUES>
+                            </ECUC-CONTAINER-VALUE>
+                          </SUB-CONTAINERS>
+                        </ECUC-CONTAINER-VALUE>
+                      </CONTAINERS>
+                    </ECUC-MODULE-CONFIGURATION-VALUES>
+                  </ELEMENTS>
+                </AR-PACKAGE>
+              </AR-PACKAGES>
+            </AR-PACKAGE>
+          </AR-PACKAGES>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

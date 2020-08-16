@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-0-3.xsd">
+  
+  
+<ADMIN-DATA>
+    <USED-LANGUAGES>
+      <L-10 L="EN" xml:space="preserve">EN</L-10>
+    </USED-LANGUAGES>
+  </ADMIN-DATA><AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_J1939Tp</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>J1939Tp_MainFunction</SHORT-NAME>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>J1939Tp</SHORT-NAME>
+              <CATEGORY>BSW_MODULE</CATEGORY>
+              <MODULE-ID>37</MODULE-ID>
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>BswInternalBehaviour</SHORT-NAME>
+                  <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>ExclusiveArea_0</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                  </EXCLUSIVE-AREAS>
+                  <ENTITYS>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>BSWSE_J1939Tp_MainFunction</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_J1939Tp/BswModuleDescriptions/J1939Tp/BswInternalBehaviour/ExclusiveArea_0</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_J1939Tp/BswModuleEntrys/J1939Tp_MainFunction</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                  </ENTITYS>
+                  <EVENTS>
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>BSWTE_J1939Tp_MainFunction</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_J1939Tp/BswModuleDescriptions/J1939Tp/BswInternalBehaviour/BSWSE_J1939Tp_MainFunction</STARTS-ON-EVENT-REF>
+                      <PERIOD>0.01</PERIOD>
+                    </BSW-TIMING-EVENT>
+                  </EVENTS>
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswImplementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>BSWIMPL_J1939Tp</SHORT-NAME>
+              <CODE-DESCRIPTORS>
+                <CODE>
+                  <SHORT-NAME>CodeDescriptor</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTORS>
+                    <AUTOSAR-ENGINEERING-OBJECT>
+                      <SHORT-LABEL>EngObject</SHORT-LABEL>
+                      <CATEGORY>SWSRC</CATEGORY>
+                    </AUTOSAR-ENGINEERING-OBJECT>
+                  </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <AR-RELEASE-VERSION>4.0.2</AR-RELEASE-VERSION>
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_J1939Tp/BswModuleDescriptions/J1939Tp/BswInternalBehaviour</BEHAVIOR-REF>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES></AUTOSAR>

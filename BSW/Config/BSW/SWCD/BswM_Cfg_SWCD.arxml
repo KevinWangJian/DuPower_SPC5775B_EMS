@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+
+<AR-PACKAGES>
+<AR-PACKAGE>
+<SHORT-NAME>AUTOSAR_BswM</SHORT-NAME>
+<AR-PACKAGES>
+<AR-PACKAGE>
+<SHORT-NAME>SwComponentTypes</SHORT-NAME>
+<ELEMENTS>
+<SERVICE-SW-COMPONENT-TYPE>
+<SHORT-NAME>BswM</SHORT-NAME>
+
+<PORTS>
+
+<!-- Require Ports for Immediate/Deferred SWC Mode Request Ports-->
+<!-- Require Ports for BswM_MRP_SwcModeRequest SWC Mode Request Port-->
+<R-PORT-PROTOTYPE>
+<SHORT-NAME>RP_BswMArbitration_BswM_MRP_SwcModeRequest</SHORT-NAME>
+
+<REQUIRED-INTERFACE-TREF DEST="SENDER-RECEIVER-INTERFACE">/Interfaces/SenderReceiverInterface_uint16</REQUIRED-INTERFACE-TREF>
+</R-PORT-PROTOTYPE>
+
+<!-- Require Ports for Immediate/Deferred SWC Mode Notification Ports-->
+
+<!-- Provide Ports for SWC Mode Switch Ports-->
+
+<!-- Provide Ports for BswMRteModeRequest Action-->
+
+</PORTS>
+
+<INTERNAL-BEHAVIORS>
+<SWC-INTERNAL-BEHAVIOR>
+<SHORT-NAME>IB_BswM</SHORT-NAME>
+
+<DATA-TYPE-MAPPING-REFS>
+<!-- Data Type Mapping sets for all SWC Request Ports, SWC Mode Switch Notifications Ports and RTE Mode Switch Actions -->
+
+<DATA-TYPE-MAPPING-REF DEST="DATA-TYPE-MAPPING-SET">/AUTOSAR_BswM/ModeDeclarationGroups/ECUM_STATE_Mapping</DATA-TYPE-MAPPING-REF>
+</DATA-TYPE-MAPPING-REFS>
+
+<EVENTS>
+
+<!-- Data Received event for all immediate SWC requests -->
+
+<!-- Data Received event for all Deferred SWC requests -->
+
+<!-- Data Received Event for BswM_MRP_SwcModeRequest Deferred SWC Request Ports-->
+<DATA-RECEIVED-EVENT>
+<SHORT-NAME>DRE_BswM_Cfg_DfrdSwcReqst_BswM_MRP_SwcModeRequest</SHORT-NAME>
+<START-ON-EVENT-REF DEST="RUNNABLE-ENTITY">/AUTOSAR_BswM/SwComponentTypes/BswM/IB_BswM/RE_BswM_Cfg_DfrdSwcReqst_BswM_MRP_SwcModeRequest</START-ON-EVENT-REF>
+<DATA-IREF>
+<CONTEXT-R-PORT-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_BswM/SwComponentTypes/BswM/RP_BswMArbitration_BswM_MRP_SwcModeRequest</CONTEXT-R-PORT-REF>
+<TARGET-DATA-ELEMENT-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/SenderReceiverInterface_uint16/VDP_uint16</TARGET-DATA-ELEMENT-REF>
+</DATA-IREF>
+</DATA-RECEIVED-EVENT>
+
+<!-- Mode Switch events for all immediate SWC Notifications -->
+
+<!-- Mode Switch events for all Deferred SWC Notifications -->
+
+</EVENTS>
+
+<RUNNABLES>
+
+<!-- Runnable Entities for all Immediate SWC Request Ports -->
+
+<!-- Runnable Entities for all Deferred SWC Request Ports -->
+
+<!-- Runnable Entity for BswM_MRP_SwcModeRequest Deferred SWC Mode Request Port -->
+<RUNNABLE-ENTITY>
+<SHORT-NAME>RE_BswM_Cfg_DfrdSwcReqst_BswM_MRP_SwcModeRequest</SHORT-NAME>
+<CAN-BE-INVOKED-CONCURRENTLY>true</CAN-BE-INVOKED-CONCURRENTLY>
+<DATA-RECEIVE-POINT-BY-ARGUMENTS>
+<VARIABLE-ACCESS>
+<SHORT-NAME>DRP_BswM_MRP_SwcModeRequest</SHORT-NAME>
+<ACCESSED-VARIABLE>
+<AUTOSAR-VARIABLE-IREF>
+<PORT-PROTOTYPE-REF DEST="R-PORT-PROTOTYPE">/AUTOSAR_BswM/SwComponentTypes/BswM/RP_BswMArbitration_BswM_MRP_SwcModeRequest</PORT-PROTOTYPE-REF>
+<TARGET-DATA-PROTOTYPE-REF DEST="VARIABLE-DATA-PROTOTYPE">/Interfaces/SenderReceiverInterface_uint16/VDP_uint16</TARGET-DATA-PROTOTYPE-REF>
+</AUTOSAR-VARIABLE-IREF>
+</ACCESSED-VARIABLE>
+</VARIABLE-ACCESS>
+</DATA-RECEIVE-POINT-BY-ARGUMENTS>
+<SYMBOL>BswM_Cfg_DfrdSwcReqst_BswM_MRP_SwcModeRequest</SYMBOL>
+</RUNNABLE-ENTITY>
+
+<!-- Runnable Entities for all Immediate SWC Notification Ports -->
+
+<!-- Runnable Entities for all Deferred SWC Notification Ports -->
+
+<!-- Runnable Entities for Rte_Switch actions -->
+
+<!-- Runnable Entities for BswMRteModeRequest actions -->
+
+</RUNNABLES>
+<SUPPORTS-MULTIPLE-INSTANTIATION>false</SUPPORTS-MULTIPLE-INSTANTIATION>
+</SWC-INTERNAL-BEHAVIOR>
+</INTERNAL-BEHAVIORS>
+</SERVICE-SW-COMPONENT-TYPE>
+
+</ELEMENTS>
+</AR-PACKAGE>
+<AR-PACKAGE>
+<SHORT-NAME>ImplementationDataTypes</SHORT-NAME>
+<ELEMENTS>
+
+<!--
+##################################################
+#              IMPLEMENTATION-DATA-TYPE          #
+##################################################-->
+<IMPLEMENTATION-DATA-TYPE>
+<SHORT-NAME>BswM_ModeType</SHORT-NAME>
+<CATEGORY>TYPE_REFERENCE</CATEGORY>
+<SW-DATA-DEF-PROPS>
+<SW-DATA-DEF-PROPS-VARIANTS>
+<SW-DATA-DEF-PROPS-CONDITIONAL>
+
+<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+</SW-DATA-DEF-PROPS-CONDITIONAL>
+</SW-DATA-DEF-PROPS-VARIANTS>
+</SW-DATA-DEF-PROPS>
+</IMPLEMENTATION-DATA-TYPE>
+
+<IMPLEMENTATION-DATA-TYPE>
+<SHORT-NAME>BswM_UserType</SHORT-NAME>
+<CATEGORY>TYPE_REFERENCE</CATEGORY>
+<SW-DATA-DEF-PROPS>
+<SW-DATA-DEF-PROPS-VARIANTS>
+<SW-DATA-DEF-PROPS-CONDITIONAL>
+
+<IMPLEMENTATION-DATA-TYPE-REF DEST="IMPLEMENTATION-DATA-TYPE">/AUTOSAR_Platform/ImplementationDataTypes/uint16</IMPLEMENTATION-DATA-TYPE-REF>
+</SW-DATA-DEF-PROPS-CONDITIONAL>
+</SW-DATA-DEF-PROPS-VARIANTS>
+</SW-DATA-DEF-PROPS>
+</IMPLEMENTATION-DATA-TYPE>
+</ELEMENTS>
+</AR-PACKAGE>
+
+<AR-PACKAGE>
+<SHORT-NAME>SwcImplementations</SHORT-NAME>
+<ELEMENTS>
+<SWC-IMPLEMENTATION>
+<SHORT-NAME>SWCIMPL_BswM</SHORT-NAME>
+<CODE-DESCRIPTORS>
+<CODE>
+<SHORT-NAME>CodeDescriptor</SHORT-NAME>
+<ARTIFACT-DESCRIPTORS>
+<AUTOSAR-ENGINEERING-OBJECT>
+<SHORT-LABEL>ArEngObj</SHORT-LABEL>
+<CATEGORY>SWSRC</CATEGORY>
+</AUTOSAR-ENGINEERING-OBJECT>
+</ARTIFACT-DESCRIPTORS>
+</CODE>
+</CODE-DESCRIPTORS>
+<PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+<SW-VERSION>1.0.0</SW-VERSION>
+<BEHAVIOR-REF DEST="SWC-INTERNAL-BEHAVIOR">/AUTOSAR_BswM/SwComponentTypes/BswM/IB_BswM</BEHAVIOR-REF>
+</SWC-IMPLEMENTATION>
+</ELEMENTS>
+</AR-PACKAGE>
+</AR-PACKAGES>
+</AR-PACKAGE>
+</AR-PACKAGES>
+
+</AUTOSAR>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 autosar_4-2-2.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Ecu_FlatView</SHORT-NAME>
+      <ELEMENTS>
+        <FLAT-MAP>
+          <SHORT-NAME>Ecu_FlatMap</SHORT-NAME>
+          <INSTANCES>
+            <FLAT-INSTANCE-DESCRIPTOR>
+              <SHORT-NAME>CPT_Os_SWC</SHORT-NAME>
+              <UPSTREAM-REFERENCE-IREF>
+                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System/System/RootSwCompositionPrototype_0</CONTEXT-ELEMENT-REF>
+                <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/TopLevelComposition/TopLevelComposition/CPT_Os_SWC</TARGET-REF>
+              </UPSTREAM-REFERENCE-IREF>
+              <ECU-EXTRACT-REFERENCE-IREF>
+                <CONTEXT-ELEMENT-REF DEST="ROOT-SW-COMPOSITION-PROTOTYPE">/System_EcuExtract/EXTR_Ecu/CPT_Ecu_FlatView</CONTEXT-ELEMENT-REF>
+                <TARGET-REF DEST="SW-COMPONENT-PROTOTYPE">/Ecu_FlatView/SwComponentTypes/Ecu_FlatView/CPT_Os_SWC</TARGET-REF>
+              </ECU-EXTRACT-REFERENCE-IREF>
+            </FLAT-INSTANCE-DESCRIPTOR>
+          </INSTANCES>
+        </FLAT-MAP>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

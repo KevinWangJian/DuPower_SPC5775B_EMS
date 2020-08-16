@@ -1,0 +1,2569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-2-2.xsd">
+    <ADMIN-DATA>
+       <LANGUAGE>EN</LANGUAGE>
+       <USED-LANGUAGES>
+          <L-10 xml:space="default" L="EN">EN</L-10>
+       </USED-LANGUAGES>
+        <DOC-REVISIONS>
+            <DOC-REVISION>
+                <REVISION-LABEL>20.0.0</REVISION-LABEL>
+                <ISSUED-BY>RB</ISSUED-BY>
+                <DATE>2016-08-29</DATE>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <AR-PACKAGES>
+        <AR-PACKAGE>
+            <SHORT-NAME>AUTOSAR_PduR</SHORT-NAME>
+            <AR-PACKAGES>
+                <AR-PACKAGE>
+                    <SHORT-NAME>EcucModuleDefs</SHORT-NAME>
+                    <ELEMENTS>
+                  <!-- Module Definition: PduR -->
+                  <ECUC-MODULE-DEF >
+                     <SHORT-NAME>PduR</SHORT-NAME>
+					  <LONG-NAME>
+                     <L-4 L="EN">Pdu Router Module</L-4>
+                      </LONG-NAME>
+                     <DESC>
+                     <L-2 L="EN">Configuration of the PduR (PDU Router) module(with vendor specific enhancements of RB).</L-2>
+                     </DESC>
+                     <ADMIN-DATA>
+                        <DOC-REVISIONS>
+                           <DOC-REVISION>
+                              <REVISION-LABEL>4.2.2</REVISION-LABEL>
+                              <ISSUED-BY>AUTOSAR</ISSUED-BY>
+                              <DATE>2014-10-31</DATE>
+                           </DOC-REVISION>
+							<DOC-REVISION>
+							<REVISION-LABEL>1.0.0</REVISION-LABEL>
+							<ISSUED-BY>RB</ISSUED-BY>
+							<DATE>2016-08-29</DATE>
+                           </DOC-REVISION>
+                        </DOC-REVISIONS>
+                     </ADMIN-DATA>                     
+                     <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00293</RELATED-TRACE-ITEM-REF>
+                     <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                     <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>                     
+                     <POST-BUILD-VARIANT-SUPPORT>false</POST-BUILD-VARIANT-SUPPORT>
+                     <REFINED-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/PduR</REFINED-MODULE-DEF-REF>
+                     <SUPPORTED-CONFIG-VARIANTS>                        
+                        <SUPPORTED-CONFIG-VARIANT>VARIANT-PRE-COMPILE</SUPPORTED-CONFIG-VARIANT>
+                     </SUPPORTED-CONFIG-VARIANTS>                    
+                     <CONTAINERS>
+                        <!-- Container Definition: PduRBswModules -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                           <SHORT-NAME>PduRBswModules</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">Each container describes a specific BSW module (upper/CDD/lower/IpduM) that the PDU Router shall interface to.</L-2>
+                           </DESC>
+                           <INTRODUCTION>
+                              <P>
+                                 <L-1 L="EN">The reason to have it as own configuration container instead of implication of the routing path is to be able to configure CDDs properly and to force module's to be used in a post-build situation even though no routing is made to/from this module (future configurations may include these modules).</L-1>
+                              </P>
+                           </INTRODUCTION>                           
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00295</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                           <MULTIPLICITY-CONFIG-CLASSES>
+                              <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                              </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                              <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                              </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                           </MULTIPLICITY-CONFIG-CLASSES>
+                           <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: PduRCancelReceive -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRCancelReceive</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the Transport protocol module supports the CancelReceive API or not. Value true the API is supported.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00340</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRCancelTransmit -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRCancelTransmit</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the BSW module supports the CancelTransmit API or not. Value true the API is supported.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00297</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRChangeParameterApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRChangeParameterApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This parameter, if set to true, enables the PduR_&lt;Up&gt;ChangeParameter Api for this Module.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00326</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRCommunicationInterface -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRCommunicationInterface</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the BSW module supports the Communication Interface APIs or not. Value true the APIs are supported.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">A module can have both Communication Interface APIs and Transport Protocol APIs (e.g. the COM module).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00298</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRLowerModule -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRLowerModule</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">The PduRLowerModule will decide who will call the APIs and who will implement the APIs.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">For example, if the CanIf module is referenced then the PDU Router module will implement the PduR_CanIfRxIndication API. And the PDUR module will call the CanIf_Transmit API. Other APIs are of course also covered.
+
+                                        An upper module can also be an lower module (e.g. the IpduM module).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00307</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRRetransmission -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRRetransmission</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If set to true this means that the destination transport protocol module will use the retransmission feature. This parameter might be set to false if the retransmission feature is not used, even though the destination transport protocol is supporting it.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter is only valid for transport protocol modules and gateway operations. If transmission from a local upper layer module this module will handle the retransmission.</L-1>
+                                    </P>
+                                 </INTRODUCTION>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00332</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRTransportProtocol -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRTransportProtocol</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">The PDU Router module shall use the API parameters specified for transport protocol interface.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00312</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRTriggertransmit -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRTriggertransmit</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the BSW module supports the TriggerTransmit API or not. Value true means that the BSW module supports the TriggerTransmit interface which a lower layer module can call and also that it can call the TriggerTransmit interface of an upper layer module. Value false means that the BSW module does not support the TriggerTransmit interface which a lower layer module can call and also that it shall not call the TriggerTransmit interface of an upper layer module.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00313</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRTxConfirmation -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRTxConfirmation</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Specifies if the BSW module supports the TxConfirmation API or not. Value true the API is supported.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00314</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRUpperModule -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRUpperModule</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">The PduRUpperModule will decide who will call the APIs and who will implement the APIs.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">For example, if the COM module is referenced then the PDU Router module will implement the PduR_Transmit API. And the PDUR module will call the Com_RxIndication API. Other APIs are of course also covered.
+
+                                        An upper module can also be an lower module (e.g. the IpduM module).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00338</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRUseTag -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRUseTag</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This parameter, if set to true, enables the usage of the tag (&lt;up&gt;) in the following API calls:</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">* PduR_&lt;Up&gt;CancelReceive
+                                        * PduR_&lt;Up&gt;CancelTransmit 
+                                        * PduR_&lt;Up&gt;ChangeParameter
+
+                                        Example: If used by COM and the parameter is enabled the PduR_ComCancelTransmit is used.
+
+                                        The background is that upper layer modules differ in usage of this tag (e.g. COM is using the tag, DCM is not).</L-1>
+                                    </P>
+                                 </INTRODUCTION>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00319</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                           </PARAMETERS>
+                           <REFERENCES>
+                              <!-- Foreign Reference Definition: PduRBswModuleRef -->
+                              <ECUC-FOREIGN-REFERENCE-DEF >
+                                 <SHORT-NAME>PduRBswModuleRef</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This is a reference to one BSW module's configuration (i.e. not the ECUC parameter definition template).</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">Example, there could be several configurations of LinIf and this reference selects one of them.</L-1>
+                                    </P>
+                                 </INTRODUCTION>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00294</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <DESTINATION-TYPE>ECUC-MODULE-CONFIGURATION-VALUES</DESTINATION-TYPE>
+                              </ECUC-FOREIGN-REFERENCE-DEF>
+                           </REFERENCES>
+						   <SUB-CONTAINERS>
+							<!-- Container Definition: PduRInvalidHandlers -->
+							<ECUC-PARAM-CONF-CONTAINER-DEF>
+								<SHORT-NAME>PduRInvalidHandlers</SHORT-NAME>
+								<DESC>
+									<L-2 L="EN">Container for each PduRBswModule to indicate whether Invalid Handlers should be supported or not for any feature.
+									This is relevant only for a lower layer module. This container need not be configured for upper layer modules.</L-2>
+								</DESC>
+								<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>								
+								<MULTIPLICITY-CONFIG-CLASSES>
+									<ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									 <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+								  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+								  <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+									 <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+									 <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+								  </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+							   </MULTIPLICITY-CONFIG-CLASSES>
+							   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+								<PARAMETERS>
+									<!-- PARAMETER DEFINITION: PduRIHCancelReceive -->
+									<ECUC-BOOLEAN-PARAM-DEF>
+										<SHORT-NAME>PduRIHCancelReceive</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Specifies for a PduRBswModule, if call to Invalid Handler needs to be generated instead of actual CancelReceive API.
+											Value TRUE: Call to Invalid Handler is generated.
+											Value FALSE: Call to Actual ModuleName_CancelReceive API is generated.</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+								  <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+										
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										<DEFAULT-VALUE>false</DEFAULT-VALUE>
+									</ECUC-BOOLEAN-PARAM-DEF>
+									<!-- PARAMETER DEFINITION: PduRIHCancelTransmit -->
+									<ECUC-BOOLEAN-PARAM-DEF>
+										<SHORT-NAME>PduRIHCancelTransmit</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Specifies for a PduRBswModule, if call to Invalid Handler needs to be generated instead of actual CancelTransmit API.
+											Value TRUE: Call to Invalid Handler is generated.
+											Value FALSE: Call to Actual ModuleName_CancelTransmit API is generated.</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+										<VALUE-CONFIG-CLASSES>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+											<ECUC-VALUE-CONFIGURATION-CLASS>
+											   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+											   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-VALUE-CONFIGURATION-CLASS>
+										</VALUE-CONFIG-CLASSES>
+										
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										<DEFAULT-VALUE>false</DEFAULT-VALUE>
+									</ECUC-BOOLEAN-PARAM-DEF>
+								</PARAMETERS>
+							</ECUC-PARAM-CONF-CONTAINER-DEF>
+						</SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: PduRGeneral -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                           <SHORT-NAME>PduRGeneral</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">This container is a subcontainer of PduR and specifies the general configuration parameters of the PDU Router.</L-2>
+                           </DESC>                           
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00305</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+                              <!-- PARAMETER DEFINITION: PduRDevErrorDetect -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRDevErrorDetect</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Switches the Default Error Tracer (Det) detection and notification ON or OFF.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">* true: enabled (ON).
+                                        * false: disabled (OFF).</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00302</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRMetaDataSupport -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRMetaDataSupport</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enable support for MetaData handling. The size of the MetaData is defined by the configuration parameter MetaDataLength of the global PDU definitions. 
+									This feature may be used for efficient CAN-CAN-routing, where the MetaData contains the CAN ID.This feature is not yet supported.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00347</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRVersionInfoApi -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRVersionInfoApi</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If true the PduR_GetVersionInfo API is available.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00316</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRZeroCostOperation -->
+                              <ECUC-BOOLEAN-PARAM-DEF >
+                                 <SHORT-NAME>PduRZeroCostOperation</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">If set the PduR configuration generator will report an error if zero-cost-operation cannot be fulfilled.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">This parameter shall be seen as an input requirement to the configuration generator.</L-1>
+                                    </P>
+                                 </INTRODUCTION>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00317</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+							  
+							                                          <!-- PARAMETER DEFINITION: PduRFifoTxBufferSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRFifoTxBufferSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for FIFOs as PDU transmit buffers; if PDUR_GATEWAY_OPERATION is disabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRCanTpChangeParameterRequestApi -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRCanTpChangeParameterRequestApi</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">This parameter, if set to true, enables the PduR_CanTpChangeParameterConfirmation Api for this Module.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRFrTpChangeParameterRequestApi -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRFrTpChangeParameterRequestApi</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">This parameter, if set to true, enables the PduR_FrTpChangeParameterConfirmation Api for this Module.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRIFGatewayOperation -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRIFGatewayOperation</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router IF Gateway from an interface module to lower layer interface modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRTPGatewayOperation -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRTPGatewayOperation</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router TP gateway from a TP module to lower layer TP modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRMemorySize -->
+                                        <ECUC-INTEGER-PARAM-DEF >
+                                            <SHORT-NAME>PduRMemorySize</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Memory size reserved for PDU Router buffers. Only required for gateway operation.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>65535</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingLoModule -->
+                                        <ECUC-ENUMERATION-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingLoModule</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Lower layer module to be used for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>CAN_IF</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>CAN_TP</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>FR_IF</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>FR_TP</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>LIN_IF</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>LIN_TP</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                            </LITERALS>
+                                        </ECUC-ENUMERATION-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingLoRxPduId -->
+                                        <ECUC-INTEGER-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingLoRxPduId</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Receive PDU identifier of the lower layer module which shall be used at the PDU Router interface to the lower layer module specified by PDUR_MINIMUM_ROUTING_LO_MODULE for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>65535</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingLoTxPduId -->
+                                        <ECUC-INTEGER-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingLoTxPduId</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Transmit PDU identifier of the lower layer module which shall be used at the PDU Router interface to the lower layer module specified by PDUR_MINIMUM_ROUTING_LO_MODULE for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>65535</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingUpModule -->
+                                        <ECUC-ENUMERATION-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingUpModule</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Upper layer module to be used for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <LITERALS>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>COM</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                                <ECUC-ENUMERATION-LITERAL-DEF >
+                                                    <SHORT-NAME>DCM</SHORT-NAME>
+                                                    <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                </ECUC-ENUMERATION-LITERAL-DEF>
+                                            </LITERALS>
+                                        </ECUC-ENUMERATION-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingUpRxPduId -->
+                                        <ECUC-INTEGER-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingUpRxPduId</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Receive PDU identifier of the upper layer module which shall be used at the PDU Router interface to the upper layer module specified by PDUR_MINIMUM_ROUTING_UP_MODULE for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>65535</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRMinimumRoutingUpTxPduId -->
+                                        <ECUC-INTEGER-PARAM-DEF >
+                                            <SHORT-NAME>PduRMinimumRoutingUpTxPduId</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Transmit PDU identifier of the upper layer module which shall be used at the PDU Router interface to the upper layer module specified by PDUR_MINIMUM_ROUTING_UP_MODULE for minimum routing; this parameter shall be used if PDUR_ZERO_COST_OPERATION is disabled; otherwise it shall not be used.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                            <MAX>65535</MAX>
+                                            <MIN>0</MIN>
+                                        </ECUC-INTEGER-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRMulticastFromIfSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRMulticastFromIfSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for multicasts from an interface module to upper layer modules or lower layer interface modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRMulticastFromTpSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRMulticastFromTpSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for multicasts from a TP module to upper layer modules or lower layer TP modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMulticastToIfSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRMulticastToIfSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for multicasts from an upper layer module to interface modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										<!-- PARAMETER DEFINITION: PduRMulticastToTpSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRMulticastToTpSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for multicasts from an upper layer module to TP modules; if PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+										
+										<!-- PARAMETER DEFINITION: PduRSbTxBufferSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRSbTxBufferSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router support for single buffers as PDU transmit buffers; if PDUR_GATEWAY_OPERATION is disabled, this parameter has to be disabled.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+											 <VALUE-CONFIG-CLASSES>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+												<ECUC-VALUE-CONFIGURATION-CLASS>
+												   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-VALUE-CONFIGURATION-CLASS>
+											 </VALUE-CONFIG-CLASSES>
+                                            
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+                                        
+                                        <!-- PARAMETER DEFINITION: PduRQueueingSupport -->
+                                        <ECUC-BOOLEAN-PARAM-DEF >
+                                            <SHORT-NAME>PduRQueueingSupport</SHORT-NAME>
+                                            <DESC>
+                                                <L-2 L="EN">Configuration parameter to enable or disable PDU Router Queueing Feature. If PDUR_ZERO_COST_OPERATION is enabled, this parameter has to be disabled. </L-2>
+                                            </DESC>
+                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                            <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                            <ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+                                            <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                            <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                        </ECUC-BOOLEAN-PARAM-DEF>
+										
+							  <!-- PARAMETER DEFINITION: PduRDSMReInitEnabled  -->
+                              <ECUC-BOOLEAN-PARAM-DEF>
+                                 <SHORT-NAME>PduRDSMReInitEnabled</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Enables or disables the reporting of DEM events to DSM after the Re-initialisation of DSM has occured.</L-2>
+                                 </DESC>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>RB:1.0.0:2017-03-10</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-LINK-TIME</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                  <DEFAULT-VALUE>false</DEFAULT-VALUE>
+                              </ECUC-BOOLEAN-PARAM-DEF>
+							  
+							  <!-- PARAMETER DEFINITION: PduRMainFunctionPeriod -->
+                                    <ECUC-FLOAT-PARAM-DEF>
+                                       <SHORT-NAME>PduRDsmReInitMainFunctionPeriod</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies the period in seconds that the MainFunction has to be triggered with. </L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">Comment:this main function is used for DsmReinit feature.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_ComM_00556</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>RB:1.0.0:2017-03-10</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>                                       
+                                       <MAX>0.1</MAX>
+                                       <MIN>0.001</MIN>
+                                    </ECUC-FLOAT-PARAM-DEF>
+							  
+                           </PARAMETERS>
+						   
+						   <SUB-CONTAINERS>
+							<!-- Container Definition: PduRDemSupport -->
+							<ECUC-PARAM-CONF-CONTAINER-DEF >
+								<SHORT-NAME>PduRDemSupport</SHORT-NAME>
+								<DESC>
+									<L-2 L="EN">This container containes switches for Dem Monitoring Control.</L-2>
+								</DESC>
+								<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+								<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+								<PARAMETERS>
+									<!-- PARAMETER DEFINITION: PduRInitFailed -->
+									<ECUC-BOOLEAN-PARAM-DEF >
+										<SHORT-NAME>PduRInitFailed</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Monitoring Control Switch for error PDUR_E_INIT_FAILED.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>RB:1.0.0:2017-03-1</ORIGIN>
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									</ECUC-BOOLEAN-PARAM-DEF>
+									<!-- PARAMETER DEFINITION: PduRPduInstanceLost -->
+									<ECUC-BOOLEAN-PARAM-DEF >
+										<SHORT-NAME>PduRPduInstanceLost</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Monitoring Control Switch for error PDUR_E_PDU_INSTANCE_LOST.This parameter shall be seen as an input requirement to the configuration generator.</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>RB:1.0.0:2017-03-1</ORIGIN>
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									</ECUC-BOOLEAN-PARAM-DEF>
+
+								</PARAMETERS>
+							</ECUC-PARAM-CONF-CONTAINER-DEF>
+						</SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                        <!-- Container Definition: PduRRoutingTables -->
+                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                           <SHORT-NAME>PduRRoutingTables</SHORT-NAME>
+                           <DESC>
+                              <L-2 L="EN">Represents one table of routing paths.</L-2>
+                           </DESC>
+                           <INTRODUCTION>
+                              <P>
+                                 <L-1 L="EN">This routing table allows multiple configurations that can be used to create several routing tables in the same configuration. This is mainly used for post-build (e.g. post-build selectable) but can be used by pre-compile and link-time for variant handling.</L-1>
+                              </P>
+                           </INTRODUCTION>                           
+                           <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00310</RELATED-TRACE-ITEM-REF>
+                           <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                           <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                           <PARAMETERS>
+							  						   
+                              <!-- PARAMETER DEFINITION: PduRConfigurationId -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>PduRConfigurationId</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Identification of the configuration of the PduR configuration. This identification can be read using the PduR API.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00327</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRMaxRoutingPathCnt -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>PduRMaxRoutingPathCnt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of RoutingPaths in all RoutingTables. This parameter is needed only in case of post-build loadable implementation using static memory allocation.
+									This parameter is not supported yet.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00350</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRMaxRoutingPathGroupCnt -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>PduRMaxRoutingPathGroupCnt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of RoutingPathGroups. This parameter is needed only in case of post-build loadable implementation using static memory allocation.
+									This parameter is not supported yet.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00348</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                              <!-- PARAMETER DEFINITION: PduRMaxRoutingTableCnt -->
+                              <ECUC-INTEGER-PARAM-DEF >
+                                 <SHORT-NAME>PduRMaxRoutingTableCnt</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Maximum number of RoutingTables. This parameter is needed only in case of post-build loadable implementation using static memory allocation.
+									This parameter is not supported yet.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00349</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                 <SCOPE>LOCAL</SCOPE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                 <VALUE-CONFIG-CLASSES>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                    <ECUC-VALUE-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-VALUE-CONFIGURATION-CLASS>
+                                 </VALUE-CONFIG-CLASSES>
+                                 <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                 <MAX>65535</MAX>
+                                 <MIN>0</MIN>
+                              </ECUC-INTEGER-PARAM-DEF>
+                           </PARAMETERS>
+                           <SUB-CONTAINERS>
+						   
+						   <!-- Container Definition: PduRDemEventParameterRefs -->
+							<ECUC-PARAM-CONF-CONTAINER-DEF>
+								<SHORT-NAME>PduRDemEventParameterRefs</SHORT-NAME>
+								<DESC>
+									<L-2 L="EN">Container for the references to DemEventParameter elements which shall be invoked using the API Dem_ReportErrorStatus API in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter&apos;s DemEventId value. The standardized errors are provided in the container and can be extended by vendor specific error references.</L-2>
+								</DESC>
+								<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+								<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								<POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+								<MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+								<!-- FC_VariationPoint_START -->
+								<PARAMETERS>
+									<ECUC-ENUMERATION-PARAM-DEF>
+									  <SHORT-NAME>PduRRbDynCreate_E_INIT_FAILED</SHORT-NAME>
+									  <LONG-NAME>
+										<L-4 L="EN">Dynamically create PDUR_E_INIT_FAILED DemEvent</L-4>
+									  </LONG-NAME>
+									  <DESC>
+										<L-2 L="EN">Selects the way how the PDUR_E_INIT_FAILED DemEvent is created. If not set or set to Disabled, no such DemEvent is automatically created. If the dynamic creation of this DemEvent is enabled, the reference to this DemEvent (in parameter PDUR_E_INIT_FAILED) is also automatically created and shall therefore not be set manually.</L-2>
+									  </DESC>
+									  <ADMIN-DATA>
+										<SDGS>
+										  <SDG GID="DemEventInfo">
+											<SD GID="DemEventShortNamePattern">PDUR_E_INIT_FAILED</SD>
+											<SD GID="DemEventLongNamePatternEn">PDU Router initialization failed</SD>
+										  </SDG>
+										</SDGS>
+									  </ADMIN-DATA>
+									  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									  <IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									  </IMPLEMENTATION-CONFIG-CLASSES>
+									  <ORIGIN>RB:0.1.0:2014-10-08</ORIGIN>
+									  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  <DEFAULT-VALUE>Disabled</DEFAULT-VALUE>
+									  <LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF>
+										  <SHORT-NAME>Disabled</SHORT-NAME>
+										  <LONG-NAME>
+											<L-4 L="EN">Disabled</L-4>
+										  </LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF>
+										  <SHORT-NAME>Standard</SHORT-NAME>
+										  <LONG-NAME>
+											<L-4 L="EN">Standard</L-4>
+										  </LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									  </LITERALS>
+									</ECUC-ENUMERATION-PARAM-DEF>
+
+									<ECUC-ENUMERATION-PARAM-DEF>
+									  <SHORT-NAME>PduRRbDynCreate_E_PDU_INSTANCE_LOST</SHORT-NAME>
+									  <LONG-NAME>
+										<L-4 L="EN">Dynamically create PDUR_E_PDU_INSTANCE_LOST DemEvent</L-4>
+									  </LONG-NAME>
+									  <DESC>
+										<L-2 L="EN">Selects the way how the PDUR_E_PDU_INSTANCE_LOST DemEvent is created. If not set or set to Disabled, no such DemEvent is automatically created. If the dynamic creation of this DemEvent is enabled, the reference to this DemEvent (in parameter PDUR_E_PDU_INSTANCE_LOST) is also automatically created and shall therefore not be set manually.</L-2>
+									  </DESC>
+									  <ADMIN-DATA>
+										<SDGS>
+										  <SDG GID="DemEventInfo">
+											<SD GID="DemEventShortNamePattern">PDUR_E_PDU_INSTANCE_LOST</SD>
+											<SD GID="DemEventLongNamePatternEn">Loss of a PDU instance occured</SD>
+										  </SDG>
+										</SDGS>
+									  </ADMIN-DATA>
+									  <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+									  <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+									  <IMPLEMENTATION-CONFIG-CLASSES>
+										<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										  <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+										  <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+										</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+									  </IMPLEMENTATION-CONFIG-CLASSES>
+									  <ORIGIN>RB:0.1.0:2014-10-08</ORIGIN>
+									  <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+									  <DEFAULT-VALUE>Disabled</DEFAULT-VALUE>
+									  <LITERALS>
+										<ECUC-ENUMERATION-LITERAL-DEF>
+										  <SHORT-NAME>Disabled</SHORT-NAME>
+										  <LONG-NAME>
+											<L-4 L="EN">Disabled</L-4>
+										  </LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+										<ECUC-ENUMERATION-LITERAL-DEF>
+										  <SHORT-NAME>Standard</SHORT-NAME>
+										  <LONG-NAME>
+											<L-4 L="EN">Standard</L-4>
+										  </LONG-NAME>
+										</ECUC-ENUMERATION-LITERAL-DEF>
+									  </LITERALS>
+									</ECUC-ENUMERATION-PARAM-DEF>
+								  </PARAMETERS>
+								  <!-- FC_VariationPoint_END -->
+								<REFERENCES>
+									<!-- Symbolic Name Reference Definition: PDUR_E_INIT_FAILED -->
+									<ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+										<SHORT-NAME>PDUR_E_INIT_FAILED</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Reference to configured DEM event to report PDU Router initialization failed (PDU Router changed to PDUR_REDUCED state).</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+									</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+									<!-- Symbolic Name Reference Definition: PDUR_E_PDU_INSTANCE_LOST -->
+									<ECUC-SYMBOLIC-NAME-REFERENCE-DEF >
+										<SHORT-NAME>PDUR_E_PDU_INSTANCE_LOST</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">Reference to configured DEM event to report Loss of a PDU instance (FIFO flushed because of an overrun).</L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter</DESTINATION-REF>
+									</ECUC-SYMBOLIC-NAME-REFERENCE-DEF>
+								</REFERENCES>
+							</ECUC-PARAM-CONF-CONTAINER-DEF>
+						   
+                              <!-- Container Definition: PduRRoutingPathGroup -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>PduRRoutingPathGroup</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container groups routing path destinations. Destinations are used instead of routing paths since a routing path can be 1:n. It is desirable to be able to enable/disable a specific bus (i.e. a destination) rather than a routing path. Of course it is possible to create groups that covers specific routing paths as well.</L-2>
+                                 </DESC>
+                                 <INTRODUCTION>
+                                    <P>
+                                       <L-1 L="EN">Enabling and disabling of routing path groups are made using the PduR API</L-1>
+                                    </P>
+                                 </INTRODUCTION>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00308</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <PARAMETERS>
+                                    <!-- PARAMETER DEFINITION: PduRIsEnabledAtInit -->
+                                    <ECUC-BOOLEAN-PARAM-DEF >
+                                       <SHORT-NAME>PduRIsEnabledAtInit</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">If set to true this routing path group will be enabled after initializing the PDU Router module (i.e. enabled in the PduR_Init function).</L-2>
+                                       </DESC>                                       
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00329</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                    </ECUC-BOOLEAN-PARAM-DEF>
+                                    <!-- PARAMETER DEFINITION: PduRRoutingPathGroupId -->
+                                    <ECUC-INTEGER-PARAM-DEF >
+                                       <SHORT-NAME>PduRRoutingPathGroupId</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Identification of the routing group.</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">The identification will be used by the disable/enable API in the PDU Router module API.</L-1>
+                                          </P>
+                                       </INTRODUCTION>                                       
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00309</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                       <SCOPE>ECU</SCOPE>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                       <MAX>65535</MAX>
+                                       <MIN>0</MIN>
+                                    </ECUC-INTEGER-PARAM-DEF>
+                                 </PARAMETERS>
+                                 <REFERENCES>
+                                    <!-- Reference Definition: PduRDestPduRef -->
+                                    <ECUC-REFERENCE-DEF >
+                                       <SHORT-NAME>PduRDestPduRef</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This reference selects one destination of the routing path.</L-2>
+                                       </DESC>                                   
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00301</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <SCOPE>LOCAL</SCOPE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                       <VALUE-CONFIG-CLASSES>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                          <ECUC-VALUE-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-VALUE-CONFIGURATION-CLASS>
+                                       </VALUE-CONFIG-CLASSES>
+                                       <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/PduR/PduRRoutingTables/PduRRoutingTable/PduRRoutingPath/PduRDestPdu</DESTINATION-REF>
+                                    </ECUC-REFERENCE-DEF>
+                                 </REFERENCES>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: PduRRoutingTable -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>PduRRoutingTable</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">Represents one container of routing paths.</L-2>
+                                 </DESC>                                 
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00247</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                 <MULTIPLICITY-CONFIG-CLASSES>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                    <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                       <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                    </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                 </MULTIPLICITY-CONFIG-CLASSES>
+                                 <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: PduRRoutingPath -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>PduRRoutingPath</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">This container is a subcontainer of PduRRoutingTable and specifies the routing path of a PDU.</L-2>
+                                       </DESC>                                       
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00248</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+									   
+									   <PARAMETERS>
+										<!-- PARAMETER DEFINITION: PduRTpGatewayQueueDepth -->
+										<ECUC-INTEGER-PARAM-DEF >
+											<SHORT-NAME>PduRTpGatewayQueueDepth</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">This parameter specifies whether queue is required in Tp Gatewaying or not. If configured as 2 then, queuing is enabled. Max queue depth can be 2. By default the parameter value is 1</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+									</PARAMETERS>
+                                       <SUB-CONTAINERS>
+                                          <!-- Container Definition: PduRDestPdu -->
+                                          <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                             <SHORT-NAME>PduRDestPdu</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">This container is a subcontainer of PduRRoutingPath and specifies one destination for the PDU to be routed.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00249</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                             <MULTIPLICITY-CONFIG-CLASSES>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             </MULTIPLICITY-CONFIG-CLASSES>
+                                             <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                             <PARAMETERS>
+                                                <!-- PARAMETER DEFINITION: PduRDestPduDataProvision -->
+                                                <ECUC-ENUMERATION-PARAM-DEF >
+                                                   <SHORT-NAME>PduRDestPduDataProvision</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">Specifies how data are provided: direct (as part of the Transmit call) or via</L-2>
+                                                   </DESC>
+                                                   <INTRODUCTION>
+                                                      <P>
+                                                         <L-1 L="EN">the TriggerTransmit callback function. Only required for non-TP gatewayed
+                                                                I-PDUs.</L-1>
+                                                      </P>
+                                                   </INTRODUCTION>                                                   
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00289</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                   <LITERALS>
+                                                      <ECUC-ENUMERATION-LITERAL-DEF >
+                                                         <SHORT-NAME>PDUR_DIRECT</SHORT-NAME>
+                                                         <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                      </ECUC-ENUMERATION-LITERAL-DEF>
+                                                      <ECUC-ENUMERATION-LITERAL-DEF >
+                                                         <SHORT-NAME>PDUR_TRIGGERTRANSMIT</SHORT-NAME>
+                                                         <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                      </ECUC-ENUMERATION-LITERAL-DEF>
+                                                   </LITERALS>
+                                                </ECUC-ENUMERATION-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: PduRDestPduHandleId -->
+                                                <ECUC-INTEGER-PARAM-DEF >
+                                                   <SHORT-NAME>PduRDestPduHandleId</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">PDU identifier assigned by PDU Router. Used by communication interface and transport protocol modules for confirmation (PduR_&lt;Lo&gt;TxConfirmation) and for TriggerTransmit (PduR_&lt;Lo&gt;TriggerTransmit).</L-2>
+                                                   </DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00322</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>ECU</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                                   <MAX>65535</MAX>
+                                                   <MIN>0</MIN>
+                                                </ECUC-INTEGER-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: PduRTpThreshold -->
+                                                <ECUC-INTEGER-PARAM-DEF >
+                                                   <SHORT-NAME>PduRTpThreshold</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">This parameter is only relevant for TP routings.</L-2>
+                                                   </DESC>
+                                                   <INTRODUCTION>
+                                                      <P>
+                                                         <L-1 L="EN">When configured, it enables on-the-fly routing and defines the number of bytes which must have been received before transmission on the destination bus may start.
+
+                                                                When omitted, direct TP routing is enforced.
+                                                                The PduRouter shall ensure that a buffer is allocated for this routing path which is at least as large as the threshold.</L-1>
+                                                      </P>
+                                                   </INTRODUCTION>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00320</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                   <MAX>65535</MAX>
+                                                   <MIN>1</MIN>
+                                                </ECUC-INTEGER-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: PduRTransmissionConfirmation -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                   <SHORT-NAME>PduRTransmissionConfirmation</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">This parameter is only for communication interfaces. Transport protocol modules will always call the TxConfirmation function.</L-2>
+                                                   </DESC>
+                                                   <INTRODUCTION>
+                                                      <P>
+                                                         <L-1 L="EN">If set the destination communication interface module will call the TxConfirmation. However the TxConfirmation may be not called due to error. So the PduR shall not block until the TxConfirmation is called.
+
+                                                                One background for this parameter is for the PduR to know when all modules have confirmed a multicast operation.</L-1>
+                                                      </P>
+                                                   </INTRODUCTION>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00339</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                </ECUC-BOOLEAN-PARAM-DEF>
+                                             </PARAMETERS>
+                                             <REFERENCES>
+                                                <!-- Reference Definition: PduRDestPduRef -->
+                                                <ECUC-REFERENCE-DEF >
+                                                   <SHORT-NAME>PduRDestPduRef</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">Destination PDU reference; reference to unique PDU identifier which shall be used by the PDU Router instead of the source PDU ID when calling the related function of the destination module.</L-2>
+                                                   </DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00291</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                                </ECUC-REFERENCE-DEF>
+												<!-- Reference Definition: PduRDestTxBufferRef -->
+												<ECUC-REFERENCE-DEF >
+													<SHORT-NAME>PduRDestTxBufferRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to a buffer that is allocated in the PduRTxBuffer. Having a global (for PduR) list of buffers allows reusage and hence less memory consumption.</L-2>
+													</DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00304</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/PduR/PduRRoutingTables/PduRTxBufferTable/PduRTxBuffer</DESTINATION-REF>
+                                                </ECUC-REFERENCE-DEF>
+												<!-- Choice Reference Definition: PduRDestTpBufferRef -->
+												<ECUC-CHOICE-REFERENCE-DEF >
+													<SHORT-NAME>PduRDestTpBufferRef</SHORT-NAME>
+													<DESC>
+														<L-2 L="EN">Reference to a buffer that is allocated in the PduRTpBuffer. Having a global (for PduR) list of buffers allows reusage and hence less memory consumption.</L-2>
+													</DESC>
+													<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+													<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+													<IMPLEMENTATION-CONFIG-CLASSES>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+														<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+															<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+															<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+														</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													</IMPLEMENTATION-CONFIG-CLASSES>
+													<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+													<DESTINATION-REFS>
+														<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/PduR/PduRRoutingTables/PduRTpBufferTable/PduRTpBuffer</DESTINATION-REF>
+														<DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/PduR/PduRRoutingTables/PduRTpBufferTable/PduRTpBufferPool</DESTINATION-REF>
+													</DESTINATION-REFS>
+												</ECUC-CHOICE-REFERENCE-DEF>
+                                             </REFERENCES>
+                                             <SUB-CONTAINERS>
+                                                <!-- Container Definition: PduRDefaultValue -->
+                                                <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                                   <SHORT-NAME>PduRDefaultValue</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">Specifies the default value of the I-PDU. Only required for gateway operation and if at least one PDU specified by PduRDestPdu uses TriggerTransmit Data provision.</L-2>
+                                                   </DESC>
+                                                   <INTRODUCTION>
+                                                      <P>
+                                                         <L-1 L="EN">Represented as an array of IntegerParamDef.</L-1>
+                                                      </P>
+                                                   </INTRODUCTION>                                                   
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00299</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SUB-CONTAINERS>
+                                                      <!-- Container Definition: PduRDefaultValueElement -->
+                                                      <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                                         <SHORT-NAME>PduRDefaultValueElement</SHORT-NAME>
+                                                         <DESC>
+                                                            <L-2 L="EN">Each value element is represented by the element and the position in an array.</L-2>
+                                                         </DESC>
+                                                         <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00300</RELATED-TRACE-ITEM-REF>
+                                                         <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                         <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                                         <MULTIPLICITY-CONFIG-CLASSES>
+                                                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                               <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                            <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                               <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                               <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                            </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         </MULTIPLICITY-CONFIG-CLASSES>
+                                                         <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                         <PARAMETERS>
+                                                            <!-- PARAMETER DEFINITION: PduRDefaultValueElement -->
+                                                            <ECUC-INTEGER-PARAM-DEF >
+                                                               <SHORT-NAME>PduRDefaultValueElement</SHORT-NAME>
+                                                               <DESC>
+                                                                  <L-2 L="EN">The default value consists of a number of elements. Each element is one byte long and the number of elements is specified by SduLength. The position of this parameter in the container is specified by the PduRElementBytePosition parameter.</L-2>
+                                                               </DESC>
+                                                               <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00290</RELATED-TRACE-ITEM-REF>
+                                                               <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                               <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                               <SCOPE>LOCAL</SCOPE>
+                                                               <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                               <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                               <VALUE-CONFIG-CLASSES>
+                                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                     <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                     <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                               </VALUE-CONFIG-CLASSES>
+                                                               <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                               <MAX>255</MAX>
+                                                               <MIN>0</MIN>
+                                                            </ECUC-INTEGER-PARAM-DEF>
+                                                            <!-- PARAMETER DEFINITION: PduRDefaultValueElementBytePosition -->
+                                                            <ECUC-INTEGER-PARAM-DEF >
+                                                               <SHORT-NAME>PduRDefaultValueElementBytePosition</SHORT-NAME>
+                                                               <DESC>
+                                                                  <L-2 L="EN">This parameter specifies the byte position of the element within the default value</L-2>
+                                                               </DESC>
+                                                               <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00292</RELATED-TRACE-ITEM-REF>
+                                                               <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                               <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                               <SCOPE>LOCAL</SCOPE>
+                                                               <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                               <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                               <VALUE-CONFIG-CLASSES>
+                                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                     <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                  <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                                     <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                     <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                  </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                               </VALUE-CONFIG-CLASSES>
+                                                               <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                               <MAX>255</MAX>
+                                                               <MIN>0</MIN>
+                                                            </ECUC-INTEGER-PARAM-DEF>
+                                                         </PARAMETERS>
+                                                      </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                                   </SUB-CONTAINERS>
+                                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                             </SUB-CONTAINERS>
+                                          </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                          <!-- Container Definition: PduRSrcPdu -->
+                                          <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                             <SHORT-NAME>PduRSrcPdu</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">This container is a subcontainer of PduRRoutingPath and specifies the source of the PDU to be routed.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00288</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <PARAMETERS>
+                                                <!-- PARAMETER DEFINITION: PduRSourcePduHandleId -->
+                                                <ECUC-INTEGER-PARAM-DEF >
+                                                   <SHORT-NAME>PduRSourcePduHandleId</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">PDU identifier assigned by PDU Router.</L-2>
+                                                   </DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00311</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>ECU</SCOPE>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>true</SYMBOLIC-NAME-VALUE>
+                                                   <MAX>65535</MAX>
+                                                   <MIN>0</MIN>
+                                                </ECUC-INTEGER-PARAM-DEF>
+                                                <!-- PARAMETER DEFINITION: PduRSrcPduUpTxConf -->
+                                                <ECUC-BOOLEAN-PARAM-DEF >
+                                                   <SHORT-NAME>PduRSrcPduUpTxConf</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">When enabled, the TxConfirmation will be</L-2>
+                                                   </DESC>
+                                                   <INTRODUCTION>
+                                                      <P>
+                                                         <L-1 L="EN">forwarded to the upper layer. Prerequisites: Lower layer and upper layer support TxConfirmation.This parameter is not supported yet.</L-1>
+                                                      </P>
+                                                   </INTRODUCTION>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00351</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>ECU</SCOPE>
+                                                   <MULTIPLICITY-CONFIG-CLASSES>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                      <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                                   </MULTIPLICITY-CONFIG-CLASSES>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                   <DEFAULT-VALUE>true</DEFAULT-VALUE>
+                                                </ECUC-BOOLEAN-PARAM-DEF>
+                                             </PARAMETERS>
+                                             <REFERENCES>
+                                                <!-- Reference Definition: PduRSrcPduRef -->
+                                                <ECUC-REFERENCE-DEF >
+                                                   <SHORT-NAME>PduRSrcPduRef</SHORT-NAME>
+                                                   <DESC>
+                                                      <L-2 L="EN">Source PDU reference; reference to unique PDU identifier which shall be used for the requested PDU Router operation.</L-2>
+                                                   </DESC>
+                                                   <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00318</RELATED-TRACE-ITEM-REF>
+                                                   <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                   <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                   <SCOPE>LOCAL</SCOPE>
+                                                   <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                                   <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                                   <VALUE-CONFIG-CLASSES>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                      <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                         <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                         <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                      </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   </VALUE-CONFIG-CLASSES>
+                                                   <DESTINATION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/EcuC/EcucConfigSet/EcucPduCollection/Pdu</DESTINATION-REF>
+                                                </ECUC-REFERENCE-DEF>
+                                             </REFERENCES>
+                                          </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                       </SUB-CONTAINERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: PduRTpBufferTable -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>PduRTpBufferTable</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container will specify the needed buffers for gatewaying using TP. It is not connected to the specific routing path destination to allow a more efficient buffer handling.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00335</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								 <PARAMETERS>
+									<!-- PARAMETER DEFINITION: PduRMaxTpBufferNumber -->
+									<ECUC-INTEGER-PARAM-DEF >
+										<SHORT-NAME>PduRMaxTpBufferNumber</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">maximum number of TP buffers.
+											 But currently PduR templates are not using this parameter, hence Lower multiplicity is changed from 1 to 0 </L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										<MAX>65535</MAX>
+										<MIN>0</MIN>
+									</ECUC-INTEGER-PARAM-DEF>
+								</PARAMETERS>
+								 
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: PduRTpBuffer -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>PduRTpBuffer</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies a buffer used for gatwaying through TP.</L-2>
+                                       </DESC>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00334</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: PduRTpBufferLength -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>PduRTpBufferLength</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Length of the TP buffer in number of bytes</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00325</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>65535</MAX>
+                                             <MIN>1</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+									<ECUC-PARAM-CONF-CONTAINER-DEF >
+                                                    <SHORT-NAME>PduRTpBufferPool</SHORT-NAME>
+                                                    <DESC>
+                                                        <L-2 L="EN">Specifies a pool of buffers used for gateway through TP.</L-2>
+                                                    </DESC>
+                                                    <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                                    <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                                    <POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+                                                    <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                                            <PARAMETERS>
+                                                                <!-- PARAMETER DEFINITION: PduRTpPoolHandleId -->
+                                                                <ECUC-INTEGER-PARAM-DEF >
+                                                                    <SHORT-NAME>PduRTpPoolHandleId</SHORT-NAME>
+                                                                    <DESC>
+                                                                        <L-2 L="EN">Unique Handle Id for accessing Buffer Pools</L-2>
+                                                                    </DESC>
+                                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                                    <IMPLEMENTATION-CONFIG-CLASSES>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                    </IMPLEMENTATION-CONFIG-CLASSES>
+                                                                    <ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+                                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                                    <WITH-AUTO>true</WITH-AUTO>
+                                                                    <MAX>65534</MAX>
+                                                                    <MIN>0</MIN>
+                                                                </ECUC-INTEGER-PARAM-DEF>
+                                                            </PARAMETERS>
+                                                    <SUB-CONTAINERS>
+                                                <!-- Container Definition: PduRTpPoolBuffer -->
+                                                        <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                                            <SHORT-NAME>PduRTpPoolBuffer</SHORT-NAME>
+                                                            <DESC>
+                                                                <L-2 L="EN">Specifies a buffer used for gateway through TP.</L-2>
+                                                            </DESC>
+                                                            <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                            <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                                            <POST-BUILD-CHANGEABLE>false</POST-BUILD-CHANGEABLE>
+                                                            <MULTIPLE-CONFIGURATION-CONTAINER>false</MULTIPLE-CONFIGURATION-CONTAINER>
+                                                            <PARAMETERS>
+                                                                <!-- PARAMETER DEFINITION: PduRLengthOfTpBufferInPool -->
+                                                                <ECUC-INTEGER-PARAM-DEF >
+                                                                    <SHORT-NAME>PduRLengthOfTpBufferInPool</SHORT-NAME>
+                                                                    <DESC>
+                                                                        <L-2 L="EN">Length of the TP buffer in number of bytes</L-2>
+                                                                    </DESC>
+                                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                                    <IMPLEMENTATION-CONFIG-CLASSES>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                    </IMPLEMENTATION-CONFIG-CLASSES>
+                                                                    <ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+                                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                                    <MAX>65535</MAX>
+                                                                    <MIN>1</MIN>
+                                                                </ECUC-INTEGER-PARAM-DEF>
+                                                                <!-- PARAMETER DEFINITION: PduRTpPoolBufferCopies -->
+                                                                <ECUC-INTEGER-PARAM-DEF >
+                                                                    <SHORT-NAME>PduRTpPoolBufferCopies</SHORT-NAME>
+                                                                    <DESC>
+                                                                        <L-2 L="EN">The number of copies required for this buffer</L-2>
+                                                                    </DESC>
+                                                                    <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                                                    <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                                                    <IMPLEMENTATION-CONFIG-CLASSES>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                        <ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                            <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                                            <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                                        </ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+                                                                    </IMPLEMENTATION-CONFIG-CLASSES>
+                                                                    <ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+                                                                    <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                                                    <MAX>65535</MAX>
+                                                                    <MIN>1</MIN>
+                                                                </ECUC-INTEGER-PARAM-DEF>
+                                                            </PARAMETERS>
+                                                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                                    </SUB-CONTAINERS>
+                                                </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                              <!-- Container Definition: PduRTxBufferTable -->
+                              <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                 <SHORT-NAME>PduRTxBufferTable</SHORT-NAME>
+                                 <DESC>
+                                    <L-2 L="EN">This container contains the buffers used for gatewaying via communication interfaces and for single frames of transport protocols.</L-2>
+                                 </DESC>
+                                 <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00337</RELATED-TRACE-ITEM-REF>
+                                 <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                 <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+								 <PARAMETERS>
+									<!-- PARAMETER DEFINITION: PduRMaxTxBufferNumber -->
+									<ECUC-INTEGER-PARAM-DEF >
+										<SHORT-NAME>PduRMaxTxBufferNumber</SHORT-NAME>
+										<DESC>
+											<L-2 L="EN">maximum number of Tx buffers.
+											 But currently PduR templates are not using this parameter, hence Lower multiplicity is changed from 1 to 0 </L-2>
+										</DESC>
+										<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+										<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+										<IMPLEMENTATION-CONFIG-CLASSES>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+												<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+											</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+										</IMPLEMENTATION-CONFIG-CLASSES>
+										<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+										<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+										<MAX>65535</MAX>
+										<MIN>0</MIN>
+									</ECUC-INTEGER-PARAM-DEF>
+								</PARAMETERS>
+                                 <SUB-CONTAINERS>
+                                    <!-- Container Definition: PduRTxBuffer -->
+                                    <ECUC-PARAM-CONF-CONTAINER-DEF >
+                                       <SHORT-NAME>PduRTxBuffer</SHORT-NAME>
+                                       <DESC>
+                                          <L-2 L="EN">Specifies a buffer used for gatewaying via communication interfaces or for</L-2>
+                                       </DESC>
+                                       <INTRODUCTION>
+                                          <P>
+                                             <L-1 L="EN">single frames of transport protocols.</L-1>
+                                          </P>
+                                       </INTRODUCTION>
+                                       <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00336</RELATED-TRACE-ITEM-REF>
+                                       <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                       <UPPER-MULTIPLICITY-INFINITE>true</UPPER-MULTIPLICITY-INFINITE>
+                                       <MULTIPLICITY-CONFIG-CLASSES>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                          <ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                             <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                             <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                          </ECUC-MULTIPLICITY-CONFIGURATION-CLASS>
+                                       </MULTIPLICITY-CONFIG-CLASSES>
+                                       <POST-BUILD-VARIANT-MULTIPLICITY>false</POST-BUILD-VARIANT-MULTIPLICITY>
+                                       <PARAMETERS>
+                                          <!-- PARAMETER DEFINITION: PduRPduMaxLength -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>PduRPduMaxLength</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Length of the Tx buffer in bytes. This parameter limits the size of buffered routed PDUs.THis parameter is not supported yet.</L-2>
+                                             </DESC>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00324</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>4294967295</MAX>
+                                             <MIN>1</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+                                          <!-- PARAMETER DEFINITION: PduRTxBufferDepth -->
+                                          <ECUC-INTEGER-PARAM-DEF >
+                                             <SHORT-NAME>PduRTxBufferDepth</SHORT-NAME>
+                                             <DESC>
+                                                <L-2 L="EN">Number of Pdus that can be stored in the buffer.</L-2>
+                                             </DESC>
+                                             <INTRODUCTION>
+                                                <P>
+                                                   <L-1 L="EN">If the value is 1, the buffer semantic is "last is best". If the value is greater than 1, the buffer semantic is a FiFo. For TP single frames, the depth
+                                                        is always 1.</L-1>
+                                                </P>
+                                             </INTRODUCTION>
+                                             <RELATED-TRACE-ITEM-REF DEST="TRACEABLE">ECUC_PduR_00323</RELATED-TRACE-ITEM-REF>
+                                             <LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+                                             <UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+                                             <SCOPE>LOCAL</SCOPE>
+                                             <ORIGIN>AUTOSAR_ECUC</ORIGIN>
+                                             <POST-BUILD-VARIANT-VALUE>false</POST-BUILD-VARIANT-VALUE>
+                                             <VALUE-CONFIG-CLASSES>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                                <ECUC-VALUE-CONFIGURATION-CLASS>
+                                                   <CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+                                                   <CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+                                                </ECUC-VALUE-CONFIGURATION-CLASS>
+                                             </VALUE-CONFIG-CLASSES>
+                                             <SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+                                             <MAX>255</MAX>
+                                             <MIN>0</MIN>
+                                          </ECUC-INTEGER-PARAM-DEF>
+									  <!-- PARAMETER DEFINITION: PduRTxBufferFIFOType -->
+										<ECUC-ENUMERATION-PARAM-DEF >
+											<SHORT-NAME>PduRTxBufferFIFOType</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Selects the type of FIFO for the destination buffer for a communication interface. Note that the configuration parameter Depth must not be set to 0 or 1.
+												 But currently PduR templates are not using this parameter, hence Lower multiplicity is changed from 1 to 0 </L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>0</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<LITERALS>
+												<ECUC-ENUMERATION-LITERAL-DEF >
+													<SHORT-NAME>DEFERRED</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+												<ECUC-ENUMERATION-LITERAL-DEF >
+													<SHORT-NAME>IMMEDIATE</SHORT-NAME>
+													<ORIGIN>AUTOSAR_ECUC</ORIGIN>
+												</ECUC-ENUMERATION-LITERAL-DEF>
+											</LITERALS>
+										</ECUC-ENUMERATION-PARAM-DEF>
+										<!-- PARAMETER DEFINITION: PduRTxBufferLength -->
+										<ECUC-INTEGER-PARAM-DEF >
+											<SHORT-NAME>PduRTxBufferLength</SHORT-NAME>
+											<DESC>
+												<L-2 L="EN">Length of the Tx buffer in number of bytes</L-2>
+											</DESC>
+											<LOWER-MULTIPLICITY>1</LOWER-MULTIPLICITY>
+											<UPPER-MULTIPLICITY>1</UPPER-MULTIPLICITY>
+											<IMPLEMENTATION-CONFIG-CLASSES>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-POST-BUILD</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+												<ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+													<CONFIG-CLASS>PRE-COMPILE</CONFIG-CLASS>
+													<CONFIG-VARIANT>VARIANT-PRE-COMPILE</CONFIG-VARIANT>
+												</ECUC-IMPLEMENTATION-CONFIGURATION-CLASS>
+											</IMPLEMENTATION-CONFIG-CLASSES>
+											<ORIGIN>RB:1:0:0:2016-08-30</ORIGIN>
+											<SYMBOLIC-NAME-VALUE>false</SYMBOLIC-NAME-VALUE>
+											<MAX>255</MAX>
+											<MIN>1</MIN>
+										</ECUC-INTEGER-PARAM-DEF>
+                                       </PARAMETERS>
+                                    </ECUC-PARAM-CONF-CONTAINER-DEF>
+                                 </SUB-CONTAINERS>
+                              </ECUC-PARAM-CONF-CONTAINER-DEF>
+                           </SUB-CONTAINERS>
+                        </ECUC-PARAM-CONF-CONTAINER-DEF>
+                     </CONTAINERS>
+                  </ECUC-MODULE-DEF>
+                    </ELEMENTS>
+                </AR-PACKAGE>
+            </AR-PACKAGES>
+        </AR-PACKAGE>
+    </AR-PACKAGES>
+</AUTOSAR>
